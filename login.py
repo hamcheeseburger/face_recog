@@ -12,18 +12,19 @@ class ExecuteLogin(UiDialog):
 
         self.btn_login.clicked.connect(self.checkPassword)
 
+
     def checkPassword(self):
         msg = QMessageBox()
-        if self.lineEdit_username.text() == 'Username' and self.lineEdit_password.text() == '000':
-            msg.setText('Success')
-            msg.exec_()
-            app.quit()
-        else:
-            msg.setText('Incorrect Password')
-            msg.exec_()
+        # if self.lineEdit_username.text() == 'Username' and self.lineEdit_password.text() == '000':
+        #     msg.setText('Success')
+        #     msg.exec_()
+        #     app.quit()
+        # else:
+        #     msg.setText('Incorrect Password')
+        #     msg.exec_()
 
-        id = self.lineEdit_username
-        password = self.lineEdit_password
+        id = self.lineEdit_username.text()
+        password = self.lineEdit_password.text()
 
         conn = sqlite3.connect("recog_user.db", isolation_level=None)
         cursor = conn.cursor()
@@ -33,6 +34,7 @@ class ExecuteLogin(UiDialog):
         row = cursor.fetchone()
         if row is None:
             msg.setText('Incorrect Password')
+            msg.exec_()
             return False
 
         print(row[0])  # 사용자 이름
@@ -50,6 +52,8 @@ class ExecuteLogin(UiDialog):
         conn.close()
 
         msg.setText('Success')
+        msg.exec_()
+        app.quit()
         return True
 
 
