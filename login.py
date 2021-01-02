@@ -3,12 +3,14 @@ import sqlite3
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5 import QtCore, QtGui, QtWidgets
 from login_gui import UiDialog
+from menu import ExecuteMenu
 
 
 class ExecuteLogin(UiDialog):
-    def __init__(self, formDialog):
+    def __init__(self, loginDialog):
+        self.loginDialog = loginDialog
         UiDialog.__init__(self)
-        self.setupUi(formDialog)
+        self.setupUi(self.loginDialog)
 
         self.btn_login.clicked.connect(self.checkPassword)
 
@@ -51,10 +53,18 @@ class ExecuteLogin(UiDialog):
         cursor.close()
         conn.close()
 
-        msg.setText('Success')
-        msg.exec_()
-        app.quit()
-        return True
+        # msg.setText('Success')
+        # msg.exec_()
+        # app.quit()
+        # return True
+
+        # self.menuWindow()
+
+    def menuWindow(self):
+        self.menuWidget = QtWidgets.QWidget(self)
+        self.menuUi = ExecuteMenu(self.menuWidget)
+        # self.menuWidget.exec_()
+        self.menuWidget.show()
 
 
 if __name__ == "__main__":
