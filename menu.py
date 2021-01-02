@@ -17,6 +17,7 @@ class ExecuteMenu(Ui_menuForm):
         # msg = QMessageBox()
         # msg.setText('jar!')
         # msg.exec_()
+
         cmd = "java -jar ./Original_Tool/VideoAnalyzer.jar ./test.txt"
         os.system(cmd)
 

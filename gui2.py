@@ -4,11 +4,6 @@ import time
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-
-
-
-
-
 import cv2
 import main2
 # import main
