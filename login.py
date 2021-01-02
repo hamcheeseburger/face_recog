@@ -61,7 +61,7 @@ class ExecuteLogin(UiDialog):
         self.menuWindow()
 
     def menuWindow(self):
-        self.menuWidget = QtWidgets.QWidget(self)
+        self.menuWidget = QtWidgets.QWidget()
         self.menuUi = ExecuteMenu(self.menuWidget)
         # self.menuWidget.exec_()
         self.menuWidget.show()

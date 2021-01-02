@@ -1,3 +1,5 @@
+import os
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 
@@ -12,9 +14,11 @@ class ExecuteMenu(Ui_menuForm):
         self.jarBtn.clicked.connect(self.callJar)
 
     def callJar(self):
-        msg = QMessageBox()
-        msg.setText('jar!')
-        msg.exec_()
+        # msg = QMessageBox()
+        # msg.setText('jar!')
+        # msg.exec_()
+        cmd = "java -jar ./Original_Tool/VideoAnalyzer.jar ./test.txt"
+        os.system(cmd)
 
 
 if __name__ == "__main__":

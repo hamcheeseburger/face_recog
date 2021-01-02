@@ -1,0 +1,2746 @@
+[
+
+    {
+	"list_type":"DashCam",
+	"item_list":
+	[
+		{
+		"item_type": "DashCam",
+		"item_name" : "Inavi FXD700",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "strl", "strh", "strf",    "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" :
+			[	
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":1, "value_type": "INT" },	
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" },		
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Inavi FXD900",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[  	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "strl", "strh", "strf",    "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" : 
+			[	 
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":1, "value_type": "INT" },	
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" },		
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Inavi CLAIR",
+		"file_type" : "AVI",
+		"id_seq" : 	
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" : 
+			[	
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Inavi G100",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",      "strl", "strh", "strf",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" : 
+			[
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" },	
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Inavi E100",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" : 
+			[
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"MP4V", "value_type": "STR" },	
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"MP4V", "value_type": "STR" },	
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				]
+			]
+		},
+
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Pineview CR-200HD",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",    "strl", "strh", "strf", "JUNK",
+				  "JUNK", "INFO", "INAM", "ISFT", "JUNK",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",    
+				  "JUNK", "INFO", "INAM", "ISFT", "JUNK",     "movi", "idx1" 
+				]
+			],
+		"check_value" : 
+			[
+				[  { "seq":0, "id":"INAM", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"CR-200HD", "value_type": "STR" }
+				],
+				[  { "seq":0, "id":"INAM", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"CR-200HD", "value_type": "STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Pineview CR-500HD",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",    "strl", "strh", "strf", "JUNK",
+				  "JUNK", "INFO", "INAM", "ICMT", "ISFT", "JUNK",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",   
+				  "JUNK", "INFO", "INAM", "ICMT", "ISFT", "JUNK",     "movi", "idx1" 
+				]
+			],
+		"check_value" :
+			[
+				[  { "seq":0, "id":"INAM", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"CR-500HD", "value_type": "STR" }
+				],
+				[  { "seq":0, "id":"INAM", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"CR-500HD", "value_type": "STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Pineview Pro",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",    "strl", "strh", "strf", "JUNK",
+				  "JUNK", "INFO", "INAM", "ICMT", "ISFT", "JUNK",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",   
+				  "JUNK", "INFO", "INAM", "ICMT", "ISFT", "JUNK",     "movi", "idx1" 
+				]
+			],
+		"check_value" :
+			[
+				[  { "seq":0, "id":"INAM", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"FINEPRO", "value_type": "STR" }
+				],
+				[  { "seq":0, "id":"INAM", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"FINEPRO", "value_type": "STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Softman R700",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" :
+			[
+				 [ 	
+				    { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				    { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" },	
+				    { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				    { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"WAVE", "value_type": "STR" },	
+				    { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				    { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"EVNT", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" },	
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"EVNT", "value_type": "STR" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Softman R300DL",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",      "strl", "strh", "strf",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" : 
+			[
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" },	
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Softman R320DL",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",      "strl", "strh", "strf",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" : 
+			[
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" },	
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },		
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Lucas LK-5900",
+		"file_type" : "AVI",
+		"id_seq" : 	
+			[	 
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" : 
+			[	
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Lucas LK-7500",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",    "strl", "strh", "strf", "JUNK",
+				  "odml", "JUNK", "movi", "idx1",   "INFO", "ISFT", "ICMT"  
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",   
+				  "JUNK", "INFO", "INAM", "ICMT", "ISFT", "JUNK",     "movi", "idx1" 
+				]
+			],
+		"check_value" :
+			[
+				[  { "seq":0, "id":"ICMT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"Qrontech", "value_type": "STR" }
+				],
+				[  { "seq":0, "id":"ICMT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"Qrontech", "value_type": "STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Mando BN500D",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",      "strl", "strh", "strf",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" : 
+			[
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" },	
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "DIONJames BlackAngel HD",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",      "strl", "strh", "strf",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" : 
+			[
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"Scale", "field_offset":24, "field_size":4, 
+					"value":4, "value_type": "INT" },	
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Urive BlackAngel 2CH HD",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",    "strl", "strh", "strf", "JUNK",
+				  "JUNK", "INFO", "ISFT", "JUNK",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",   
+				  "JUNK", "INFO", "ISFT", "JUNK",     "movi", "idx1"
+				]
+			],
+		"check_value" :
+			[
+				[  { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"Lavf55.0.100", "value_type": "STR" }
+				],
+				[  { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"Lavf55.0.100", "value_type": "STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "I-mercury Sapphire2",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "strl", "strh", "strf",    "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "JUNK", "movi", "idx1" 
+				]
+			],
+		"check_value" :
+			[	
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"WAV2", "value_type": "SRT" },	
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"USER", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"USER", "value_type": "STR" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Livue LB200",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",      "strl", "strh", "strf",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" : 
+			[
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" },	
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Lexview LX200F",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     
+				  "strl", "strh", "strf",     "JUNK", "movi", "idx1" 
+				]
+			],
+		"check_value" :
+			[
+				 [ 	
+				    { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				    { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" },	
+				    { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				    { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"WAVE", "value_type": "STR" },	
+				    { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				    { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"EVNT", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" },	
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"EVNT", "value_type": "STR" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Bullsi Unicorn ETK-B2400",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",    "strl", "strh", "strf", "JUNK",
+				  "JUNK", "INFO", "ISFT", "JUNK",     "movi", "idx1", "[ETH"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",   
+				  "JUNK", "INFO", "ISFT", "JUNK",     "movi", "idx1", "[ETH" 
+				]
+			],
+		"check_value" :
+			[
+				[  { "seq":0, "id":"ISTF", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"Lavf52.50.0", "value_type": "STR" }
+				],
+				[  { "seq":0, "id":"ISTF", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"Lavf52.50.0", "value_type": "STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "JMC BlackCop 200",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	 
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",      "strl", "strh", "strf",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" : 
+			[
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" },	
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Iriver X300",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",      "strl", "strh", "strf",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" : 
+			[
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" },	
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "CleanView CM100",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",      "strl", "strh", "strf",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",     "movi", "idx1" 
+				]
+			],
+		"check_value" : 
+			[
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" },	
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":3, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"AVC1", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"txts", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"XBLB", "value_type": "STR" }		
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Smart-i 3500",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",    "strl", "strh", "strf", "JUNK",
+				  "JUNK", "INFO", "ISFT", "JUNK",     "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",   
+				  "JUNK", "INFO", "ISFT", "JUNK",     "movi", "idx1"
+				]
+			],
+		"check_value" :
+			[
+				[  { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"Lavf55.0.100", "value_type": "STR" }
+				],
+				[  { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"Lavf55.0.100", "value_type": "STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Perfect 300",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf", 
+				  "JUNK", "movi", "idx1",   "SLLT", "SGLT"    
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",   
+				  "JUNK", "movi", "idx1",   "SLLT", "SGLT"
+				]
+			],
+		"check_value" :
+			[
+				[  { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"MJPG", "value_type": "STR" }
+				],
+				[  { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"MJPG", "value_type": "STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Urive Shotgun",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",    "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "JUNK", "movi", "idx1" 
+				]
+			],
+		"check_value" :
+			[	
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" }	
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Dabonda Heart HDA900L",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "strl", "strh", "strf",    "JUNK", "movi", "idx1", "ERRO" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "JUNK", "movi", "idx1", "ERRO"  
+				]
+			],
+		"check_value" :
+			[	
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" },	
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":2, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":0, "value_type": "INT" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" }	
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Garmin dash cam 20",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",    "strl", "strh", "strf", "indx",
+				  "JUNK", "movi", "idx1",     "GR02", "MKLT"    
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",   
+				  "JUNK", "movi", "idx1",     "GR02", "MKLT"
+				]
+			],
+		"check_value" :
+			[
+				[],
+				[]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Toguard Dash Cam",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", 	 "strl", "strh", "strf", 
+				  "JUNK", "movi", "idx1"    
+				]
+			],
+		"check_value" :
+			[
+				[
+				   {"seq":0, "id":"JUNK", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+					"value":"v1020013", "value_type": "STR"}
+				]
+			]
+		},
+
+		
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Dabonda Gallery DBR-200H",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",
+				  "free"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":4, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Sep 05 2012", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Dabonda Gallery DBR-2000H+",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[
+				[ "ftyp", "free", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",
+				  "free"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":4, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Sep 05 2012", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Dabonda Gallery DBR-2000HN",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",
+				  "free"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":4, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Jun 10 2013", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Dabonda New Gallery DBR-2000HN",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[
+				[ "ftyp", "free", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",
+				  "free"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":4, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Jun 10 2013", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Dabonda Brother 300",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[
+				[ "ftyp", "free", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",
+				  "free"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":4, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "May 06 2013", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Real View HD",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[
+				[ "ftyp", "free", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",
+				  "free"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":4, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Apr 19 2012", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Dabonda HDA-100V",
+		"file_type" : "MP4",
+		"id_seq" :
+			[
+			 	[ "ftyp", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",
+				  "free"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2V4PM", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Feb 18 2011", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "PittaSoft Blackvue DR400",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "mdat", "moov", "mvhd",    "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco",    "trak", "tkhd", "mdia", "mdhd", 
+				  "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",     "udta", "meta"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Lavf53.5.0", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"avc1", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands3", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "PittaSoft Blackvue DR350",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "mdat", "moov", "mvhd",     "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stco", "stsc", "stss",    "trak", "tkhd", "mdia", "mdhd", 
+				  "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stco", "stsc"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Pittasoft Co., Ltd.54210006F", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "PittaSoft Blackvue DR400G-HD",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "mdat", "moov", "mvhd",     "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stco", "stsc", "stss",    "trak", "tkhd", "mdia", "mdhd", 
+				  "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stco", "stsc"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Pittasoft Co., Ltd.", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "PittaSoft Blackvue WIFI DR500GW-HD",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "mdat", "moov", "mvhd",     "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stco", "stsc", "stss"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Pittasoft Co., Ltd.", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Urive HD",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",  "ERRO"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":4, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Jun 20 2012", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Urive Single",
+		"file_type" : "MP4",
+		"id_seq" :
+			[
+			 	[ "ftyp", "mdat", "moov", "mvhd", "iods",      "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco", "stss",      "trak", "tkhd", "mdia", "mdhd", 
+				  "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco",    "udat",  "ERRO"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Compatible Brands2", "field_offset":16, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value":"VideoTR", "value_type":"STR" },
+				  { "seq":1, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value":"AudioTR", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Urive Albatross md-7000p",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",  "ERRO"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":4, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Jul 11 2012", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Urive Albatross A2",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "mdat", "moov", "mvhd",      
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",
+				  "udat"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Urive Eagle",
+		"file_type" : "MP4",
+		"id_seq" :
+			[
+			 	[ "ftyp", "mdat", "moov", "mvhd", "iods",      "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco", "stss",      "trak", "tkhd", "mdia", "mdhd", 
+				  "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco",    
+				  "udat", "ERRO"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Compatible Brands2", "field_offset":16, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value":"VideoTR", "value_type":"STR" },
+				  { "seq":1, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value":"AudioTR", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Atom AL-350",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",
+				  "free"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":4, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Jul 11 2012", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Atom Gold AL-390",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",
+				  "free"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":4, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Jul 11 2012", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Hyundai Mobicom IT-8000",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",
+				  "free"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":4, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Feb 27 2012", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Atom K3000",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "mdat", "moov", "mvhd", "iods",      
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "vdinf", "dref", "stbl", "stts", "stsd", "stsz", "stsc", "stco", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stts", "stsd", "stsz", "stss", "stsc", "stco", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stts", "stsd", "stsz", "stss", "stsc", "stco", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stts", "stsd", "stsz", "stsc", "stco" 
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "OKYESBBK", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands3", "field_offset":-1, "field_size":-1, 
+				    "value":"avc1", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Itronics ITB-50",
+		"file_type" : "MP4",
+		"id_seq" :
+			[
+			 	[ "ftyp", "mdat", "moov", "mvhd", "iods",      "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco", "stss",      "trak", "tkhd", "mdia", "mdhd", 
+				  "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value":"VideoTR", "value_type":"STR" },
+				  { "seq":1, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value":"AudioTR", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Itronics ITB-70G",
+		"file_type" : "MP4",
+		"id_seq" :
+			[
+			 	[ "ftyp", "mdat", "moov", "mvhd", "iods",      "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco", "stss",      "trak", "tkhd", "mdia", "mdhd", 
+				  "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco",    "udat",  "ERRO"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Compatible Brands2", "field_offset":16, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value":"VideoTR", "value_type":"STR" },
+				  { "seq":1, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value":"AudioTR", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Iroad 3300CH",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",
+				  "free"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":4, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Jun 10 2013", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Iroad IONE 250V",
+		"file_type" : "MP4",
+		"id_seq" :
+			[
+			 	[ "ftyp", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",
+				  "free"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2V4PM", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Feb 18 2011", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "YooilStar RealView HD",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "free", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsz", "stts", "stsc", "stco",
+				  "free"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA21CVA", "value_type":"STR" },
+				  { "seq":3, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HRA2XBLB", "value_type":"STR" },
+				  { "seq":4, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Sep 05 2012", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "HoneyWell 100WN",
+		"file_type" : "MP4",
+		"id_seq" :
+			[
+			 	[ "ftyp", "mdat", "moov", "mvhd", "iods",      
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco", "stss", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco",   "udat"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Compatible Brands2", "field_offset":16, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Compatible Brands3", "field_offset":20, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Compatible Brands4", "field_offset":24, "field_size":4, 
+				    "value":0, "value_type":"INT" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "I-mercury MD-100",
+		"file_type" : "MP4",
+		"id_seq" :
+			[
+			 	[ "ftyp", "mdat", "moov", "mvhd", "iods",      
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco", "stss", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco",  "_hea"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Compatible Brands2", "field_offset":16, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Compatible Brands3", "field_offset":20, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Compatible Brands4", "field_offset":24, "field_size":4, 
+				    "value":0, "value_type":"INT" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "HMS RoadMemory",
+		"file_type" : "3gp",
+		"id_seq" :
+			[
+			 	[ "ftyp", "free", "free", "free", "mdat", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stsc", "stts", "stsz", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stsc", "stts", "stsz", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stsd", "stsc", "stts", "stsz", "stco"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HERA", "value_type":"STR" },
+				  { "seq":1, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Corelogic", "value_type":"STR" },
+				  { "seq":2, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "HERAS4PM", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp5", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "DashCam",
+		"item_name" : "Oasser Amazing U2",
+		"file_type" : "3gp",
+		"id_seq" :
+			[
+			 	[ "ftyp", "frea", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "udta", "ⓒfmt" "ⓒinf", "gps"
+				]
+			],
+		"check_value": 
+			[
+				[  ]
+			]
+		}
+
+	]
+    },
+
+
+    {
+	"list_type":"CCTV",
+	"item_list":
+	[
+		{
+		"item_type": "CCTV",
+		"item_name" : "EGPIS (NVR Series)",
+		"file_type" : "AVI",
+		"id_seq" : 	
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",     "movi", "idx1" 	],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "movi", "idx1" 				]
+			],
+		"check_value" : 
+			[	
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" },	
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"auds", "value_type": "STR" },
+				   { "seq":1, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"G711", "value_type": "STR" }		
+				],
+				[ 	
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccType", "field_offset":0, "field_size":4, 
+					"value":"vids", "value_type": "STR" },
+				   { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"H264", "value_type": "STR" }		
+				]
+			]
+		 }
+	]
+   },
+
+
+
+   {
+	"list_type":"SmartPhone",
+	"item_list":
+	[
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "Galaxy Note 3",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "smta",  
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"SDLN", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "SEQ_PLAY", "value_type":"STR" },
+				  { "seq":0, "id":"smrd", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "TRUEBLUE", "value_type":"STR" },
+				  { "seq":0, "id":"smta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "saut", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "Galaxy Note 4",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "smta", "meta", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"SDLN", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "SEQ_PLAY", "value_type":"STR" },
+				  { "seq":0, "id":"smrd", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "TRUEBLUE", "value_type":"STR" },
+				  { "seq":0, "id":"smta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "saut", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "mdtacom.android.version", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "Galaxy Note 5",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "smta",  
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco", "sefd"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"SDLN", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "SEQ_PLAY", "value_type":"STR" },
+				  { "seq":0, "id":"smrd", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "TRUEBLUE", "value_type":"STR" },
+				  { "seq":0, "id":"smta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "saut", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "Galaxy Note 8",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	  
+				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "smta", "meta", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco", "sefd"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"SDLN", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "SEQ_PLAY", "value_type":"STR" },
+				  { "seq":0, "id":"smrd", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "TRUEBLUE", "value_type":"STR" },
+				  { "seq":0, "id":"smta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "saut", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "mdtacom.android.version", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "Galaxy S4",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "smta",  
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"SDLN", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "SEQ_PLAY", "value_type":"STR" },
+				  { "seq":0, "id":"smrd", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "TRUEBLUE", "value_type":"STR" },
+				  { "seq":0, "id":"smta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "saut", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "Galaxy S8+",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "smta", "meta", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"SDLN", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "SEQ_PLAY", "value_type":"STR" },
+				  { "seq":0, "id":"smrd", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "TRUEBLUE", "value_type":"STR" },
+				  { "seq":0, "id":"smta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "saut", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "mdtacom.android.version", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "Galaxy S9",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "ⓒxyz", "smta", "meta",  
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"SDLN", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "SEQ_PLAY", "value_type":"STR" },
+				  { "seq":0, "id":"smrd", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "TRUEBLUE", "value_type":"STR" },
+				  { "seq":0, "id":"smta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "saut", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "mdtacom.android.version", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "Galaxy S9+",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "ⓒxyz", "smta", "meta",  
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"SDLN", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "SEQ_PLAY", "value_type":"STR" },
+				  { "seq":0, "id":"smrd", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "TRUEBLUE", "value_type":"STR" },
+				  { "seq":0, "id":"smta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "saut", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "mdtacom.android.version", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "iPhone Series",
+		"file_type" : "MOV",
+		"id_seq" : 	
+			[	 
+				[ "SKIP" ]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "iPhone", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "iPad Series",
+		"file_type" : "MOV",
+		"id_seq" : 	
+			[	 
+				[ "SKIP" ]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "iPad", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "iPhone 6S",
+		"file_type" : "MOV",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "wide", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stss", "sdtp", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "udta", "free", "meta", "free"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "iPhone 6s", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "iPhone 6S+",
+		"file_type" : "MOV",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "wide", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts",  
+				  "ctts", "cslg", "stss", "sdtp", "stsc", "stsz", "stco", "meta"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "iPhone 6s Plus", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "iPhone 7",
+		"file_type" : "MOV",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "cslg", "stss", "sdtp", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "meta", "wide", "mdat"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "iPhone 7", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "iPhone 7+",
+		"file_type" : "MOV",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "wide", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stss", "sdtp", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "meta"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "iPhone 7 Plus", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "iPhone 8",
+		"file_type" : "MOV",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "wide", "mdat", "moov", "mvhd",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "cslg", "stss", "sdtp", "stsc", "stsz", "stco",  
+				  "meta"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "iPhone 8", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "iPhone SE",
+		"file_type" : "MOV",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "wide", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stss", "sdtp", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "meta" 
+				],
+				[ "ftyp", "wide", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stss", "sdtp", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "udta", "free", "meta", "free" 
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "iPhone SE", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "iPhone SE", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "iPhone X",
+		"file_type" : "MOV",
+		"id_seq" : 	
+			[	 
+				[ "ftyp", "wide", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
+				  "sgpd", "sgpd", "sbgp", "stts", "ctts", "cslg", "stss", "sdtp", "stsc", "stsz", "stco",   	
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",
+				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "udta", "free", "meta", "free" 
+				],
+				[ "ftyp", "wide", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "cslg", "stss", "sdtp", "stsc", "stsz", "stco",   	
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "meta", "free" 
+				],
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "cslg", "stss", "sdtp", "stsc", "stsz", "stco",   		  
+				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "meta", "wide", "mdat" 
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "iPhone X", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "iPhone X", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "iPhone X", "value_type":"STR" }
+				]
+			]
+		},
+
+		
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "iPad 2",
+		"file_type" : "MOV",
+		"id_seq" : 	
+			[	 
+				[ "ftyp", "wide", "mdat", "moov", "mvhd",
+				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stss", "sdtp", "stsc", "stsz", "stco",   	
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "meta", "udta", "ⓒmak", "ⓒswr", "ⓒday", "ⓒmod"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "iPad 2", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "LG G4",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "moov", "mvhd", "udta", "auth", "adzc", "adzm", "adze",  
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco",   
+				  "free", "mdat"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"auth", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "LGE", "value_type":"STR" },
+				  { "seq":0, "id":"adzc", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "false", "value_type":"STR" },
+				  { "seq":0, "id":"adze", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "true", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "LG Q6",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "moov", "mvhd", "udta", "auth", "stvd", "meta",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco",   
+				  "free", "mdat"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"auth", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "LGM-X600S", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "LG V30",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "moov", "mvhd", "udta", "auth", "stvd", "vhdr", "meta",  
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco",   
+				  "free", "mdat"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"auth", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "LGM-V300K", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "LG X5",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "moov", "mvhd", "udta", "auth", "stvd", "vhdr", "meta",  
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco",   
+				  "free", "mdat"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"auth", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "LM-X510L", "value_type":"STR" }
+				]
+			]
+		},
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "Nexus 5X",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "moov", "mvhd", "udta", "ⓒxyz", "meta",  
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco", 
+				  "free", "mdat" 
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "mdtacom.android.version", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "Redmi Note5",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	 
+				[ "ftyp", "moov", "mvhd", "meta",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco",   
+				  "free", "mdat"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "mdtacom.android.version", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "HTC Wildfire A3333",
+		"file_type" : "3gp",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "mdat", "moov", "mvhd", "udta", "cprt", "auth", "titl", "dscp", "perf", "gnre", "rtng", "clsf", "kywd", "loci", "albm", "yrrc",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", "stss",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco" 
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brand", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":768, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp6", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "SmartPhone",
+		"item_name" : "LG Optimus G",
+		"file_type" : "k3g",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "mdat", "moov", "mvhd", "udta", "cprt", "auth", "titl", "dscp", "perf", "gnre", "rtng", "clsf", "kywd", "loci", "albm", "yrrc",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", "stss"
+				]
+			],
+		"check_value" : 
+			[	
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brand", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":768, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp4", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"3gp6", "value_type":"STR" }
+				]
+			]
+		}
+
+	]
+
+   }
+
+]
