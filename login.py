@@ -1,3 +1,5 @@
+import sqlite3
+
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5 import QtCore, QtGui, QtWidgets
 from login_gui import UiDialog
@@ -12,7 +14,6 @@ class ExecuteLogin(UiDialog):
 
     def checkPassword(self):
         msg = QMessageBox()
-
         if self.lineEdit_username.text() == 'Username' and self.lineEdit_password.text() == '000':
             msg.setText('Success')
             msg.exec_()
@@ -20,6 +21,36 @@ class ExecuteLogin(UiDialog):
         else:
             msg.setText('Incorrect Password')
             msg.exec_()
+
+        id = self.lineEdit_username
+        password = self.lineEdit_password
+
+        conn = sqlite3.connect("recog_user.db", isolation_level=None)
+        cursor = conn.cursor()
+
+        sql = "select name, hex(image) from user_table where id=? and password=?"
+        cursor.execute(sql, (id, password))
+        row = cursor.fetchone()
+        if row is None:
+            msg.setText('Incorrect Password')
+            return False
+
+        print(row[0])  # 사용자 이름
+        strr = row[1]  # 사용자 사진
+
+        with open('test_file.bin', 'a') as file_bin:
+            file_bin.write(strr)
+
+        path = "db_image/" + row[0] + ".jpg"
+        print(path)
+        with open(path, 'wb') as file:
+            file.write(bytes.fromhex(strr))
+
+        cursor.close()
+        conn.close()
+
+        msg.setText('Success')
+        return True
 
 
 if __name__ == "__main__":
