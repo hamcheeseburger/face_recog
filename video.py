@@ -14,6 +14,7 @@ import os
 # 프레임추출부분, Thread1.run() 함수에 구현
 # 그 외 부분, ExecuteVideo.threadEventHandler()에 구현
 
+
 class Thread1(QThread):
     threadEvent = QtCore.pyqtSignal(int)
 
