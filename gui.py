@@ -4,11 +4,30 @@ import time
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-
+from PyQt5 import QtCore
 import cv2
 import main
 import os
 
+
+class Thread1(QThread):
+    threadEvent = QtCore.pyqtSignal(int)
+
+    def __init__(self, parent, face_recog):
+        super().__init__()
+        self.face_recog = face_recog
+        self.main = parent
+        self.frame_list = []
+        if face_recog is None:
+            print("쓰레드 init: face_recog is None")
+
+    def run(self):
+        print("쓰레드 run")
+        self.frame_list = self.face_recog.get_specific_frame()
+        if len(self.frame_list) > 0:
+            self.threadEvent.emit(1)
+        else:
+            self.threadEvent.emit(0)
 
 class Gui(QWidget):
     def __init__(self):
@@ -18,6 +37,7 @@ class Gui(QWidget):
         self.pauseFlag = False
         self.isCameraDisplayed = False
         self.initUI()
+
 
     def initUI(self):
         # 근무 확인 아이콘 생성
@@ -86,16 +106,9 @@ class Gui(QWidget):
         self.resize(400, 200)
         self.show()
 
-    # 시작버튼 눌렸을 때 실행되는 함수
-    def start_recog(self):
-        self.print_total_working.setText("프레임추출중.. 잠시만 기다려주세요")
-        face_recog = main.FaceRecog()
-        face_recog.get_name(self.et_name.text())
-        print(face_recog.known_face_names)
-        frame_list = face_recog.get_specific_frame()
-
-        # 비디오쓰기를 위한 작업
-        video = face_recog.get_video()
+    @pyqtSlot(int)
+    def threadEventHandler(self, result): # 쓰레드 핸들러
+        video = self.face_recog.get_video()
         fcc = cv2.VideoWriter_fourcc("m", "p", "4", "v")
         out = cv2.VideoWriter(
             "outVideo/output2.mp4", fcc, 3.0, (int(video.get(3)), int(video.get(4)))
@@ -103,10 +116,11 @@ class Gui(QWidget):
 
         start = time.time()
         print(start)
-        if len(frame_list) > 0:
+        print("result 변수 : " + str(result))
+        if result is 1:
             self.print_total_working.setText("근무시간 측정중...")
             while True:
-                frame = face_recog.do_recognition()
+                frame = self.face_recog.do_recognition()
                 # frame이 아니라 jpg byte를 받아와서 이미지 출력
                 # bytes -> QPixmap으로 변환하는 것이 핵심
                 # frame이 null이 아닐 경우에만 윈도우 상 출력
@@ -117,7 +131,7 @@ class Gui(QWidget):
                     # print('frame is not None')
                     # 매개 변수 jpg_bytes -> 비디오 파일 꺼지자 마자 프로그램 강제 종료
                     # 매개 변수 face_recog.get_jpg_bytes() -> 이상 없음
-                    self.my_bytes = QByteArray(face_recog.get_jpg_bytes())
+                    self.my_bytes = QByteArray(self.face_recog.get_jpg_bytes())
                     self.bytes_pixmap = QPixmap()
                     ok = self.bytes_pixmap.loadFromData(self.my_bytes)
                     assert ok
@@ -128,21 +142,21 @@ class Gui(QWidget):
                 out.write(frame)
 
                 # 근무 신호등 교체
-                self.isWorking = face_recog.working
+                self.isWorking = self.face_recog.working
                 if self.isWorking is True:
                     self.change_traffic_light("./templates/Traffic_Lights_green.png")
                 else:
                     self.change_traffic_light("./templates/Traffic_Lights_red.png")
 
-                if self.stopFlag or face_recog.video_end:
+                if self.stopFlag or self.face_recog.video_end:
                     break
                 cv2.waitKey(5) & 0xFF
-                face_recog.notifyIsPaused(self.pauseFlag)
+                self.face_recog.notifyIsPaused(self.pauseFlag)
         end = time.time()
         print(str(end) + ", " + str(end - start))
         cv2.destroyAllWindows()
 
-        self.print_total_working.setText(face_recog.calculate_total())
+        self.print_total_working.setText(self.face_recog.calculate_total())
         print("finish")
         # 종료버튼을 누르고 나서 신호등과 카메라 화면을 초기화
         self.cam_stop()
@@ -153,6 +167,18 @@ class Gui(QWidget):
         self.adjustSize()
 
         out.release()
+
+    # 시작버튼 눌렸을 때 실행되는 함수
+    def start_recog(self):
+        self.print_total_working.setText("프레임추출중.. 잠시만 기다려주세요")
+
+        self.face_recog = main.FaceRecog()
+        self.th = Thread1(self, self.face_recog)
+        self.th.threadEvent.connect(self.threadEventHandler)
+        self.face_recog.get_name(self.et_name.text())
+        print(self.face_recog.known_face_names)
+
+        self.th.start()
 
     def change_traffic_light(self, file_path):
         self.pixmap = QPixmap(self.scriptDir + os.path.sep + file_path)

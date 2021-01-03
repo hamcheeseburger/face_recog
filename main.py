@@ -155,6 +155,7 @@ class FaceRecog():
     def do_recognition(self):
         self.index += 1
         if self.index >= len(self.specific_frame):
+            print("index : " + str(self.index) + ", frame_length : " + str(len(self.specific_frame)))
             return None
 
         self.totalFrame += self.interval
