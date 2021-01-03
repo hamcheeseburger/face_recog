@@ -1,6 +1,5 @@
 import sys
 import time
-
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
@@ -29,6 +28,7 @@ class Thread1(QThread):
         else:
             self.threadEvent.emit(0)
 
+
 class Gui(QWidget):
     def __init__(self):
         super().__init__()
@@ -37,7 +37,6 @@ class Gui(QWidget):
         self.pauseFlag = False
         self.isCameraDisplayed = False
         self.initUI()
-
 
     def initUI(self):
         # 근무 확인 아이콘 생성
@@ -215,3 +214,4 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     ex = Gui()
     sys.exit(app.exec_())
+
