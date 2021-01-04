@@ -69,8 +69,9 @@ class FaceRecog():
 
         # Load sample pictures and learn how to recognize it.
         # knowns 디렉토리에서 사진 파일을 읽습니다. 파일 이름으로부터 사람 이름을 추출합니다.
-        dirname = 'knowns'
+        dirname = 'user_file'
         files = os.listdir(dirname)
+
         for filename in files:
             name, ext = os.path.splitext(filename)
             if ext == '.jpg':
