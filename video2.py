@@ -37,7 +37,7 @@ class Thread1(QThread):
 
 
 class ExecuteVideo(Ui_videoForm):
-    def __init__(self, videoForm):
+    def __init__(self, videoForm, id):
         Ui_videoForm.__init__(self)
         self.setupUi(videoForm)
         self.videoForm = videoForm
@@ -53,6 +53,8 @@ class ExecuteVideo(Ui_videoForm):
         # 비디오 화면 버튼 핸들러
         self.btn_camera.clicked.connect(self.cam_handler)
         # self.btn_cam_stop.clicked.connect(self.cam_stop)
+        self.user_name.setText("사용자 : " + id)
+        self.user_id = id
 
     def threadEventHandler(self, result):  # 쓰레드핸들러(result값 전달 받는 부분)
         # result값이 1이면 정상적으로 프레임 추출이 완료된다는 뜻
@@ -142,7 +144,7 @@ class ExecuteVideo(Ui_videoForm):
         self.face_recog = main.FaceRecog()
         self.th = Thread1(self, self.face_recog)
         self.th.threadEvent.connect(self.threadEventHandler)
-        self.face_recog.get_name("Hyeonji")  # 추후에 수정할 것
+        # self.face_recog.get_name("Hyeonji")  # 추후에 수정할 것
         print(self.face_recog.known_face_names)
 
         # 프레임 추출하는 과정에 대해서만 쓰레드 시작 그 이후 코드는 쓰레드 핸들러에서 실행

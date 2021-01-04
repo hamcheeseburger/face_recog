@@ -3,7 +3,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from login_gui import UiDialog
 from menu import ExecuteMenu
 from loginCheck import CheckUser
-
+from menu2 import ExecuteMenu
 
 class ExecuteLogin(UiDialog):
     def __init__(self, loginDialog):
@@ -37,10 +37,10 @@ class ExecuteLogin(UiDialog):
 
     def menuWindow(self):
         self.loginDialog.close()
-        self.menuWidget = QtWidgets.QWidget()
-        self.menuUi = ExecuteMenu(self.menuWidget, self.lineEdit_username.text())
-        # self.menuWidget.exec_()
-        # self.menuWidget.show()
+        # self.menuWidget = QtWidgets.QWidget()
+        # self.menuUi = ExecuteMenu(self.menuWidget, self.lineEdit_username.text())
+
+        self.menu = ExecuteMenu(self.lineEdit_username.text())
 
 if __name__ == "__main__":
     import sys
