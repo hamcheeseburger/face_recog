@@ -2,6 +2,7 @@ import base64
 import cv2
 import user_info
 import numpy as np
+import pickle
 
 
 class CheckUser:
@@ -21,6 +22,29 @@ class CheckUser:
 
         with open("test_file.bin", "w") as fb:
             fb.write(text.hex())
+
+    def use_pickle_write(self):
+        with open("knowns/Hyeonji.jpg", "rb") as img:
+            img_byte = img.read()
+
+        MyObject = {'id': 'yhj',
+                    'password': '1234',
+                    'name': 'Hyeonji',
+                    'image': img_byte
+                    }
+
+        with open("serialized_file.txt", "wb") as MyFile:
+            pickle.dump(MyObject, MyFile, protocol=3)
+
+    def use_pickle_read(self):
+        with open("serialized_file.txt", "rb") as MyFile:
+            read_obj = pickle.load(MyFile)
+            # print(object['name'])
+            # print(read_obj)
+
+        url = "binary_image/" + read_obj['name'] + ".jpg"
+        with open(url, "wb") as WriteFile:
+            WriteFile.write(read_obj['image'])
 
     def read_binary_file(self):
         with open("test_file.bin", "r") as f:
@@ -85,12 +109,12 @@ class CheckUser:
         # for filename in files:
         #     path = os.path.join(dirname, filename)
         with open("knowns/Hwayoung.jpg", "rb") as single_img:
-            img_b64 = base64.b64encode(single_img.read()) #type : bytes
+            img_b64 = base64.b64encode(single_img.read())  # type : bytes
 
         with open("file.bin", "w") as image_binary_file:
             str = img_b64.hex()
             image_binary_file.write(str)
-######
+        ######
         with open('file.bin') as file:
             data = file.read()
             print(data)
@@ -99,7 +123,6 @@ class CheckUser:
 
         with open("image.jpg", "wb") as image_file:
             image_file.write(data)
-
 
     def convert_binary_to_image(self, dt):
         encoded_img = np.fromstring(dt, dtype=np.uint8)
@@ -163,21 +186,17 @@ if __name__ == "__main__":
 
     # user.test_read_binary()
 
-    user.read_binary_file()
-
-    id = input("사용자 id를 입력하세요 : ")
-    password = input("사용자 password를 입력하세요 : ")
-
-    result = user.match_user(id, password)
-
-    if not result:
-        print("로그인 실패")
-    else:
-        print("로그인 성공")
-        # img = cv2.imread(result.path, cv2.IMREAD_COLOR)
-        # cv2.imshow("img", img)
-        # cv2.waitKey(0)
-        # cv2.destroyAllWindows()
+    # user.read_binary_file()
+    #
+    # id = input("사용자 id를 입력하세요 : ")
+    # password = input("사용자 password를 입력하세요 : ")
+    #
+    # result = user.match_user(id, password)
+    #
+    # if not result:
+    #     print("로그인 실패")
+    # else:
+    #     print("로그인 성공")
 
     # user.convert_txt_to_binary()
 
@@ -185,3 +204,6 @@ if __name__ == "__main__":
     # user.print_user()
 
     # user.read_images()
+
+    user.use_pickle_write()
+    user.use_pickle_read()
