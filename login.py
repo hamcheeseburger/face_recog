@@ -3,6 +3,7 @@ import sqlite3
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5 import QtCore, QtGui, QtWidgets
 from login_gui import UiDialog
+from menuUi import Ui_menuForm
 from menu import ExecuteMenu
 
 
@@ -62,10 +63,12 @@ class ExecuteLogin(UiDialog):
         self.loginDialog.close()
 
     def menuWindow(self):
+        self.loginDialog.close()
         self.menuWidget = QtWidgets.QWidget()
         self.menuUi = ExecuteMenu(self.menuWidget)
         # self.menuWidget.exec_()
         self.menuWidget.show()
+
 
 
 if __name__ == "__main__":
