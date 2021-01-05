@@ -10,7 +10,8 @@ import simpleaudio as sa
 import realTime_main
 
 # 푸쉬용 커밋
-face_recog = realTime_main.FaceRecog()
+global face_recog
+
 
 class Thread(QThread):
     changePixmap = pyqtSignal(QImage)
@@ -18,7 +19,7 @@ class Thread(QThread):
 
     def run(self):
         global face_recog
-        # face_recog = realTime_main.FaceRecog()
+        face_recog = realTime_main.FaceRecog()
         while True:
             frame = face_recog.get_frame()
             if frame is not None:
@@ -64,14 +65,12 @@ class ExecuteRealTime(RealTimeUi):
 
     @pyqtSlot(QImage)
     def changePixmapHandler(self, image):
-        self.videoLabel.setPixmap(QPixmap.fromImage(image))
-        # if self.isCameraDisplayed is True:
-        #     # print('cam_start')
-        #     self.isCameraDisplayed = True
-        #     # 실시간이기 때문에 비디오 크기가 아님 웹캠 사이즈로 고정
-        #     # self.videoLabel.setFixedSize(1280, 720)
-        #     self.videoLabel.setPixmap(QPixmap.fromImage(image))
-        #     self.adjustSize()
+        # self.videoLabel.setPixmap(QPixmap.fromImage(image))
+        if self.isCameraDisplayed is True:
+            # 실시간이기 때문에 비디오 크기가 아님 웹캠 사이즈로 고정
+            self.videoLabel.setFixedSize(640, 480)
+            self.videoLabel.setPixmap(QPixmap.fromImage(image))
+            self.adjustSize()
 
     # 시작버튼 눌렸을 때 실행되는 함수
     def start_recog(self):
