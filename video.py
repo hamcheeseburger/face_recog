@@ -116,10 +116,12 @@ class ExecuteVideo(VideoUi):
         # 종료버튼을 누르고 나서 신호등과 카메라 화면을 초기화
         self.isCameraDisplayed = False
         self.videoLabel.setText("근무 종료")
+        self.videoLabel.setFixedSize(100, 30)
         # self.videoLabel.resize(self.videoLabel.width(), self.videoLabel.height())
         self.change_traffic_light("./templates/Traffic_Lights_init.png")
         # 윈도우 창을 적절하게 자동으로 조정
-        self.setFixedSize(400, 300)
+        # self.setFixedSize(400, 300)
+        self.adjustSize()
         out.release()
 
     # 시작버튼 눌렸을 때 실행되는 함수
@@ -158,7 +160,8 @@ class ExecuteVideo(VideoUi):
             self.isCameraDisplayed = False
             self.videoLabel.setText('화면 중지')
             self.videoLabel.setFixedSize(100, 30)
-            self.setFixedSize(400, 300)
+            # self.setFixedSize(400, 300)
+            self.adjustSize()
         else:
             print('cam_start')
             self.isCameraDisplayed = True
