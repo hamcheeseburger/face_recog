@@ -70,7 +70,7 @@ class VideoUi(QWidget):
 
         self.setWindowTitle("Face Recognition")
         self.move(300, 300)
-        self.resize(400, 200)
+        self.resize(400, 300)
 
 if __name__ == "__main__":
     import sys

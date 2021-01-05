@@ -1,5 +1,4 @@
 from video_ui import VideoUi
-import sys
 import time
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
@@ -119,7 +118,7 @@ class ExecuteVideo(VideoUi):
         # self.videoLabel.resize(self.videoLabel.width(), self.videoLabel.height())
         self.change_traffic_light("./templates/Traffic_Lights_init.png")
         # 윈도우 창을 적절하게 자동으로 조정
-        self.setFixedSize(400, 200)
+        self.setFixedSize(400, 300)
         out.release()
 
     # 시작버튼 눌렸을 때 실행되는 함수
@@ -129,7 +128,6 @@ class ExecuteVideo(VideoUi):
         self.face_recog = main.FaceRecog(self.fileRoute)
         self.th = Thread1(self, self.face_recog)
         self.th.threadEvent.connect(self.threadEventHandler)
-        self.face_recog.get_name("Hyeonji")  # 추후에 수정할 것
         print(self.face_recog.known_face_names)
 
         # 프레임 추출하는 과정에 대해서만 쓰레드 시작 그 이후 코드는 쓰레드 핸들러에서 실행
@@ -159,7 +157,7 @@ class ExecuteVideo(VideoUi):
             self.isCameraDisplayed = False
             self.videoLabel.setText('화면 중지')
             self.videoLabel.setFixedSize(100, 30)
-            self.setFixedSize(400, 200)
+            self.setFixedSize(400, 300)
         else:
             print('cam_start')
             self.isCameraDisplayed = True
