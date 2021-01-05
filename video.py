@@ -7,6 +7,7 @@ from PyQt5 import QtCore, QtWidgets
 import cv2
 import main
 import os
+import simpleaudio as sa
 
 
 # 진행과정 : 시작버튼 클릭 -> 동영상 프레임추출 -> 프레임별로 얼굴인식 후 근무시간 측정
@@ -47,6 +48,13 @@ class ExecuteVideo(VideoUi):
         self.pauseFlag = False
         self.isCameraDisplayed = True
         self.fileRoute = ''
+        self.workingAlarmFlag = False
+        self.slackOffAlarmFlag = False
+        self.alarmMute = False
+        # simpleaudio
+        scriptDir = os.path.dirname(os.path.abspath(__file__))
+        self.workingWav = sa.WaveObject.from_wave_file(scriptDir + os.path.sep + './sound/voice_working.wav')
+        self.notWorkingWav = sa.WaveObject.from_wave_file(scriptDir + os.path.sep + './sound/voice_notWorking.wav')
 
         # 얼굴인식 실행/중지 핸들러 연결
         self.btn_start.clicked.connect(self.start_recog)
@@ -100,8 +108,19 @@ class ExecuteVideo(VideoUi):
                 self.isWorking = self.face_recog.working
                 if self.isWorking is True:
                     self.change_traffic_light("./templates/Traffic_Lights_green.png")
+                    if self.workingAlarmFlag is False and self.alarmMute is False:
+                        # print('working alarm!!')
+                        play_obj = self.workingWav.play()
+                        # play_obj.wait_done()
+                        self.workingAlarmFlag = True
+                        self.slackOffAlarmFlag = False
                 else:
                     self.change_traffic_light("./templates/Traffic_Lights_red.png")
+                    if self.slackOffAlarmFlag is False and self.alarmMute is False:
+                        # print('slackOff alarm!!')
+                        play_obj = self.notWorkingWav.play()
+                        self.slackOffAlarmFlag = True
+                        self.workingAlarmFlag = False
 
                 if self.stopFlag or self.face_recog.video_end:
                     break
@@ -169,7 +188,11 @@ class ExecuteVideo(VideoUi):
             # self.videoLabel.setFixedSize(1280, 720)
 
     def sound_handler(self):
-        print("사운드 핸들러 동작")
+        # print("사운드 핸들러 동작")
+        if self.alarmMute is False:
+            self.alarmMute = True
+        else:
+            self.alarmMute = False
 
     def select_route(self):
         dialog = QFileDialog(self)
