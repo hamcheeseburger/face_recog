@@ -5,6 +5,7 @@ from PyQt5.QtCore import QThread
 from PyQt5.QtWidgets import QMessageBox, QApplication
 from menuUi import Ui_menuForm
 from video import ExecuteVideo
+from realTime import ExecuteRealTime
 import sys
 import subprocess
 
@@ -23,6 +24,7 @@ class ExecuteMenu(Ui_menuForm):
         self.processBtn.clicked.connect(self.callExe)
         self.jarBtn.clicked.connect(self.callJar)
         self.videoBtn.clicked.connect(self.call_video_recog)
+        self.realTimeBtn.clicked.connect(self.call_realTime_recog)
         self.th1 = jar_thread()
         self.userIdLabel.setText(id + "님 환영합니다.")
         self.logoutBtn.clicked.connect(self.logout)
@@ -36,6 +38,12 @@ class ExecuteMenu(Ui_menuForm):
 
     def callJar(self):
         self.th1.start()
+
+    def call_realTime_recog(self):
+        self.realTimeWidget = QtWidgets.QWidget()
+        self.realTimeUi = ExecuteRealTime(self.realTimeWidget)
+
+        self.realTimeWidget.show()
 
     def call_video_recog(self):
         self.videoWidget = QtWidgets.QWidget()
