@@ -261,8 +261,12 @@ class FaceRecog():
         # We are using Motion JPEG, but OpenCV defaults to capture raw images,
         # so we must encode it into JPEG in order to correctly display the
         # video stream.
-        ret, jpg = cv2.imencode('.jpg', frame)
-        return jpg.tobytes()
+        if frame is not None:
+            ret, jpg = cv2.imencode('.jpg', frame)
+            return jpg.tobytes()
+        else:
+            print("FRAME IS NONE")
+            return None
 
     def calculate_total(self):
         # 영상 마지막에 근무자가 인식이 되지 않는다면 태만시간에 대한 계산이 끝나지 않으므로

@@ -85,12 +85,14 @@ class ExecuteVideo(VideoUi):
                     # print('frame is not None')
                     # 매개 변수 jpg_bytes -> 비디오 파일 꺼지자 마자 프로그램 강제 종료
                     # 매개 변수 face_recog.get_jpg_bytes() -> 이상 없음
-                    self.my_bytes = QByteArray(self.face_recog.get_jpg_bytes())
-                    self.bytes_pixmap = QPixmap()
-                    ok = self.bytes_pixmap.loadFromData(self.my_bytes)
-                    assert ok
-                    self.videoLabel.setPixmap(self.bytes_pixmap)
-                    self.videoLabel.setFixedSize(1280, 720)
+                    byte = self.face_recog.get_jpg_bytes()
+                    if byte is not None:
+                        self.my_bytes = QByteArray(byte)
+                        self.bytes_pixmap = QPixmap()
+                        ok = self.bytes_pixmap.loadFromData(self.my_bytes)
+                        assert ok
+                        self.videoLabel.setPixmap(self.bytes_pixmap)
+                        self.videoLabel.setFixedSize(1280, 720)
 
                 # 비디오쓰기
                 out.write(frame)
