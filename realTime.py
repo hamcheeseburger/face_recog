@@ -59,14 +59,14 @@ class ExecuteRealTime(RealTimeUi):
         self.show()
 
     def threadEventHandler(self, result):  # 쓰레드핸들러
-
+        print("쓰레드핸들러")
 
 
     # 시작버튼 눌렸을 때 실행되는 함수
     def start_recog(self):
         self.print_total_working.setText("근무시간 측정 중..")
 
-        self.th = Thread1(self)
+        self.th = Thread(self)
         self.th.threadEvent.connect(self.threadEventHandler)
         print(self.face_recog.known_face_names)
 
