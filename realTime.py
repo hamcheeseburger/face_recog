@@ -10,27 +10,24 @@ import simpleaudio as sa
 import realTime_main
 
 
-class Thread1(QThread):
-    threadEvent = QtCore.pyqtSignal(int)
-
-    def __init__(self, parent, face_recog):
-        super().__init__()
-        self.face_recog = face_recog
-        self.main = parent
-        self.frame = None
-        if face_recog is None:
-            print("쓰레드 init: face_recog is None")
+class Thread(QThread):
+    changePixmap = pyqtSignal(QImage)
+    scaled_size = QSize(640, 480)
 
     def run(self):
-        # 동영상에서 프레임을 추출하는 과정
-        self.frame_list = self.face_recog.get_specific_frame()
+        face_recog = realTime_main.FaceRecog()
+        while True:
+            frame = face_recog.get_frame()
+            if frame is not None:
+                print(frame.shape)
+                rgbImage = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                convertToQtFormat = QImage(rgbImage.data, rgbImage.shape[1], rgbImage.shape[0],
+                                           QImage.Format_RGB888)
+                p = convertToQtFormat.scaled(self.scaled_size, Qt.KeepAspectRatio)
+                self.changePixmap.emit(p)
 
-        # 프레임 추출이 완료되면 핸들러로 결과 전달(성공 : 1, 실패 : 0)
-        if len(self.frame_list) > 0:
-            self.threadEvent.emit(1)
-        else:
-            self.threadEvent.emit(0)
-
+    def scaled(self, scaled_size):
+        self.scaled_size = scaled_size
 
 class ExecuteRealTime(RealTimeUi):
     def __init__(self, id):
@@ -61,15 +58,15 @@ class ExecuteRealTime(RealTimeUi):
 
         self.show()
 
-    def threadEventHandler(self, result):  # 쓰레드핸들러(result값 전달 받는 부분)
+    def threadEventHandler(self, result):  # 쓰레드핸들러
+
 
 
     # 시작버튼 눌렸을 때 실행되는 함수
     def start_recog(self):
         self.print_total_working.setText("근무시간 측정 중..")
 
-        self.face_recog = main.FaceRecog(self.fileRoute)
-        self.th = Thread1(self, self.face_recog)
+        self.th = Thread1(self)
         self.th.threadEvent.connect(self.threadEventHandler)
         print(self.face_recog.known_face_names)
 
