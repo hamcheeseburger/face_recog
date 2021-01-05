@@ -287,6 +287,7 @@ class FaceRecog():
         recogTimeM = math.trunc(recogTime / 60)
         notRecogTime = totalTime - recogTime
 
+
         # 총태만시간이 10초 미만일 수는 없다.
         if notRecogTime < 10:
             recogTime += notRecogTime
