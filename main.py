@@ -277,7 +277,11 @@ class FaceRecog():
             self.notRecogFrame = 0
 
         # 근무시간 계산
-        totalTime = self.time_length
+        # totalTime = self.time_length
+        if self.totalFrame / self.FPS + 1 > self.time_length:
+            totalTime = self.time_length
+        else:
+            totalTime = round(self.totalFrame / self.FPS)
         totalTimeM = math.trunc(totalTime / 60)
         recogTime = round((self.recogFrame / self.totalFrame) * totalTime)
         recogTimeM = math.trunc(recogTime / 60)
