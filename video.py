@@ -45,7 +45,7 @@ class ExecuteVideo(VideoUi):
         self.user_id = id
         self.stopFlag = False
         self.pauseFlag = False
-        self.isCameraDisplayed = False
+        self.isCameraDisplayed = True
         self.fileRoute = ''
 
         # 얼굴인식 실행/중지 핸들러 연결
@@ -81,7 +81,7 @@ class ExecuteVideo(VideoUi):
                 if frame is None:
                     print("<<<<동영상이 종료됨>>>>")
                     break
-                elif self.isCameraDisplayed is True:
+                elif frame is not None and self.isCameraDisplayed is True:
                     # print('frame is not None')
                     # 매개 변수 jpg_bytes -> 비디오 파일 꺼지자 마자 프로그램 강제 종료
                     # 매개 변수 face_recog.get_jpg_bytes() -> 이상 없음
@@ -91,6 +91,7 @@ class ExecuteVideo(VideoUi):
                     assert ok
                     self.videoLabel.setPixmap(self.bytes_pixmap)
                     self.videoLabel.setFixedSize(1280, 720)
+                    self.adjustSize()
 
                 # 비디오쓰기
                 out.write(frame)
