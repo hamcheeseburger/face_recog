@@ -1,7 +1,7 @@
 import os
 
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QHBoxLayout, QVBoxLayout, QLabel, QPushButton, QLineEdit, QWidget, QFileDialog, QTextEdit
+from PyQt5.QtWidgets import QHBoxLayout, QVBoxLayout, QLabel, QPushButton, QWidget
 from PyQt5 import QtWidgets, QtCore
 
 
@@ -26,8 +26,8 @@ class VideoUi(QWidget):
         self.videoLabel = QLabel()
         self.videoLabel.move(280, 120)
 
-        self.btn_cam_start = QPushButton("Camera")
-        self.btn_sound_start = QPushButton("Sound")
+        self.btn_cam_start = QPushButton("Camera off")
+        self.btn_sound_start = QPushButton("Sound off")
 
         self.btn_start = QPushButton("시작")
         self.btn_end = QPushButton("종료")
@@ -37,9 +37,9 @@ class VideoUi(QWidget):
         self.routeLabel = QLabel()
         self.routeLabel.setStyleSheet("color: black;"
                                       "background-color : white;"
-                              "border-style: solid;"
-                              "border-width: 1px;"
-                              "border-color: black;")
+                                      "border-style: solid;"
+                                      "border-width: 1px;"
+                                      "border-color: black;")
         self.btn_select_route = QPushButton('불러오기')
 
         hbox = QHBoxLayout()
@@ -72,8 +72,10 @@ class VideoUi(QWidget):
         self.move(300, 300)
         self.resize(400, 300)
 
+
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     ui = VideoUi()
     sys.exit(app.exec_())
