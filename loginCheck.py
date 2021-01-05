@@ -71,5 +71,7 @@ class CheckUser:
 if __name__ == "__main__":
     user = CheckUser()
 
-    user.user_write_binary('yhj', '1234', 'Hyeonji', 'knowns/Hyeonji.jpg')
+    user.user_write_binary('yoon', '1234', 'yoon', 'knowns/yoon.jpg')
+    user.user_write_binary('현진', '1234', 'Hyeonjin', 'knowns/Hyeonjin.jpg')
+    user.user_write_binary('rhj', '1234', 'Hwayoung', 'knowns/Hwayoung.jpg')
     # user.user_check_binary('yjs', '111')
