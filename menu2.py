@@ -8,6 +8,7 @@ from video import ExecuteVideo
 from gui import Gui
 import subprocess
 from menuUi2 import MenuUi
+from realTime import ExecuteRealTime
 
 class jar_thread(QThread):
     def run(self):
@@ -23,6 +24,7 @@ class ExecuteMenu(MenuUi):
         self.processBtn.clicked.connect(self.callExe)
         self.jarBtn.clicked.connect(self.callJar)
         self.videoBtn.clicked.connect(self.call_video_recog)
+        self.realTimeBtn.clicked.connect(self.call_realTime_recog)
         self.th1 = jar_thread()
         self.userIdLabel.setText(id + "님 환영합니다.")
         self.logoutBtn.clicked.connect(self.logout)
@@ -36,6 +38,9 @@ class ExecuteMenu(MenuUi):
 
     def callJar(self):
         self.th1.start()
+
+    def call_realTime_recog(self):
+        self.realTimeExe = ExecuteRealTime(self.user_id)
 
     def call_video_recog(self):
         # self.videoWidget = QtWidgets.QWidget()

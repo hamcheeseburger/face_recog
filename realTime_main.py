@@ -279,7 +279,7 @@ class FaceRecog():
             font = cv2.FONT_HERSHEY_DUPLEX
             cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
 
-            return frame
+        return frame
 
     def get_jpg_bytes(self):
         frame = self.get_frame()
