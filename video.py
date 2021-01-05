@@ -9,6 +9,7 @@ import cv2
 import main
 import os
 
+
 # 진행과정 : 시작버튼 클릭 -> 동영상 프레임추출 -> 프레임별로 얼굴인식 후 근무시간 측정
 # 시작버튼 클릭시,ExecuteVideo.start_recog() 함수 실행
 # 프레임추출부분, Thread1.run() 함수에 구현
@@ -38,22 +39,26 @@ class Thread1(QThread):
 
 
 class ExecuteVideo(VideoUi):
-    def __init__(self, videoForm):
+    def __init__(self, id):
         VideoUi.__init__(self)
-        self.setup_ui(videoForm)
-        self.videoForm = videoForm
 
+        self.user_name.setText("사용자 : " + id)
+        self.user_id = id
         self.stopFlag = False
         self.pauseFlag = False
         self.isCameraDisplayed = False
+        self.fileRoute = ''
 
         # 얼굴인식 실행/중지 핸들러 연결
         self.btn_start.clicked.connect(self.start_recog)
         self.btn_end.clicked.connect(self.end_recog)
 
         # 비디오 화면 버튼 핸들러
-        self.btn_cam_start.clicked.connect(self.cam_start)
-        self.btn_cam_stop.clicked.connect(self.cam_stop)
+        self.btn_cam_start.clicked.connect(self.cam_handler)
+        self.btn_sound_start.clicked.connect(self.sound_handler)
+        self.btn_select_route.clicked.connect(self.select_route)
+
+        self.show()
 
     def threadEventHandler(self, result):  # 쓰레드핸들러(result값 전달 받는 부분)
         # result값이 1이면 정상적으로 프레임 추출이 완료된다는 뜻
@@ -109,20 +114,19 @@ class ExecuteVideo(VideoUi):
         self.print_total_working.setText(self.face_recog.calculate_total())
         print("finish")
         # 종료버튼을 누르고 나서 신호등과 카메라 화면을 초기화
-        self.cam_stop()
+        self.isCameraDisplayed = False
         self.videoLabel.setText("근무 종료")
         # self.videoLabel.resize(self.videoLabel.width(), self.videoLabel.height())
         self.change_traffic_light("./templates/Traffic_Lights_init.png")
         # 윈도우 창을 적절하게 자동으로 조정
-        self.videoForm.adjustSize()
-
+        self.setFixedSize(400, 200)
         out.release()
 
     # 시작버튼 눌렸을 때 실행되는 함수
     def start_recog(self):
         self.print_total_working.setText("프레임추출중.. 잠시만 기다려주세요")
 
-        self.face_recog = main.FaceRecog()
+        self.face_recog = main.FaceRecog(self.fileRoute)
         self.th = Thread1(self, self.face_recog)
         self.th.threadEvent.connect(self.threadEventHandler)
         self.face_recog.get_name("Hyeonji")  # 추후에 수정할 것
@@ -149,24 +153,41 @@ class ExecuteVideo(VideoUi):
     def end_recog(self):
         self.stopFlag = True
 
-    def cam_stop(self):
-        print("cam_stop")
-        self.isCameraDisplayed = False
-        self.videoLabel.setText("화면 중지")
-        # self.videoLabel.resize(100, 30)
-        self.videoLabel.setFixedSize(100, 30)
-        self.videoForm.adjustSize()
+    def cam_handler(self):
+        if self.isCameraDisplayed is True:
+            print('cam_stop')
+            self.isCameraDisplayed = False
+            self.videoLabel.setText('화면 중지')
+            self.videoLabel.setFixedSize(100, 30)
+            self.setFixedSize(400, 200)
+        else:
+            print('cam_start')
+            self.isCameraDisplayed = True
+            # 실시간이기 때문에 비디오 크기가 아님 웹캠 사이즈로 고정
+            # self.videoLabel.setFixedSize(1280, 720)
 
-    def cam_start(self):
-        print("cam_start")
-        self.isCameraDisplayed = True
+    def sound_handler(self):
+        print("사운드 핸들러 동작")
+
+    def select_route(self):
+        dialog = QFileDialog(self)
+        dialog.setFileMode(QFileDialog.ExistingFile)
+        dialog.setNameFilter(
+            self.tr("Data Files (*.mp4 *.avi);; Images (*.png *.xpm *.jpg *.gif);; All Files(*.*)"))
+        dialog.setViewMode(QFileDialog.Detail)
+        if dialog.exec_():
+            filesRoute = dialog.selectedFiles()
+            self.fileRoute = filesRoute[0]
+            self.routeLabel.setText(self.fileRoute)
 
 
 if __name__ == "__main__":
     import sys
 
     app = QtWidgets.QApplication(sys.argv)
-    videoForm = QtWidgets.QWidget()
-    menuUi = ExecuteVideo(videoForm)
-    videoForm.show()
+    # videoForm = QtWidgets.QWidget()
+    # menuUi = ExecuteVideo(videoForm)
+    # videoForm.show()
+    obj = ExecuteVideo('yhj')
+
     sys.exit(app.exec_())

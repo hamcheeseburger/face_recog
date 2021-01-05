@@ -3,8 +3,9 @@ from gui import Gui
 from PyQt5 import QtCore, QtGui, QtWidgets, Qt
 from PyQt5.QtCore import QThread
 from PyQt5.QtWidgets import QMessageBox, QApplication
-# from video import ExecuteVideo
-from video2 import ExecuteVideo
+from video import ExecuteVideo
+# from video2 import ExecuteVideo
+from gui import Gui
 import subprocess
 from menuUi2 import MenuUi
 
@@ -37,11 +38,12 @@ class ExecuteMenu(MenuUi):
         self.th1.start()
 
     def call_video_recog(self):
-        self.videoWidget = QtWidgets.QWidget()
-        self.videoUi = ExecuteVideo(self.videoWidget, self.user_id)
+        # self.videoWidget = QtWidgets.QWidget()
+        # self.videoUi = ExecuteVideo(self.videoWidget, self.user_id)
+        #
+        # self.videoWidget.show()
 
-        self.videoWidget.show()
-
+        self.videoExe = ExecuteVideo(self.user_id)
     def logout(self):
         dirname = 'user_image'
         files = os.listdir(dirname)
@@ -54,6 +56,7 @@ class ExecuteMenu(MenuUi):
     def closeEvent(self, a0: QtGui.QCloseEvent) -> None:
         print("closed")
         self.logout()
+
 
 if __name__ == "__main__":
     import sys

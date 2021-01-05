@@ -31,7 +31,7 @@ class Thread1(QThread):
 
 class Gui(QWidget):
     def __init__(self):
-        super().__init__()
+        QWidget.__init__(self)
         self.btn_pause = QPushButton("일시중지", self)
         self.stopFlag = False
         self.pauseFlag = False

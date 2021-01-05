@@ -9,16 +9,12 @@ import numpy as np
 import math
 # 파이썬은 B,G,R형태(numpy객체)로 이미지를 표현
 # OpenCV: [B, G, R]
-
-from datetime import datetime, timedelta
-
 import logging
-import timeit
 
 
 class FaceRecog():
 
-    def __init__(self):
+    def __init__(self, route):
         # Using OpenCV to capture from device 0. If you have trouble capturing
         # from a webcam, comment the line below out and use a video file
         # instead.
@@ -33,9 +29,9 @@ class FaceRecog():
         # test_video2.mp4 : 노트북 웹캠 영상
         # test_video3.mp4 : 핸드폰 촬영 영상
         # test_video4.mp4 : 유튜브 영상(2인 이상 출현)
-        route = './video/video_test3.mp4'
-        self.video = cv2.VideoCapture(route)
-        container = (av.open(route)).streams.video[0]
+        self.route = route
+        self.video = cv2.VideoCapture(self.route)
+        container = (av.open(self.route)).streams.video[0]
         self.name = ''
         self.known_face_encodings = []
         self.known_face_names = []
