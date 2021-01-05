@@ -9,7 +9,6 @@ class RealTimeUi(QWidget):
     def __init__(self):
         # 근무 확인 아이콘 생성
         QWidget.__init__(self)
-
         self.scriptDir = os.path.dirname(os.path.abspath(__file__))
         self.imgLabel = QLabel()
         self.traffic_width = 120

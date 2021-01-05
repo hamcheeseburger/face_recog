@@ -56,7 +56,6 @@ class FaceRecog():
         self.totalSlackOffCount = 0
 
         # 로그 파일 생성 준비
-
         # logger instance 생성
         self.logger = logging.getLogger(__name__)
         # handler 생성 (stream, file)
