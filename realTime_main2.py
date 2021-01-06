@@ -270,13 +270,21 @@ class FaceRecog():
         return jpg.tobytes()
 
     def calculate_total(self):
+        if self.slackOffCount != 0 and (timeit.default_timer() - self.slackOffCount) >= 10:
+            # 얼마나 근무 태만을 지속했는지 계산(second)
+            count = timeit.default_timer() - self.slackOffCount
+            self.totalSlackOffCount += count
+            delta = timedelta(seconds=count)
+            calculatedTime = (self.slackOffStartTime + delta).replace(microsecond=0)
+            self.logger.info("근무 태만 시간은 {0} 부터 {1} 까지 입니다.".format(self.slackOffStartTime, calculatedTime))
+
         final_total_working_count = timeit.default_timer() - self.totalWorkingCount
         final_working_count = final_total_working_count - self.totalSlackOffCount
         final_slackoff_count = self.totalSlackOffCount
 
-        final_working_count_int = round(final_working_count);
-        final_slackoff_count_int = round(final_slackoff_count);
-        final_total_working_count_int = final_slackoff_count_int + final_working_count_int;
+        final_working_count_int = round(final_working_count)
+        final_slackoff_count_int = round(final_slackoff_count)
+        final_total_working_count_int = final_slackoff_count_int + final_working_count_int
 
         self.logger.info("\n---------프로그램 종료----------")
         s = "총근무시간 : "
