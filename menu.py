@@ -5,7 +5,7 @@ from PyQt5.QtCore import QThread
 from PyQt5.QtWidgets import QMessageBox, QApplication
 from menuUi import Ui_menuForm
 from video import ExecuteVideo
-from realTime import ExecuteRealTime
+from useless_realTime import ExecuteRealTime
 import sys
 import subprocess
 
