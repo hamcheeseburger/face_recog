@@ -8,6 +8,7 @@ from realTime_ui import RealTimeUi
 import os
 import simpleaudio as sa
 import realTime_main
+import realTime_main2
 
 # 커밋용
 class ExecuteRealTime(RealTimeUi):
