@@ -13,8 +13,8 @@ import logging
 import timeit
 import camera
 
-class FaceRecog():
 
+class FaceRecog():
     def __init__(self):
         # Using OpenCV to capture from device 0. If you have trouble capturing
         # from a webcam, comment the line below out and use a video file
@@ -66,6 +66,18 @@ class FaceRecog():
         # logger instance로 log 찍기
         self.logger.setLevel(level=logging.DEBUG)
 
+        dirname = 'user_image'
+        files = os.listdir(dirname)
+        filename = files[0]
+        name, ext = os.path.splitext(filename)
+        self.name = name
+        if ext == '.jpg':
+            self.known_face_names.append(name)
+            pathname = os.path.join(dirname, filename)
+            img = face_recognition.load_image_file(pathname)  # 이미지파일 가져오는 코드..
+            face_encoding = face_recognition.face_encodings(img)[0]
+            self.known_face_encodings.append(face_encoding)
+
         # Load sample pictures and learn how to recognize it.
         # knowns 디렉토리에서 사진 파일을 읽습니다. 파일 이름으로부터 사람 이름을 추출합니다.
         dirname = 'knowns'
@@ -94,6 +106,14 @@ class FaceRecog():
         self.process_this_frame = True
         self.video_end = False
 
+    @property
+    def working(self):
+        return self._working
+
+    @working.setter
+    def working(self, value):
+        self._working = value
+
     def __del__(self):
         del self.video
 
@@ -103,6 +123,9 @@ class FaceRecog():
 
     def notifyIsPaused(self, paused):
         self.paused = paused
+
+    def close(self):
+        self.video.end_camera()
 
     def get_frame(self):
         # 카메라 버전으로 테스트

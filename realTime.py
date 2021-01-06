@@ -2,13 +2,14 @@ import time
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from PyQt5 import QtCore, QtWidgets
+from PyQt5 import QtCore, QtWidgets, QtGui
 import cv2
 from realTime_ui import RealTimeUi
 import os
 import simpleaudio as sa
 import realTime_main
 import realTime_main2
+
 
 # 커밋용
 class ExecuteRealTime(RealTimeUi):
@@ -17,13 +18,9 @@ class ExecuteRealTime(RealTimeUi):
 
         self.user_name.setText("사용자 : " + id)
         self.user_id = id
-        self.stopFlag = False
-        self.pauseFlag = False
-        self.isCameraDisplayed = True
-        # self.fileRoute = ''
-        self.workingAlarmFlag = False
-        self.slackOffAlarmFlag = False
-        self.alarmMute = False
+
+        self.init_variable()
+
         # simpleaudio
         scriptDir = os.path.dirname(os.path.abspath(__file__))
         self.workingWav = sa.WaveObject.from_wave_file(scriptDir + os.path.sep + './sound/voice_working.wav')
@@ -46,11 +43,18 @@ class ExecuteRealTime(RealTimeUi):
 
         self.show()
 
-
+    def init_variable(self):
+        self.stopFlag = False
+        self.pauseFlag = False
+        self.isCameraDisplayed = True
+        self.workingAlarmFlag = False
+        self.slackOffAlarmFlag = False
+        self.alarmMute = False
 
     # 시작버튼 눌렸을 때 실행되는 함수
     def start_recog(self):
-        self.face_recog = realTime_main.FaceRecog()
+        self.init_variable()
+        self.face_recog = realTime_main2.FaceRecog()
         self.print_total_working.setText("근무시간 측정중..")
         self.btn_start.setDisabled(True)
 
@@ -119,7 +123,7 @@ class ExecuteRealTime(RealTimeUi):
         # self.videoLabel.resize(self.videoLabel.width(), self.videoLabel.height())
         self.change_traffic_light("./templates/Traffic_Lights_init.png")
         # 윈도우 창을 적절하게 자동으로 조정
-        self.setFixedSize(400, 200)
+        self.setFixedSize(400, 300)
         self.btn_sound_start.setDisabled(True)
         self.btn_cam_start.setDisabled(True)
         self.btn_end.setDisabled(True)
@@ -144,6 +148,7 @@ class ExecuteRealTime(RealTimeUi):
     # 종료버튼 눌렸을 때 실행되는 함수
     def end_recog(self):
         self.stopFlag = True
+        self.face_recog.close()
 
     def cam_handler(self):
         if self.isCameraDisplayed is True:
@@ -170,6 +175,9 @@ class ExecuteRealTime(RealTimeUi):
         else:
             self.btn_sound_start.setText('Sound Off')
             self.alarmMute = False
+
+    def closeEvent(self, a0: QtGui.QCloseEvent) -> None:
+        self.end_recog()
 
 
 if __name__ == "__main__":

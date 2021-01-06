@@ -44,13 +44,9 @@ class ExecuteVideo(VideoUi):
 
         self.user_name.setText("사용자 : " + id)
         self.user_id = id
-        self.stopFlag = False
-        self.pauseFlag = False
-        self.isCameraDisplayed = True
         self.fileRoute = ''
-        self.workingAlarmFlag = False
-        self.slackOffAlarmFlag = False
-        self.alarmMute = False
+        self.init_variable()
+
         # simpleaudio
         scriptDir = os.path.dirname(os.path.abspath(__file__))
         self.workingWav = sa.WaveObject.from_wave_file(scriptDir + os.path.sep + './sound/voice_working.wav')
@@ -72,6 +68,14 @@ class ExecuteVideo(VideoUi):
         self.btn_end.setDisabled(True)
 
         self.show()
+
+    def init_variable(self):
+        self.stopFlag = False
+        self.pauseFlag = False
+        self.isCameraDisplayed = True
+        self.workingAlarmFlag = False
+        self.slackOffAlarmFlag = False
+        self.alarmMute = False
 
     def threadEventHandler(self, result):  # 쓰레드핸들러(result값 전달 받는 부분)
         # result값이 1이면 정상적으로 프레임 추출이 완료된다는 뜻
@@ -161,6 +165,7 @@ class ExecuteVideo(VideoUi):
 
     # 시작버튼 눌렸을 때 실행되는 함수
     def start_recog(self):
+        self.init_variable()
         self.print_total_working.setText("프레임추출중.. 잠시만 기다려주세요")
         self.btn_start.setDisabled(True)
 

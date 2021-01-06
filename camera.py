@@ -22,6 +22,8 @@ class VideoCamera(object):
         ret, frame = self.video.read()
         return frame
 
+    def end_camera(self):
+        self.video.release()
 
 # 어떤 스크립트 파일이든 파이썬 인터프리터가 최초로 실행한 스크립트 파일의 __name__에는
 # '__main__'이 들어갑니다.
