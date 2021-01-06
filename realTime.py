@@ -9,7 +9,7 @@ import os
 import simpleaudio as sa
 import realTime_main
 
-
+# 커밋용
 class ExecuteRealTime(RealTimeUi):
     def __init__(self, id):
         RealTimeUi.__init__(self)
