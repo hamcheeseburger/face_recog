@@ -40,10 +40,10 @@ class ExecuteMenu(Ui_menuForm):
         self.th1.start()
 
     def call_realTime_recog(self):
-        self.realTimeWidget = QtWidgets.QWidget()
-        self.realTimeUi = ExecuteRealTime(self.realTimeWidget)
+        realTimeWidget = QtWidgets.QWidget()
+        realTimeUi = ExecuteRealTime(self.realTimeWidget)
 
-        self.realTimeWidget.show()
+        realTimeWidget.show()
 
     def call_video_recog(self):
         self.videoWidget = QtWidgets.QWidget()

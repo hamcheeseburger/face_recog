@@ -7,8 +7,7 @@ import cv2
 from realTime_ui import RealTimeUi
 import os
 import simpleaudio as sa
-import realTime_main
-import realTime_main2
+from realTime_main2 import FaceRecog
 
 
 # 커밋용
@@ -18,7 +17,7 @@ class ExecuteRealTime(RealTimeUi):
 
         self.user_name.setText("사용자 : " + id)
         self.user_id = id
-
+        self.face_recog = None
         self.init_variable()
 
         # simpleaudio
@@ -43,6 +42,9 @@ class ExecuteRealTime(RealTimeUi):
 
         self.show()
 
+    def __del__(self):
+        print("realTime 객체 삭제")
+
     def init_variable(self):
         self.stopFlag = False
         self.pauseFlag = False
@@ -54,7 +56,7 @@ class ExecuteRealTime(RealTimeUi):
     # 시작버튼 눌렸을 때 실행되는 함수
     def start_recog(self):
         self.init_variable()
-        self.face_recog = realTime_main2.FaceRecog()
+        self.face_recog = FaceRecog()
         self.print_total_working.setText("근무시간 측정중..")
         self.btn_start.setDisabled(True)
 
@@ -129,7 +131,6 @@ class ExecuteRealTime(RealTimeUi):
         self.btn_end.setDisabled(True)
         self.btn_start.setDisabled(False)
         self.adjustSize()
-        # self.resize(400, 200)
 
     def change_traffic_light(self, file_path):
         self.pixmap = QPixmap(self.scriptDir + os.path.sep + file_path)
@@ -177,7 +178,9 @@ class ExecuteRealTime(RealTimeUi):
             self.alarmMute = False
 
     def closeEvent(self, a0: QtGui.QCloseEvent) -> None:
-        self.end_recog()
+        if self.face_recog is not None:
+            self.end_recog()
+            del self.face_recog
 
 
 if __name__ == "__main__":

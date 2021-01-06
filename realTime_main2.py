@@ -13,7 +13,6 @@ import logging
 import timeit
 import camera
 
-
 class FaceRecog():
     def __init__(self):
         # Using OpenCV to capture from device 0. If you have trouble capturing
@@ -55,16 +54,7 @@ class FaceRecog():
 
         # 로그 파일 생성 준비
 
-        # logger instance 생성
-        self.logger = logging.getLogger(__name__)
-        # handler 생성 (stream, file)
-        streamHandler = logging.StreamHandler()
-        fileHandler = logging.FileHandler('./server.log')
-        # logger instance에 handler 설정
-        self.logger.addHandler(streamHandler)
-        self.logger.addHandler(fileHandler)
-        # logger instance로 log 찍기
-        self.logger.setLevel(level=logging.DEBUG)
+        self.logger = self.get_logger()
 
         dirname = 'user_image'
         files = os.listdir(dirname)
@@ -106,6 +96,22 @@ class FaceRecog():
         self.process_this_frame = True
         self.video_end = False
 
+    def get_logger(self):
+        # logger instance 생성
+        logger = logging.getLogger(__name__)
+        # handler 생성 (stream, file)
+        if len(logger.handlers) > 0:
+            return logger
+
+        streamHandler = logging.StreamHandler()
+        fileHandler = logging.FileHandler('./server.log')
+        # logger instance에 handler 설정
+        logger.addHandler(streamHandler)
+        logger.addHandler(fileHandler)
+        # logger instance로 log 찍기
+        logger.setLevel(level=logging.DEBUG)
+
+        return logger
     @property
     def working(self):
         return self._working
@@ -116,6 +122,7 @@ class FaceRecog():
 
     def __del__(self):
         del self.video
+        print("face_recog 객체 소멸")
 
     def get_name(self, name):
         self.name = name
