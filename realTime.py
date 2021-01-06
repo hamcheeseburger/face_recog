@@ -10,7 +10,7 @@ import simpleaudio as sa
 import realTime_main
 import realTime_main2
 
-# 커밋용
+# 푸쉬..
 class ExecuteRealTime(RealTimeUi):
     def __init__(self, id):
         RealTimeUi.__init__(self)
