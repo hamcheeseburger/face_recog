@@ -74,4 +74,5 @@ if __name__ == "__main__":
     user.user_write_binary('yoon', '1234', 'yoon', 'knowns/yoon.jpg')
     user.user_write_binary('현진', '1234', 'Hyeonjin', 'knowns/Hyeonjin.jpg')
     user.user_write_binary('rhj', '1234', 'Hwayoung', 'knowns/Hwayoung.jpg')
+    user.user_write_binary('sji', '1234', 'Jaeim', 'knowns/Jaeim.jpg')
     # user.user_check_binary('yjs', '111')
