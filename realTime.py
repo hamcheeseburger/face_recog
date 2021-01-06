@@ -23,7 +23,7 @@ class Thread(QThread):
         while True:
             frame = face_recog.get_frame()
             if frame is not None:
-                print(frame.shape)
+                # print(frame.shape)
                 rgbImage = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                 convertToQtFormat = QImage(rgbImage.data, rgbImage.shape[1], rgbImage.shape[0],
                                            QImage.Format_RGB888)
