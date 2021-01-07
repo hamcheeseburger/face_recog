@@ -20,20 +20,20 @@ class ExecuteLogin(UiDialog):
         password = self.lineEdit_password.text()
 
         # db로 로그인
-        if self.check_user.user_check_db(id, password):
-            self.menuWindow()
-            self.loginDialog.close()
-        else:
-            msg.setText('Incorrect Password')
-            msg.exec_()
-
-        # 바이너리로 로그인
-        # if self.check_user.user_check_binary(id, password):
+        # if self.check_user.user_check_db(id, password):
         #     self.menuWindow()
         #     self.loginDialog.close()
         # else:
         #     msg.setText('Incorrect Password')
         #     msg.exec_()
+
+        # 바이너리로 로그인
+        if self.check_user.user_check_binary(id, password):
+            self.menuWindow()
+            self.loginDialog.close()
+        else:
+            msg.setText('Incorrect Password')
+            msg.exec_()
 
     def menuWindow(self):
         self.loginDialog.close()
