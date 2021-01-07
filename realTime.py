@@ -125,7 +125,7 @@ class ExecuteRealTime(RealTimeUi):
         # self.videoLabel.resize(self.videoLabel.width(), self.videoLabel.height())
         self.change_traffic_light("./templates/Traffic_Lights_init.png")
         # 윈도우 창을 적절하게 자동으로 조정
-        self.setFixedSize(400, 300)
+        # self.setFixedSize(400, 300)
         self.btn_sound_start.setDisabled(True)
         self.btn_cam_start.setDisabled(True)
         self.btn_end.setDisabled(True)
@@ -158,7 +158,7 @@ class ExecuteRealTime(RealTimeUi):
             self.isCameraDisplayed = False
             self.videoLabel.setText('화면 중지')
             self.videoLabel.setFixedSize(100, 30)
-            self.setFixedSize(400, 200)
+            # self.setFixedSize(400, 200)
             self.adjustSize()
             # self.resize(400, 200)
         else:
