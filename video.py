@@ -75,7 +75,7 @@ class ExecuteVideo(VideoUi):
         self.isCameraDisplayed = True
         self.workingAlarmFlag = False
         self.slackOffAlarmFlag = False
-        self.alarmMute = False
+        self.alarmMute = True
 
     def threadEventHandler(self, result):  # 쓰레드핸들러(result값 전달 받는 부분)
         # result값이 1이면 정상적으로 프레임 추출이 완료된다는 뜻
