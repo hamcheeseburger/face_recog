@@ -5,7 +5,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import QtCore
 import cv2
-from videoCheck import main
+from videoCheck import videomain
 import os
 
 
@@ -171,7 +171,7 @@ class Gui(QWidget):
     def start_recog(self):
         self.print_total_working.setText("프레임추출중.. 잠시만 기다려주세요")
 
-        self.face_recog = main.FaceRecog()
+        self.face_recog = videomain.FaceRecog()
         self.th = Thread1(self, self.face_recog)
         self.th.threadEvent.connect(self.threadEventHandler)
         self.face_recog.get_name(self.et_name.text())

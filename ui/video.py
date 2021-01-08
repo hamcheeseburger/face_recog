@@ -1,11 +1,11 @@
-from ui.video_ui import VideoUi
+from ui.videoui import VideoUi
 import time
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import QtCore, QtWidgets
 import cv2
-from videoCheck import main
+from videoCheck import videomain
 import os
 import simpleaudio as sa
 
@@ -171,7 +171,7 @@ class ExecuteVideo(VideoUi):
         self.btn_start.setDisabled(True)
 
         print(self.fileRoute)
-        self.face_recog = main.FaceRecog(self.fileRoute)
+        self.face_recog = videomain.FaceRecog(self.fileRoute)
         self.th = Thread1(self, self.face_recog)
         self.th.threadEvent.connect(self.threadEventHandler)
         print(self.face_recog.known_face_names)

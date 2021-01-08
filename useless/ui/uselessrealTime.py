@@ -2,10 +2,10 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import QtWidgets
 import cv2
-from ui.realTime_ui import RealTimeUi
+from ui.realtimeui import RealTimeUi
 import os
 import simpleaudio as sa
-from useless.realTime import useless_realTime_main
+from useless.realTime import uselessrealTimemain
 
 # 푸쉬용 커밋
 global face_recog
@@ -19,7 +19,7 @@ class Thread(QThread):
     def __init__(self, parent):
         super().__init__(parent)
         global face_recog
-        face_recog = useless_realTime_main.FaceRecog()
+        face_recog = uselessrealTimemain.FaceRecog()
 
     def run(self):
         while True:

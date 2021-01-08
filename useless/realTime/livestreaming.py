@@ -1,7 +1,7 @@
-# live_streaming.py
+# livestreaming.py
 
 from flask import Flask, render_template, Response
-from videoCheck import main
+from videoCheck import videomain
 
 app = Flask(__name__)
 
@@ -17,7 +17,7 @@ def gen(fr):
 
 @app.route('/video_feed')
 def video_feed():
-    return Response(gen(main.FaceRecog()),
+    return Response(gen(videomain.FaceRecog()),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':

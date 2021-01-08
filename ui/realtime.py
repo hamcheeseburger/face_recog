@@ -3,10 +3,10 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import QtWidgets, QtGui
 import cv2
-from ui.realTime_ui import RealTimeUi
+from ui.realtimeui import RealTimeUi
 import os
 import simpleaudio as sa
-from realTimeCheck.realTime_main2 import FaceRecog
+from realTimeCheck.realTimemain import FaceRecog
 
 
 # 커밋용

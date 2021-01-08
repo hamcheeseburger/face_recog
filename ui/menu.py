@@ -4,8 +4,9 @@ from PyQt5.QtCore import QThread
 from ui.video import ExecuteVideo
 # from video2 import ExecuteVideo
 import subprocess
-from ui.menuUi2 import MenuUi
-from ui.realTime import ExecuteRealTime
+from ui.menuui import MenuUi
+from ui.realtime import ExecuteRealTime
+
 
 class jar_thread(QThread):
     def run(self):

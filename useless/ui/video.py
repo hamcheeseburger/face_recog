@@ -1,10 +1,10 @@
-from useless.ui.videoUi import Ui_videoForm
+from useless.ui.videoui import Ui_videoForm
 import time
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import QtCore, QtWidgets
 import cv2
-from videoCheck import main
+from videoCheck import videomain
 import os
 
 # 수정된 videoUi.py를 이용함
@@ -139,7 +139,7 @@ class ExecuteVideo(Ui_videoForm):
     def start_recog(self):
         self.print_total_working.setText("프레임추출중.. 잠시만 기다려주세요")
 
-        self.face_recog = main.FaceRecog()
+        self.face_recog = videomain.FaceRecog()
         self.th = Thread1(self, self.face_recog)
         self.th.threadEvent.connect(self.threadEventHandler)
         # self.face_recog.get_name("Hyeonji")  # 추후에 수정할 것

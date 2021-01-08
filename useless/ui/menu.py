@@ -1,9 +1,9 @@
 import os
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QThread
-from useless.ui.menuUi import Ui_menuForm
+from useless.ui.menuui import Ui_menuForm
 from ui.video import ExecuteVideo
-from useless.ui.useless_realTime import ExecuteRealTime
+from useless.ui.uselessrealTime import ExecuteRealTime
 import subprocess
 
 
