@@ -42,6 +42,7 @@ class ExecuteLogin(UiDialog):
 
         self.menu = ExecuteMenu(self.lineEdit_username.text())
 
+
 if __name__ == "__main__":
     import sys
 

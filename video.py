@@ -9,6 +9,7 @@ import main
 import os
 import simpleaudio as sa
 
+# ui기능
 
 # 진행과정 : 시작버튼 클릭 -> 동영상 프레임추출 -> 프레임별로 얼굴인식 후 근무시간 측정
 # 시작버튼 클릭시,ExecuteVideo.start_recog() 함수 실행

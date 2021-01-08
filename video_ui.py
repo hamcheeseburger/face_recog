@@ -4,6 +4,7 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QHBoxLayout, QVBoxLayout, QLabel, QPushButton, QWidget
 from PyQt5 import QtWidgets, QtCore
 
+# ui 디자인
 
 class VideoUi(QWidget):
     def __init__(self):
