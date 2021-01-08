@@ -26,7 +26,7 @@ class RealTimeUi(QWidget):
         self.videoLabel.move(280, 120)
 
         self.btn_cam_start = QPushButton("Camera")
-        self.btn_sound_start = QPushButton("../sound")
+        self.btn_sound_start = QPushButton("sound")
 
         self.btn_start = QPushButton("시작")
         self.btn_end = QPushButton("종료")
