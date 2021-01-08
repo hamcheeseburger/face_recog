@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5 import QtWidgets
-from login.logincheck import CheckUser
+# import login.logincheck
+from login import logincheck
 from ui.logingui import UiDialog
 from ui.menu import ExecuteMenu
 
@@ -11,7 +12,7 @@ class ExecuteLogin(UiDialog):
         UiDialog.__init__(self)
         self.setupUi(self.loginDialog)
 
-        self.check_user = CheckUser()
+        self.check_user = logincheck.CheckUser()
         self.btn_login.clicked.connect(self.checkPassword)
 
     def checkPassword(self):
