@@ -1,14 +1,11 @@
 import os
-from gui import Gui
-from PyQt5 import QtCore, QtGui, QtWidgets, Qt
+from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtCore import QThread
-from PyQt5.QtWidgets import QMessageBox, QApplication
-from video import ExecuteVideo
+from ui.video import ExecuteVideo
 # from video2 import ExecuteVideo
-from gui import Gui
 import subprocess
-from menuUi2 import MenuUi
-from realTime import ExecuteRealTime
+from ui.menuUi2 import MenuUi
+from ui.realTime import ExecuteRealTime
 
 class jar_thread(QThread):
     def run(self):
@@ -33,7 +30,7 @@ class ExecuteMenu(MenuUi):
 
     def callExe(self):
         # 윈도우 명령어는 쉘안에 들어있으므로 shell=Ture여야 윈도우 쉘 명령어 사용ok
-        fileName = './Original_Tool/VideoAnalyzer.exe'
+        fileName = '../Original_Tool/VideoAnalyzer.exe'
         subprocess.run(["start", fileName], shell=True)
 
     def callJar(self):

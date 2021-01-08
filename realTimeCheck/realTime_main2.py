@@ -11,7 +11,8 @@ from datetime import datetime, timedelta
 
 import logging
 import timeit
-import camera
+from realTimeCheck import camera
+
 
 class FaceRecog():
     def __init__(self):
@@ -104,7 +105,7 @@ class FaceRecog():
             return logger
 
         streamHandler = logging.StreamHandler()
-        fileHandler = logging.FileHandler('./server.log')
+        fileHandler = logging.FileHandler('../server.log')
         # logger instance에 handler 설정
         logger.addHandler(streamHandler)
         logger.addHandler(fileHandler)

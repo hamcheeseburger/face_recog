@@ -1,7 +1,7 @@
 # live_streaming.py
 
 from flask import Flask, render_template, Response
-import main
+from videoCheck import main
 
 app = Flask(__name__)
 

@@ -9,11 +9,8 @@ import numpy as np
 # 파이썬은 B,G,R형태(numpy객체)로 이미지를 표현
 # OpenCV: [B, G, R]
 
-from datetime import datetime, timedelta
-
 import logging
-import camera
-import timeit
+from realTimeCheck import camera
 
 
 class FaceRecog():
@@ -62,7 +59,7 @@ class FaceRecog():
         self.logger = logging.getLogger(__name__)
         # handler 생성 (stream, file)
         streamHandler = logging.StreamHandler()
-        fileHandler = logging.FileHandler('./server.log')
+        fileHandler = logging.FileHandler('../../server.log')
         # logger instance에 handler 설정
         self.logger.addHandler(streamHandler)
         self.logger.addHandler(fileHandler)

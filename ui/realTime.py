@@ -1,13 +1,12 @@
 import time
-from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from PyQt5 import QtCore, QtWidgets, QtGui
+from PyQt5 import QtWidgets, QtGui
 import cv2
-from realTime_ui import RealTimeUi
+from ui.realTime_ui import RealTimeUi
 import os
 import simpleaudio as sa
-from realTime_main2 import FaceRecog
+from realTimeCheck.realTime_main2 import FaceRecog
 
 
 # 커밋용
@@ -93,7 +92,7 @@ class ExecuteRealTime(RealTimeUi):
             # 근무 신호등 교체
             self.isWorking = self.face_recog.working
             if self.isWorking is True:
-                self.change_traffic_light("./templates/Traffic_Lights_green.png")
+                self.change_traffic_light("../templates/Traffic_Lights_green.png")
                 if self.workingAlarmFlag is False and self.alarmMute is False:
                     # print('working alarm!!')
                     play_obj = self.workingWav.play()
@@ -101,7 +100,7 @@ class ExecuteRealTime(RealTimeUi):
                     self.workingAlarmFlag = True
                     self.slackOffAlarmFlag = False
             else:
-                self.change_traffic_light("./templates/Traffic_Lights_red.png")
+                self.change_traffic_light("../templates/Traffic_Lights_red.png")
                 if self.slackOffAlarmFlag is False and self.alarmMute is False:
                     # print('slackOff alarm!!')
                     play_obj = self.notWorkingWav.play()
@@ -123,7 +122,7 @@ class ExecuteRealTime(RealTimeUi):
         self.videoLabel.setText("근무종료")
         self.videoLabel.setFixedSize(100, 30)
         # self.videoLabel.resize(self.videoLabel.width(), self.videoLabel.height())
-        self.change_traffic_light("./templates/Traffic_Lights_init.png")
+        self.change_traffic_light("../templates/Traffic_Lights_init.png")
         # 윈도우 창을 적절하게 자동으로 조정
         # self.setFixedSize(400, 300)
         self.btn_sound_start.setDisabled(True)
