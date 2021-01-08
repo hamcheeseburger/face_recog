@@ -1,8 +1,8 @@
 from PyQt5.QtWidgets import QMessageBox
-from PyQt5 import QtCore, QtGui, QtWidgets
-from login_gui import UiDialog
-from loginCheck import CheckUser
-from menu2 import ExecuteMenu
+from PyQt5 import QtWidgets
+from ui.login_gui import UiDialog
+from login.loginCheck import CheckUser
+from ui.menu2 import ExecuteMenu
 
 
 class ExecuteLogin(UiDialog):

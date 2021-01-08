@@ -1,7 +1,7 @@
 # face_recog.py
 # 얼굴인식 기능에 초점을 맞춘 wrapper 패키지
 import time
-
+import av
 import face_recognition
 import cv2
 import os
@@ -9,16 +9,12 @@ import numpy as np
 import math
 # 파이썬은 B,G,R형태(numpy객체)로 이미지를 표현
 # OpenCV: [B, G, R]
-
-from datetime import datetime, timedelta
-
 import logging
-import timeit
 
 
 class FaceRecog():
 
-    def __init__(self):
+    def __init__(self, route):
         # Using OpenCV to capture from device 0. If you have trouble capturing
         # from a webcam, comment the line below out and use a video file
         # instead.
@@ -33,9 +29,9 @@ class FaceRecog():
         # test_video2.mp4 : 노트북 웹캠 영상
         # test_video3.mp4 : 핸드폰 촬영 영상
         # test_video4.mp4 : 유튜브 영상(2인 이상 출현)
-
-        self.video = cv2.VideoCapture('./video/test_video5.mp4')
-
+        self.route = route
+        self.video = cv2.VideoCapture(self.route)
+        container = (av.open(self.route)).streams.video[0]
         self.name = ''
         self.known_face_encodings = []
         self.known_face_names = []
@@ -60,7 +56,7 @@ class FaceRecog():
         self.logger = logging.getLogger(__name__)
         # handler 생성 (stream, file)
         streamHandler = logging.StreamHandler()
-        fileHandler = logging.FileHandler('./server.log')
+        fileHandler = logging.FileHandler('../server.log')
         # logger instance에 handler 설정
         self.logger.addHandler(streamHandler)
         self.logger.addHandler(fileHandler)
@@ -69,6 +65,18 @@ class FaceRecog():
 
         # Load sample pictures and learn how to recognize it.
         # knowns 디렉토리에서 사진 파일을 읽습니다. 파일 이름으로부터 사람 이름을 추출합니다.
+        dirname = 'user_image'
+        files = os.listdir(dirname)
+        filename = files[0]
+        name, ext = os.path.splitext(filename)
+        self.name = name
+        if ext == '.jpg':
+            self.known_face_names.append(name)
+            pathname = os.path.join(dirname, filename)
+            img = face_recognition.load_image_file(pathname)  # 이미지파일 가져오는 코드..
+            face_encoding = face_recognition.face_encodings(img)[0]
+            self.known_face_encodings.append(face_encoding)
+
         dirname = 'knowns'
         files = os.listdir(dirname)
         for filename in files:
@@ -83,7 +91,7 @@ class FaceRecog():
                 # %EC%9D%80-%EC%A6%90%EA%B2%81%EB%8B%A4-part-4-63ed781eee3c)에 잘 설명되어 있습니다. 아주 쉽게
                 # 설명되어 있으므로, 꼭 한 번 읽어보시길 강력 추천 드립니다.
 
-                img = face_recognition.load_image_file(pathname)
+                img = face_recognition.load_image_file(pathname)  # 이미지파일 가져오는 코드..
                 face_encoding = face_recognition.face_encodings(img)[0]
                 self.known_face_encodings.append(face_encoding)
 
@@ -95,10 +103,11 @@ class FaceRecog():
         self.process_this_frame = True
         self.video_end = False
 
-        self.time_length = 255.0
         self.FPS = round(self.video.get(cv2.CAP_PROP_FPS), 2)
+        self.time_length = round(container.frames / self.FPS)
+        print("비디오 총길이 : " + str(self.time_length) + "초")
         self.interval = round(self.FPS / 3) #원본영상 fps의 1/3정도
-        self.frame_sequence = 0
+        self.frame_sequence = -self.interval
         self.specific_frame = []
         # print(self.interval)
 
@@ -124,26 +133,41 @@ class FaceRecog():
         self.name = name
         print(self.name)
 
+    def get_video(self):
+        return self.video
+
     def notifyIsPaused(self, paused):
         self.paused = paused
 
+    def get_specific_frame(self):
+        start = time.time()
+        print(start)
+        print("...프레임추출중...")
+        while True:
+            self.frame_sequence += self.interval
+            if self.frame_sequence > self.time_length * self.FPS:
+                break
+            # print(self.frame_sequence)
+            self.video.set(cv2.CAP_PROP_POS_FRAMES, self.frame_sequence)
+            ret, frame = self.video.read()
+            if ret:
+                # print("프레임 가져오기 성공")
+                self.specific_frame.append(frame)
+            else:
+                print(self.frame_sequence)
+        # return
+        end = time.time()
+        print(str(end) + ", " + str(end-start))
+        return self.specific_frame
+
     def do_recognition(self):
-        self.frame_sequence += self.interval
-        self.totalFrame += self.interval
-
-        # if self.frame_sequence > self.time_length * self.FPS:
-        #     return None
-
-        self.video.set(cv2.CAP_PROP_POS_FRAMES, self.frame_sequence)
-        ret, frame = self.video.read()
-
-        if frame is None:
+        self.index += 1
+        if self.index >= len(self.specific_frame):
+            print("index : " + str(self.index) + ", frame_length : " + str(len(self.specific_frame)))
             return None
-        # self.index += 1
-        # if self.index >= len(self.specific_frame):
-        #     return None
-        # frame = self.specific_frame[self.index]
 
+        self.totalFrame += self.interval
+        frame = self.specific_frame[self.index]
         small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
         # Convert the image from BGR color (which OpenCV uses) to RGB color (which face_recognition uses)
         rgb_small_frame = small_frame[:, :, ::-1]
@@ -237,8 +261,12 @@ class FaceRecog():
         # We are using Motion JPEG, but OpenCV defaults to capture raw images,
         # so we must encode it into JPEG in order to correctly display the
         # video stream.
-        ret, jpg = cv2.imencode('.jpg', frame)
-        return jpg.tobytes()
+        if frame is not None:
+            ret, jpg = cv2.imencode('.jpg', frame)
+            return jpg.tobytes()
+        else:
+            print("FRAME IS NONE")
+            return None
 
     def calculate_total(self):
         # 영상 마지막에 근무자가 인식이 되지 않는다면 태만시간에 대한 계산이 끝나지 않으므로
@@ -249,11 +277,16 @@ class FaceRecog():
             self.notRecogFrame = 0
 
         # 근무시간 계산
-        totalTime = round(self.totalFrame / self.FPS);
+        # totalTime = self.time_length
+        if self.totalFrame / self.FPS + 1 > self.time_length:
+            totalTime = self.time_length
+        else:
+            totalTime = round(self.totalFrame / self.FPS)
         totalTimeM = math.trunc(totalTime / 60)
         recogTime = round((self.recogFrame / self.totalFrame) * totalTime)
         recogTimeM = math.trunc(recogTime / 60)
         notRecogTime = totalTime - recogTime
+
 
         # 총태만시간이 10초 미만일 수는 없다.
         if notRecogTime < 10:

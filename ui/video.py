@@ -1,11 +1,11 @@
-from video_ui import VideoUi
+from ui.video_ui import VideoUi
 import time
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import QtCore, QtWidgets
 import cv2
-import main
+from videoCheck import main
 import os
 import simpleaudio as sa
 
@@ -123,7 +123,7 @@ class ExecuteVideo(VideoUi):
                 # 근무 신호등 교체
                 self.isWorking = self.face_recog.working
                 if self.isWorking is True:
-                    self.change_traffic_light("./templates/Traffic_Lights_green.png")
+                    self.change_traffic_light("../templates/Traffic_Lights_green.png")
                     if self.workingAlarmFlag is False and self.alarmMute is False:
                         # print('working alarm!!')
                         play_obj = self.workingWav.play()
@@ -131,7 +131,7 @@ class ExecuteVideo(VideoUi):
                         self.workingAlarmFlag = True
                         self.slackOffAlarmFlag = False
                 else:
-                    self.change_traffic_light("./templates/Traffic_Lights_red.png")
+                    self.change_traffic_light("../templates/Traffic_Lights_red.png")
                     if self.slackOffAlarmFlag is False and self.alarmMute is False:
                         # print('slackOff alarm!!')
                         play_obj = self.notWorkingWav.play()
@@ -153,7 +153,7 @@ class ExecuteVideo(VideoUi):
         self.videoLabel.setText(" ")
         self.videoLabel.setFixedSize(100, 30)
         # self.videoLabel.resize(self.videoLabel.width(), self.videoLabel.height())
-        self.change_traffic_light("./templates/Traffic_Lights_init.png")
+        self.change_traffic_light("../templates/Traffic_Lights_init.png")
         # 윈도우 창을 적절하게 자동으로 조정
         # self.setFixedSize(400, 300)
         self.btn_sound_start.setDisabled(True)

@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import cv2
-import main2
+from useless.videoCheck import main2
 # import main
 import os
 
@@ -118,9 +118,9 @@ class Gui(QWidget):
             # 근무 신호등 교체
             self.isWorking = face_recog.working
             if self.isWorking is True:
-                self.change_traffic_light('./templates/Traffic_Lights_green.png')
+                self.change_traffic_light('../../templates/Traffic_Lights_green.png')
             else:
-                self.change_traffic_light('./templates/Traffic_Lights_red.png')
+                self.change_traffic_light('../../templates/Traffic_Lights_red.png')
 
             if self.stopFlag or face_recog.video_end:
                 break
@@ -136,7 +136,7 @@ class Gui(QWidget):
         self.cam_stop()
         self.videoLabel.setText('근무 종료')
         # self.videoLabel.resize(self.videoLabel.width(), self.videoLabel.height())
-        self.change_traffic_light('./templates/Traffic_Lights_init.png')
+        self.change_traffic_light('../../templates/Traffic_Lights_init.png')
         # 윈도우 창을 적절하게 자동으로 조정
         self.adjustSize()
 

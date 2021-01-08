@@ -21,7 +21,7 @@ class CheckUser:
                     'image': img_byte
                     }
 
-        bin_dir = "user_file"
+        bin_dir = "../user_file"
         bin_file_name = "user_" + id + "_" + name + ".txt"
         bin_path = bin_dir + "/" + bin_file_name
         with open(bin_path, "wb") as MyFile:

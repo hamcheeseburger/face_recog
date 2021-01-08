@@ -1,13 +1,11 @@
-import time
-from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from PyQt5 import QtCore, QtWidgets
+from PyQt5 import QtWidgets
 import cv2
-from realTime_ui import RealTimeUi
+from ui.realTime_ui import RealTimeUi
 import os
 import simpleaudio as sa
-import useless_realTime_main
+from useless.realTime import useless_realTime_main
 
 # 푸쉬용 커밋
 global face_recog
