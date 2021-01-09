@@ -64,7 +64,7 @@ class ExecuteRealTime(RealTimeUi):
     # 시작버튼 눌렸을 때 실행되는 함수
     def start_recog(self):
         self.init_variable()
-        self.face_recog = FaceRecog()
+        self.face_recog = FaceRecog.instance()
         self.print_total_working.setText("근무시간 측정중..")
         self.btn_start.setDisabled(True)
 
@@ -186,9 +186,10 @@ class ExecuteRealTime(RealTimeUi):
             self.alarmMute = False
 
     def closeEvent(self, a0: QtGui.QCloseEvent) -> None:
-        if self.face_recog is not None:
-            self.end_recog()
-            del self.face_recog
+        # if self.face_recog is not None:
+        #     self.end_recog()
+        #     del self.face_recog
+       print("realTime window is closed!")
 
 
 if __name__ == "__main__":

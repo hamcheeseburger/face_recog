@@ -32,7 +32,7 @@ class CheckUser:
                     'image': img_byte
                     }
 
-        bin_dir = "../user_file"
+        bin_dir = "./user_file"
         bin_file_name = "user_" + id + "_" + name + ".txt"
         bin_path = bin_dir + "/" + bin_file_name
         with open(bin_path, "wb") as MyFile:
@@ -82,8 +82,8 @@ class CheckUser:
 if __name__ == "__main__":
     user = CheckUser()
 
-    user.user_write_binary('yoon', '1234', 'yoon', 'knowns/yoon.jpg')
-    user.user_write_binary('현진', '1234', 'Hyeonjin', 'knowns/Hyeonjin.jpg')
-    user.user_write_binary('rhj', '1234', 'Hwayoung', 'knowns/Hwayoung.jpg')
-    user.user_write_binary('sji', '1234', 'Jaeim', 'knowns/Jaeim.jpg')
-    # user.user_check_binary('yjs', '111')
+    user.user_write_binary('사용자아이디', '비밀번호', '사용자이름', '이미지경로')
+
+    #예시
+    #user.user_write_binary('yhj', '1234', 'Hyeonji', 'knowns/Hyeonji.jpg')
+

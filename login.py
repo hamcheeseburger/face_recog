@@ -15,7 +15,7 @@ from PyQt5 import QtWidgets
 from login import logincheck
 from ui.logingui import UiDialog
 from ui.menu import ExecuteMenu
-
+from realTimeCheck.realtimemain import FaceRecog
 
 class ExecuteLogin(UiDialog):
     def __init__(self, loginDialog):
@@ -24,6 +24,7 @@ class ExecuteLogin(UiDialog):
         self.setupUi(self.loginDialog)
 
         self.check_user = logincheck.CheckUser()
+        FaceRecog.instance()
         self.btn_login.clicked.connect(self.checkPassword)
 
     def checkPassword(self):
