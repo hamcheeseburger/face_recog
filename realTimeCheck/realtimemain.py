@@ -40,40 +40,12 @@ class FaceRecog(object):
 
     def __init__(self):
         print("__init__ is called\n")
-        # Using OpenCV to capture from device 0. If you have trouble capturing
-        # from a webcam, comment the line below out and use a video file
-        # instead.
-
-        # 근무 중임을 나타내는 boolean 변수
-        self.working = False
-        # 화면에 잡힌 얼굴중 근무자가 존재하는지를 알아내는 boolean 변수
-        self.workerExist = False
-
-        self.paused = False
-
-        # 카메라 버전으로 테스트
-        self.video = camera.VideoCamera()
-
+        self.reset()
         self.name = None
         self.known_face_encodings = []
         self.known_face_names = []
-        self.frame_count = 0
-
-        # 근무 최초 시작시간 초기화
-        self.workStartTimeAtFirst = 0
-        # 총 근무 시간 초기화 (계산전 : 근무 최초 시작 이래 무조건 계속 증가..근무 종료시에 - totalSlcakOffCount)
-        self.totalWorkingCount = 0
-        # 근무 태만 시작시간 초기화
-        self.slackOffStartTime = 0
-        # 근무 태만 시간 초기화 (재근무 시 마다 초기화)
-        self.slackOffCount = 0
-        # 근무 태만 10초 이상시 근무태만이 시작되었다는 것을 알려주었는지 체크(무한 print 방지)
-        self.alertSlackOff = False
-        # 총 근무 태만 시간 초기화 (재근무 시 마다 + slackOffCount )
-        self.totalSlackOffCount = 0
 
         # 로그 파일 생성 준비
-
         self.logger = self.get_logger()
 
         # Load sample pictures and learn how to recognize it.
@@ -95,14 +67,6 @@ class FaceRecog(object):
                 img = face_recognition.load_image_file(pathname)
                 face_encoding = face_recognition.face_encodings(img)[0]
                 self.known_face_encodings.append(face_encoding)
-
-        # Initialize some variables
-        # 왜 리스트? 한 프레임에 얼굴이 여러개 일 수 있으니까?
-        self.face_locations = []
-        self.face_encodings = []
-        self.face_names = []
-        self.process_this_frame = True
-        self.video_end = False
 
     def get_user_name(self):
         print("get_user_name is called")
@@ -127,7 +91,7 @@ class FaceRecog(object):
         self.paused = False
 
         self.video = camera.VideoCamera()
-
+        self.frame_count = 0
         # 근무 최초 시작시간 초기화
         self.workStartTimeAtFirst = 0
         # 총 근무 시간 초기화 (계산전 : 근무 최초 시작 이래 무조건 계속 증가..근무 종료시에 - totalSlcakOffCount)
@@ -163,6 +127,7 @@ class FaceRecog(object):
         logger.setLevel(level=logging.INFO)
 
         return logger
+
     @property
     def working(self):
         return self._working

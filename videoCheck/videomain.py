@@ -23,70 +23,34 @@ import logging
 
 
 class FaceRecog:
+    _instance = None
 
-    def __init__(self, route):
-        # Using OpenCV to capture from device 0. If you have trouble capturing
-        # from a webcam, comment the line below out and use a video file
-        # instead.
+    @classmethod
+    def _getInstance(cls):
+        print("[video.py] _getInstance call")
+        cls._instance.reset()
+        return cls._instance
 
-        # 근무 중임을 나타내는 boolean 변수
-        self.working = False
-        # 화면에 잡힌 얼굴중 근무자가 존재하는지를 알아내는 boolean 변수
-        self.workerExist = False
+    @classmethod
+    def instance(cls, *args, **kargs):
+        print("[video.py] instance call")
+        cls._instance = cls(*args, **kargs)
+        cls.instance = cls._getInstance
+        return cls._instance
 
-        self.paused = False
-
-        # test_video2.mp4 : 노트북 웹캠 영상
-        # test_video3.mp4 : 핸드폰 촬영 영상
-        # test_video4.mp4 : 유튜브 영상(2인 이상 출현)
-        self.route = route
-        self.video = cv2.VideoCapture(self.route)
-        container = (av.open(self.route)).streams.video[0]
-        self.name = ''
+    def __init__(self):
+        print("[video.py] __init__ call")
+        self.reset()
+        self.route = None
+        self.name = None
         self.known_face_encodings = []
         self.known_face_names = []
-        self.frame_count = 0
-
-        # 근무 최초 시작시간 초기화
-        self.workStartTimeAtFirst = 0
-        # 총 근무 시간 초기화 (계산전 : 근무 최초 시작 이래 무조건 계속 증가..근무 종료시에 - totalSlcakOffCount)
-        self.totalWorkingCount = 0
-        # 근무 태만 시작시간 초기화
-        self.slackOffStartTime = 0
-        # 근무 태만 시간 초기화 (재근무 시 마다 초기화)
-        self.slackOffCount = 0
-        # 근무 태만 10초 이상시 근무태만이 시작되었다는 것을 알려주었는지 체크(무한 print 방지)
-        self.alertSlackOff = False
-        # 총 근무 태만 시간 초기화 (재근무 시 마다 + slackOffCount )
-        self.totalSlackOffCount = 0
-
-        # 로그 파일 생성 준비
 
         # logger instance 생성
-        self.logger = logging.getLogger(__name__)
-        # handler 생성 (stream, file)
-        streamHandler = logging.StreamHandler()
-        fileHandler = logging.FileHandler('../server.log')
-        # logger instance에 handler 설정
-        self.logger.addHandler(streamHandler)
-        self.logger.addHandler(fileHandler)
-        # logger instance로 log 찍기
-        self.logger.setLevel(level=logging.DEBUG)
+        self.logger = self.get_logger()
 
         # Load sample pictures and learn how to recognize it.
         # knowns 디렉토리에서 사진 파일을 읽습니다. 파일 이름으로부터 사람 이름을 추출합니다.
-        dirname = 'user_image'
-        files = os.listdir(dirname)
-        filename = files[0]
-        name, ext = os.path.splitext(filename)
-        self.name = name
-        if ext == '.jpg':
-            self.known_face_names.append(name)
-            pathname = os.path.join(dirname, filename)
-            img = face_recognition.load_image_file(pathname)  # 이미지파일 가져오는 코드..
-            face_encoding = face_recognition.face_encodings(img)[0]
-            self.known_face_encodings.append(face_encoding)
-
         dirname = 'knowns'
         files = os.listdir(dirname)
         for filename in files:
@@ -105,21 +69,33 @@ class FaceRecog:
                 face_encoding = face_recognition.face_encodings(img)[0]
                 self.known_face_encodings.append(face_encoding)
 
-        # Initialize some variables
-        # 왜 리스트? 한 프레임에 얼굴이 여러개 일 수 있으니까?
+    # def __del__(self):
+    #     del self.video
+
+    def reset(self):
+        self.working = False
+        # 화면에 잡힌 얼굴중 근무자가 존재하는지를 알아내는 boolean 변수
+        self.workerExist = False
+        self.paused = False
+        self.frame_count = 0
+
+        # 근무 최초 시작시간 초기화
+        self.workStartTimeAtFirst = 0
+        # 총 근무 시간 초기화 (계산전 : 근무 최초 시작 이래 무조건 계속 증가..근무 종료시에 - totalSlcakOffCount)
+        self.totalWorkingCount = 0
+        # 근무 태만 시작시간 초기화
+        self.slackOffStartTime = 0
+        # 근무 태만 시간 초기화 (재근무 시 마다 초기화)
+        self.slackOffCount = 0
+        # 근무 태만 10초 이상시 근무태만이 시작되었다는 것을 알려주었는지 체크(무한 print 방지)
+        self.alertSlackOff = False
+        # 총 근무 태만 시간 초기화 (재근무 시 마다 + slackOffCount )
+        self.totalSlackOffCount = 0
         self.face_locations = []
         self.face_encodings = []
         self.face_names = []
         self.process_this_frame = True
         self.video_end = False
-
-        self.FPS = round(self.video.get(cv2.CAP_PROP_FPS), 2)
-        self.time_length = round(container.frames / self.FPS)
-        print("비디오 총길이 : " + str(self.time_length) + "초")
-        self.interval = round(self.FPS / 3) #원본영상 fps의 1/3정도
-        self.frame_sequence = -self.interval
-        self.specific_frame = []
-        # print(self.interval)
 
         self.index = -1
         self.first = True
@@ -127,8 +103,50 @@ class FaceRecog:
         self.recogFrame = 0
         self.notRecogFrame = 0
 
-    def __del__(self):
-        del self.video
+    def get_logger(self):
+        # logger instance 생성
+        logger = logging.getLogger(__name__)
+        # handler 생성 (stream, file)
+        if len(logger.handlers) > 0:
+            return logger
+
+        streamHandler = logging.StreamHandler()
+        fileHandler = logging.FileHandler('./server.log')
+        # logger instance에 handler 설정
+        logger.addHandler(streamHandler)
+        logger.addHandler(fileHandler)
+        # logger instance로 log 찍기
+        logger.setLevel(level=logging.DEBUG)
+
+        return logger
+
+    def set_file_route(self, route):
+        self.route = route
+        self.get_video_info()
+
+    def get_video_info(self):
+        self.video = cv2.VideoCapture(self.route)
+        container = (av.open(self.route)).streams.video[0]
+        self.FPS = round(self.video.get(cv2.CAP_PROP_FPS), 2)
+        self.time_length = round(container.frames / self.FPS)
+        print("비디오 총길이 : " + str(self.time_length) + "초")
+        self.interval = round(self.FPS / 3)  # 원본영상 fps의 1/3정도
+        self.frame_sequence = -self.interval
+        self.specific_frame = []
+
+    def get_user_name(self):
+        print("get_user_name is called")
+        dirname = 'user_image'
+        files = os.listdir(dirname)
+        filename = files[0]
+        name, ext = os.path.splitext(filename)
+        self.name = name
+        if ext == '.jpg':
+            self.known_face_names.append(name)
+            pathname = os.path.join(dirname, filename)
+            img = face_recognition.load_image_file(pathname)  # 이미지파일 가져오는 코드..
+            face_encoding = face_recognition.face_encodings(img)[0]
+            self.known_face_encodings.append(face_encoding)
 
     # 근무여부를 확인하는 boolean 변수를 반환한다.
     @property
@@ -150,6 +168,9 @@ class FaceRecog:
         self.paused = paused
 
     def get_specific_frame(self):
+        if self.name is None:
+            self.get_user_name()
+
         start = time.time()
         print(start)
         print("...프레임추출중...")
