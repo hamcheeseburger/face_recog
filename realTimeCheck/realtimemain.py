@@ -22,8 +22,24 @@ import timeit
 from realTimeCheck import camera
 
 
-class FaceRecog():
+class FaceRecog(object):
+    _instance = None
+
+    @classmethod
+    def _getInstance(cls):
+        print("_getInstance call")
+        cls._instance.reset()
+        return cls._instance
+
+    @classmethod
+    def instance(cls, *args, **kargs):
+        print("instance call")
+        cls._instance = cls(*args, **kargs)
+        cls.instance = cls._getInstance
+        return cls._instance
+
     def __init__(self):
+        print("__init__ is called\n")
         # Using OpenCV to capture from device 0. If you have trouble capturing
         # from a webcam, comment the line below out and use a video file
         # instead.
@@ -35,15 +51,10 @@ class FaceRecog():
 
         self.paused = False
 
-        #test_video2.mp4 : 노트북 웹캠 영상
-        #test_video3.mp4 : 핸드폰 촬영 영상
-        #test_video4.mp4 : 유튜브 영상(2인 이상 출현)
-
         # 카메라 버전으로 테스트
         self.video = camera.VideoCamera()
-        # self.video = cv2.VideoCapture('./video/video_test3.mp4')
 
-        self.name = ''
+        self.name = None
         self.known_face_encodings = []
         self.known_face_names = []
         self.frame_count = 0
@@ -64,18 +75,6 @@ class FaceRecog():
         # 로그 파일 생성 준비
 
         self.logger = self.get_logger()
-
-        dirname = 'user_image'
-        files = os.listdir(dirname)
-        filename = files[0]
-        name, ext = os.path.splitext(filename)
-        self.name = name
-        if ext == '.jpg':
-            self.known_face_names.append(name)
-            pathname = os.path.join(dirname, filename)
-            img = face_recognition.load_image_file(pathname)  # 이미지파일 가져오는 코드..
-            face_encoding = face_recognition.face_encodings(img)[0]
-            self.known_face_encodings.append(face_encoding)
 
         # Load sample pictures and learn how to recognize it.
         # knowns 디렉토리에서 사진 파일을 읽습니다. 파일 이름으로부터 사람 이름을 추출합니다.
@@ -105,6 +104,49 @@ class FaceRecog():
         self.process_this_frame = True
         self.video_end = False
 
+    def get_user_name(self):
+        print("get_user_name is called")
+        dirname = 'user_image'
+        files = os.listdir(dirname)
+        filename = files[0]
+        name, ext = os.path.splitext(filename)
+        self.name = name
+        if ext == '.jpg':
+            self.known_face_names.append(name)
+            pathname = os.path.join(dirname, filename)
+            img = face_recognition.load_image_file(pathname)  # 이미지파일 가져오는 코드..
+            face_encoding = face_recognition.face_encodings(img)[0]
+            self.known_face_encodings.append(face_encoding)
+
+    def reset(self):
+        print("variable reset")
+        self.working = False
+        # 화면에 잡힌 얼굴중 근무자가 존재하는지를 알아내는 boolean 변수
+        self.workerExist = False
+
+        self.paused = False
+
+        self.video = camera.VideoCamera()
+
+        # 근무 최초 시작시간 초기화
+        self.workStartTimeAtFirst = 0
+        # 총 근무 시간 초기화 (계산전 : 근무 최초 시작 이래 무조건 계속 증가..근무 종료시에 - totalSlcakOffCount)
+        self.totalWorkingCount = 0
+        # 근무 태만 시작시간 초기화
+        self.slackOffStartTime = 0
+        # 근무 태만 시간 초기화 (재근무 시 마다 초기화)
+        self.slackOffCount = 0
+        # 근무 태만 10초 이상시 근무태만이 시작되었다는 것을 알려주었는지 체크(무한 print 방지)
+        self.alertSlackOff = False
+        # 총 근무 태만 시간 초기화 (재근무 시 마다 + slackOffCount )
+        self.totalSlackOffCount = 0
+
+        self.face_locations = []
+        self.face_encodings = []
+        self.face_names = []
+        self.process_this_frame = True
+        self.video_end = False
+
     def get_logger(self):
         # logger instance 생성
         logger = logging.getLogger(__name__)
@@ -113,12 +155,12 @@ class FaceRecog():
             return logger
 
         streamHandler = logging.StreamHandler()
-        fileHandler = logging.FileHandler('../server.log')
+        fileHandler = logging.FileHandler('./server.log')
         # logger instance에 handler 설정
         logger.addHandler(streamHandler)
         logger.addHandler(fileHandler)
         # logger instance로 log 찍기
-        logger.setLevel(level=logging.DEBUG)
+        logger.setLevel(level=logging.INFO)
 
         return logger
     @property
@@ -144,6 +186,9 @@ class FaceRecog():
         self.video.end_camera()
 
     def get_frame(self):
+        if self.name is None:
+            self.get_user_name()
+
         # 카메라 버전으로 테스트
         frame = self.video.get_frame()
         # ret, frame = self.video.read()
@@ -226,7 +271,7 @@ class FaceRecog():
                 # 최초 근무 시작 시간이 저장되어 있지 않은 경우 저장
                 if (self.workStartTimeAtFirst == 0):
                     self.workStartTimeAtFirst = datetime.now().replace(microsecond=0)
-                    self.logger.info("근무 시작 시간: {0}".format(self.workStartTimeAtFirst))
+                    self.logger.info("\n\n근무 시작 시간: {0}".format(self.workStartTimeAtFirst))
                     # 프로그램이 종료(근무 끝) 됐을때 총 근무시간 타이머가 종료됨
                     self.totalWorkingCount = timeit.default_timer()
                 # 근무태만 -> 근무중이 되었을때
