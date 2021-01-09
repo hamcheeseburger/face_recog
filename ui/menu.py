@@ -1,3 +1,13 @@
+"""menu action
+기능설명:
+    menu ui를 상속받아 메뉴 버튼 클릭시의 동작을 정의한다.
+개발자:
+    송재임 유현지
+개발일시:
+    2021.01.02.23.00.00
+버전:
+
+"""
 import os
 from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtCore import QThread

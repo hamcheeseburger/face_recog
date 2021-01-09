@@ -1,10 +1,10 @@
 """camera
 기능설명:
-     실시간 웹캠을 관리하는 모듈
+    사용자 컴퓨터 내 웹캠 화면을 동작시킨다.
 개발자:
-    유현지
+    교수님께 제공받음
 개발일시:
-    2021.01.06.16.45.00
+
 버전:
     0.0.1
 """
@@ -22,6 +22,9 @@ class VideoCamera(object):
         # self.video = cv2.VideoCapture('video.mp4')
 
     def __del__(self):
+        """
+        얼굴인식 동작이 끝난 후 웹캠 동작을 중지하는 코드드
+       """
         self.video.release()
 
     def get_frame(self):

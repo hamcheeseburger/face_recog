@@ -1,3 +1,13 @@
+"""menu ui
+기능설명:
+    menu ui를 정의하고 있다.
+개발자:
+    송재임
+개발일시:
+    2021.01.02.22.00.00
+버전:
+
+"""
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QHBoxLayout, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout
 
