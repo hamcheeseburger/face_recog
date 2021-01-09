@@ -1,3 +1,13 @@
+"""video Ui(useless)
+기능설명:
+     초기 UI에서 디자인 사이즈 수정
+개발자:
+    송재임
+개발일시:
+    2021.01.02.20.44.00
+버전:
+    0.0.2
+"""
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'videoUi2.ui'

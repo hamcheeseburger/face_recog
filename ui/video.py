@@ -6,7 +6,7 @@
 개발일시:
     2021.01.05.20.53.00
 버전:
-    0.0.1
+    0.0.2
 """
 
 from ui.videoui import VideoUi

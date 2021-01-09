@@ -57,6 +57,7 @@ class ExecuteMenu(MenuUi):
         # self.videoWidget.show()
 
         self.videoExe = ExecuteVideo(self.user_id)
+
     def logout(self):
         dirname = 'user_image'
         files = os.listdir(dirname)

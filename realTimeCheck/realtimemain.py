@@ -6,7 +6,7 @@
 개발일시:
     2021.01.07.14.17.00
 버전:
-
+    0.0.3
 """
 import face_recognition
 import cv2

@@ -1,12 +1,13 @@
 """gui2 (useless)
 기능설명:
-
+    동영상으로 근무시간을 측정할 때 사용되는 UI (menu.py가 생기기 이전에 간이로 사용했던 ui)
+    useless/videoCheck/main2.py와 연결되는 UI
 개발자:
     송재임, 유현지
 개발일시:
-    2021.01.05.23.04.00
+    2021.01.02.20.44.00
 버전:
-    0.0.1
+    0.0.0
 """
 import sys
 import time

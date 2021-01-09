@@ -1,3 +1,14 @@
+"""gui (useless)
+기능설명:
+    동영상으로 근무시간을 측정할 때 사용되는 UI (menu.py가 생기기 이전에 간이로 사용했던 ui)
+    이 전에 사용하던 main.py와 연결되던 UI (현 videoCheck/videomain.py 와 동일 파일)
+개발자:
+    송재임, 유현지
+개발일시:
+    2021.01.02.20.44.00
+버전:
+    0.0.0
+"""
 import sys
 import time
 from PyQt5.QtWidgets import *
