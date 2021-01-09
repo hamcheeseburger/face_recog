@@ -1,3 +1,13 @@
+"""realtime face recognition ui
+기능설명:
+    실시간 얼굴인식 ui를 정의하였다.
+개발자:
+    송재임 유현지
+개발일시:
+    2021.01.05.22.00.00
+버전:
+
+"""
 import os
 
 from PyQt5.QtGui import QPixmap

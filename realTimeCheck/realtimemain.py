@@ -1,8 +1,13 @@
-# realtimemain_송재임유현지_21년01월07일_14시17분
-# 실시간 근무시간 측정하는 기능
+"""realtime face recognition
+기능설명:
+    실시간으로 사용자의 얼굴을 인식하여 근태 여부를 확인한다. 얼굴인식이 10초 이상 되지않으면 근무태만으로 간주한다.
+개발자:
+    송재임 유현지
+개발일시:
+    2021.01.07.14.17.00
+버전:
 
-# face_recog.py
-# 얼굴인식 기능에 초점을 맞춘 wrapper 패키지
+"""
 import face_recognition
 import cv2
 import os
