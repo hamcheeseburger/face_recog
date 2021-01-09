@@ -241,7 +241,7 @@ class FaceRecog(object):
                     self.totalWorkingCount = timeit.default_timer()
                 # 근무태만 -> 근무중이 되었을때
                 self.alertSlackOff = False
-                # 근무태만 시간이 10초가 되기전에 다시 재근무 했을 때
+                # 근무태만 시간이 10초 경과 후 재근무 했을 때
                 if self.slackOffCount != 0 and (timeit.default_timer() - self.slackOffCount) >= 10:
                     # 얼마나 근무 태만을 지속했는지 계산(second)
                     count = timeit.default_timer() - self.slackOffCount
@@ -250,7 +250,7 @@ class FaceRecog(object):
                     calculatedTime = (self.slackOffStartTime + delta).replace(microsecond=0)
                     self.logger.info("근무 태만 시간은 {0} 부터 {1} 까지 입니다.".format(self.slackOffStartTime, calculatedTime))
 
-                # 근무 태만 시간이 10초 지난 뒤에 재근무 했을 때는 별다른 코드x..
+                # 근무 태만 시간이 10초 지나기 전에 재근무 했을 때는 별다른 코드x..
 
                 self.slackOffCount = 0
 
