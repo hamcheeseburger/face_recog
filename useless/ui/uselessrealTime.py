@@ -1,3 +1,14 @@
+"""realtime face recognition ui action
+기능설명:
+    실시간 얼굴인식 ui를 상속받아 버튼 클릭 등의 동작시 기능을 연결하였다. 카메라 화면출력/음성안내/근태 신호등/시작/종료 동작을 처리한다.
+    카메라 화면 출력을 쓰레드로 처리하였으나 성능개선이 되지않아 중단하였다.
+개발자:
+    송재임
+개발일시:
+    2021.01.05.00.00.00
+버전:
+    0.0.1
+"""
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import QtWidgets

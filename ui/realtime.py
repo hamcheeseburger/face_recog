@@ -6,7 +6,7 @@
 개발일시:
     2021.01.05.23.00.00
 버전:
-
+    0.0.2
 """
 import time
 from PyQt5.QtGui import *

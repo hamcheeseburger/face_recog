@@ -1,3 +1,13 @@
+"""menu ui action (useless)
+기능설명:
+     menu ui를 상속받아 ui 동작을 정의한다. jar , exe 호출 방식에 문제가 생겨 사용하지 않음.
+개발자:
+    송재임, 유현지
+개발일시:
+    2021.01.02.21.00.00
+버전:
+    0.0.1
+"""
 import os
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QThread

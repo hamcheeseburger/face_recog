@@ -6,7 +6,7 @@
 개발일시:
     2021.01.02.22.00.00
 버전:
-
+    0.0.2
 """
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QHBoxLayout, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout

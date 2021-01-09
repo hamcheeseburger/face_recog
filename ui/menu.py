@@ -6,7 +6,7 @@
 개발일시:
     2021.01.02.23.00.00
 버전:
-
+    0.0.2
 """
 import os
 from PyQt5 import QtGui, QtWidgets
