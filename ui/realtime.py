@@ -6,7 +6,7 @@ import cv2
 from ui.realtimeui import RealTimeUi
 import os
 import simpleaudio as sa
-from realTimeCheck.realTimemain import FaceRecog
+from realTimeCheck.realtimemain import FaceRecog
 
 
 # 커밋용

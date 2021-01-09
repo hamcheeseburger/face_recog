@@ -10,6 +10,7 @@
 # PyQT Designer에서 기본적으로 import하는 것들
 # QtWidgets은 PyQT5에서 모든 UI 객체를 포함하고 있는 클래스라서 무조건 import
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 

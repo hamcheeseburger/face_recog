@@ -1,5 +1,8 @@
 # face_recog.py
 # 얼굴인식 기능에 초점을 맞춘 wrapper 패키지
+
+# videomain_유현지_21년01월05일_20시38분
+# 비디오로 근무시간을 측정하는 기능
 import time
 import av
 import face_recognition

@@ -31,7 +31,7 @@ class ExecuteMenu(MenuUi):
 
     def callExe(self):
         # 윈도우 명령어는 쉘안에 들어있으므로 shell=Ture여야 윈도우 쉘 명령어 사용ok
-        fileName = '../Original_Tool/VideoAnalyzer.exe'
+        fileName = './Original_Tool/VideoAnalyzer.exe'
         subprocess.run(["start", fileName], shell=True)
 
     def callJar(self):

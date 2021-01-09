@@ -1,3 +1,6 @@
+# videoui_송재임유현지_21년01월04일_19시01분
+# 동영상으로 근무시간을 측정할 때 사용되는 ui
+
 import os
 
 from PyQt5.QtGui import QPixmap
@@ -5,6 +8,7 @@ from PyQt5.QtWidgets import QHBoxLayout, QVBoxLayout, QLabel, QPushButton, QWidg
 from PyQt5 import QtWidgets, QtCore
 
 # ui 디자인
+
 
 class VideoUi(QWidget):
     def __init__(self):
@@ -17,7 +21,8 @@ class VideoUi(QWidget):
         self.traffic_height = 33
         self.imgLabel.resize(self.traffic_width, self.traffic_height)
         self.pixmap = QPixmap(
-            self.scriptDir + os.path.sep + "./templates/Traffic_Lights_init.png"
+            # self.scriptDir + os.path.sep + "./templates/Traffic_Lights_init.png"
+            "./templates/Traffic_Lights_init.png"
         )
         self.pixmap = self.pixmap.scaled(self.traffic_width, self.traffic_height)
         self.imgLabel.setPixmap(self.pixmap)

@@ -15,7 +15,8 @@ class RealTimeUi(QWidget):
         self.traffic_height = 33
         self.imgLabel.resize(self.traffic_width, self.traffic_height)
         self.pixmap = QPixmap(
-            self.scriptDir + os.path.sep + "./templates/Traffic_Lights_init.png"
+            # self.scriptDir + os.path.sep + "./templates/Traffic_Lights_init.png"
+            "./templates/Traffic_Lights_init.png"
         )
         self.pixmap = self.pixmap.scaled(self.traffic_width, self.traffic_height)
         self.imgLabel.setPixmap(self.pixmap)

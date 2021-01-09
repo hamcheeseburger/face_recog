@@ -1,3 +1,7 @@
+# logincheck_유현지_21년01월05일_01시27분
+# 로그인을 처리하는 기능
+
+
 import os
 import sqlite3
 import pickle

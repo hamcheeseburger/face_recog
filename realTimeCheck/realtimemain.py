@@ -1,3 +1,6 @@
+# realtimemain_송재임유현지_21년01월07일_14시17분
+# 실시간 근무시간 측정하는 기능
+
 # face_recog.py
 # 얼굴인식 기능에 초점을 맞춘 wrapper 패키지
 import face_recognition

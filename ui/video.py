@@ -1,3 +1,6 @@
+# video_송재임유현지_21년01월05일_20시53분
+# 동영상으로 근무시간을 측정할 때 사용되는 ui 기능부분
+
 from ui.videoui import VideoUi
 import time
 from PyQt5.QtWidgets import *
