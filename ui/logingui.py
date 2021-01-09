@@ -1,3 +1,14 @@
+"""login Ui
+기능설명:
+    로그인 UI 틀을 나타내는 코드임. QTDesigner에서 작성하여 파이썬 코드로 변환하였음.
+개발자:
+    송재임
+개발일시:
+    2020.01.02.14.00.00
+버전:
+    0.0.1
+"""
+
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'login.ui'
@@ -9,8 +20,6 @@
 
 # PyQT Designer에서 기본적으로 import하는 것들
 # QtWidgets은 PyQT5에서 모든 UI 객체를 포함하고 있는 클래스라서 무조건 import
-
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
