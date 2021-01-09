@@ -1,3 +1,14 @@
+"""login
+기능설명:
+     로그인 Ui의 기능을 담당하는 모듈
+개발자:
+    송재임, 유현지
+개발일시:
+    2021.01.07.16.51.00
+버전:
+    0.0.1
+"""
+
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5 import QtWidgets
 # import login.logincheck

@@ -1,3 +1,13 @@
+"""gui2 (useless)
+기능설명:
+
+개발자:
+    송재임, 유현지
+개발일시:
+    2021.01.05.23.04.00
+버전:
+    0.0.1
+"""
 import sys
 import time
 
@@ -5,9 +15,10 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import cv2
-from useless.videoCheck import main
+from useless.videoCheck import main2
 # import main
 import os
+
 
 class Gui(QWidget):
     def __init__(self):
@@ -87,7 +98,7 @@ class Gui(QWidget):
     # 시작버튼 눌렸을 때 실행되는 함수
     def start_recog(self):
         self.print_total_working.setText('프레임추출중.. 잠시만 기다려주세요')
-        face_recog = main.FaceRecog()
+        face_recog = main2.FaceRecog()
         face_recog.get_name(self.et_name.text())
         print(face_recog.known_face_names)
         # frame_list = face_recog.get_specific_frame()

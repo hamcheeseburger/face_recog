@@ -1,7 +1,14 @@
-# realtimemain_송재임유현지_21년01월05일_23시04분
-# 새로운 로그인 시스템에 연결하기 위해서 추가해야 할 항목들이 있었기에 새롭게 파일을 만들었음 (이 파일은 로그인기능이 생기기 이전의 파일)
-
-
+"""realTime Main (useless)
+기능설명:
+     새로운 로그인 시스템에 연결하기 위해서 추가해야 할 항목들이 있었기에 새롭게 파일을 만들었음
+     (이 파일은 로그인기능이 생기기 이전의 파일)
+개발자:
+    송재임, 유현지
+개발일시:
+    2021.01.05.23.04.00
+버전:
+    0.0.1
+"""
 # face_recog.py
 # 얼굴인식 기능에 초점을 맞춘 wrapper 패키지
 import math
@@ -17,7 +24,7 @@ import logging
 from realTimeCheck import camera
 
 
-class FaceRecog():
+class FaceRecog:
 
     def __init__(self):
         # Using OpenCV to capture from device 0. If you have trouble capturing

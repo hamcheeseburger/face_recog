@@ -1,7 +1,14 @@
-# camera.py
-
+"""camera
+기능설명:
+     실시간 웹캠을 관리하는 모듈
+개발자:
+    유현지
+개발일시:
+    2021.01.06.16.45.00
+버전:
+    0.0.1
+"""
 import cv2
-
 
 
 class VideoCamera(object):

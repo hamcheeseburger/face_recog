@@ -1,3 +1,13 @@
+"""video (useless)
+기능설명:
+     로그인 기능 구현 이전의 동영상 근무측정 기능
+개발자:
+    송재임, 유현지
+개발일시:
+    2021.01.02.20.44.00
+버전:
+    0.0.1
+"""
 from useless.ui.videoui import Ui_videoForm
 import time
 from PyQt5.QtGui import *
@@ -180,6 +190,7 @@ class ExecuteVideo(Ui_videoForm):
             self.isCameraDisplayed = True
             # 실시간이기 때문에 비디오 크기가 아님 웹캠 사이즈로 고정
             # self.videoLabel.setFixedSize(1280, 720)
+
 
 if __name__ == "__main__":
     import sys

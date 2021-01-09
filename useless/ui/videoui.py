@@ -1,3 +1,13 @@
+"""video Ui(useless)
+기능설명:
+     로그인 기능 구현 이전의 동영상 근무측정 기능
+개발자:
+    송재임, 유현지
+개발일시:
+    2021.01.02.20.44.00
+버전:
+    0.0.1
+"""
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'videoUi.ui'

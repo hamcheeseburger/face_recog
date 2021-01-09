@@ -1,3 +1,13 @@
+"""useless realTime Main (useless)
+기능설명:
+     실시간으로 근무측정을 할 때 사용되는 기능적 모듈 (근무시간에 대한 수정이 있기 전의 파일)
+개발자:
+    송재임, 유현지
+개발일시:
+    2021.01.04.00.00.00
+버전:
+    0.0.1
+"""
 # face_recog.py
 # 얼굴인식 기능에 초점을 맞춘 wrapper 패키지
 import face_recognition
@@ -14,7 +24,7 @@ import timeit
 from realTimeCheck import camera
 
 
-class FaceRecog():
+class FaceRecog:
 
     def __init__(self):
         # Using OpenCV to capture from device 0. If you have trouble capturing
