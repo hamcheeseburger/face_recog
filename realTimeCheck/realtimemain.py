@@ -105,6 +105,9 @@ class FaceRecog(object):
         # 총 근무 태만 시간 초기화 (재근무 시 마다 + slackOffCount )
         self.totalSlackOffCount = 0
 
+        # log 출력 형식
+        self.formatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(name)s - %(message)s')
+
         self.face_locations = []
         self.face_encodings = []
         self.face_names = []
@@ -125,6 +128,8 @@ class FaceRecog(object):
         logger.addHandler(fileHandler)
         # logger instance로 log 찍기
         logger.setLevel(level=logging.INFO)
+        streamHandler.setFormatter(self.formatter)
+        fileHandler.setFormatter(self.formatter)
 
         return logger
 
@@ -236,7 +241,8 @@ class FaceRecog(object):
                 # 최초 근무 시작 시간이 저장되어 있지 않은 경우 저장
                 if (self.workStartTimeAtFirst == 0):
                     self.workStartTimeAtFirst = datetime.now().replace(microsecond=0)
-                    self.logger.info("\n\n근무 시작 시간: {0}".format(self.workStartTimeAtFirst))
+                    # self.logger.info("\n\n근무 시작 시간: {0}".format(self.workStartTimeAtFirst))
+                    self.logger.info(f'근무 최초 시작')
                     # 프로그램이 종료(근무 끝) 됐을때 총 근무시간 타이머가 종료됨
                     self.totalWorkingCount = timeit.default_timer()
                 # 근무태만 -> 근무중이 되었을때
