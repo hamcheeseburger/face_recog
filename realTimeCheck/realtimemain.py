@@ -314,24 +314,27 @@ class FaceRecog(object):
         final_working_count = final_total_working_count - self.totalSlackOffCount
         final_slackoff_count = self.totalSlackOffCount
 
-        final_working_count_int = round(final_working_count)
-        final_slackoff_count_int = round(final_slackoff_count)
+        print(final_total_working_count)
+        print(final_working_count)
+        print(final_slackoff_count)
+        final_working_count_int = int(final_working_count)
+        final_slackoff_count_int = int(final_slackoff_count)
         final_total_working_count_int = final_slackoff_count_int + final_working_count_int
 
         self.logger.info("\n---------프로그램 종료----------")
         s = "총근무시간 : "
         if final_total_working_count_int / 60 >= 1:
-            s += str(round(final_total_working_count_int / 60)) + "분 "
+            s += str(int(final_total_working_count_int / 60)) + "분 "
         s += str(final_total_working_count_int % 60) + "초\n"
 
         s += "순수근무시간 : "
         if final_working_count_int / 60 >= 1:
-            s += str(round(final_working_count_int / 60)) + "분 "
+            s += str(int(final_working_count_int / 60)) + "분 "
         s += str(final_working_count_int % 60) + "초\n"
 
         s += "근무태만시간 : "
         if final_slackoff_count_int / 60 >= 1:
-            s += str(round(final_slackoff_count_int / 60)) + "분 "
+            s += str(int(final_slackoff_count_int / 60)) + "분 "
         s += str(final_slackoff_count_int % 60) + "초"
         self.logger.info(s)
 
