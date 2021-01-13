@@ -16,7 +16,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import QtCore, QtWidgets, QtGui
 import cv2
-from videoCheck.videomain import FaceRecog
+from videoCheck.videomain2 import FaceRecog
 import os
 import simpleaudio as sa
 
@@ -35,19 +35,26 @@ class Thread1(QThread):
         super().__init__()
         self.face_recog = face_recog
         self.main = parent
-        self.frame_list = []
         if face_recog is None:
             print("쓰레드 init: face_recog is None")
 
     def run(self):
         # 동영상에서 프레임을 추출하는 과정
-        self.frame_list = self.face_recog.get_specific_frame()
+        frame_list = []
+        while True:
+            frame, percent = self.face_recog.get_specific_frame()
+            if frame is None:
+                break
+            else:
+                frame_list.append(frame)
+                self.threadEvent.emit(percent)
 
         # 프레임 추출이 완료되면 핸들러로 결과 전달(성공 : 1, 실패 : 0)
-        if len(self.frame_list) > 0:
-            self.threadEvent.emit(1)
+        if len(frame_list) > 0:
+            self.face_recog.set_frame_list(frame_list)
+            self.threadEvent.emit(200)
         else:
-            self.threadEvent.emit(0)
+            self.threadEvent.emit(None)
 
 
 class ExecuteVideo(VideoUi):
@@ -91,71 +98,73 @@ class ExecuteVideo(VideoUi):
 
     def threadEventHandler(self, result):  # 쓰레드핸들러(result값 전달 받는 부분)
         # result값이 1이면 정상적으로 프레임 추출이 완료된다는 뜻
+        if result == 200:
+            self.do_work()
+        elif result is not None:
+            self.print_total_working.setText("프레임추출중.. 잠시만 기다려주세요. " + str(result) + "% 진행중")
+        else:
+            return
 
+    def do_work(self):
         video = self.face_recog.get_video()
         fcc = cv2.VideoWriter_fourcc("m", "p", "4", "v")
         out = cv2.VideoWriter(
             "outVideo/output2.mp4", fcc, 3.0, (int(video.get(3)), int(video.get(4)))
         )
 
-        start = time.time()
-        print(start)
-        print("result 변수 : " + str(result))
-        if result is 1:
-            self.print_total_working.setText("근무시간 측정중...")
-            # 캠onoff, 소리onoff, 종료 버튼 활성화
-            self.btn_cam_start.setDisabled(False)
-            self.btn_sound_start.setDisabled(False)
-            self.btn_end.setDisabled(False)
-            while True:
-                frame = self.face_recog.do_recognition()
-                # frame이 아니라 jpg byte를 받아와서 이미지 출력
-                # bytes -> QPixmap으로 변환하는 것이 핵심
-                # frame이 null이 아닐 경우에만 윈도우 상 출력
-                if frame is None:
-                    print("<<<<동영상이 종료됨>>>>")
-                    break
-                elif frame is not None and self.isCameraDisplayed is True:
-                    # print('frame is not None')
-                    # 매개 변수 jpg_bytes -> 비디오 파일 꺼지자 마자 프로그램 강제 종료
-                    # 매개 변수 face_recog.get_jpg_bytes() -> 이상 없음
-                    byte = self.face_recog.get_jpg_bytes()
-                    if byte is not None:
-                        self.my_bytes = QByteArray(byte)
-                        self.bytes_pixmap = QPixmap()
-                        ok = self.bytes_pixmap.loadFromData(self.my_bytes)
-                        assert ok
-                        self.videoLabel.setPixmap(self.bytes_pixmap)
-                        self.videoLabel.setFixedSize(1280, 720)
-                        self.adjustSize()
+        self.print_total_working.setText("근무시간 측정중...")
+        # 캠onoff, 소리onoff, 종료 버튼 활성화
+        self.btn_cam_start.setDisabled(False)
+        self.btn_sound_start.setDisabled(False)
+        self.btn_end.setDisabled(False)
+        while True:
+            frame = self.face_recog.do_recognition()
+            # frame이 아니라 jpg byte를 받아와서 이미지 출력
+            # bytes -> QPixmap으로 변환하는 것이 핵심
+            # frame이 null이 아닐 경우에만 윈도우 상 출력
+            if frame is None:
+                print("<<<<동영상이 종료됨>>>>")
+                break
+            elif frame is not None and self.isCameraDisplayed is True:
+                # print('frame is not None')
+                # 매개 변수 jpg_bytes -> 비디오 파일 꺼지자 마자 프로그램 강제 종료
+                # 매개 변수 face_recog.get_jpg_bytes() -> 이상 없음
+                byte = self.face_recog.get_jpg_bytes()
+                if byte is not None:
+                    self.my_bytes = QByteArray(byte)
+                    self.bytes_pixmap = QPixmap()
+                    ok = self.bytes_pixmap.loadFromData(self.my_bytes)
+                    assert ok
+                    self.videoLabel.setPixmap(self.bytes_pixmap)
+                    self.videoLabel.setFixedSize(1280, 720)
+                    self.adjustSize()
 
-                # 비디오쓰기
-                out.write(frame)
+            # 비디오쓰기
+            out.write(frame)
 
-                # 근무 신호등 교체
-                self.isWorking = self.face_recog.working
-                if self.isWorking is True:
-                    self.change_traffic_light("../templates/Traffic_Lights_green.png")
-                    if self.workingAlarmFlag is False and self.alarmMute is False:
-                        # print('working alarm!!')
-                        play_obj = self.workingWav.play()
-                        # play_obj.wait_done()
-                        self.workingAlarmFlag = True
-                        self.slackOffAlarmFlag = False
-                else:
-                    self.change_traffic_light("../templates/Traffic_Lights_red.png")
-                    if self.slackOffAlarmFlag is False and self.alarmMute is False:
-                        # print('slackOff alarm!!')
-                        play_obj = self.notWorkingWav.play()
-                        self.slackOffAlarmFlag = True
-                        self.workingAlarmFlag = False
+            # 근무 신호등 교체
+            self.isWorking = self.face_recog.working
+            if self.isWorking is True:
+                self.change_traffic_light("../templates/Traffic_Lights_green.png")
+                if self.workingAlarmFlag is False and self.alarmMute is False:
+                    # print('working alarm!!')
+                    play_obj = self.workingWav.play()
+                    # play_obj.wait_done()
+                    self.workingAlarmFlag = True
+                    self.slackOffAlarmFlag = False
+            else:
+                self.change_traffic_light("../templates/Traffic_Lights_red.png")
+                if self.slackOffAlarmFlag is False and self.alarmMute is False:
+                    # print('slackOff alarm!!')
+                    play_obj = self.notWorkingWav.play()
+                    self.slackOffAlarmFlag = True
+                    self.workingAlarmFlag = False
 
-                if self.stopFlag or self.face_recog.video_end:
-                    break
-                cv2.waitKey(5) & 0xFF
-                self.face_recog.notifyIsPaused(self.pauseFlag)
-        end = time.time()
-        print(str(end) + ", " + str(end - start))
+            if self.stopFlag or self.face_recog.video_end:
+                break
+            cv2.waitKey(5) & 0xFF
+            self.face_recog.notifyIsPaused(self.pauseFlag)
+
         cv2.destroyAllWindows()
 
         self.print_total_working.setText(self.face_recog.calculate_total())

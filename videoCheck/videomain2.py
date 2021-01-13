@@ -137,7 +137,7 @@ class FaceRecog:
         self.FPS = round(self.video.get(cv2.CAP_PROP_FPS), 2)
         self.time_length = round(container.frames / self.FPS)
         print("비디오 총길이 : " + str(self.time_length) + "초")
-        self.interval = round(self.FPS / 3)  # 원본영상 fps의 1/3정도
+        self.interval = round(self.FPS)  # 원본영상 fps의 1/3정도
         self.frame_sequence = -self.interval
         self.specific_frame = []
 
@@ -171,35 +171,34 @@ class FaceRecog:
     def get_video(self):
         return self.video
 
+    def set_frame_list(self, frame_list):
+        self.specific_frame = frame_list
+
     def notifyIsPaused(self, paused):
         self.paused = paused
 
     def get_specific_frame(self):
+        percent = -1
+
         if self.name is None:
             self.get_user_name()
 
-        start = time.time()
-        # print(start)
-        print("...프레임추출중...")
-        while True:
-            if self.frame_sequence > self.time_length * self.FPS:
-                break
-            self.frame_sequence += self.interval
+        if self.frame_sequence > self.time_length * self.FPS:
+            return None, -1
+        self.frame_sequence += self.interval
 
-            if self.frame_sequence != 0:
-                percent = int((self.frame_sequence / (self.FPS * self.time_length)) * 100)
-                print(str(percent) + "% 진행중")
-            self.video.set(cv2.CAP_PROP_POS_FRAMES, self.frame_sequence)
-            ret, frame = self.video.read()
-            if ret:
-                # print("프레임 가져오기 성공")
-                self.specific_frame.append(frame)
-            else:
-                print(self.frame_sequence)
-        # return
-        end = time.time()
-        # print(str(end) + ", " + str(end-start))
-        return self.specific_frame
+        if self.frame_sequence != 0:
+            percent = int((self.frame_sequence / (self.FPS * self.time_length)) * 100)
+            print(str(percent) + "% 진행중")
+
+        self.video.set(cv2.CAP_PROP_POS_FRAMES, self.frame_sequence)
+        ret, frame = self.video.read()
+        if ret:
+            # print("프레임 가져오기 성공")
+            return frame, percent
+        else:
+            return None, -1
+
 
     def do_recognition(self):
         self.index += 1
@@ -371,6 +370,7 @@ class FaceRecog:
         strNotRecogTime = str(timedelta(seconds=notRecogTime))
 
         str_noti_end = "\n프로그램 종료"
+        self.logger.info(str_noti_end)
         print("\n동영상 fps : " + str(self.FPS) + "\n" \
                                + "전체 프레임 : " + str(self.totalFrame) \
                                + "\n" + "인식된 프레임 : " + str(self.recogFrameAgg) + "\n" \
@@ -379,7 +379,7 @@ class FaceRecog:
         str_total_working_time = "총근무시간 : " + strTotalTime + " / " \
             + "순수근무시간 : " + strRecogTime + " / " \
             + "총태만시간 : " + strNotRecogTime + "\n"
-        self.logger.info(str_noti_end + str_total_working_time)
+        self.logger.info(str_total_working_time)
         return str_total_working_time
 
 

@@ -11,8 +11,8 @@
 import os
 from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtCore import QThread
-from ui.video import ExecuteVideo
-# from video2 import ExecuteVideo
+# from ui.video import ExecuteVideo
+from ui.video2 import ExecuteVideo
 import subprocess
 from ui.menuui import MenuUi
 from ui.realtime import ExecuteRealTime

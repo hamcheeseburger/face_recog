@@ -159,7 +159,8 @@ class ExecuteRealTime(RealTimeUi):
     # 종료버튼 눌렸을 때 실행되는 함수
     def end_recog(self):
         self.stopFlag = True
-        self.face_recog.close()
+        if self.face_recog is not None:
+            self.face_recog.close()
 
     def cam_handler(self):
         if self.isCameraDisplayed is True:
@@ -188,10 +189,8 @@ class ExecuteRealTime(RealTimeUi):
             self.alarmMute = False
 
     def closeEvent(self, a0: QtGui.QCloseEvent) -> None:
-        # if self.face_recog is not None:
-        #     self.end_recog()
-        #     del self.face_recog
-       print("realTime window is closed!")
+        self.end_recog()
+        print("realTime window is closed!")
 
 
 if __name__ == "__main__":
