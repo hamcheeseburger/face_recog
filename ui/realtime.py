@@ -65,6 +65,8 @@ class ExecuteRealTime(RealTimeUi):
     def start_recog(self):
         self.init_variable()
         self.face_recog = FaceRecog.instance()
+        # 얼굴 인식 시작할 때 마다 변수 초기화 필요...
+        # self.face_recog.reset()
         self.print_total_working.setText("근무시간 측정중..")
         self.btn_start.setDisabled(True)
 
@@ -121,7 +123,7 @@ class ExecuteRealTime(RealTimeUi):
             cv2.waitKey(5) & 0xFF
             self.face_recog.notifyIsPaused(self.pauseFlag)
         end = time.time()
-        print(str(end) + ", " + str(end - start))
+        # print(str(end) + ", " + str(end - start))
         cv2.destroyAllWindows()
 
         self.print_total_working.setText(self.face_recog.calculate_total())
