@@ -25,6 +25,14 @@ class MenuUi(QWidget):
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
 
+        self.logBtn = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.logBtn.setObjectName("logBtn")
+        self.gridLayout.addWidget(self.logBtn, 7, 0, 1, 1)
+
+        self.copyCheckBtn = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.copyCheckBtn.setObjectName("copyCheckBtn")
+        self.gridLayout.addWidget(self.copyCheckBtn, 6, 0, 1, 1)
+
         self.processBtn = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.processBtn.setObjectName("processBtn")
         self.gridLayout.addWidget(self.processBtn, 5, 0, 1, 1)
@@ -58,3 +66,5 @@ class MenuUi(QWidget):
         self.jarBtn.setText(_translate("menuForm", "동영상 무결성 체크(jar 호출)"))
         self.videoBtn.setText(_translate("menuForm", "동영상 인식"))
         self.realTimeBtn.setText(_translate("menuForm", "실시간 인식"))
+        self.copyCheckBtn.setText(_translate("menuFrom", "동영상 중복 체크"))
+        self.logBtn.setText(_translate("menuForm", "근무 로그 보기"))
