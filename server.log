@@ -2884,3 +2884,210 @@
 [2021-01-11 18:52:26,359] INFO - realTimeCheck.realtimemain - 총근무시간 : 1분 21초
 순수근무시간 : 1분 21초
 근무태만시간 : 0초
+[2021-01-11 19:15:01,829] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-11 19:25:53,194] INFO - realTimeCheck.realtimemain - 근무 태만 : 2021-01-11 19:25:43
+[2021-01-11 19:25:55,960] INFO - realTimeCheck.realtimemain - 근무 태만 시간은 2021-01-11 19:25:43 부터 2021-01-11 19:25:55 까지 입니다.
+[2021-01-11 19:25:55,964] INFO - realTimeCheck.realtimemain - 
+---------프로그램 종료----------
+[2021-01-11 19:25:55,965] INFO - realTimeCheck.realtimemain - 총근무시간 : 10분 53초
+순수근무시간 : 10분 41초
+근무태만시간 : 12초
+[2021-01-11 23:29:40,752] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-11 23:29:40,754] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-11 23:30:05,336] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-11 23:30:18,093] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:00:05,787] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 00:00:05,788] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:00:40,345] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:00:34.549227
+[2021-01-12 00:00:40,346] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-12 00:01:01,588] INFO - realTimeCheck.realtimemain - 근무 태만 종료(태만 유지시간) : 0:00:31.283416
+[2021-01-12 00:01:01,589] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:01:48,074] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:01:54,012] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:02:05,615] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:02:41,741] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:02:48,556] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 00:02:48,557] INFO - realTimeCheck.realtimemain - s
+[2021-01-12 00:05:21,956] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 00:05:21,956] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:05:47,290] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:00:25.333598
+[2021-01-12 00:05:47,291] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-12 00:06:01,830] INFO - realTimeCheck.realtimemain - 근무 태만 종료(태만 유지시간) : 0:00:24.541665
+[2021-01-12 00:06:01,831] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:06:26,038] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 00:06:26,039] INFO - realTimeCheck.realtimemain - 총근무시간 : 1분 3초
+순수근무시간 : 39초
+근무태만시간 : 24초
+[2021-01-12 00:07:48,823] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 00:07:48,823] INFO - realTimeCheck.realtimemain - 총근무시간 : 2분 53초
+순수근무시간 : 2분 53초
+근무태만시간 : 0초
+[2021-01-12 00:10:01,795] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 00:10:01,795] INFO - realTimeCheck.realtimemain - 총근무시간 : 5분 6초
+순수근무시간 : 5분 6초
+근무태만시간 : 0초
+[2021-01-12 00:16:30,005] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 00:16:30,005] INFO - realTimeCheck.realtimemain - 총근무시간 : 11분 34초
+순수근무시간 : 11분 34초
+근무태만시간 : 0초
+[2021-01-12 00:16:47,094] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 00:16:47,095] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:16:50,761] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 00:16:50,761] INFO - realTimeCheck.realtimemain - 총근무시간 : 3초
+순수근무시간 : 3초
+근무태만시간 : 0초
+[2021-01-12 00:28:11,981] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 00:28:11,982] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:28:24,320] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 00:28:24,321] INFO - realTimeCheck.realtimemain - 총근무시간 : 12초
+순수근무시간 : 12초
+근무태만시간 : 0초
+[2021-01-12 00:29:09,146] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 00:29:09,146] INFO - realTimeCheck.realtimemain - 총근무시간 : 1분 28초
+순수근무시간 : 1분 28초
+근무태만시간 : 0초
+[2021-01-12 00:33:54,223] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 00:33:54,224] INFO - realTimeCheck.realtimemain - 총근무시간 : 6분 13초
+순수근무시간 : 6분 13초
+근무태만시간 : 0초
+[2021-01-12 00:34:03,892] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 00:34:03,893] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:34:09,558] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 00:34:09,558] INFO - realTimeCheck.realtimemain - 총근무시간 : 5초
+순수근무시간 : 5초
+근무태만시간 : 0초
+[2021-01-12 00:34:18,813] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 00:34:18,814] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:34:22,880] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 00:34:22,881] INFO - realTimeCheck.realtimemain - 총근무시간 : 3초
+순수근무시간 : 3초
+근무태만시간 : 0초
+[2021-01-12 00:44:46,075] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 00:44:46,076] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:49:46,462] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 00:49:46,463] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:49:55,381] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 00:49:55,381] INFO - realTimeCheck.realtimemain - 총근무시간 : 8초
+순수근무시간 : 8초
+근무태만시간 : 0초
+[2021-01-12 00:51:13,342] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 00:51:13,343] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:51:39,042] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:00:25.699629
+[2021-01-12 00:51:39,043] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-12 00:51:41,410] INFO - realTimeCheck.realtimemain - 근무 태만 종료(태만 유지시간) : 0:00:12.368406
+[2021-01-12 00:51:41,411] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 00:51:58,315] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 00:51:58,316] INFO - realTimeCheck.realtimemain - 총근무시간 : 44초
+순수근무시간 : 32초
+근무태만시간 : 12초
+[2021-01-12 00:53:40,981] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 00:53:40,982] INFO - realTimeCheck.realtimemain - 총근무시간 : 2분 57초
+순수근무시간 : 2분 57초
+근무태만시간 : 0초
+[2021-01-12 01:02:33,332] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 01:02:33,332] INFO - realTimeCheck.realtimemain - 총근무시간 : 37초
+순수근무시간 : 37초
+근무태만시간 : 0초
+[2021-01-12 01:02:49,306] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 01:02:49,306] INFO - realTimeCheck.realtimemain - 총근무시간 : 53초
+순수근무시간 : 53초
+근무태만시간 : 0초
+[2021-01-12 01:02:56,848] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 01:02:56,849] INFO - realTimeCheck.realtimemain - 총근무시간 : 1분 0초
+순수근무시간 : 1분 0초
+근무태만시간 : 0초
+[2021-01-12 01:03:03,534] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 01:03:03,534] INFO - realTimeCheck.realtimemain - 총근무시간 : 1분 7초
+순수근무시간 : 1분 7초
+근무태만시간 : 0초
+[2021-01-12 01:03:09,656] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 01:03:09,656] INFO - realTimeCheck.realtimemain - 총근무시간 : 1분 13초
+순수근무시간 : 1분 13초
+근무태만시간 : 0초
+[2021-01-12 01:03:17,134] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 01:03:17,134] INFO - realTimeCheck.realtimemain - 총근무시간 : 1분 20초
+순수근무시간 : 1분 20초
+근무태만시간 : 0초
+[2021-01-12 01:03:27,600] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 01:03:27,601] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 01:03:30,630] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 01:03:30,630] INFO - realTimeCheck.realtimemain - 총근무시간 : 3초
+순수근무시간 : 3초
+근무태만시간 : 0초
+[2021-01-12 01:11:41,969] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 01:11:41,969] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 01:12:11,586] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 01:12:11,586] INFO - realTimeCheck.realtimemain - 총근무시간 : 29초
+순수근무시간 : 29초
+근무태만시간 : 0초
+[2021-01-12 01:12:40,120] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 01:12:40,120] INFO - realTimeCheck.realtimemain - 총근무시간 : 0초
+순수근무시간 : 0초
+근무태만시간 : 0초
+[2021-01-12 01:32:14,283] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 01:32:14,284] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 01:32:34,194] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:00:19.910130
+[2021-01-12 01:32:34,195] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 01:32:34,195] INFO - realTimeCheck.realtimemain - 총근무시간 : 19초
+순수근무시간 : 19초
+근무태만시간 : 0초
+[2021-01-12 01:32:50,242] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 01:32:50,242] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 01:33:16,305] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:00:26.062602
+[2021-01-12 01:33:16,306] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-12 01:34:16,548] INFO - realTimeCheck.realtimemain - 근무 태만 종료(태만 유지시간) : 0:01:10.272983
+[2021-01-12 01:34:16,549] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 01:34:40,531] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:00:23.982934
+[2021-01-12 01:34:40,532] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-12 01:34:43,594] INFO - realTimeCheck.realtimemain - 근무 태만 종료(태만 유지시간) : 0:00:13.096343
+[2021-01-12 01:34:43,595] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 01:35:00,436] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:00:16.842033
+[2021-01-12 01:35:00,437] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-12 01:35:30,851] INFO - realTimeCheck.realtimemain - 근무 태만 종료(태만 유지시간) : 0:00:40.433136
+[2021-01-12 01:35:30,852] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 01:35:51,386] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:00:20.534372
+[2021-01-12 01:35:51,387] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-12 01:37:19,684] INFO - realTimeCheck.realtimemain - 근무 태만 종료(태만 유지시간) : 0:01:38.337694
+[2021-01-12 01:37:19,684] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 01:37:38,607] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:00:18.922408
+[2021-01-12 01:37:38,610] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 01:37:38,610] INFO - realTimeCheck.realtimemain - 총근무시간 : 4분 48초
+순수근무시간 : 1분 6초
+근무태만시간 : 3분 42초
+[2021-01-12 01:49:12,660] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 01:49:12,660] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 01:50:16,236] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:00:53.543370
+[2021-01-12 01:50:16,237] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-12 01:50:40,835] INFO - realTimeCheck.realtimemain - 근무 태만 종료(태만 유지시간) : 0:00:34.631483
+[2021-01-12 01:50:40,836] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 01:51:03,612] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:00:12.760351
+[2021-01-12 01:51:03,612] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-12 01:51:34,590] INFO - realTimeCheck.realtimemain - 근무 태만 종료(태만 유지시간) : 0:00:40.994069
+[2021-01-12 01:51:34,591] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 01:51:34,592] INFO - realTimeCheck.realtimemain - 총근무시간 : 2분 21초
+순수근무시간 : 1분 6초
+근무태만시간 : 1분 15초
+[2021-01-12 01:53:31,813] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 01:53:31,814] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 01:54:44,663] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:01:02.818269
+[2021-01-12 01:54:44,664] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-12 01:55:03,972] INFO - realTimeCheck.realtimemain - 근무 태만 종료(태만 유지시간) : 0:00:29.338674
+[2021-01-12 01:55:03,972] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 01:56:52,302] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:01:38.309672
+[2021-01-12 01:56:52,302] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-12 01:57:17,102] INFO - realTimeCheck.realtimemain - 근무 태만 종료(태만 유지시간) : 0:00:34.819894
+[2021-01-12 01:57:17,103] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 01:58:23,413] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:01:06.311132
+[2021-01-12 01:58:23,415] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 01:58:23,416] INFO - realTimeCheck.realtimemain - 총근무시간 : 4분 51초
+순수근무시간 : 3분 47초
+근무태만시간 : 1분 4초
+[2021-01-12 21:19:54,671] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-12 21:19:54,673] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 21:20:17,142] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:00:12.445910
+[2021-01-12 21:20:17,143] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-12 21:20:26,067] INFO - realTimeCheck.realtimemain - 근무 태만 종료(태만 유지시간) : 0:00:18.947697
+[2021-01-12 21:20:26,067] INFO - realTimeCheck.realtimemain - 근무시작(근무중)
+[2021-01-12 21:20:30,455] INFO - realTimeCheck.realtimemain - 근무 유지 시간(근무중단) : 0:00:04.388093
+[2021-01-12 21:20:30,456] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-12 21:20:30,457] INFO - realTimeCheck.realtimemain - 총근무시간 : 0:00:35 순수근무시간 : 0:00:16 근무태만시간 : 0:00:18
