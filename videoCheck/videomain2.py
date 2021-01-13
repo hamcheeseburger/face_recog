@@ -10,7 +10,6 @@
 """
 # face_recog.py
 # 얼굴인식 기능에 초점을 맞춘 wrapper 패키지
-import ctypes
 import time
 from time import gmtime, strftime
 from datetime import timedelta
@@ -118,10 +117,7 @@ class FaceRecog:
         streamHandler = logging.StreamHandler()
         streamHandler.setFormatter(formatter)
 
-        logfile = './server2.log'
-        ctypes.windll.kernel32.SetFileAttributesW(logfile, 2)
-
-        fileHandler = logging.FileHandler(logfile)
+        fileHandler = logging.FileHandler('./server.log')
         fileHandler.setFormatter(formatter)
         # logger instance에 handler 설정
         logger.addHandler(streamHandler)
