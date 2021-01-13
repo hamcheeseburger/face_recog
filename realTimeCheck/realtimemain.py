@@ -4,9 +4,9 @@
 개발자:
     송재임 유현지
 개발일시:
-    2021.01.07.14.17.00
+    2021.01.12.02.07.00
 버전:
-    0.0.3
+    0.0.4
 """
 import face_recognition
 import cv2
@@ -93,6 +93,12 @@ class FaceRecog(object):
         self.video = camera.VideoCamera()
         # 근무 최초 시작시간 초기화
         self.workStartTimeAtFirst = 0
+        # 근무 유지 시작 시간 초기화 (근무 최초 시작시, 태만->근무중 전환시 마다 초기화 됨)
+        self.workStartTime = 0
+        # 근무 유지 시간 초기화 (..)
+        self.workCount = 0
+        # 근무 중단 시간을 담기 위한 임시 변수 초기화
+        self.tempWorkStopTime = 0
         # 총 근무 시간 초기화 (계산전 : 근무 최초 시작 이래 무조건 계속 증가..근무 종료시에 - totalSlcakOffCount)
         self.totalWorkingCount = 0
         # 근무 태만 시작시간 초기화
@@ -101,8 +107,13 @@ class FaceRecog(object):
         self.slackOffCount = 0
         # 근무 태만 10초 이상시 근무태만이 시작되었다는 것을 알려주었는지 체크(무한 print 방지)
         self.alertSlackOff = False
+        # 근무 태만 10초 이상시 진짜 근무태만임.
+        self.isRealSlackOff = False
         # 총 근무 태만 시간 초기화 (재근무 시 마다 + slackOffCount )
         self.totalSlackOffCount = 0
+
+        # log 출력 형식
+        self.formatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(name)s - %(message)s')
 
         self.face_locations = []
         self.face_encodings = []
@@ -124,6 +135,8 @@ class FaceRecog(object):
         logger.addHandler(fileHandler)
         # logger instance로 log 찍기
         logger.setLevel(level=logging.INFO)
+        streamHandler.setFormatter(self.formatter)
+        fileHandler.setFormatter(self.formatter)
 
         return logger
 
@@ -205,19 +218,29 @@ class FaceRecog(object):
         # self.slackOffCount != 0 없으면 맨처음 코드를 실행했을때
         # slackOffCount = 0 이니까 무조건 10 이상임
         if self.slackOffCount != 0 and (
-                timeit.default_timer() - self.slackOffCount) >= 10 and self.alertSlackOff == False:
+                timeit.default_timer() - self.slackOffCount) >= 10 and self.alertSlackOff is False:
             # True로 설정하면 근무 태만 알림 문구를 더이상 출력 안함
             self.alertSlackOff = True
-            self.logger.info("근무 태만 : {0}".format(self.slackOffStartTime))
+            # self.logger.info("근무 태만 : {0}".format(self.slackOffStartTime))
+            # 근무 유지 시간 계산 (근무를 한번도 안하고 바로 근무 태만될 가능성 생각 => workCount가 0일 가능성 고려)
+            if self.workCount != 0:
+                # count = timeit.default_timer() - self.workCount
+                count = self.tempWorkStopTime - self.workCount
+                self.logger.info(f'근무 유지 시간(근무중단) : ' + str(timedelta(seconds=count)))
+            self.logger.info(f'근무 태만 시작')
+            # 진짜 근무 태만 상태임
+            self.isRealSlackOff = True
         # Display the results
         # 찾은 사람의 얼굴 영역과 이름을 비디오 화면에 그립니다.
         # 프레임 안에 얼굴이 없으면(근무지 이탈) '근무 태만'
-        if len(self.face_locations) == 0 and self.working == True:
+        if len(self.face_locations) == 0 and self.working is True:
             # 근무태만이 시작된 시간 저장..
             self.slackOffStartTime = datetime.now().replace(microsecond=0)
             self.slackOffCount = timeit.default_timer()
-
+            # 아직 실제로 근무 태만은 아니다.
             self.working = False
+            # 근무 중단이 된 시간을 저장
+            self.tempWorkStopTime = timeit.default_timer()
             # start_time = datetime.now().replace(microsecond=0)
             # self.logger.info("근무 태만 : {0}".format(start_time) )
         else:
@@ -235,27 +258,46 @@ class FaceRecog(object):
                 # 최초 근무 시작 시간이 저장되어 있지 않은 경우 저장
                 if (self.workStartTimeAtFirst == 0):
                     self.workStartTimeAtFirst = datetime.now().replace(microsecond=0)
-                    self.logger.info("\n\n근무 시작 시간: {0}".format(self.workStartTimeAtFirst))
+                    # self.logger.info("\n\n근무 시작 시간: {0}".format(self.workStartTimeAtFirst))
+                    self.logger.info(f'근무 최초 시작')
                     # 프로그램이 종료(근무 끝) 됐을때 총 근무시간 타이머가 종료됨
                     self.totalWorkingCount = timeit.default_timer()
+                    # 최초로 근무 유지 시간 계산시..
+                    # 두번째 계산부터는 진짜 근무 태만 상태->근무중 전환시에만 근무유지 시간을 초기화한다.
+                    self.workStartTime = datetime.now().replace(microsecond=0)
+                    self.workCount = timeit.default_timer()
+                    self.logger.info(f'근무시작(근무중)')
                 # 근무태만 -> 근무중이 되었을때
                 self.alertSlackOff = False
                 # 근무태만 시간이 10초 경과 후 재근무 했을 때
                 if self.slackOffCount != 0 and (timeit.default_timer() - self.slackOffCount) >= 10:
-                    # 얼마나 근무 태만을 지속했는지 계산(second)
+                    # 얼마나 근무 태만을 지속했는지 계산(second) (= 근무태만 종료)
+                    # 기존 방법 : 근무 태만 유지 시간이 아닌 근무 태만 종료 시점만 계산함
+                    # count = timeit.default_timer() - self.slackOffCount
+                    # self.totalSlackOffCount += count
+                    # delta = timedelta(seconds=count)
+                    # calculatedTime = (self.slackOffStartTime + delta).replace(microsecond=0)
+                    # self.logger.info("근무 태만 시간은 {0} 부터 {1} 까지 입니다.".format(self.slackOffStartTime, calculatedTime))
+
+                    # 변경방법 : 근무 태만 유지 시간을 계산 (근무 태만 종료 시점은 해당 로그가 찍힌 시점이다.)
                     count = timeit.default_timer() - self.slackOffCount
                     self.totalSlackOffCount += count
-                    delta = timedelta(seconds=count)
-                    calculatedTime = (self.slackOffStartTime + delta).replace(microsecond=0)
-                    self.logger.info("근무 태만 시간은 {0} 부터 {1} 까지 입니다.".format(self.slackOffStartTime, calculatedTime))
+                    self.logger.info(f'근무 태만 종료(태만 유지시간) : ' + str(timedelta(seconds=count)))
 
-                # 근무 태만 시간이 10초 지나기 전에 재근무 했을 때는 별다른 코드x..
-
+                # 근무 태만 시작을 0으로 초기화
                 self.slackOffCount = 0
 
-                self.working = True
-                start_time = datetime.now().replace(microsecond=0)
+                # start_time = datetime.now().replace(microsecond=0)
                 # self.logger.info("근무 중 : {0}".format(start_time))
+                # 근무 유지 시간 측정 시작 (진짜 근무 태만에서 근무중이 될때마다 초기화 됨.
+                # but 최초로 근무중일 시에는 위에 최초 근무 시작 시간 저장하는 부분에서 같이 측정)
+                if self.isRealSlackOff is True:
+                    self.isRealSlackOff = False
+                    self.workStartTime = datetime.now().replace(microsecond=0)
+                    self.workCount = timeit.default_timer()
+                    self.logger.info(f'근무시작(근무중)')
+                self.working = True
+
             # 프레임 안에 근무자가 없으면 근무태만
             elif self.workerExist == False and self.working == True:
                 # 근무태만이 시작된 시간 저장..
@@ -295,13 +337,28 @@ class FaceRecog(object):
         return jpg.tobytes()
 
     def calculate_total(self):
+        # 진짜 근무 태만인 상태로 끝났을 때에도 해당 태만 시간을 총 태만 시간에 더해주도록 처리함.
         if self.slackOffCount != 0 and (timeit.default_timer() - self.slackOffCount) >= 10:
-            # 얼마나 근무 태만을 지속했는지 계산(second)
+            # 얼마나 근무 태만을 지속했는지 계산(second) (= 근무태만 종료)
+            # 기존 방법 : 근무 태만 유지 시간이 아닌 근무 태만 종료 시점만 계산함
+            # count = timeit.default_timer() - self.slackOffCount
+            # self.totalSlackOffCount += count
+            # delta = timedelta(seconds=count)
+            # calculatedTime = (self.slackOffStartTime + delta).replace(microsecond=0)
+            # self.logger.info("근무 태만 시간은 {0} 부터 {1} 까지 입니다.".format(self.slackOffStartTime, calculatedTime))
+
+            # 변경방법 : 근무 태만 유지 시간을 계산 (근무 태만 종료 시점은 해당 로그가 찍힌 시점이다.)
             count = timeit.default_timer() - self.slackOffCount
             self.totalSlackOffCount += count
-            delta = timedelta(seconds=count)
-            calculatedTime = (self.slackOffStartTime + delta).replace(microsecond=0)
-            self.logger.info("근무 태만 시간은 {0} 부터 {1} 까지 입니다.".format(self.slackOffStartTime, calculatedTime))
+            self.logger.info(f'근무 태만 종료(태만 유지시간) : ' + str(timedelta(seconds=count)))
+        else:
+            # 마지막에도 근무 유지 시간을 찍어야 함.
+            if self.workCount != 0:
+                count = timeit.default_timer() - self.workCount
+                self.logger.info(f'근무 유지 시간(근무중단) : ' + str(timedelta(seconds=count)))
+
+        # 얼굴 인식 아예 안할때 아래 라인에서 문제 생김
+        # final_total_working_count = timeit.default_timer() - self.totalWorkingCount
 
         if self.totalWorkingCount == 0:
             final_total_working_count = 0
@@ -311,14 +368,23 @@ class FaceRecog(object):
         final_working_count = final_total_working_count - self.totalSlackOffCount
         final_slackoff_count = self.totalSlackOffCount
 
-        print(final_total_working_count)
-        print(final_working_count)
-        print(final_slackoff_count)
+        # print(final_total_working_count)
+        # print(final_working_count)
+        # print(final_slackoff_count)
+
+        total_cnt = str(timedelta(seconds=final_total_working_count)).split(".")[0]
+        working_cnt = str(timedelta(seconds=final_working_count)).split(".")[0]
+        slack_cnt = str(timedelta(seconds=final_slackoff_count)).split(".")[0]
+
+        print(str(timedelta(seconds=final_total_working_count)).split(".")[0])
+        print(str(timedelta(seconds=final_working_count)).split(".")[0])
+        print(str(timedelta(seconds=final_slackoff_count)).split(".")[0])
+
         final_working_count_int = int(final_working_count)
         final_slackoff_count_int = int(final_slackoff_count)
         final_total_working_count_int = final_slackoff_count_int + final_working_count_int
 
-        self.logger.info("\n---------프로그램 종료----------")
+        self.logger.info(f'프로그램 종료')
         s = "총근무시간 : "
         if final_total_working_count_int / 60 >= 1:
             s += str(int(final_total_working_count_int / 60)) + "분 "
@@ -333,7 +399,11 @@ class FaceRecog(object):
         if final_slackoff_count_int / 60 >= 1:
             s += str(int(final_slackoff_count_int / 60)) + "분 "
         s += str(final_slackoff_count_int % 60) + "초"
-        self.logger.info(s)
+
+
+        self.logger.info(f'' + '총근무시간 : ' + total_cnt + ' 순수근무시간 : ' + working_cnt + ' 근무태만시간 : ' + slack_cnt)
+
+        # self.reset()
 
         return s
 
