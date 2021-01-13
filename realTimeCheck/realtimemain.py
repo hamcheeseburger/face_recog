@@ -298,6 +298,7 @@ class FaceRecog(object):
                     self.logger.info(f'근무시작(근무중)')
                 self.working = True
 
+
             # 프레임 안에 근무자가 없으면 근무태만
             elif self.workerExist == False and self.working == True:
                 # 근무태만이 시작된 시간 저장..
