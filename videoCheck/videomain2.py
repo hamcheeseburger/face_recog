@@ -110,7 +110,7 @@ class FaceRecog:
         if len(logger.handlers) > 0:
             return logger
 
-        FORMAT = '%(asctime)s %(levelname)s %(name)s %(funcName)s:%(message)s'
+        FORMAT = '[%(asctime)s] %(levelname)s - %(name)s - %(message)s'
         TIME_FORMAT = "%Y-%m-%d %H:%M:%S"
         formatter = logging.Formatter(FORMAT, TIME_FORMAT)
 
@@ -138,6 +138,7 @@ class FaceRecog:
         self.time_length = round(container.frames / self.FPS)
         print("비디오 총길이 : " + str(self.time_length) + "초")
         self.interval = round(self.FPS)  # 원본영상 fps의 1/3정도
+        self.totalFrame = -self.interval
         self.frame_sequence = -self.interval
         self.specific_frame = []
 
@@ -181,6 +182,7 @@ class FaceRecog:
         percent = -1
 
         if self.name is None:
+            self.logger.info("\n\n<동영상으로 근무체크>")
             self.get_user_name()
 
         if self.frame_sequence > self.time_length * self.FPS:
@@ -189,7 +191,7 @@ class FaceRecog:
 
         if self.frame_sequence != 0:
             percent = int((self.frame_sequence / (self.FPS * self.time_length)) * 100)
-            print(str(percent) + "% 진행중")
+            # print(str(percent) + "% 진행중")
 
         self.video.set(cv2.CAP_PROP_POS_FRAMES, self.frame_sequence)
         ret, frame = self.video.read()
@@ -198,7 +200,6 @@ class FaceRecog:
             return frame, percent
         else:
             return None, -1
-
 
     def do_recognition(self):
         self.index += 1
@@ -369,7 +370,7 @@ class FaceRecog:
 
         strNotRecogTime = str(timedelta(seconds=notRecogTime))
 
-        str_noti_end = "\n프로그램 종료"
+        str_noti_end = "프로그램 종료"
         self.logger.info(str_noti_end)
         print("\n동영상 fps : " + str(self.FPS) + "\n" \
                                + "전체 프레임 : " + str(self.totalFrame) \
