@@ -2999,3 +2999,1132 @@
 총근무시간 : 1분 51초
 순수근무시간 : 1분 51초
 근무태만시간 : 0초
+
+
+근무 시작 시간: 2021-01-11 19:10:29
+근무 태만 : 2021-01-11 19:12:43
+근무 태만 시간은 2021-01-11 19:12:43 부터 2021-01-11 19:13:11 까지 입니다.
+근무 태만 : 2021-01-11 19:13:26
+근무 태만 시간은 2021-01-11 19:13:26 부터 2021-01-11 19:13:59 까지 입니다.
+
+---------프로그램 종료----------
+총근무시간 : 5분 49초
+순수근무시간 : 4분 47초
+근무태만시간 : 1분 2초
+근무시작
+근무태만
+
+---------프로그램 종료----------
+근무시작
+근무태만
+
+---------프로그램 종료----------
+근무시작
+근무태만
+
+---------프로그램 종료----------
+2021-01-11 19:47:02,216 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 19:47:04,992 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 2.3초
+2021-01-11 19:47:04,992 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 5
+2021-01-11 19:47:08,738 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 19:47:08,738 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 12.3초
+2021-01-11 19:47:08,738 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 18
+2021-01-11 19:47:10,283 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+2021-01-11 19:47:10,284 INFO videoCheck.videomain calculate_total:동영상 fps : 30.0
+전체 프레임 : 610
+인식된 프레임 : 220
+
+2021-01-11 19:47:10,284 INFO videoCheck.videomain calculate_total:총근무시간 : 0분 20초
+근무시간 : 0분 7초
+태만시간 : 0분 13초
+
+2021-01-11 19:49:30,958 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 19:49:33,762 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 2.3초
+2021-01-11 19:49:33,763 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 5
+2021-01-11 19:49:36,496 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 19:49:36,497 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 12.3초
+2021-01-11 19:49:36,497 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 18
+2021-01-11 19:49:38,202 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 610
+인식된 프레임 : 220
+
+총근무시간 : 0분 20초
+근무시간 : 0분 7초
+태만시간 : 0분 13초
+
+2021-01-11 19:54:54,142 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 19:54:57,296 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 2초
+2021-01-11 19:54:57,296 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 4초
+2021-01-11 19:54:59,975 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 19:54:59,975 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 12초
+2021-01-11 19:54:59,976 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 5초
+2021-01-11 19:55:01,507 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 610
+인식된 프레임 : 220
+
+총근무시간 : 0분 20초
+근무시간 : 0분 7초
+태만시간 : 0분 13초
+
+2021-01-11 19:56:57,171 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 19:56:58,635 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 2초
+2021-01-11 19:56:58,635 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 4초
+2021-01-11 19:57:01,582 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 19:57:01,582 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 16초
+2021-01-11 19:57:01,583 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 4초
+2021-01-11 19:57:09,457 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 0초
+2021-01-11 19:57:09,458 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 11초
+2021-01-11 19:57:33,939 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 5초
+2021-01-11 19:57:33,940 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 41초
+2021-01-11 19:57:46,452 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 6초
+2021-01-11 19:57:46,453 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 63초
+2021-01-11 19:57:50,490 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 5초
+2021-01-11 19:57:50,491 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 72초
+2021-01-11 19:58:02,350 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 5초
+2021-01-11 19:58:02,350 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 92초
+2021-01-11 19:58:33,646 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 7초
+2021-01-11 19:58:33,647 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 137초
+2021-01-11 19:58:34,480 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 1초
+2021-01-11 19:58:34,480 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 139초
+2021-01-11 19:58:46,203 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 3초
+2021-01-11 19:58:46,204 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 156초
+2021-01-11 19:58:56,898 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 19:58:56,898 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 15초
+2021-01-11 19:58:56,899 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 166초
+2021-01-11 19:59:12,898 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 1초
+2021-01-11 19:59:12,899 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 188초
+2021-01-11 20:01:49,259 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 20:01:50,807 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 2초
+2021-01-11 20:01:50,808 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 4초
+2021-01-11 20:01:53,793 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 20:01:53,793 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 16초
+2021-01-11 20:01:53,794 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 4초
+2021-01-11 20:01:59,998 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 0초
+2021-01-11 20:01:59,998 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 11초
+2021-01-11 20:02:24,602 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 5초
+2021-01-11 20:02:24,602 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 41초
+2021-01-11 20:02:37,110 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 6초
+2021-01-11 20:02:37,110 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 63초
+2021-01-11 20:02:40,879 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 5초
+2021-01-11 20:02:40,880 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 72초
+2021-01-11 20:02:52,877 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 5초
+2021-01-11 20:02:52,877 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 92초
+2021-01-11 20:03:27,880 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 7초
+2021-01-11 20:03:27,881 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 137초
+2021-01-11 20:03:28,682 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 1초
+2021-01-11 20:03:28,682 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 139초
+2021-01-11 20:03:40,188 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 3초
+2021-01-11 20:03:40,188 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 156초
+2021-01-11 20:03:51,298 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 20:03:51,299 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 15초
+2021-01-11 20:03:51,299 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 166초
+2021-01-11 20:04:08,485 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 1초
+2021-01-11 20:04:08,485 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 188초
+2021-01-11 20:04:29,162 INFO videoCheck.videomain calculate_total:태만 유지 시간 : 2초
+2021-01-11 20:04:29,162 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 6440
+
+총근무시간 : 4분 11초
+근무시간 : 3분 34초
+태만시간 : 0분 37초
+
+2021-01-11 20:06:10,491 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 20:06:11,890 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 2초
+2021-01-11 20:07:32,503 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 20:07:33,903 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 2초
+2021-01-11 20:07:33,904 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 4초/4초
+2021-01-11 20:07:36,675 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 20:07:36,676 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 16초
+2021-01-11 20:07:36,677 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 4초/21초
+2021-01-11 20:07:42,579 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 0초
+2021-01-11 20:07:42,580 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 11초/28초
+2021-01-11 20:08:06,501 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 5초
+2021-01-11 20:08:06,502 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 41초/59초
+2021-01-11 20:08:19,064 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 6초
+2021-01-11 20:08:19,065 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 63초/81초
+2021-01-11 20:08:22,941 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 5초
+2021-01-11 20:08:22,942 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 72초/91초
+2021-01-11 20:08:34,422 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 5초
+2021-01-11 20:08:34,422 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 92초/111초
+2021-01-11 20:09:04,279 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 7초
+2021-01-11 20:09:04,280 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 137초/156초
+2021-01-11 20:09:05,058 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 1초
+2021-01-11 20:09:05,059 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 139초/159초
+2021-01-11 20:09:16,056 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 3초
+2021-01-11 20:09:16,057 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 156초/175초
+2021-01-11 20:09:26,504 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 20:09:26,504 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 15초
+2021-01-11 20:09:26,505 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 166초/202초
+2021-01-11 20:09:41,844 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 1초
+2021-01-11 20:09:41,844 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 188초/224초
+2021-01-11 20:10:00,283 INFO videoCheck.videomain calculate_total:태만 유지 시간 : 2초
+2021-01-11 20:10:00,283 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 6440
+
+총근무시간 : 4분 11초
+근무시간 : 3분 34초
+태만시간 : 0분 37초
+
+2021-01-11 20:31:31,687 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 20:31:35,997 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 20:31:35,998 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 16초
+2021-01-11 20:31:35,998 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 4초/21초
+2021-01-11 20:33:30,079 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 20:33:30,080 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 15초
+2021-01-11 20:33:30,080 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 166초/202초
+2021-01-11 20:34:04,758 INFO videoCheck.videomain calculate_total:태만 유지 시간 : 2초
+2021-01-11 20:34:04,759 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 6440
+
+총근무시간 : 4분 11초
+근무시간 : 3분 34초
+태만시간 : 0분 37초
+
+2021-01-11 20:38:48,206 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 20:38:52,458 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 20:38:52,458 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 16초
+2021-01-11 20:38:52,459 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 4초/21초
+2021-01-11 20:40:42,741 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 20:40:42,742 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 15초
+2021-01-11 20:40:42,742 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 166초/202초
+2021-01-11 20:41:17,442 INFO videoCheck.videomain calculate_total:근무 유지 시간 : 214초/251초
+2021-01-11 20:41:17,442 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 6440
+
+총근무시간 : 4분 11초
+근무시간 : 3분 34초
+태만시간 : 0분 37초
+
+2021-01-11 20:48:13,658 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 20:48:13,659 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 20:50:12,078 INFO videoCheck.videomain calculate_total:근무 유지 시간 : 0초/251초
+2021-01-11 20:50:12,079 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 20
+
+총근무시간 : 4분 11초
+근무시간 : 0분 0초
+태만시간 : 4분 11초
+
+2021-01-11 20:51:44,495 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 20:54:43,393 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 20:54:49,350 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 20:54:49,352 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 16초
+2021-01-11 20:54:49,353 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 4초/21초
+2021-01-11 20:56:42,797 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 20:56:42,799 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 15초
+2021-01-11 20:56:42,799 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 166초/202초
+2021-01-11 20:57:21,858 INFO videoCheck.videomain calculate_total:근무 유지 시간 : 214초/251초
+2021-01-11 20:57:21,859 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 6440
+
+총근무시간 : 4분 11초
+근무시간 : 3분 34초
+태만시간 : 0분 37초
+
+2021-01-11 21:01:05,389 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 21:04:14,814 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 21:04:19,005 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 21:04:19,006 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 16.3초
+2021-01-11 21:04:19,007 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 4.7초/21.7초
+2021-01-11 21:06:23,693 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 21:06:23,693 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 15.7초
+2021-01-11 21:06:23,694 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 166.8초/202.5초
+2021-01-11 21:06:59,444 INFO videoCheck.videomain calculate_total:근무 유지 시간 : 214초/251초
+2021-01-11 21:06:59,445 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 6440
+
+총근무시간 : 4분 11초
+근무시간 : 3분 34초
+태만시간 : 0분 37초
+
+2021-01-11 21:12:25,193 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 21:12:32,370 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 21:12:32,371 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 16.3초
+2021-01-11 21:12:32,373 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 4.7초/21.7초
+2021-01-11 21:14:24,811 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 21:14:24,812 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 15.7초
+2021-01-11 21:14:24,812 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 166.8초/202.5초
+2021-01-11 21:14:59,686 INFO videoCheck.videomain calculate_total:근무 유지 시간 : 214초/251초
+2021-01-11 21:14:59,687 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 6440
+
+총근무시간 : 4분 11초
+근무시간 : 3분 34초
+태만시간 : 0분 37초
+
+2021-01-11 21:28:39,926 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 21:28:44,199 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 21:28:44,200 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 16.3초
+2021-01-11 21:28:44,201 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 4.7초/21.7초
+2021-01-11 21:30:42,506 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 21:30:42,507 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 15.7초
+2021-01-11 21:30:42,508 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 166.8초/202.5초
+2021-01-11 21:31:16,980 INFO videoCheck.videomain calculate_total:근무 유지 시간 : 214초/251초
+2021-01-11 21:31:16,980 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 6440
+
+총근무시간 : 4분 11초
+근무시간 : 3분 34초
+태만시간 : 0분 37초
+
+2021-01-11 21:34:34,756 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 21:34:34,757 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 21:35:52,267 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 21:35:56,806 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 21:35:56,807 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 16.7초
+2021-01-11 21:35:56,808 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 5.0초/21.7초
+2021-01-11 21:37:53,127 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 21:37:53,129 INFO videoCheck.videomain do_recognition:태만 유지 시간 : 16.0초
+2021-01-11 21:37:53,129 INFO videoCheck.videomain do_recognition:근무 유지 시간 : 169.8초/202.5초
+2021-01-11 21:38:31,120 INFO videoCheck.videomain calculate_total:근무 유지 시간 : 218초/251초
+2021-01-11 21:38:31,121 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 6550
+
+총근무시간 : 4분 11초
+근무시간 : 3분 38초
+태만시간 : 0분 33초
+
+2021-01-11 21:44:54,368 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 21:44:58,746 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 21:44:58,746 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.7초
+2021-01-11 21:44:58,747 INFO videoCheck.videomain do_recognition:순수근무누적시간 : 5.0초/21.7초
+2021-01-11 21:46:52,795 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 21:46:52,796 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.0초
+2021-01-11 21:46:52,797 INFO videoCheck.videomain do_recognition:순수근무누적시간 : 169.8초/202.5초
+2021-01-11 21:47:28,068 INFO videoCheck.videomain calculate_total:순수근무누적시간 : 218.6초/251.3초
+2021-01-11 21:47:28,069 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 6550
+인식되지 않은 프레임 : 980
+총근무시간 : 4분 11초
+근무시간 : 3분 38초
+태만시간 : 0분 33초
+
+2021-01-11 22:05:09 INFO videoCheck.videomain calculate_total:근무누적시간 : 0.0초/28.7초
+2021-01-11 22:05:09 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 860
+인식된 프레임 : 0
+인식되지 않은 프레임 : 0
+총근무시간 : 0분 28초
+순수근무시간 : 0분 0초
+총태만시간 : 0분 28초
+
+2021-01-11 22:06:36 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 22:06:41 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:06:41 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.7초
+2021-01-11 22:06:41 INFO videoCheck.videomain do_recognition:근무누적시간 : 5.0초/21.7초
+2021-01-11 22:08:32 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:08:32 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.0초
+2021-01-11 22:08:32 INFO videoCheck.videomain do_recognition:근무누적시간 : 169.8초/202.5초
+2021-01-11 22:09:06 INFO videoCheck.videomain calculate_total:근무누적시간 : 218.6초/251.3초
+2021-01-11 22:09:06 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 6550
+인식되지 않은 프레임 : 980
+총근무시간 : 4분 11초
+순수근무시간 : 3분 38초
+총태만시간 : 0분 33초
+
+2021-01-11 22:32:47 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 22:32:50 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:50 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:50 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:50 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:50 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:50 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:52 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:32:52 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.7초
+2021-01-11 22:32:52 INFO videoCheck.videomain do_recognition:근무누적시간 : 5.0초/21.7초
+2021-01-11 22:34:31 INFO videoCheck.videomain calculate_total:근무누적시간 : 140.1초/156.8초
+2021-01-11 22:34:31 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 4700
+인식된 프레임 : 4200
+인식되지 않은 프레임 : 500
+총근무시간 : 2분 36초
+순수근무시간 : 2분 19초
+총태만시간 : 0분 17초
+
+2021-01-11 22:38:01 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 22:38:04 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:38:06 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.7초
+2021-01-11 22:38:06 INFO videoCheck.videomain do_recognition:근무누적시간 : 5.0초/21.7초
+2021-01-11 22:40:02 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:40:03 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.0초
+2021-01-11 22:40:03 INFO videoCheck.videomain do_recognition:근무누적시간 : 169.8초/202.5초
+2021-01-11 22:40:40 INFO videoCheck.videomain calculate_total:근무누적시간 : 218.6초/251.3초
+2021-01-11 22:40:40 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 6550
+인식되지 않은 프레임 : 980
+총근무시간 : 4분 11초
+순수근무시간 : 3분 38초
+총태만시간 : 0분 33초
+
+2021-01-11 22:49:22 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 22:49:25 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:49:25 INFO videoCheck.videomain do_recognition:근무유지시간 : 2.0초
+2021-01-11 22:49:26 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.7초(5.0~21.7
+2021-01-11 22:51:18 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 22:51:18 INFO videoCheck.videomain do_recognition:근무유지시간 : 126.8초
+2021-01-11 22:51:19 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.0초(186.5~202.5
+2021-01-11 22:51:54 INFO videoCheck.videomain calculate_total:근무누적시간 : 218.6초/251.3초
+2021-01-11 22:51:54 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 6550
+인식되지 않은 프레임 : 980
+총근무시간 : 4분 11초
+순수근무시간 : 3분 38초
+총태만시간 : 0분 33초
+
+2021-01-11 23:03:37 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 23:03:42 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:03:42 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-11 23:03:43 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(5.7~18.3
+2021-01-11 23:03:44 INFO videoCheck.videomain calculate_total:근무누적시간 : 2.3초/20.3초
+2021-01-11 23:03:44 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 610
+인식된 프레임 : 70
+인식되지 않은 프레임 : 380
+총근무시간 : 0분 20초
+순수근무시간 : 0분 2초
+총태만시간 : 0분 18초
+
+2021-01-11 23:05:58 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 23:06:01 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:06:01 INFO videoCheck.videomain do_recognition:근무유지시간 : 4.7초
+2021-01-11 23:06:03 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.7초(5.0~21.7
+2021-01-11 23:07:59 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:07:59 INFO videoCheck.videomain do_recognition:근무유지시간 : 164.8초
+2021-01-11 23:08:00 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.0초(186.5~202.5
+2021-01-11 23:08:34 INFO videoCheck.videomain calculate_total:근무누적시간 : 49.0초/251.3초
+2021-01-11 23:08:34 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 1470
+인식되지 않은 프레임 : 980
+총근무시간 : 4분 11초
+순수근무시간 : 0분 49초
+총태만시간 : 3분 22초
+
+2021-01-11 23:10:43 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 23:10:48 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:10:48 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-11 23:10:48 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(5.7~18.3
+2021-01-11 23:10:50 INFO videoCheck.videomain calculate_total:근무누적시간 : 7.7초/20.3초
+2021-01-11 23:10:50 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 610
+인식된 프레임 : 230
+인식되지 않은 프레임 : 380
+총근무시간 : 0분 20초
+순수근무시간 : 0분 7초
+총태만시간 : 0분 13초
+
+2021-01-11 23:15:03 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 23:15:08 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:15:08 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-11 23:15:09 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(5.7~18.3
+2021-01-11 23:15:10 INFO videoCheck.videomain calculate_total:근무누적시간 : 7.7초/20.3초
+2021-01-11 23:15:10 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 610
+인식된 프레임 : 230
+인식되지 않은 프레임 : 380
+총근무시간 : 0분 20초
+순수근무시간 : 0분 7초
+총태만시간 : 0분 13초
+
+2021-01-11 23:26:02 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 23:26:06 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:26:06 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-11 23:26:07 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(5.7~18.3)
+2021-01-11 23:26:09 INFO videoCheck.videomain calculate_total:근무누적시간 : 7.7초/20.3초
+2021-01-11 23:26:09 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 610
+인식된 프레임 : 230
+인식되지 않은 프레임 : 380
+총근무시간 : 0분 20초
+순수근무시간 : 0분 7초
+총태만시간 : 0분 13초
+
+2021-01-11 23:32:24 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 23:32:31 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:32:31 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-11 23:32:31 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(5.7~18.3)
+2021-01-11 23:32:34 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 610
+인식된 프레임 : 230
+인식되지 않은 프레임 : 380
+총근무시간 : 0분 20초
+순수근무시간 : 0분 7초
+총태만시간 : 0분 13초
+
+2021-01-11 23:35:02 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 23:35:07 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:35:07 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-11 23:36:17 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 23:36:22 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:36:22 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-11 23:36:23 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0분5초~0분18초)
+2021-01-11 23:36:24 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 610
+인식된 프레임 : 230
+인식되지 않은 프레임 : 380
+총근무시간 : 0분 20초
+순수근무시간 : 0분 7초
+총태만시간 : 0분 13초
+
+2021-01-11 23:38:27 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 23:38:33 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:38:33 INFO videoCheck.videomain do_recognition:근무유지시간 : 4.7초
+2021-01-11 23:38:34 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.7초(0분5초~0분21초)
+2021-01-11 23:40:23 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:40:23 INFO videoCheck.videomain do_recognition:근무유지시간 : 164.8초
+2021-01-11 23:40:24 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.0초(3분6초~3분22초)
+2021-01-11 23:40:58 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.97
+전체 프레임 : 7530
+인식된 프레임 : 6550
+인식되지 않은 프레임 : 980
+총근무시간 : 4분 11초
+순수근무시간 : 3분 38초
+총태만시간 : 0분 33초
+
+2021-01-11 23:49:56 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:49:56 INFO videoCheck.videomain do_recognition:근무유지시간 : 0.0초
+2021-01-11 23:49:57 INFO videoCheck.videomain calculate_total:태만유지시간 : 22.7초(0분0초~0분0초)
+2021-01-11 23:49:57 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 680
+인식된 프레임 : 0
+인식되지 않은 프레임 : 680
+총근무시간 : 0분 23초
+순수근무시간 : 0분 0초
+총태만시간 : 0분 23초
+
+2021-01-11 23:50:53 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:50:53 INFO videoCheck.videomain do_recognition:근무유지시간 : 0.0초
+2021-01-11 23:50:54 INFO videoCheck.videomain calculate_total:태만유지시간 : 22.7초(0분0초~0분0초)
+2021-01-11 23:50:54 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 680
+인식된 프레임 : 0
+인식되지 않은 프레임 : 680
+총근무시간 : 0분 23초
+순수근무시간 : 0분 0초
+총태만시간 : 0분 23초
+
+2021-01-11 23:52:06 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:52:06 INFO videoCheck.videomain do_recognition:근무유지시간 : 0.0초
+2021-01-11 23:52:07 INFO videoCheck.videomain calculate_total:태만유지시간 : 22.7초(0분0초~0분0초)
+2021-01-11 23:52:07 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 680
+인식된 프레임 : 0
+인식되지 않은 프레임 : 680
+총근무시간 : 0분 23초
+순수근무시간 : 0분 0초
+총태만시간 : 0분 23초
+
+2021-01-11 23:52:19 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:52:19 INFO videoCheck.videomain do_recognition:근무유지시간 : 0.0초
+2021-01-11 23:52:20 INFO videoCheck.videomain calculate_total:태만유지시간 : 22.7초(0분0초~0분0초)
+2021-01-11 23:52:20 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 680
+인식된 프레임 : 0
+인식되지 않은 프레임 : 680
+총근무시간 : 0분 23초
+순수근무시간 : 0분 0초
+총태만시간 : 0분 23초
+
+2021-01-11 23:52:51 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:52:51 INFO videoCheck.videomain do_recognition:근무유지시간 : 0.0초
+2021-01-11 23:52:52 INFO videoCheck.videomain calculate_total:태만유지시간 : 22.7초(0분0초~0분0초)
+2021-01-11 23:52:52 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 680
+인식된 프레임 : 0
+인식되지 않은 프레임 : 680
+총근무시간 : 0분 23초
+순수근무시간 : 0분 0초
+총태만시간 : 0분 23초
+
+2021-01-11 23:53:06 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:53:06 INFO videoCheck.videomain do_recognition:근무유지시간 : 0.0초
+2021-01-11 23:53:07 INFO videoCheck.videomain calculate_total:태만유지시간 : 22.7초(0분0초~0분0초)
+2021-01-11 23:53:07 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 680
+인식된 프레임 : 0
+인식되지 않은 프레임 : 680
+총근무시간 : 0분 23초
+순수근무시간 : 0분 0초
+총태만시간 : 0분 23초
+
+2021-01-11 23:55:17 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:55:17 INFO videoCheck.videomain do_recognition:근무유지시간 : 0.0초
+2021-01-11 23:55:18 INFO videoCheck.videomain calculate_total:태만유지시간 : 23.0초(0분0초~0분0초)
+2021-01-11 23:55:18 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.98
+전체 프레임 : 690
+인식된 프레임 : 0
+인식되지 않은 프레임 : 690
+총근무시간 : 0분 23초
+순수근무시간 : 0분 0초
+총태만시간 : 0분 23초
+
+2021-01-11 23:55:26 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 23:55:35 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:55:35 INFO videoCheck.videomain do_recognition:근무유지시간 : 12.0초
+2021-01-11 23:55:35 INFO videoCheck.videomain calculate_total:태만유지시간 : 10.7초(0분12초~0분0초)
+2021-01-11 23:55:35 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.98
+전체 프레임 : 680
+인식된 프레임 : 360
+인식되지 않은 프레임 : 320
+총근무시간 : 0분 23초
+순수근무시간 : 0분 12초
+총태만시간 : 0분 11초
+
+2021-01-11 23:57:19 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-11 23:57:27 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:57:27 INFO videoCheck.videomain do_recognition:근무유지시간 : 12.0초
+2021-01-11 23:57:27 INFO videoCheck.videomain calculate_total:태만유지시간 : 10.7초(0분12초~0분22초)
+2021-01-11 23:57:27 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.98
+전체 프레임 : 680
+인식된 프레임 : 360
+인식되지 않은 프레임 : 320
+총근무시간 : 0분 23초
+순수근무시간 : 0분 12초
+총태만시간 : 0분 11초
+
+2021-01-11 23:58:34 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-11 23:58:34 INFO videoCheck.videomain do_recognition:근무유지시간 : 0.0초
+2021-01-11 23:58:35 INFO videoCheck.videomain calculate_total:태만유지시간 : 22.7초(0분0초~0분22초)
+2021-01-11 23:58:35 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 680
+인식된 프레임 : 0
+인식되지 않은 프레임 : 680
+총근무시간 : 0분 23초
+순수근무시간 : 0분 0초
+총태만시간 : 0분 23초
+
+2021-01-12 00:03:10 INFO videoCheck.videomain calculate_total:태만유지시간 : 22.7초(0분0초~0분22초)
+2021-01-12 00:03:10 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 680
+인식된 프레임 : 0
+인식되지 않은 프레임 : 680
+총근무시간 : 0분 23초
+순수근무시간 : 0분 0초
+총태만시간 : 0분 23초
+
+2021-01-12 00:12:03 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 00:12:03 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 00:12:03 INFO videoCheck.videomain do_recognition:근무유지시간 : 0.3초
+2021-01-12 00:12:15 INFO videoCheck.videomain do_recognition:태만유지시간 : 14.0초(0분29초~0분43초)
+2021-01-12 00:12:25 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 00:12:25 INFO videoCheck.videomain do_recognition:근무유지시간 : 29.0초
+2021-01-12 00:12:25 INFO videoCheck.videomain calculate_total:태만유지시간 : 11.3초(0분56초~1분7초)
+2021-01-12 00:12:25 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 2020
+인식된 프레임 : 880
+인식되지 않은 프레임 : 1140
+총근무시간 : 1분 7초
+순수근무시간 : 0분 29초
+총태만시간 : 0분 38초
+
+2021-01-12 00:14:33 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 00:14:33 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 00:14:33 INFO videoCheck.videomain do_recognition:근무유지시간 : 0.3초
+2021-01-12 00:14:45 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 1100
+인식된 프레임 : 720
+인식되지 않은 프레임 : 380
+총근무시간 : 0분 36초
+순수근무시간 : 0분 23초
+총태만시간 : 0분 13초
+
+
+
+근무 시작 시간: 2021-01-12 00:58:36
+
+---------프로그램 종료----------
+총근무시간 : 5초
+순수근무시간 : 5초
+근무태만시간 : 0초
+
+---------프로그램 종료----------
+총근무시간 : 15초
+순수근무시간 : 15초
+근무태만시간 : 0초
+
+
+근무 시작 시간: 2021-01-12 00:59:42
+
+---------프로그램 종료----------
+총근무시간 : 3초
+순수근무시간 : 3초
+근무태만시간 : 0초
+
+---------프로그램 종료----------
+총근무시간 : 1분 18초
+순수근무시간 : 1분 18초
+근무태만시간 : 0초
+
+
+근무 시작 시간: 2021-01-12 01:00:52
+
+---------프로그램 종료----------
+총근무시간 : 2초
+순수근무시간 : 2초
+근무태만시간 : 0초
+
+---------프로그램 종료----------
+총근무시간 : 8초
+순수근무시간 : 8초
+근무태만시간 : 0초
+
+
+근무 시작 시간: 2021-01-12 01:02:35
+
+---------프로그램 종료----------
+총근무시간 : 2초
+순수근무시간 : 2초
+근무태만시간 : 0초
+
+---------프로그램 종료----------
+총근무시간 : 0초
+순수근무시간 : 0초
+근무태만시간 : 0초
+2021-01-12 01:10:25 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 01:10:25 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:10:25 INFO videoCheck.videomain do_recognition:근무유지시간 : 0.3초
+2021-01-12 01:10:37 INFO videoCheck.videomain do_recognition:태만유지시간 : 14.0초(0분29초~0분43초)
+2021-01-12 01:10:46 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:10:46 INFO videoCheck.videomain do_recognition:근무유지시간 : 29.0초
+2021-01-12 01:10:46 INFO videoCheck.videomain calculate_total:태만유지시간 : 11.3초(0분56초~1분7초)
+2021-01-12 01:10:46 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 2020
+인식된 프레임 : 880
+인식되지 않은 프레임 : 1140
+총근무시간 : 1분 7초
+순수근무시간 : 0분 29초
+총태만시간 : 0분 38초
+
+2021-01-12 01:14:29 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 01:14:42 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:14:42 INFO videoCheck.videomain do_recognition:근무유지시간 : 16.0초
+2021-01-12 01:14:43 INFO videoCheck.videomain do_recognition:태만유지시간 : 14.0초(0분29초~0분43초)
+2021-01-12 01:14:52 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:14:52 INFO videoCheck.videomain do_recognition:근무유지시간 : 13.3초
+2021-01-12 01:14:52 INFO videoCheck.videomain calculate_total:태만유지시간 : 11.3초(0분56초~1분7초)
+2021-01-12 01:14:52 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 2020
+인식된 프레임 : 880
+인식되지 않은 프레임 : 760
+총근무시간 : 1분 7초
+순수근무시간 : 0분 29초
+총태만시간 : 0분 38초
+
+2021-01-12 01:15:50 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 01:16:01 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:16:01 INFO videoCheck.videomain do_recognition:근무유지시간 : 16.0초
+2021-01-12 01:16:02 INFO videoCheck.videomain do_recognition:태만유지시간 : 14.0초(0분29초~0분43초)
+2021-01-12 01:16:13 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:16:13 INFO videoCheck.videomain do_recognition:근무유지시간 : 13.3초
+2021-01-12 01:16:13 INFO videoCheck.videomain calculate_total:태만유지시간 : 11.3초(0분56초~1분7초)
+2021-01-12 01:16:14 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 2020
+인식된 프레임 : 880
+인식되지 않은 프레임 : 760
+총근무시간 : 1분 7초
+순수근무시간 : 0분 29초
+총태만시간 : 0분 38초
+
+2021-01-12 01:18:10 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 510
+인식된 프레임 : 0
+인식되지 않은 프레임 : 0
+총근무시간 : 0분 17초
+순수근무시간 : 0분 0초
+총태만시간 : 0분 17초
+
+2021-01-12 01:23:55 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 01:24:00 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:24:00 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 01:24:00 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0분5초~0분18초)
+2021-01-12 01:24:02 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 610
+인식된 프레임 : 230
+인식되지 않은 프레임 : 380
+총근무시간 : 0분 20초
+순수근무시간 : 0분 7초
+총태만시간 : 0분 13초
+
+2021-01-12 01:27:07 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 01:27:12 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:27:12 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 01:27:13 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0분5초~0분18초)
+2021-01-12 01:28:19 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 01:28:24 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:28:24 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 01:28:24 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0분5초~0분18초)
+2021-01-12 01:38:22 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 01:38:30 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:38:30 INFO videoCheck.videomain do_recognition:근무유지시간 : 12.0초
+2021-01-12 01:38:31 INFO videoCheck.videomain calculate_total:태만유지시간 : 10.7초(0분12초~0분22초)
+2021-01-12 01:40:11 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 01:40:18 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:40:18 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 01:40:19 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0분5초~0분18초)
+2021-01-12 01:40:21 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 610
+인식된 프레임 : 230
+인식되지 않은 프레임 : 380
+총근무시간 : 0시 00분 20초
+순수근무시간 : 0시 00분 07초
+총태만시간 : 0시 00분 13초
+
+2021-01-12 01:45:59 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 01:46:05 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:46:05 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 01:46:05 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0분5초~0분18초)
+2021-01-12 01:50:35 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 01:50:40 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:50:40 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 01:50:41 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0분5초~0분18초)
+2021-01-12 01:57:01 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 01:57:06 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:57:06 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 01:57:07 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0시00분05.666667초~0시00분18.333333초)
+2021-01-12 01:57:08 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 610
+인식된 프레임 : 230
+인식되지 않은 프레임 : 380
+총근무시간 : 0시 00분 20초
+순수근무시간 : 0시 00분 07초
+총태만시간 : 0시 00분 13초
+
+2021-01-12 01:59:14 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 01:59:19 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 01:59:19 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 01:59:20 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0시00분05초~0시00분18초)
+2021-01-12 01:59:21 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 610
+인식된 프레임 : 230
+인식되지 않은 프레임 : 380
+총근무시간 : 0시 00분 20초
+순수근무시간 : 0시 00분 07초
+총태만시간 : 0시 00분 13초
+
+2021-01-12 02:05:52 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 02:06:01 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 02:06:01 INFO videoCheck.videomain do_recognition:근무유지시간 : 12.0초
+2021-01-12 02:06:01 INFO videoCheck.videomain calculate_total:태만유지시간 : 10.7초(0시00분12초~0시00분22초)
+2021-01-12 02:06:01 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 29.98
+전체 프레임 : 680
+인식된 프레임 : 360
+인식되지 않은 프레임 : 320
+총근무시간 : 0시 00분 23초
+순수근무시간 : 0시 00분 12초
+총태만시간 : 0시 00분 11초
+
+2021-01-12 02:06:22 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 02:06:34 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 02:06:34 INFO videoCheck.videomain do_recognition:근무유지시간 : 16.0초
+2021-01-12 02:06:36 INFO videoCheck.videomain do_recognition:태만유지시간 : 14.0초(0시00분29초~0시00분43초)
+2021-01-12 02:06:45 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 02:06:45 INFO videoCheck.videomain do_recognition:근무유지시간 : 13.3초
+2021-01-12 02:06:45 INFO videoCheck.videomain calculate_total:태만유지시간 : 11.3초(0시00분56초~0시01분07초)
+2021-01-12 02:06:45 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 2020
+인식된 프레임 : 880
+인식되지 않은 프레임 : 760
+총근무시간 : 0시 01분 07초
+순수근무시간 : 0시 00분 29초
+총태만시간 : 0시 00분 38초
+
+2021-01-12 02:13:35 INFO videoCheck.videomain do_recognition:근무시작
+2021-01-12 02:13:48 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 02:13:48 INFO videoCheck.videomain do_recognition:근무유지시간 : 16.0초
+2021-01-12 02:13:49 INFO videoCheck.videomain do_recognition:태만유지시간 : 14.0초(0시00분29초~0시00분43초)
+2021-01-12 02:13:58 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 02:13:58 INFO videoCheck.videomain do_recognition:근무유지시간 : 13.3초
+2021-01-12 02:13:58 INFO videoCheck.videomain calculate_total:태만유지시간 : 11.3초(0시00분56초~0시01분07초)
+2021-01-12 02:13:58 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 2020
+인식된 프레임 : 880
+인식되지 않은 프레임 : 760
+총근무시간 : 0시 01분 07초
+순수근무시간 : 0시 00분 29초
+총태만시간 : 0시 00분 38초
+
+2021-01-12 02:19:19 INFO videoCheck.videomain do_recognition:근무시작 : 0:00:13
+2021-01-12 02:19:34 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 02:19:34 INFO videoCheck.videomain do_recognition:근무유지시간 : 16.0초
+2021-01-12 02:19:35 INFO videoCheck.videomain do_recognition:태만유지시간 : 14.0초(0시00분29초~0시00분43초)
+2021-01-12 02:19:45 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 02:19:45 INFO videoCheck.videomain do_recognition:근무유지시간 : 13.3초
+2021-01-12 02:19:45 INFO videoCheck.videomain calculate_total:태만유지시간 : 11.3초(0시00분56초~0시01분07초)
+2021-01-12 02:19:45 INFO videoCheck.videomain calculate_total:
+---------프로그램 종료----------
+동영상 fps : 30.0
+전체 프레임 : 2020
+인식된 프레임 : 880
+인식되지 않은 프레임 : 760
+총근무시간 : 0시 01분 07초
+순수근무시간 : 0시 00분 29초
+총태만시간 : 0시 00분 38초
+
+2021-01-12 22:34:29 INFO videoCheck.videomain do_recognition:근무시작 : 0:00:00
+2021-01-12 22:34:34 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 22:34:34 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 22:40:29 INFO videoCheck.videomain do_recognition:근무시작 : 0:00:00
+2021-01-12 22:40:35 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 22:40:35 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 22:40:35 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0:00:05~0:00:18)
+2021-01-12 22:40:37 INFO videoCheck.videomain calculate_total:
+프로그램 종료총근무시간 : 0:00:20 / 순수근무시간 : 0:00:07 / 총태만시간 : 0:00:13
+
+2021-01-12 22:44:12 INFO videoCheck.videomain do_recognition:근무시작 : 0:00:00
+2021-01-12 22:44:18 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 22:44:18 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 22:44:19 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0:00:05~0:00:18)
+2021-01-12 22:44:21 INFO videoCheck.videomain calculate_total:
+프로그램 종료총근무시간 : 0:00:20 / 순수근무시간 : 0:00:07 / 총태만시간 : 0:00:13
+
+2021-01-12 22:45:53 INFO videoCheck.videomain do_recognition:근무시작 : 0:00:00
+2021-01-12 22:45:58 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 22:45:58 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 22:45:59 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0:00:05~0:00:18)
+2021-01-12 22:46:00 INFO videoCheck.videomain calculate_total:
+프로그램 종료총근무시간 : 0:00:20 / 순수근무시간 : 0:00:07 / 총태만시간 : 0:00:13
+
+2021-01-12 22:48:48 INFO videoCheck.videomain do_recognition:근무시작 : 0:00:00
+2021-01-12 22:48:54 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 22:48:54 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 22:48:54 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0:00:05~0:00:18)
+2021-01-12 22:48:56 INFO videoCheck.videomain calculate_total:
+프로그램 종료총근무시간 : 0:00:20 / 순수근무시간 : 0:00:07 / 총태만시간 : 0:00:13
+
+2021-01-12 22:50:44 INFO videoCheck.videomain do_recognition:근무시작 : 0:00:00
+2021-01-12 22:50:50 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 22:50:50 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 22:50:51 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0:00:05~0:00:18)
+2021-01-12 22:50:53 INFO videoCheck.videomain calculate_total:
+프로그램 종료총근무시간 : 0:00:20 / 순수근무시간 : 0:00:07 / 총태만시간 : 0:00:13
+
+2021-01-12 22:51:43 INFO videoCheck.videomain do_recognition:근무시작 : 0:00:00
+2021-01-12 22:51:49 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 22:51:49 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 22:51:49 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0:00:05~0:00:18)
+2021-01-12 22:51:51 INFO videoCheck.videomain calculate_total:
+프로그램 종료총근무시간 : 0:00:20 / 순수근무시간 : 0:00:07 / 총태만시간 : 0:00:13
+
+2021-01-12 22:52:52 INFO videoCheck.videomain do_recognition:근무시작 : 0:00:00
+2021-01-12 22:52:56 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 22:52:56 INFO videoCheck.videomain do_recognition:근무유지시간 : 5.3초
+2021-01-12 22:52:58 INFO videoCheck.videomain do_recognition:태만유지시간 : 12.7초(0:00:05~0:00:18)
+2021-01-12 22:52:59 INFO videoCheck.videomain calculate_total:
+프로그램 종료총근무시간 : 0:00:20 / 순수근무시간 : 0:00:07 / 총태만시간 : 0:00:13
+
+2021-01-12 23:13:33 INFO videoCheck.videomain do_recognition:근무시작 : 0:00:00
+2021-01-12 23:14:58 INFO videoCheck.videomain calculate_total:
+프로그램 종료총근무시간 : 0:01:18 / 순수근무시간 : 0:01:18 / 총태만시간 : 0:00:00
+
+2021-01-12 23:24:24 INFO videoCheck.videomain do_recognition:근무시작 : 0:00:59
+2021-01-12 23:24:42 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 23:24:42 INFO videoCheck.videomain do_recognition:근무유지시간 : 0.7초
+2021-01-12 23:27:33 INFO videoCheck.videomain calculate_total:태만유지시간 : 125.5초(0:01:00~0:03:05)
+2021-01-12 23:27:33 INFO videoCheck.videomain calculate_total:
+프로그램 종료총근무시간 : 0:03:05 / 순수근무시간 : 0:00:00 / 총태만시간 : 0:03:05
+
+2021-01-12 23:29:30 INFO videoCheck.videomain calculate_total:
+프로그램 종료총근무시간 : 0:00:25 / 순수근무시간 : 0:00:00 / 총태만시간 : 0:00:25
+
+2021-01-12 23:32:17 INFO videoCheck.videomain do_recognition:근무시작 : 0:00:00
+2021-01-12 23:32:24 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 23:32:24 INFO videoCheck.videomain do_recognition:근무유지시간 : 4.7초
+2021-01-12 23:32:27 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.7초(0:00:05~0:00:21)
+2021-01-12 23:32:48 INFO videoCheck.videomain calculate_total:
+프로그램 종료총근무시간 : 0:00:30 / 순수근무시간 : 0:00:13 / 총태만시간 : 0:00:17
+
+2021-01-12 23:33:53 INFO videoCheck.videomain do_recognition:근무시작 : 0:00:00
+2021-01-12 23:34:00 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 23:34:00 INFO videoCheck.videomain do_recognition:근무유지시간 : 4.7초
+2021-01-12 23:34:03 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.7초(0:00:05~0:00:21)
+2021-01-12 23:34:22 INFO videoCheck.videomain calculate_total:
+프로그램 종료총근무시간 : 0:00:29 / 순수근무시간 : 0:00:12 / 총태만시간 : 0:00:17
+
+2021-01-12 23:37:35 INFO videoCheck.videomain do_recognition:근무시작 : 0:00:00
+2021-01-12 23:37:41 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 23:37:41 INFO videoCheck.videomain do_recognition:근무유지시간 : 4.7초
+2021-01-12 23:37:44 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.7초(0:00:05~0:00:21)
+2021-01-12 23:40:42 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 23:40:42 INFO videoCheck.videomain do_recognition:근무유지시간 : 164.8초
+2021-01-12 23:40:43 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.0초(0:03:06~0:03:22)
+2021-01-12 23:41:23 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 23:41:23 INFO videoCheck.videomain do_recognition:근무유지시간 : 54.1초
+2021-01-12 23:41:25 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.7초(0:04:16~0:04:33)
+2021-01-12 23:43:26 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 23:43:26 INFO videoCheck.videomain do_recognition:근무유지시간 : 164.8초
+2021-01-12 23:43:28 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.0초(0:07:18~0:07:34)
+2021-01-12 23:44:13 INFO videoCheck.videomain do_recognition:근무태만
+2021-01-12 23:44:13 INFO videoCheck.videomain do_recognition:근무유지시간 : 54.1초
+2021-01-12 23:44:14 INFO videoCheck.videomain do_recognition:태만유지시간 : 16.0초(0:08:28~0:08:44)
+2021-01-12 23:46:16 INFO videoCheck.videomain calculate_total:
+프로그램 종료총근무시간 : 0:11:24 / 순수근무시간 : 0:10:02 / 총태만시간 : 0:01:22
+
+2021-01-13 00:18:22 INFO videoCheck.videomain2 do_recognition:근무시작 : 0:00:00
+2021-01-13 00:18:28 INFO videoCheck.videomain2 do_recognition:근무태만
+2021-01-13 00:18:28 INFO videoCheck.videomain2 do_recognition:근무유지시간 : 5.3초
+2021-01-13 00:18:29 INFO videoCheck.videomain2 do_recognition:태만유지시간 : 12.7초(0:00:05~0:00:18)
+2021-01-13 00:18:30 INFO videoCheck.videomain2 calculate_total:
+프로그램 종료총근무시간 : 0:00:20 / 순수근무시간 : 0:00:07 / 총태만시간 : 0:00:13
+
+2021-01-13 00:19:44 INFO videoCheck.videomain2 do_recognition:근무시작 : 0:00:00
+2021-01-13 00:19:50 INFO videoCheck.videomain2 do_recognition:근무태만
+2021-01-13 00:19:50 INFO videoCheck.videomain2 do_recognition:근무유지시간 : 5.3초
+2021-01-13 00:19:51 INFO videoCheck.videomain2 do_recognition:태만유지시간 : 12.7초(0:00:05~0:00:18)
+2021-01-13 00:19:52 INFO videoCheck.videomain2 calculate_total:
+프로그램 종료총근무시간 : 0:00:20 / 순수근무시간 : 0:00:07 / 총태만시간 : 0:00:13
+
+2021-01-13 00:36:09 INFO videoCheck.videomain2 do_recognition:근무시작 : 0:00:00
+2021-01-13 00:36:14 INFO videoCheck.videomain2 do_recognition:근무태만
+2021-01-13 00:36:14 INFO videoCheck.videomain2 do_recognition:근무유지시간 : 5.3초
+2021-01-13 00:36:15 INFO videoCheck.videomain2 do_recognition:태만유지시간 : 12.7초(0:00:05~0:00:18)
+2021-01-13 00:36:16 INFO videoCheck.videomain2 calculate_total:
+프로그램 종료총근무시간 : 0:00:20 / 순수근무시간 : 0:00:07 / 총태만시간 : 0:00:13
+
+2021-01-13 00:47:26 INFO videoCheck.videomain2 do_recognition:근무시작 : 0:00:00
+2021-01-13 00:52:06 INFO videoCheck.videomain2 calculate_total:
+프로그램 종료총근무시간 : 0:06:01 / 순수근무시간 : 0:06:01 / 총태만시간 : 0:00:00
+
+2021-01-13 01:00:35 INFO videoCheck.videomain2 do_recognition:근무시작 : 0:00:00
+2021-01-13 01:03:02 INFO videoCheck.videomain2 do_recognition:근무태만
+2021-01-13 01:03:02 INFO videoCheck.videomain2 do_recognition:근무유지시간 : 180.0초
+2021-01-13 01:03:08 INFO videoCheck.videomain2 do_recognition:태만유지시간 : 32.0초(0:03:00~0:03:32)
+2021-01-13 01:04:20 INFO videoCheck.videomain2 calculate_total:
+프로그램 종료총근무시간 : 0:04:56 / 순수근무시간 : 0:04:24 / 총태만시간 : 0:00:32
+
+2021-01-13 01:05:50 INFO videoCheck.videomain2 do_recognition:근무시작 : 0:00:01
+2021-01-13 01:06:36 INFO videoCheck.videomain2 do_recognition:근무태만
+2021-01-13 01:06:36 INFO videoCheck.videomain2 do_recognition:근무유지시간 : 180.0초
+2021-01-13 01:06:38 INFO videoCheck.videomain2 do_recognition:태만유지시간 : 32.0초(0:03:01~0:03:33)
+2021-01-13 01:06:58 INFO videoCheck.videomain2 calculate_total:
+프로그램 종료총근무시간 : 0:04:56 / 순수근무시간 : 0:04:24 / 총태만시간 : 0:00:32
+
