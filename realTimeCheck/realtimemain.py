@@ -91,7 +91,6 @@ class FaceRecog(object):
         self.paused = False
 
         self.video = camera.VideoCamera()
-        self.frame_count = 0
         # 근무 최초 시작시간 초기화
         self.workStartTimeAtFirst = 0
         # 근무 유지 시작 시간 초기화 (근무 최초 시작시, 태만->근무중 전환시 마다 초기화 됨)
@@ -366,6 +365,7 @@ class FaceRecog(object):
             final_total_working_count = 0
         else:
             final_total_working_count = timeit.default_timer() - self.totalWorkingCount
+
         final_working_count = final_total_working_count - self.totalSlackOffCount
         final_slackoff_count = self.totalSlackOffCount
 
