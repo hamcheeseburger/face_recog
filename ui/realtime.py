@@ -1,12 +1,13 @@
 """realtime face recognition ui action
 기능설명:
     실시간 얼굴인식 ui를 상속받아 버튼 클릭 등의 동작시 기능을 연결하였다. 카메라 화면출력/음성안내/근태 신호등/시작/종료 동작을 처리한다.
+    + 0.0.3 화면 탐지 버튼을 누르면 동작함.
 개발자:
     송재임 유현지
 개발일시:
-    2021.01.05.23.00.00
+    2021.01.14.19.00.00
 버전:
-    0.0.2
+    0.0.3
 """
 import time
 from PyQt5.QtGui import *
@@ -18,6 +19,8 @@ import os
 import simpleaudio as sa
 from realTimeCheck.realtimemain import FaceRecog
 
+import threading
+from subprocess import call
 
 class ExecuteRealTime(RealTimeUi):
     def __init__(self, id):
@@ -41,6 +44,9 @@ class ExecuteRealTime(RealTimeUi):
         self.btn_cam_start.clicked.connect(self.cam_handler)
         self.btn_sound_start.clicked.connect(self.sound_handler)
         # self.btn_select_route.clicked.connect(self.select_route)
+
+        # 화면 탐지 버튼 핸들러
+        self.btn_detection.clicked.connect(self.negligence_handler)
 
         # 시작 버튼 미클릭시 버튼 클릭 못하게
         self.btn_cam_start.setDisabled(True)
@@ -140,6 +146,7 @@ class ExecuteRealTime(RealTimeUi):
         self.btn_cam_start.setDisabled(True)
         self.btn_end.setDisabled(True)
         self.btn_start.setDisabled(False)
+
         self.adjustSize()
 
     def change_traffic_light(self, file_path):
@@ -187,6 +194,18 @@ class ExecuteRealTime(RealTimeUi):
         else:
             self.btn_sound_start.setText('Sound Off')
             self.alarmMute = False
+
+    def negligence_detection(self):
+        # 화면 탐지 동작
+        # 쓰레드->서브프로세스 호출로 동작하게 하였다.
+        path = './negligencedetection/negligence_detection.py'
+        call(["python", path])
+
+
+    def negligence_handler(self):
+        processThread = threading.Thread(target=self.negligence_detection)
+        processThread.start()
+        # self.btn_detection.setDisabled(True)
 
     def closeEvent(self, a0: QtGui.QCloseEvent) -> None:
         self.end_recog()
