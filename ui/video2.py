@@ -252,7 +252,7 @@ class ExecuteVideo(VideoUi):
         dialog = QFileDialog(self)
         dialog.setFileMode(QFileDialog.ExistingFile)
         dialog.setNameFilter(
-            self.tr("Data Files (*.mp4 *.avi);; Images (*.png *.xpm *.jpg *.gif);; All Files(*.*)"))
+            self.tr("Data Files (*.mp4 *.avi *.mov *mkv);; Images (*.png *.xpm *.jpg *.gif);; All Files(*.*)"))
         dialog.setViewMode(QFileDialog.Detail)
         if dialog.exec_():
             filesRoute = dialog.selectedFiles()
