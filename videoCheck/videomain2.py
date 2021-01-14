@@ -135,9 +135,13 @@ class FaceRecog:
         self.video = cv2.VideoCapture(self.route)
         container = (av.open(self.route)).streams.video[0]
         self.FPS = round(self.video.get(cv2.CAP_PROP_FPS), 2)
+        print("fps : " + str(self.FPS))
+        if self.FPS == 0:
+            self.FPS = 30
+        print("총 프레임 수 : " + str(container.frames))
         self.time_length = round(container.frames / self.FPS)
         print("비디오 총길이 : " + str(self.time_length) + "초")
-        self.interval = round(self.FPS)  # 원본영상 fps의 1/3정도
+        self.interval = round(self.FPS)
         self.totalFrame = -self.interval
         self.frame_sequence = -self.interval
         self.specific_frame = []
@@ -179,27 +183,31 @@ class FaceRecog:
         self.paused = paused
 
     def get_specific_frame(self):
-        percent = -1
+        percent = 0
 
         if self.name is None:
-            self.logger.info("\n\n<동영상으로 근무체크>")
+            self.logger.info("<동영상으로 근무체크>")
             self.get_user_name()
 
-        if self.frame_sequence > self.time_length * self.FPS:
-            return None, -1
         self.frame_sequence += self.interval
 
-        if self.frame_sequence != 0:
-            percent = int((self.frame_sequence / (self.FPS * self.time_length)) * 100)
-            # print(str(percent) + "% 진행중")
+        if self.time_length != 0 and self.FPS != 0:
+            if self.frame_sequence > self.time_length * self.FPS:
+                return None, 100
+            if self.frame_sequence != 0:
+                percent = int((self.frame_sequence / (self.FPS * self.time_length)) * 100)
+                # print(str(percent) + "% 진행중")
+        else:
+            percent = -1
 
         self.video.set(cv2.CAP_PROP_POS_FRAMES, self.frame_sequence)
         ret, frame = self.video.read()
-        if ret:
+        if frame is not None:
             # print("프레임 가져오기 성공")
             return frame, percent
         else:
-            return None, -1
+            print("끝!")
+            return None, percent
 
     def do_recognition(self):
         self.index += 1
@@ -351,12 +359,15 @@ class FaceRecog:
         # self.logger.info('근무누적시간 : ' + format(recog_sec, ".1f") + '초/' + format(total_sec, ".1f") + '초')
 
         # 근무시간 계산
-        if self.totalFrame / self.FPS + 1 > self.time_length:
+        if self.time_length != 0 and self.totalFrame / self.FPS + 1 > self.time_length:
             totalTime = self.time_length
         else:
             totalTime = int(self.totalFrame / self.FPS)
 
         strTotalTime = str(timedelta(seconds=totalTime))
+
+        # notRecogTime = int((self.notRecogAgg / self.totalFrame) * totalTime)
+        # recogTime = totalTime - notRecogTime
 
         recogTime = int((self.recogFrameAgg / self.totalFrame) * totalTime)
         strRecogTime = str(timedelta(seconds=recogTime))
