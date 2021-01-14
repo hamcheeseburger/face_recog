@@ -3126,3 +3126,21 @@
 [2021-01-14 22:38:37,802] INFO - realTimeCheck.realtimemain - 근무 유지 시간 : 0:00:08
 [2021-01-14 22:38:37,803] INFO - realTimeCheck.realtimemain - 프로그램 종료
 [2021-01-14 22:38:37,805] INFO - realTimeCheck.realtimemain - 총근무시간 : 0:00:08 순수근무시간 : 0:00:08 근무태만시간 : 0:00:00
+[2021-01-15 00:13:59,009] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-15 00:13:59,012] INFO - realTimeCheck.realtimemain - 근무시작
+[2021-01-15 00:14:50,152] INFO - realTimeCheck.realtimemain - 근무 유지 시간 : 0:00:41
+[2021-01-15 00:14:50,156] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-15 00:15:03,193] INFO - realTimeCheck.realtimemain - 태만 유지 시간 : 0:00:23
+[2021-01-15 00:15:03,200] INFO - realTimeCheck.realtimemain - 근무시작
+[2021-01-15 00:17:37,399] INFO - realTimeCheck.realtimemain - 근무 유지 시간 : 0:02:34
+[2021-01-15 00:17:37,400] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-15 00:17:37,401] INFO - realTimeCheck.realtimemain - 총근무시간 : 0:03:38 순수근무시간 : 0:03:15 근무태만시간 : 0:00:23
+[2021-01-15 00:32:22,228] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-15 00:32:22,231] INFO - realTimeCheck.realtimemain - 근무시작
+[2021-01-15 00:33:00,479] INFO - realTimeCheck.realtimemain - 근무 유지 시간 : 0:00:28
+[2021-01-15 00:33:00,482] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-15 00:33:06,121] INFO - realTimeCheck.realtimemain - 태만 유지 시간 : 0:00:15
+[2021-01-15 00:33:06,121] INFO - realTimeCheck.realtimemain - 근무시작
+[2021-01-15 00:33:11,189] INFO - realTimeCheck.realtimemain - 근무 유지 시간 : 0:00:05
+[2021-01-15 00:33:11,189] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-15 00:33:11,190] INFO - realTimeCheck.realtimemain - 총근무시간 : 0:00:48 순수근무시간 : 0:00:33 근무태만시간 : 0:00:15
