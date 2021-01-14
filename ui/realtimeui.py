@@ -1,12 +1,13 @@
 """realtime face recognition ui
 기능설명:
     실시간 얼굴인식 ui를 정의하였다.
+    + 0.0.3 화면탐지 버튼 추가
 개발자:
     송재임 유현지
 개발일시:
-    2021.01.05.22.00.00
+    2021.01.14.19.00.00
 버전:
-    0.0.2
+    0.0.3
 """
 import os
 
@@ -44,6 +45,7 @@ class RealTimeUi(QWidget):
 
         self.print_total_working = QLabel("total 시간 출력")
 
+        self.btn_detection = QPushButton("화면탐지")
         # self.routeLabel = QLabel()
         # self.routeLabel.setStyleSheet("color: black;"
         #                               "background-color : white;"
@@ -68,12 +70,16 @@ class RealTimeUi(QWidget):
         hbox3.addWidget(self.btn_start)
         hbox3.addWidget(self.btn_end)
 
+        hbox4 = QHBoxLayout()
+        hbox4.addWidget(self.btn_detection)
+
         vbox = QVBoxLayout()
         vbox.addLayout(hbox)
         # vbox.addLayout(hbox1)
         vbox.addWidget(self.videoLabel)
         vbox.addLayout(hbox2)
         vbox.addLayout(hbox3)
+        vbox.addLayout(hbox4)
         vbox.addWidget(self.print_total_working)
 
         self.setLayout(vbox)
