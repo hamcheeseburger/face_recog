@@ -377,9 +377,9 @@ class FaceRecog(object):
         working_cnt = str(timedelta(seconds=final_working_count)).split(".")[0]
         slack_cnt = str(timedelta(seconds=final_slackoff_count)).split(".")[0]
 
-        print(str(timedelta(seconds=final_total_working_count)).split(".")[0])
-        print(str(timedelta(seconds=final_working_count)).split(".")[0])
-        print(str(timedelta(seconds=final_slackoff_count)).split(".")[0])
+        # print(str(timedelta(seconds=final_total_working_count)).split(".")[0])
+        # print(str(timedelta(seconds=final_working_count)).split(".")[0])
+        # print(str(timedelta(seconds=final_slackoff_count)).split(".")[0])
 
         final_working_count_int = int(final_working_count)
         final_slackoff_count_int = int(final_slackoff_count)
