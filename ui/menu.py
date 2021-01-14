@@ -8,6 +8,7 @@
 버전:
     0.0.2
 """
+import ctypes
 import os
 from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtCore import QThread
@@ -16,7 +17,7 @@ from ui.video2 import ExecuteVideo
 import subprocess
 from ui.menuui import MenuUi
 from ui.realtime import ExecuteRealTime
-
+from ui.log import Log
 
 class jar_thread(QThread):
     def run(self):
@@ -33,6 +34,9 @@ class ExecuteMenu(MenuUi):
         self.jarBtn.clicked.connect(self.callJar)
         self.videoBtn.clicked.connect(self.call_video_recog)
         self.realTimeBtn.clicked.connect(self.call_realTime_recog)
+        self.logBtn.clicked.connect(self.call_log_file)
+        self.copyCheckBtn.clicked.connect(self.call_copy_check)
+
         self.th1 = jar_thread()
         self.userIdLabel.setText(id + "님 환영합니다.")
         self.logoutBtn.clicked.connect(self.logout)
@@ -57,6 +61,15 @@ class ExecuteMenu(MenuUi):
         # self.videoWidget.show()
 
         self.videoExe = ExecuteVideo(self.user_id)
+
+    def call_log_file(self):
+        print("로그 버튼 클릭")
+        self.logExe = Log()
+
+    def call_copy_check(self):
+        print("중복체크버튼 클릭")
+        fileName = './Duplicate/DuplicateVideoDetector.jar'
+        subprocess.run(["start", fileName], shell=True)
 
     def logout(self):
         dirname = 'user_image'

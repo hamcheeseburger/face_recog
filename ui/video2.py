@@ -8,6 +8,7 @@
 버전:
     0.0.2
 """
+import datetime
 
 from ui.videoui import VideoUi
 import time
@@ -108,8 +109,11 @@ class ExecuteVideo(VideoUi):
     def do_work(self):
         video = self.face_recog.get_video()
         fcc = cv2.VideoWriter_fourcc("m", "p", "4", "v")
+        now = datetime.datetime.now()
+        nowDate = str(now.strftime('%Y%m%d_%H-%M-%S'))
+        print(nowDate)
         out = cv2.VideoWriter(
-            "outVideo/output2.mp4", fcc, 3.0, (int(video.get(3)), int(video.get(4)))
+            "outVideo/" + self.user_id + "_" + nowDate + ".mp4", fcc, 3.0, (int(video.get(3)), int(video.get(4)))
         )
 
         self.print_total_working.setText("근무시간 측정중...")
