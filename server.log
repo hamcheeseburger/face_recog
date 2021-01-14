@@ -703,3 +703,49 @@
 [2021-01-14 17:32:07] INFO - videoCheck.videomain2 - 프로그램 종료
 [2021-01-14 17:32:07] INFO - videoCheck.videomain2 - 총근무시간 : 0:15:21 / 순수근무시간 : 0:10:06 / 총태만시간 : 0:05:15
 
+[2021-01-14 17:35:31] INFO - videoCheck.videomain2 - <동영상으로 근무체크>
+[2021-01-14 17:35:54] INFO - videoCheck.videomain2 - 프로그램 종료
+[2021-01-14 17:35:54] INFO - videoCheck.videomain2 - 총근무시간 : 0:00:28 / 순수근무시간 : 0:00:00 / 총태만시간 : 0:00:28
+
+[2021-01-14 17:53:10] INFO - videoCheck.videomain2 - <동영상으로 근무체크>
+[2021-01-14 17:53:34] INFO - videoCheck.videomain2 - 프로그램 종료
+[2021-01-14 17:53:34] INFO - videoCheck.videomain2 - 총근무시간 : 0:00:28 / 순수근무시간 : 0:00:00 / 총태만시간 : 0:00:28
+
+[2021-01-14 18:49:48] INFO - videoCheck.videomain2 - <동영상으로 근무체크>
+[2021-01-14 18:49:52] INFO - videoCheck.videomain2 - 근무시작 : 0:00:00
+[2021-01-14 18:49:53] INFO - videoCheck.videomain2 - 근무태만
+[2021-01-14 18:49:53] INFO - videoCheck.videomain2 - 근무유지시간 : 2.0초
+[2021-01-14 18:49:53] INFO - videoCheck.videomain2 - 태만유지시간 : 16.0초(0:00:02~0:00:18)
+[2021-01-14 18:49:54] INFO - videoCheck.videomain2 - 프로그램 종료
+[2021-01-14 18:49:54] INFO - videoCheck.videomain2 - 총근무시간 : 0:00:20 / 순수근무시간 : 0:00:05 / 총태만시간 : 0:00:15
+
+[2021-01-14 18:50:34] INFO - videoCheck.videomain2 - 프로그램 종료
+[2021-01-14 18:50:34] INFO - videoCheck.videomain2 - 총근무시간 : 0:00:28 / 순수근무시간 : 0:00:00 / 총태만시간 : 0:00:28
+
+[2021-01-14 18:53:18] INFO - videoCheck.videomain2 - <동영상으로 근무체크>
+[2021-01-14 22:39:37] INFO - videoCheck.videomain2 - <동영상으로 근무체크>
+[2021-01-14 22:39:54] INFO - videoCheck.videomain2 - 근무시작 : 0:00:02
+[2021-01-14 22:39:56] INFO - videoCheck.videomain2 - 근무태만
+[2021-01-14 22:39:56] INFO - videoCheck.videomain2 - 근무유지시간 : 14.0초
+[2021-01-14 22:39:57] INFO - videoCheck.videomain2 - 태만유지시간 : 62.1초(0:00:16~0:01:18)
+[2021-01-14 22:39:59] INFO - videoCheck.videomain2 - 근무태만
+[2021-01-14 22:39:59] INFO - videoCheck.videomain2 - 근무유지시간 : 4.0초
+[2021-01-14 22:39:59] INFO - videoCheck.videomain2 - 태만유지시간 : 30.0초(0:01:22~0:01:52)
+[2021-01-14 22:40:00] INFO - videoCheck.videomain2 - 근무태만
+[2021-01-14 22:40:00] INFO - videoCheck.videomain2 - 근무유지시간 : 2.0초
+[2021-01-14 22:40:01] INFO - videoCheck.videomain2 - 태만유지시간 : 46.0초(0:01:54~0:02:40)
+[2021-01-14 22:40:01] INFO - videoCheck.videomain2 - 근무태만
+[2021-01-14 22:40:01] INFO - videoCheck.videomain2 - 근무유지시간 : 4.0초
+[2021-01-14 22:40:05] INFO - videoCheck.videomain2 - 태만유지시간 : 216.2초(0:02:44~0:06:20)
+[2021-01-14 22:40:07] INFO - videoCheck.videomain2 - 근무태만
+[2021-01-14 22:40:07] INFO - videoCheck.videomain2 - 근무유지시간 : 10.0초
+[2021-01-14 22:40:09] INFO - videoCheck.videomain2 - 태만유지시간 : 98.1초(0:06:30~0:08:08)
+[2021-01-14 22:40:30] INFO - videoCheck.videomain2 - 근무태만
+[2021-01-14 22:40:30] INFO - videoCheck.videomain2 - 근무유지시간 : 96.1초
+[2021-01-14 22:40:31] INFO - videoCheck.videomain2 - 태만유지시간 : 58.1초(0:09:44~0:10:42)
+[2021-01-14 22:40:32] INFO - videoCheck.videomain2 - 근무태만
+[2021-01-14 22:40:32] INFO - videoCheck.videomain2 - 근무유지시간 : 8.0초
+[2021-01-14 22:40:32] INFO - videoCheck.videomain2 - 태만유지시간 : 18.0초(0:10:50~0:11:07)
+[2021-01-14 22:40:32] INFO - videoCheck.videomain2 - 프로그램 종료
+[2021-01-14 22:40:32] INFO - videoCheck.videomain2 - 총근무시간 : 0:11:08 / 순수근무시간 : 0:02:18 / 총태만시간 : 0:08:50
+

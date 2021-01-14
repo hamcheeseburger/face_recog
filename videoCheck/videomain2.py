@@ -133,13 +133,11 @@ class FaceRecog:
 
     def get_video_info(self):
         self.video = cv2.VideoCapture(self.route)
-        container = (av.open(self.route)).streams.video[0]
         self.FPS = round(self.video.get(cv2.CAP_PROP_FPS), 2)
         print("fps : " + str(self.FPS))
         if self.FPS == 0:
             self.FPS = 30
-        print("총 프레임 수 : " + str(container.frames))
-        self.time_length = round(container.frames / self.FPS)
+        self.time_length = round(self.video.get(cv2.CAP_PROP_FRAME_COUNT) / self.FPS)
         print("비디오 총길이 : " + str(self.time_length) + "초")
         self.interval = round(self.FPS)
         self.totalFrame = -self.interval
@@ -300,6 +298,10 @@ class FaceRecog:
 
         #프레임에 얼굴이 없거나, 근무자가 없는 경우
         if self.first is False and (len(self.face_locations) == 0 or not self.workerExist):
+            # if len(self.face_locations) == 0:
+            #     print("아무도 없음")
+            # if not self.workerExist:
+            #     print("근무자 없음")
             # 근무태만이 시작된 시간 저장..
             if self.working:  # 얼굴인식이 되다가 안되기 시작한 첫 번째 순간
                 self.notRecogFrame = self.interval
