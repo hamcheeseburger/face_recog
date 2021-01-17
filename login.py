@@ -16,7 +16,8 @@ from login import logincheck
 from ui.logingui import UiDialog
 from ui.menu import ExecuteMenu
 from realTimeCheck import realtimemain
-from videoCheck import videomain
+from videoCheck import videomain2
+
 
 class ExecuteLogin(UiDialog):
     def __init__(self, loginDialog):
@@ -26,7 +27,7 @@ class ExecuteLogin(UiDialog):
 
         self.check_user = logincheck.CheckUser()
         realtimemain.FaceRecog.instance()
-        videomain.FaceRecog.instance()
+        videomain2.FaceRecog.instance()
         self.btn_login.clicked.connect(self.checkPassword)
 
     def checkPassword(self):

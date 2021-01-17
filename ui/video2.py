@@ -194,13 +194,11 @@ class ExecuteVideo(VideoUi):
         self.print_total_working.setText("프레임추출중.. 잠시만 기다려주세요")
         self.btn_start.setDisabled(True)
 
-        print(self.fileRoute)
         self.face_recog = FaceRecog.instance()
         self.face_recog.set_file_route(self.fileRoute)
 
         self.th = Thread1(self, self.face_recog)
         self.th.threadEvent.connect(self.threadEventHandler)
-        print(self.face_recog.known_face_names)
 
         # 프레임 추출하는 과정에 대해서만 쓰레드 시작 그 이후 코드는 쓰레드 핸들러에서 실행
         self.th.start()
