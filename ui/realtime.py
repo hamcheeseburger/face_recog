@@ -21,6 +21,8 @@ from realTimeCheck.realtimemain import FaceRecog
 
 import threading
 from subprocess import call
+from negligencedetection.negligence_detection import detection
+
 
 class ExecuteRealTime(RealTimeUi):
     def __init__(self, id):
@@ -198,9 +200,9 @@ class ExecuteRealTime(RealTimeUi):
     def negligence_detection(self):
         # 화면 탐지 동작
         # 쓰레드->서브프로세스 호출로 동작하게 하였다.
-        path = './negligencedetection/negligence_detection.py'
-        call(["python", path])
-
+        # path = './negligencedetection/negligence_detection.py'
+        # call(["python", path])
+        detection()
 
     def negligence_handler(self):
         processThread = threading.Thread(target=self.negligence_detection)
