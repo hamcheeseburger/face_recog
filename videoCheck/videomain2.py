@@ -4,9 +4,9 @@
 개발자:
     송재임, 유현지
 개발일시:
-    2021.01.05.20.38.00
+    2021.01.17.13.17.00
 버전:
-    0.0.2
+    0.0.3
 """
 # face_recog.py
 # 얼굴인식 기능에 초점을 맞춘 wrapper 패키지
@@ -43,7 +43,6 @@ class FaceRecog:
 
     def __init__(self):
         print("[video.py] __init__ call")
-        # self.reset()
         self.route = None
         self.name = None
         self.known_face_encodings = []

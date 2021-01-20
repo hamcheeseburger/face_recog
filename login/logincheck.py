@@ -13,6 +13,8 @@ import os
 import sqlite3
 import pickle
 
+import pymysql
+
 
 class CheckUser:
     def __init__(self):
@@ -78,12 +80,41 @@ class CheckUser:
         conn.close()
         return True
 
+    def user_check_aws(self, id, pswd):
+        host = "face-recog-db-dev.ckeffyuykcfz.ap-northeast-2.rds.amazonaws.com"
+        port = 3306
+        username = "admin"
+        database = "mydb"
+        password = "12345678"
+
+        conn = pymysql.connect(host=host, user=username, passwd=password, db=database, port=port, charset='utf8')
+        cursor = conn.cursor()
+        query = "select name, hex(image) as img from member where login_id=%s and password=%s"
+        cursor.execute(query, (id, pswd))
+        row = cursor.fetchone()
+
+        if row is None:
+            print("no data")
+            return False
+        else:
+            print(row[0])
+            strr = row[1]  # 사용자 사진
+
+            path = "user_image/" + row[0] + ".jpg"
+            print(path)
+            with open(path, 'wb') as file:
+                file.write(bytes.fromhex(strr))
+
+        cursor.close()
+        conn.close()
+        return True
 
 if __name__ == "__main__":
     user = CheckUser()
 
-    user.user_write_binary('사용자아이디', '비밀번호', '사용자이름', '이미지경로')
+    # user.user_write_binary('사용자아이디', '비밀번호', '사용자이름', '이미지경로')
 
-    #예시
-    #user.user_write_binary('yhj', '1234', 'Hyeonji', 'knowns/Hyeonji.jpg')
+    # 예시
+    # user.user_write_binary('yhj', '1234', 'Hyeonji', 'knowns/Hyeonji.jpg')
 
+    user.user_check_aws('yhj', '1234')
