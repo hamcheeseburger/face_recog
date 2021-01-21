@@ -52,7 +52,15 @@ class ExecuteLogin(UiDialog):
         #     msg.exec_()
 
         # AWS DB로 로그인
-        if self.check_user.user_check_aws(id, password):
+        # if self.check_user.user_check_aws(id, password):
+        #     self.menuWindow()
+        #     self.loginDialog.close()
+        # else:
+        #     msg.setText('Incorrect Password')
+        #     msg.exec_()
+
+        # 서버 로그인
+        if self.check_user.user_check_web_server(id, password):
             self.menuWindow()
             self.loginDialog.close()
         else:

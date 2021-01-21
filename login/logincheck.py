@@ -118,8 +118,7 @@ class CheckUser:
             'password':password
         }
 
-        url = "http://localhost:8080/awsDBproject/user/login"
-        # url = "http://localhost:8090/awsDBproject/user/login"
+        url = "http://localhost:8090/awsDBproject/user/login"
         response = requests.post(url, data=info, verify=False)
 
         print(response.status_code)
@@ -129,6 +128,7 @@ class CheckUser:
             json_data = response.json()
             if json_data.get("error"):
                 print(json_data['error'])
+                return False
 
             if json_data.get('image') and json_data.get('name'):
                 member_image = base64.b64decode(json_data['image'])
@@ -137,6 +137,11 @@ class CheckUser:
                 url = "user_image/" + member_name + ".jpg"
                 with open(url, "wb") as WriteFile:
                     WriteFile.write(member_image)
+                return True
+        else:
+            print("response error")
+            return False
+
 
 if __name__ == "__main__":
     user = CheckUser()
