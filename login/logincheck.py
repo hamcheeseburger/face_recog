@@ -8,7 +8,6 @@
 버전:
     0.0.1
 """
-import array
 import base64
 import os
 import sqlite3
@@ -16,7 +15,6 @@ import pickle
 
 import pymysql
 import requests
-import json
 
 
 class CheckUser:
@@ -117,8 +115,11 @@ class CheckUser:
             'login_id':id,
             'password':password
         }
+        # url = "http://localhost:8090/awsDBproject/user/login"
 
-        url = "http://localhost:8090/awsDBproject/user/login"
+        # putty 접속하여 tomcat 서버 구동한 후 테스트 할 것
+        url = "http://3.35.38.165:8080/awsDBproject/user/login"
+        print(url)
         response = requests.post(url, data=info, verify=False)
 
         print(response.status_code)
@@ -153,4 +154,4 @@ if __name__ == "__main__":
 
     # user.user_check_aws('yhj', '1234')
 
-    user.user_check_web_server('yhj', '1234')
+    user.user_check_web_server('sji', '1234')
