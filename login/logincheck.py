@@ -118,7 +118,8 @@ class CheckUser:
             'password':password
         }
 
-        url = "http://localhost:8090/awsDBproject/user/login"
+        url = "http://localhost:8080/awsDBproject/user/login"
+        # url = "http://localhost:8090/awsDBproject/user/login"
         response = requests.post(url, data=info, verify=False)
 
         print(response.status_code)
@@ -126,22 +127,16 @@ class CheckUser:
         if response.status_code == 200:
             # json 응답일 경우 딕셔너리로 변환
             json_data = response.json()
-            member_id = json_data['id']
-            member_name = json_data['name']
-            print(member_id + " and " + member_name )
-        url = "http://localhost:8080/awsDBproject/user/login"
-        responseJson = requests.post(url, data=info).json()
+            if json_data.get("error"):
+                print(json_data['error'])
 
-        if responseJson.get("error"):
-            print(responseJson['error'])
+            if json_data.get('image') and json_data.get('name'):
+                member_image = base64.b64decode(json_data['image'])
+                member_name = json_data['name']
 
-        if responseJson.get("image") and responseJson.get("name"):
-            image = base64.b64decode(responseJson["image"])
-            name = responseJson["name"]
-
-            url = "user_image/" + name + ".jpg"
-            with open(url, "wb") as WriteFile:
-                WriteFile.write(image)
+                url = "user_image/" + member_name + ".jpg"
+                with open(url, "wb") as WriteFile:
+                    WriteFile.write(member_image)
 
 if __name__ == "__main__":
     user = CheckUser()
