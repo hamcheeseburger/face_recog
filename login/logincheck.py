@@ -16,6 +16,7 @@ import pickle
 
 import pymysql
 import requests
+import json
 
 
 class CheckUser:
@@ -117,6 +118,17 @@ class CheckUser:
             'password':password
         }
 
+        url = "http://localhost:8090/awsDBproject/user/login"
+        response = requests.post(url, data=info, verify=False)
+
+        print(response.status_code)
+        # 추후 fail.jsp에서는 응답 코드를 200이 아닌 것으로 바꾸는 것으로?
+        if response.status_code == 200:
+            # json 응답일 경우 딕셔너리로 변환
+            json_data = response.json()
+            member_id = json_data['id']
+            member_name = json_data['name']
+            print(member_id + " and " + member_name )
         url = "http://localhost:8080/awsDBproject/user/login"
         responseJson = requests.post(url, data=info).json()
 
