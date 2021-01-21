@@ -8,7 +8,8 @@
 버전:
     0.0.1
 """
-
+import array
+import base64
 import os
 import sqlite3
 import pickle
@@ -112,14 +113,23 @@ class CheckUser:
 
     def user_check_web_server(self, id, password):
         info = {
-            'login_id' : id,
-            'password' : password
+            'login_id':id,
+            'password':password
         }
 
         url = "http://localhost:8080/awsDBproject/user/login"
-        response = requests.post(url, data=info)
+        responseJson = requests.post(url, data=info).json()
 
-        print(response)
+        if responseJson.get("error"):
+            print(responseJson['error'])
+
+        if responseJson.get("image") and responseJson.get("name"):
+            image = base64.b64decode(responseJson["image"])
+            name = responseJson["name"]
+
+            url = "user_image/" + name + ".jpg"
+            with open(url, "wb") as WriteFile:
+                WriteFile.write(image)
 
 if __name__ == "__main__":
     user = CheckUser()
