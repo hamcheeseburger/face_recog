@@ -14,6 +14,7 @@ import sqlite3
 import pickle
 
 import pymysql
+import requests
 
 
 class CheckUser:
@@ -109,6 +110,17 @@ class CheckUser:
         conn.close()
         return True
 
+    def user_check_web_server(self, id, password):
+        info = {
+            'login_id' : id,
+            'password' : password
+        }
+
+        url = "http://localhost:8080/awsDBproject/user/login"
+        response = requests.post(url, data=info)
+
+        print(response)
+
 if __name__ == "__main__":
     user = CheckUser()
 
@@ -117,4 +129,6 @@ if __name__ == "__main__":
     # 예시
     # user.user_write_binary('yhj', '1234', 'Hyeonji', 'knowns/Hyeonji.jpg')
 
-    user.user_check_aws('yhj', '1234')
+    # user.user_check_aws('yhj', '1234')
+
+    user.user_check_web_server('yhj', '1234')
