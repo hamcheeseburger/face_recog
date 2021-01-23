@@ -112,15 +112,19 @@ class CheckUser:
 
     def user_check_web_server(self, id, password):
         info = {
-            'login_id':id,
-            'password':password
+            'login_id': id,
+            'password': password
         }
         # url = "http://localhost:8090/awsDBproject/user/login"
 
         # putty 접속하여 tomcat 서버 구동한 후 테스트 할 것
         url = "http://3.35.38.165:8080/awsDBproject/user/login"
         print(url)
-        response = requests.post(url, data=info, verify=False)
+        try:
+            response = requests.post(url, data=info, verify=False)
+        except:
+            print("Connection Error")
+            return -2
 
         print(response.status_code)
         # 추후 fail.jsp에서는 응답 코드를 200이 아닌 것으로 바꾸는 것으로?
@@ -129,7 +133,7 @@ class CheckUser:
             json_data = response.json()
             if json_data.get("error"):
                 print(json_data['error'])
-                return False
+                return 0
 
             if json_data.get('image') and json_data.get('name'):
                 member_image = base64.b64decode(json_data['image'])
@@ -138,10 +142,10 @@ class CheckUser:
                 url = "user_image/" + member_name + ".jpg"
                 with open(url, "wb") as WriteFile:
                     WriteFile.write(member_image)
-                return True
+                return 1
         else:
             print("response error")
-            return False
+            return -1
 
 
 if __name__ == "__main__":

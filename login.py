@@ -60,11 +60,18 @@ class ExecuteLogin(UiDialog):
         #     msg.exec_()
 
         # 서버 로그인
-        if self.check_user.user_check_web_server(id, password):
+        result = self.check_user.user_check_web_server(id, password)
+        if result == 1:
             self.menuWindow()
             self.loginDialog.close()
-        else:
+        elif result == 0:
             msg.setText('Incorrect Password')
+            msg.exec_()
+        elif result == -1:
+            msg.setText('Response Error')
+            msg.exec_()
+        elif result == -2:
+            msg.setText('Network Error')
             msg.exec_()
 
     def menuWindow(self):
