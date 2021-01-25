@@ -115,10 +115,10 @@ class CheckUser:
             'login_id': id,
             'password': password
         }
-        # url = "http://localhost:8090/awsDBproject/user/login"
+        url = "http://localhost:8090/awsDBproject/user/login"
 
         # putty 접속하여 tomcat 서버 구동한 후 테스트 할 것
-        url = "http://3.35.38.165:8080/awsDBproject/user/login"
+        # url = "http://3.35.38.165:8080/awsDBproject/user/login"
         print(url)
         try:
             response = requests.post(url, data=info, verify=False)
@@ -138,6 +138,7 @@ class CheckUser:
             if json_data.get('image') and json_data.get('name'):
                 member_image = base64.b64decode(json_data['image'])
                 member_name = json_data['name']
+                print("Welcome " + member_name + "!!")
 
                 url = "user_image/" + member_name + ".jpg"
                 with open(url, "wb") as WriteFile:

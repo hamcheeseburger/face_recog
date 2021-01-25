@@ -43,6 +43,8 @@ class FaceRecog:
 
     def __init__(self):
         print("[video.py] __init__ call")
+        self.RECOG_LV = 1
+        self.NOD_SEC = 10
         self.route = None
         self.name = None
         self.known_face_encodings = []
@@ -61,6 +63,8 @@ class FaceRecog:
 
     def reset(self):
         print("reset 호출")
+        print("nod_sec : " + str(self.NOD_SEC))
+        print("recog_lv : " + str(self.RECOG_LV))
         self.working = False
         # 화면에 잡힌 얼굴중 근무자가 존재하는지를 알아내는 boolean 변수
         self.workerExist = False
@@ -79,7 +83,6 @@ class FaceRecog:
         self.recogFrame = 0
         self.notRecogFrame = 0
         self.notRecogAgg = 0
-        self.standardSec = 10
 
         self.notRecogStartPoint = 0
         self.notRecogEndPoint = 0
@@ -232,7 +235,7 @@ class FaceRecog:
 
         self.process_this_frame = not self.process_this_frame
 
-        if self.first is False and self.alertSlackOff is False and self.notRecogFrame >= self.standardSec * self.FPS:
+        if self.first is False and self.alertSlackOff is False and self.notRecogFrame >= self.NOD_SEC * self.FPS:
             recog_sec = self.recogFrame / self.FPS
             self.alertSlackOff = True
             self.logger.info('근무태만')
@@ -256,7 +259,7 @@ class FaceRecog:
                 self.recogFrameAgg += self.interval
 
             if self.workerExist and not self.working:  # 얼굴 인식이 안되다가 인식이 된 순간
-                if self.notRecogFrame < self.standardSec * self.FPS:  # 10초 * fps
+                if self.notRecogFrame < self.NOD_SEC * self.FPS:  # 10초 * fps
                     self.recogFrameAgg += self.notRecogFrame
                     self.recogFrame += self.notRecogFrame
                 else:
@@ -272,7 +275,7 @@ class FaceRecog:
                     not_recog_sec = self.notRecogFrame / self.FPS
                     recog_sec = self.recogFrameAgg / self.FPS
                     # not_recog_agg = self.notRecogAgg / self.FPS
-                    if not_recog_sec >= self.standardSec:
+                    if not_recog_sec >= self.NOD_SEC:
                         self.notRecogEndPoint = total_sec
                         strNotRecogStart = str(timedelta(seconds=int(self.notRecogStartPoint)))
                         strNotRecogEnd = str(timedelta(seconds=int(self.notRecogEndPoint)))
@@ -330,7 +333,7 @@ class FaceRecog:
         total_sec = self.totalFrame / self.FPS
         recog_sec = self.recogFrameAgg / self.FPS
         if self.notRecogFrame != 0:
-            if self.notRecogFrame < self.standardSec * self.FPS:
+            if self.notRecogFrame < self.NOD_SEC * self.FPS:
                 self.recogFrameAgg += self.notRecogFrame
                 self.notRecogFrame = 0
             else:
@@ -362,7 +365,7 @@ class FaceRecog:
         notRecogTime = totalTime - recogTime
 
         # 총태만시간이 10초 미만일 수는 없다.
-        if notRecogTime < self.standardSec:
+        if notRecogTime < self.NOD_SEC:
             recogTime += notRecogTime
             notRecogTime = 0
 

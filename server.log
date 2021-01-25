@@ -3296,3 +3296,45 @@
 [2021-01-23 18:28:43] INFO - videoCheck.videomain2 - 프로그램 종료
 [2021-01-23 18:28:43] INFO - videoCheck.videomain2 - 총근무시간 : 0:10:25 / 순수근무시간 : 0:09:12 / 총태만시간 : 0:01:13
 
+[2021-01-23 19:16:09,143] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-23 19:16:09,144] INFO - realTimeCheck.realtimemain - 근무시작
+[2021-01-23 19:18:32,885] INFO - realTimeCheck.realtimemain - 근무 유지 시간 : 0:02:23
+[2021-01-23 19:18:32,886] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-23 19:18:32,886] INFO - realTimeCheck.realtimemain - 총근무시간 : 0:02:23 순수근무시간 : 0:02:23 근무태만시간 : 0:00:00
+[2021-01-23 19:38:44,907] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-23 19:38:44,907] INFO - realTimeCheck.realtimemain - 근무시작
+[2021-01-23 19:38:56,904] INFO - realTimeCheck.realtimemain - 근무 유지 시간 : 0:00:01
+[2021-01-23 19:38:56,904] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-23 19:38:58,391] INFO - realTimeCheck.realtimemain - 태만 유지 시간 : 0:00:11
+[2021-01-23 19:38:58,391] INFO - realTimeCheck.realtimemain - 근무시작
+[2021-01-23 19:39:16,644] INFO - realTimeCheck.realtimemain - 근무 유지 시간 : 0:00:08
+[2021-01-23 19:39:16,645] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-23 19:39:35,561] INFO - realTimeCheck.realtimemain - 태만 유지 시간 : 0:00:28
+[2021-01-23 19:39:35,562] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-23 19:39:35,562] INFO - realTimeCheck.realtimemain - 총근무시간 : 0:00:50 순수근무시간 : 0:00:10 근무태만시간 : 0:00:40
+[2021-01-23 19:40:37,587] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-23 19:40:37,588] INFO - realTimeCheck.realtimemain - 근무시작
+[2021-01-23 19:40:50,612] INFO - realTimeCheck.realtimemain - 근무 유지 시간 : 0:00:03
+[2021-01-23 19:40:50,612] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-23 19:40:55,895] INFO - realTimeCheck.realtimemain - 태만 유지 시간 : 0:00:15
+[2021-01-23 19:40:55,895] INFO - realTimeCheck.realtimemain - 근무시작
+[2021-01-23 19:41:20,881] INFO - realTimeCheck.realtimemain - 근무 유지 시간 : 0:00:14
+[2021-01-23 19:41:20,882] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-23 19:41:32,678] INFO - realTimeCheck.realtimemain - 태만 유지 시간 : 0:00:21
+[2021-01-23 19:41:32,679] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-23 19:41:32,679] INFO - realTimeCheck.realtimemain - 총근무시간 : 0:00:55 순수근무시간 : 0:00:17 근무태만시간 : 0:00:37
+[2021-01-26 00:07:45,304] INFO - realTimeCheck.realtimemain - 근무 최초 시작
+[2021-01-26 00:07:45,305] INFO - realTimeCheck.realtimemain - 근무시작
+[2021-01-26 00:08:16,266] INFO - realTimeCheck.realtimemain - 근무 유지 시간 : 0:00:10
+[2021-01-26 00:08:16,267] INFO - realTimeCheck.realtimemain - 근무 태만 시작
+[2021-01-26 00:08:20,211] INFO - realTimeCheck.realtimemain - 태만 유지 시간 : 0:00:23
+[2021-01-26 00:08:20,212] INFO - realTimeCheck.realtimemain - 근무시작
+[2021-01-26 00:08:24,775] INFO - realTimeCheck.realtimemain - 근무 유지 시간 : 0:00:04
+[2021-01-26 00:08:24,776] INFO - realTimeCheck.realtimemain - 프로그램 종료
+[2021-01-26 00:08:24,777] INFO - realTimeCheck.realtimemain - 총근무시간 : 0:00:39 순수근무시간 : 0:00:15 근무태만시간 : 0:00:23
+[2021-01-26 00:09:27] INFO - videoCheck.videomain2 - C:/Users/yoo77/PycharmProjects/0101/video/video_test3.mp4
+[2021-01-26 00:09:27] INFO - videoCheck.videomain2 - <동영상으로 근무체크>
+[2021-01-26 00:09:31] INFO - videoCheck.videomain2 - 근무시작 : 0:00:00
+[2021-01-26 00:09:34] INFO - videoCheck.videomain2 - 프로그램 종료
+[2021-01-26 00:09:34] INFO - videoCheck.videomain2 - 총근무시간 : 0:00:20 / 순수근무시간 : 0:00:21 / 총태만시간 : 0:00:00
+

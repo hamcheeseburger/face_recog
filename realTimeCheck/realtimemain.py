@@ -22,6 +22,7 @@ import timeit
 from realTimeCheck import camera
 from getFile import getknowns
 
+
 class FaceRecog(object):
     _instance = None
 
@@ -40,7 +41,9 @@ class FaceRecog(object):
 
     def __init__(self):
         print("__init__ is called\n")
-        # self.reset()
+        self.RECOG_LV = 1
+        self.NOD_SEC = 10
+        self.DETEC_SEC = 60
         self.name = None
         self.known_face_encodings = []
         self.known_face_names = []
@@ -71,6 +74,9 @@ class FaceRecog(object):
 
     def reset(self):
         print("variable reset")
+        print("nod_sec : " + str(self.NOD_SEC))
+        print("detec_sec : " + str(self.DETEC_SEC))
+        print("recog_lv : " + str(self.RECOG_LV))
         self.working = False
         # 화면에 잡힌 얼굴중 근무자가 존재하는지를 알아내는 boolean 변수
         self.workerExist = False
@@ -99,8 +105,6 @@ class FaceRecog(object):
         self.isRealSlackOff = False
         # 총 근무 태만 시간 초기화 (재근무 시 마다 + slackOffCount )
         self.totalSlackOffCount = 0
-
-
 
         self.face_locations = []
         self.face_encodings = []
@@ -206,7 +210,7 @@ class FaceRecog(object):
         # self.slackOffCount != 0 없으면 맨처음 코드를 실행했을때
         # slackOffCount = 0 이니까 무조건 10 이상임
         if self.slackOffCount != 0 and (
-                timeit.default_timer() - self.slackOffCount) >= 10 and self.alertSlackOff is False:
+                timeit.default_timer() - self.slackOffCount) >= self.NOD_SEC and self.alertSlackOff is False:
             # True로 설정하면 근무 태만 알림 문구를 더이상 출력 안함
             self.alertSlackOff = True
             # self.logger.info("근무 태만 : {0}".format(self.slackOffStartTime))
@@ -258,7 +262,7 @@ class FaceRecog(object):
                 # 근무태만 -> 근무중이 되었을때
                 self.alertSlackOff = False
                 # 근무태만 시간이 10초 경과 후 재근무 했을 때
-                if self.slackOffCount != 0 and (timeit.default_timer() - self.slackOffCount) >= 10:
+                if self.slackOffCount != 0 and (timeit.default_timer() - self.slackOffCount) >= self.NOD_SEC:
                     # 얼마나 근무 태만을 지속했는지 계산(second) (= 근무태만 종료)
                     # 기존 방법 : 근무 태만 유지 시간이 아닌 근무 태만 종료 시점만 계산함
                     # count = timeit.default_timer() - self.slackOffCount
@@ -327,7 +331,7 @@ class FaceRecog(object):
 
     def calculate_total(self):
         # 진짜 근무 태만인 상태로 끝났을 때에도 해당 태만 시간을 총 태만 시간에 더해주도록 처리함.
-        if self.slackOffCount != 0 and (timeit.default_timer() - self.slackOffCount) >= 10:
+        if self.slackOffCount != 0 and (timeit.default_timer() - self.slackOffCount) >= self.NOD_SEC:
             # 얼마나 근무 태만을 지속했는지 계산(second) (= 근무태만 종료)
             # 기존 방법 : 근무 태만 유지 시간이 아닌 근무 태만 종료 시점만 계산함
             # count = timeit.default_timer() - self.slackOffCount
