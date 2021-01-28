@@ -69,9 +69,9 @@ class ExecuteLogin(UiDialog):
     def threadHandler(self, result_dict):
         if result_dict is not None:
             if not result_dict.get("error"):
-                # print("DETEC_SEC : " + str(result_dict['DETEC_SEC']))
-                # print("NOD_SEC : " + str(result_dict['NOD_SEC']))
-                # print("RECOV_LV : " + str(result_dict['RECOG_LV']))
+                print("DETEC_SEC : " + str(result_dict['DETEC_SEC']))
+                print("NOD_SEC : " + str(result_dict['NOD_SEC']))
+                print("RECOV_LV : " + str(result_dict['RECOG_LV']))
 
                 self.real_face_recog.NOD_SEC = result_dict['NOD_SEC']
                 self.real_face_recog.DETEC_SEC = result_dict['DETEC_SEC']
