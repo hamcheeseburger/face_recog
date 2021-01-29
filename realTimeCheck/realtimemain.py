@@ -188,19 +188,22 @@ class FaceRecog(object):
                 # See if the face s a match for the known face(s)
                 # Frame에서 추출한 얼굴 특징과 knowns에 있던 사진 얼굴의 특징을 비교하여, (얼마나 비슷한지)
                 # 거리 척도로 환산합니다. 거리(distance)가 가깝다는 (작다는) 것은 서로 비슷한 얼굴이라는 의미입니다.
-                distances = face_recognition.face_distance(self.known_face_encodings, face_encoding)
-                min_value = min(distances)
+                if self.RECOG_LV == 1:
+                    name = self.name
+                elif self.RECOG_LV == 2:
+                    distances = face_recognition.face_distance(self.known_face_encodings, face_encoding)
+                    min_value = min(distances)
 
-                # tolerance: How much distance between faces to consider it a match. Lower is more strict.
-                # 0.6 is typical best performance.
-                # 실험상, 거리가 0.6 이면 다른 사람의 얼굴입니다. 이런 경우의 이름은 Unknown 입니다.
+                    # tolerance: How much distance between faces to consider it a match. Lower is more strict.
+                    # 0.6 is typical best performance.
+                    # 실험상, 거리가 0.6 이면 다른 사람의 얼굴입니다. 이런 경우의 이름은 Unknown 입니다.
 
-                # 거리가 0.6 이하이고, 최소값을 가진 사람의 이름을 찾습니다.
-                name = "Unknown"
-                if min_value < 0.6:
-                    # 최소 값을 반환한 행렬을 찾는다.
-                    index = np.argmin(distances)
-                    name = self.known_face_names[index]
+                    # 거리가 0.6 이하이고, 최소값을 가진 사람의 이름을 찾습니다.
+                    name = "Unknown"
+                    if min_value < 0.5:
+                        # 최소 값을 반환한 행렬을 찾는다.
+                        index = np.argmin(distances)
+                        name = self.known_face_names[index]
 
                 self.face_names.append(name)
 
