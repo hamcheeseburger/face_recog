@@ -8,6 +8,9 @@
 버전:
     0.0.4
 """
+import io
+
+import PIL
 import face_recognition
 import cv2
 import os
@@ -17,10 +20,12 @@ import numpy as np
 
 from datetime import datetime, timedelta
 
+from PIL import Image
+
+from login.userinfo import UserInfo
 import logging
 import timeit
 from realTimeCheck import camera
-from getFile import getknowns
 
 
 class FaceRecog(object):
@@ -44,7 +49,8 @@ class FaceRecog(object):
         self.RECOG_LV = 1
         self.NOD_SEC = 10
         self.DETEC_SEC = 60
-        self.name = None
+
+        self.userInfo = UserInfo.instance()
         self.known_face_encodings = []
         self.known_face_names = []
         self.video = None
@@ -53,34 +59,35 @@ class FaceRecog(object):
         self.formatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(name)s - %(message)s')
         self.logger = self.get_logger()
 
-        knowns_obj = getknowns.Knowns.instance()
-        self.known_face_names = knowns_obj.known_face_names
-        self.known_face_encodings = knowns_obj.known_face_encodings
+        # knowns_obj = getknowns.Knowns.instance()
+        # self.known_face_names = knowns_obj.known_face_names
+        # self.known_face_encodings = knowns_obj.known_face_encodings
         # print(self.known_face_names)
 
-    def get_user_name(self):
-        print("get_user_name is called")
-        dirname = 'user_image'
-        files = os.listdir(dirname)
-        filename = files[0]
-        name, ext = os.path.splitext(filename)
-        self.name = name
-        if ext == '.jpg':
-            self.known_face_names.append(name)
-            pathname = os.path.join(dirname, filename)
-            img = face_recognition.load_image_file(pathname)  # 이미지파일 가져오는 코드..
-            face_encoding = face_recognition.face_encodings(img)[0]
-            self.known_face_encodings.append(face_encoding)
+    def set_image_to_known(self):
+        self.known_face_names.append(self.name)
+        mode = 'RGB'
+        im = Image.open(io.BytesIO(self.image))
+        if mode:
+            im = im.convert(mode)
+        img = np.array(im)
+
+        face_encoding = face_recognition.face_encodings(img)[0]
+        self.known_face_encodings.append(face_encoding)
 
     def reset(self):
         print("variable reset")
-        print("nod_sec : " + str(self.NOD_SEC))
-        print("detec_sec : " + str(self.DETEC_SEC))
-        print("recog_lv : " + str(self.RECOG_LV))
+        print("\nSetting is applied to REALTIME object!")
+        print("DETEC_SEC : " + str(self.DETEC_SEC))
+        print("NOD_SEC : " + str(self.NOD_SEC))
+        print("RECOV_LV : " + str(self.RECOG_LV) + "\n")
+
+        self.name = self.userInfo.name
+        self.image = self.userInfo.image
+
         self.working = False
         # 화면에 잡힌 얼굴중 근무자가 존재하는지를 알아내는 boolean 변수
         self.workerExist = False
-
         self.paused = False
         # log 출력 형식
 
@@ -111,6 +118,10 @@ class FaceRecog(object):
         self.face_names = []
         self.process_this_frame = True
         self.video_end = False
+
+        self.known_face_names = []
+        self.known_face_encodings = []
+        self.set_image_to_known()
 
     def get_logger(self):
         # logger instance 생성
@@ -155,9 +166,6 @@ class FaceRecog(object):
         self.video.end_camera()
 
     def get_frame(self):
-        if self.name is None:
-            self.get_user_name()
-
         # 카메라 버전으로 테스트
         frame = self.video.get_frame()
         # ret, frame = self.video.read()
@@ -315,9 +323,10 @@ class FaceRecog(object):
             cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
 
             # Draw a label with a name below the face
-            cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
-            font = cv2.FONT_HERSHEY_DUPLEX
-            cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
+            if self.RECOG_LV >= 2:
+                cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
+                font = cv2.FONT_HERSHEY_DUPLEX
+                cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
 
         # frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
         # frame = cv2.transpose(frame)
@@ -395,7 +404,6 @@ class FaceRecog(object):
         if final_slackoff_count_int / 60 >= 1:
             s += str(int(final_slackoff_count_int / 60)) + "분 "
         s += str(final_slackoff_count_int % 60) + "초"
-
 
         self.logger.info(f'' + '총근무시간 : ' + total_cnt + ' 순수근무시간 : ' + working_cnt + ' 근무태만시간 : ' + slack_cnt)
 

@@ -14,6 +14,8 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import QtWidgets, QtGui
 import cv2
+
+from login.userinfo import UserInfo
 from ui.realtimeui import RealTimeUi
 import os
 import simpleaudio as sa
@@ -28,7 +30,9 @@ class ExecuteRealTime(RealTimeUi):
     def __init__(self, id):
         RealTimeUi.__init__(self)
 
-        self.user_name.setText("사용자 : " + id)
+        self.userInfo = UserInfo.instance()
+        self.user_name.setText("사용자 : " + self.userInfo.name)
+
         self.user_id = id
         self.face_recog = None
         self.init_variable()

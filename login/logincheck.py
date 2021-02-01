@@ -18,6 +18,8 @@ import requests
 
 
 class CheckUser:
+    URL = "http://localhost:8090/awsDBproject/user/login"
+
     def __init__(self):
         self.known_face_names = []
         self.known_face_images = []
@@ -25,106 +27,20 @@ class CheckUser:
         self.image = []
         self.user_info_array = []
 
-    def user_write_binary(self, id, password, name, path):
-        with open(path, "rb") as img:
-            img_byte = img.read()
-
-        MyObject = {'id': id,
-                    'password': password,
-                    'name': name,
-                    'image': img_byte
-                    }
-
-        bin_dir = "./user_file"
-        bin_file_name = "user_" + id + "_" + name + ".txt"
-        bin_path = bin_dir + "/" + bin_file_name
-        with open(bin_path, "wb") as MyFile:
-            pickle.dump(MyObject, MyFile, protocol=3)
-
-    def user_check_binary(self, id, password):
-        dirname = 'user_file'
-        files = os.listdir(dirname)
-
-        for filename in files:
-            path = dirname + '/' + filename
-            with open(path, "rb") as MyFile:
-                read_obj = pickle.load(MyFile)
-                if read_obj['id'] == id and read_obj['password'] == password:
-                    print("로그인 성공")
-                    url = "user_image/" + read_obj['name'] + ".jpg"
-                    with open(url, "wb") as WriteFile:
-                        WriteFile.write(read_obj['image'])
-                    return True
-
-        print("로그인 실패")
-        return False
-
-    def user_check_db(self, id, password):
-        conn = sqlite3.connect("recog_user.db", isolation_level=None)
-        cursor = conn.cursor()
-
-        sql = "select name, hex(image) from user_table where id=? and password=?"
-        cursor.execute(sql, (id, password))
-        row = cursor.fetchone()
-        if row is None:
-            return False
-
-        print(row[0])  # 사용자 이름
-        strr = row[1]  # 사용자 사진
-
-        path = "user_image/" + row[0] + ".jpg"
-        print(path)
-        with open(path, 'wb') as file:
-            file.write(bytes.fromhex(strr))
-
-        cursor.close()
-        conn.close()
-        return True
-
-    def user_check_aws(self, id, pswd):
-        host = "face-recog-db-dev.ckeffyuykcfz.ap-northeast-2.rds.amazonaws.com"
-        port = 3306
-        username = "admin"
-        database = "mydb"
-        password = "12345678"
-
-        conn = pymysql.connect(host=host, user=username, passwd=password, db=database, port=port, charset='utf8')
-        cursor = conn.cursor()
-        query = "select name, hex(image) as img from member where login_id=%s and password=%s"
-        cursor.execute(query, (id, pswd))
-        row = cursor.fetchone()
-
-        if row is None:
-            print("no data")
-            return False
-        else:
-            print(row[0])
-            strr = row[1]  # 사용자 사진
-
-            path = "user_image/" + row[0] + ".jpg"
-            print(path)
-            with open(path, 'wb') as file:
-                file.write(bytes.fromhex(strr))
-
-        cursor.close()
-        conn.close()
-        return True
-
     def user_check_web_server(self, id, password):
         info = {
             'login_id': id,
             'password': password
         }
-        url = "http://localhost:8090/awsDBproject/user/login"
 
         # putty 접속하여 tomcat 서버 구동한 후 테스트 할 것
         # url = "http://3.35.38.165:8080/awsDBproject/user/login"
-        print(url)
+        print(self.URL)
         try:
-            response = requests.post(url, data=info, verify=False)
+            response = requests.post(self.URL, data=info, verify=False)
         except:
             print("Connection Error")
-            return -2
+            return -2, None, None
 
         print(response.status_code)
         # 추후 fail.jsp에서는 응답 코드를 200이 아닌 것으로 바꾸는 것으로?
@@ -133,20 +49,18 @@ class CheckUser:
             json_data = response.json()
             if json_data.get("error"):
                 print(json_data['error'])
-                return 0
+                return 0, None, None
 
             if json_data.get('image') and json_data.get('name'):
+                # Encoding 후 member_image 타입은 bytes
                 member_image = base64.b64decode(json_data['image'])
                 member_name = json_data['name']
-                print("Welcome " + member_name + "!!")
+                # print("Welcome " + member_name + "!!")
 
-                url = "user_image/" + member_name + ".jpg"
-                with open(url, "wb") as WriteFile:
-                    WriteFile.write(member_image)
-                return 1
+                return 1, member_name, member_image
         else:
             print("response error")
-            return -1
+            return -1, None, None
 
 
 if __name__ == "__main__":

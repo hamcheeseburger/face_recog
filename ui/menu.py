@@ -13,6 +13,7 @@ import os
 from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtCore import QThread
 # from ui.video import ExecuteVideo
+from login.userinfo import UserInfo
 from ui.video2 import ExecuteVideo
 import subprocess
 from ui.menuui import MenuUi
@@ -29,6 +30,8 @@ class ExecuteMenu(MenuUi):
     def __init__(self, id):
         MenuUi.__init__(self)
 
+        self.userInfo = UserInfo.instance()
+
         self.user_id = id
         self.processBtn.clicked.connect(self.callExe)
         self.jarBtn.clicked.connect(self.callJar)
@@ -38,7 +41,7 @@ class ExecuteMenu(MenuUi):
         self.copyCheckBtn.clicked.connect(self.call_copy_check)
 
         self.th1 = jar_thread()
-        self.userIdLabel.setText(id + "님 환영합니다.")
+        self.userIdLabel.setText(self.userInfo.name + "님 환영합니다.")
         self.logoutBtn.clicked.connect(self.logout)
 
         self.show()
@@ -72,12 +75,6 @@ class ExecuteMenu(MenuUi):
         subprocess.run(["start", fileName], shell=True)
 
     def logout(self):
-        dirname = 'user_image'
-        files = os.listdir(dirname)
-        for filename in files:
-            path = dirname + '/' + filename
-            os.remove(path)
-
         self.close()
 
     def closeEvent(self, a0: QtGui.QCloseEvent) -> None:

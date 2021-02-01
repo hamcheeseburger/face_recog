@@ -18,7 +18,7 @@ import cv2
 from videoCheck.videomain2 import FaceRecog
 import os
 import simpleaudio as sa
-
+from login.userinfo import UserInfo
 # ui기능
 
 # 진행과정 : 시작버튼 클릭 -> 동영상 프레임추출 -> 프레임별로 얼굴인식 후 근무시간 측정
@@ -60,7 +60,8 @@ class ExecuteVideo(VideoUi):
     def __init__(self, id):
         VideoUi.__init__(self)
 
-        self.user_name.setText("사용자 : " + id)
+        self.userInfo = UserInfo.instance()
+        self.user_name.setText("사용자 : " + self.userInfo.name)
         self.user_id = id
         self.fileRoute = ''
         self.init_variable()

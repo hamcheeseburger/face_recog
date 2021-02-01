@@ -18,7 +18,7 @@ from ui.logingui import UiDialog
 from ui.menu import ExecuteMenu
 from realTimeCheck import realtimemain
 from videoCheck import videomain2
-
+from login.userinfo import UserInfo
 
 class ExecuteLogin(UiDialog):
     def __init__(self, loginDialog):
@@ -30,9 +30,10 @@ class ExecuteLogin(UiDialog):
         self.real_face_recog = realtimemain.FaceRecog.instance()
         self.video_face_recog = videomain2.FaceRecog.instance()
         self.btn_login.clicked.connect(self.checkPassword)
-
         self.network_thread = NetworkThread()
         self.network_thread.threadEvent.connect(self.threadHandler)
+
+        self.userInfo = UserInfo.instance()
 
     def checkPassword(self):
         msg = QMessageBox()
@@ -40,8 +41,13 @@ class ExecuteLogin(UiDialog):
         password = self.lineEdit_password.text()
 
         # 서버 로그인
-        result = self.check_user.user_check_web_server(id, password)
+        result, name, image = self.check_user.user_check_web_server(id, password)
         if result == 1:
+            # self.real_face_recog.name = name
+            # self.real_face_recog.image = image
+            # self.video_face_recog.name = name
+            # self.video_face_recog.image = image
+            self.userInfo.setInfo(id, password, name, image)
             self.menuWindow()
             self.loginDialog.close()
             self.getSetting()
@@ -63,15 +69,16 @@ class ExecuteLogin(UiDialog):
         self.menu = ExecuteMenu(self.lineEdit_username.text())
 
     def getSetting(self):
-        print("Getting setting information from server!")
+        # print("Getting setting information from server!")
         self.network_thread.start()
 
     def threadHandler(self, result_dict):
         if result_dict is not None:
             if not result_dict.get("error"):
+                print("\nGet SETTING from SERVER")
                 print("DETEC_SEC : " + str(result_dict['DETEC_SEC']))
                 print("NOD_SEC : " + str(result_dict['NOD_SEC']))
-                print("RECOV_LV : " + str(result_dict['RECOG_LV']))
+                print("RECOV_LV : " + str(result_dict['RECOG_LV']) + "\n")
 
                 self.real_face_recog.NOD_SEC = result_dict['NOD_SEC']
                 self.real_face_recog.DETEC_SEC = result_dict['DETEC_SEC']

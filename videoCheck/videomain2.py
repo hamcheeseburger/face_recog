@@ -10,19 +10,18 @@
 """
 # face_recog.py
 # 얼굴인식 기능에 초점을 맞춘 wrapper 패키지
-import time
-from time import gmtime, strftime
+import io
 from datetime import timedelta
-from getFile import getknowns
-import av
+
+from PIL import Image
 import face_recognition
 import cv2
-import os
 import numpy as np
-import math
+
 # 파이썬은 B,G,R형태(numpy객체)로 이미지를 표현
 # OpenCV: [B, G, R]
 import logging
+from login.userinfo import UserInfo
 
 
 class FaceRecog:
@@ -46,25 +45,27 @@ class FaceRecog:
         self.RECOG_LV = 1
         self.NOD_SEC = 10
         self.route = None
-        self.name = None
+
+        self.userInfo = UserInfo.instance()
         self.known_face_encodings = []
         self.known_face_names = []
 
         # logger instance 생성
         self.logger = self.get_logger()
 
-        knowns_obj = getknowns.Knowns.instance()
-        self.known_face_names = knowns_obj.known_face_names
-        self.known_face_encodings = knowns_obj.known_face_encodings
-        # print(self.known_face_names)
-
     # def __del__(self):
     #     del self.video
 
     def reset(self):
         print("reset 호출")
-        print("nod_sec : " + str(self.NOD_SEC))
-        print("recog_lv : " + str(self.RECOG_LV))
+
+        print("Setting is applied to VIDEO object!")
+        print("NOD_SEC : " + str(self.NOD_SEC))
+        print("RECOV_LV : " + str(self.RECOG_LV))
+
+        self.name = self.userInfo.name
+        self.image = self.userInfo.image
+
         self.working = False
         # 화면에 잡힌 얼굴중 근무자가 존재하는지를 알아내는 boolean 변수
         self.workerExist = False
@@ -88,6 +89,10 @@ class FaceRecog:
         self.notRecogEndPoint = 0
 
         self.alertSlackOff = False
+
+        self.known_face_encodings = []
+        self.known_face_names = []
+        self.set_image_to_known()
 
     def get_logger(self):
         # logger instance 생성
@@ -132,19 +137,16 @@ class FaceRecog:
         self.frame_sequence = -self.interval
         self.specific_frame = []
 
-    def get_user_name(self):
-        print("get_user_name is called")
-        dirname = 'user_image'
-        files = os.listdir(dirname)
-        filename = files[0]
-        name, ext = os.path.splitext(filename)
-        self.name = name
-        if ext == '.jpg':
-            self.known_face_names.append(name)
-            pathname = os.path.join(dirname, filename)
-            img = face_recognition.load_image_file(pathname)  # 이미지파일 가져오는 코드..
-            face_encoding = face_recognition.face_encodings(img)[0]
-            self.known_face_encodings.append(face_encoding)
+    def set_image_to_known(self):
+        self.known_face_names.append(self.name)
+        mode = 'RGB'
+        im = Image.open(io.BytesIO(self.image))
+        if mode:
+            im = im.convert(mode)
+        img = np.array(im)
+
+        face_encoding = face_recognition.face_encodings(img)[0]
+        self.known_face_encodings.append(face_encoding)
 
     # 근무여부를 확인하는 boolean 변수를 반환한다.
     @property
@@ -170,11 +172,6 @@ class FaceRecog:
 
     def get_specific_frame(self):
         percent = 0
-
-        if self.name is None:
-            self.logger.info("<동영상으로 근무체크>")
-            self.get_user_name()
-
         self.frame_sequence += self.interval
 
         if self.time_length != 0 and self.FPS != 0:
@@ -309,9 +306,10 @@ class FaceRecog:
             cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
 
             # Draw a label with a name below the face
-            cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
-            font = cv2.FONT_HERSHEY_DUPLEX
-            cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
+            if self.RECOG_LV >= 2:
+                cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
+                font = cv2.FONT_HERSHEY_DUPLEX
+                cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
 
         return frame
 

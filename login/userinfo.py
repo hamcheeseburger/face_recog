@@ -11,8 +11,29 @@
 
 
 class UserInfo:
+    _instance = None
+
+    @classmethod
+    def _getInstance(cls):
+        print("UserInfo getInstance()")
+        return cls._instance
+
+    @classmethod
+    def instance(cls, *args, **kargs):
+        print("UserInfo instance()")
+        cls._instance = cls(*args, **kargs)
+        cls.instance = cls._getInstance
+        return cls._instance
+
     def __init__(self):
         self.id = ""
         self.password = ""
         self.name = ""
-        self.image = bytearray()
+        self.image = None
+
+    def setInfo(self, id, password, name, image):
+        self.id = id
+        self.password = password
+        self.name = name
+        self.image = image
+
