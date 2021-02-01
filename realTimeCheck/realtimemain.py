@@ -56,7 +56,7 @@ class FaceRecog(object):
         self.video = None
         # 로그 파일 생성 준비
 
-        self.formatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(name)s - %(message)s')
+        # self.formatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(name)s - %(message)s')
         self.logger = self.get_logger()
 
         # knowns_obj = getknowns.Knowns.instance()
@@ -129,6 +129,10 @@ class FaceRecog(object):
         # handler 생성 (stream, file)
         if len(logger.handlers) > 0:
             return logger
+
+        format = '[%(asctime)s] %(levelname)s - %(name)s - %(message)s'
+        TIME_FORMAT = "%Y-%m-%d %H:%M:%S"
+        self.formatter = logging.Formatter(format, TIME_FORMAT)
 
         streamHandler = logging.StreamHandler()
         fileHandler = logging.FileHandler('./server.log')
@@ -228,7 +232,10 @@ class FaceRecog(object):
             # 근무 유지 시간 계산 (근무를 한번도 안하고 바로 근무 태만될 가능성 생각 => workCount가 0일 가능성 고려)
             if self.workCount != 0:
                 # count = timeit.default_timer() - self.workCount
-                count = self.tempWorkStopTime - self.workCount
+                # count = self.tempWorkStopTime - self.workCount
+                # => self.tempWorkStopTime을 사용해서 시간 계산에 마이너스 오류가 발생한 거였음..
+                # 얼굴인식이 되면서 근무자가 아닌경우에는 self.tempWorkStopTime 를 초기화 안했었음..
+                count = self.slackOffCount - self.workCount
                 self.logger.info(f'근무 유지 시간 : ' + str(timedelta(seconds=count)).split(".")[0])
             self.logger.info(f'근무 태만 시작')
             # 진짜 근무 태만 상태임
@@ -242,7 +249,7 @@ class FaceRecog(object):
             self.slackOffCount = timeit.default_timer()
             # 아직 실제로 근무 태만은 아니다.
             self.working = False
-            # 근무 중단이 된 시간을 저장
+            # 근무 중단이 된 시간을 저장 (이게 왜 필요하지? 그냥 slackOffCount 쓰면 되지않나?그리고 프레임안에 얼굴이 있되, 근무자가 아닌경우엔 self.tempWorkStopTime을 안사용하는데?)
             self.tempWorkStopTime = timeit.default_timer()
             # start_time = datetime.now().replace(microsecond=0)
             # self.logger.info("근무 태만 : {0}".format(start_time) )
