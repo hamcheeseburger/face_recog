@@ -18,7 +18,7 @@ import cv2
 from videoCheck.videomain2 import FaceRecog
 import os
 import simpleaudio as sa
-from login.userinfo import UserInfo
+from info.userinfo import UserInfo
 # ui기능
 
 # 진행과정 : 시작버튼 클릭 -> 동영상 프레임추출 -> 프레임별로 얼굴인식 후 근무시간 측정

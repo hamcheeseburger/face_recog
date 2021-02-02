@@ -10,10 +10,8 @@
 """
 import io
 
-import PIL
 import face_recognition
 import cv2
-import os
 import numpy as np
 # 파이썬은 B,G,R형태(numpy객체)로 이미지를 표현
 # OpenCV: [B, G, R]
@@ -22,10 +20,12 @@ from datetime import datetime, timedelta
 
 from PIL import Image
 
-from login.userinfo import UserInfo
+from info.userinfo import UserInfo
 import logging
 import timeit
 from realTimeCheck import camera
+from info.workinfo import WorkInfo
+from info.workinfo import ArrayWorkInfo
 
 
 class FaceRecog(object):
@@ -58,11 +58,6 @@ class FaceRecog(object):
 
         # self.formatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(name)s - %(message)s')
         self.logger = self.get_logger()
-
-        # knowns_obj = getknowns.Knowns.instance()
-        # self.known_face_names = knowns_obj.known_face_names
-        # self.known_face_encodings = knowns_obj.known_face_encodings
-        # print(self.known_face_names)
 
     def set_image_to_known(self):
         self.known_face_names.append(self.name)
@@ -122,6 +117,11 @@ class FaceRecog(object):
         self.known_face_names = []
         self.known_face_encodings = []
         self.set_image_to_known()
+
+        self.work_info = {}
+        self.work_info['date_time'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        self.work_info['work_type'] = "real"
+        self.work_info_array = ArrayWorkInfo.instance().work_info_array
 
     def get_logger(self):
         # logger instance 생성
@@ -396,6 +396,13 @@ class FaceRecog(object):
         final_slackoff_count_int = int(final_slackoff_count)
         final_total_working_count_int = final_slackoff_count_int + final_working_count_int
 
+        self.work_info['total_time'] = final_total_working_count_int
+        self.work_info['work_time'] = final_working_count_int
+        self.work_info['not_work_time'] = final_slackoff_count_int
+        # self.work_info.total_time = final_total_working_count_int
+        # self.work_info.work_time = final_working_count_int
+        # self.work_info.not_work_time = final_slackoff_count_int
+
         self.logger.info(f'프로그램 종료')
         s = "총근무시간 : "
         if final_total_working_count_int / 60 >= 1:
@@ -413,7 +420,7 @@ class FaceRecog(object):
         s += str(final_slackoff_count_int % 60) + "초"
 
         self.logger.info(f'' + '총근무시간 : ' + total_cnt + ' 순수근무시간 : ' + working_cnt + ' 근무태만시간 : ' + slack_cnt)
-
+        self.work_info_array.append(self.work_info)
         # self.reset()
 
         return s

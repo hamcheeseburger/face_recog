@@ -15,14 +15,13 @@ from PyQt5.QtCore import *
 from PyQt5 import QtWidgets, QtGui
 import cv2
 
-from login.userinfo import UserInfo
+from info.userinfo import UserInfo
 from ui.realtimeui import RealTimeUi
 import os
 import simpleaudio as sa
 from realTimeCheck.realtimemain import FaceRecog
 
 import threading
-from subprocess import call
 from negligencedetection.negligence_detection import detection
 
 

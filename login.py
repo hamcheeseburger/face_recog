@@ -18,7 +18,8 @@ from ui.logingui import UiDialog
 from ui.menu import ExecuteMenu
 from realTimeCheck import realtimemain
 from videoCheck import videomain2
-from login.userinfo import UserInfo
+from info.userinfo import UserInfo
+
 
 class ExecuteLogin(UiDialog):
     def __init__(self, loginDialog):

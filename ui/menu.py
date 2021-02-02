@@ -8,17 +8,20 @@
 버전:
     0.0.2
 """
-import ctypes
 import os
+
+import requests
 from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtCore import QThread
 # from ui.video import ExecuteVideo
-from login.userinfo import UserInfo
+from info.userinfo import UserInfo
 from ui.video2 import ExecuteVideo
 import subprocess
 from ui.menuui import MenuUi
 from ui.realtime import ExecuteRealTime
 from ui.log import Log
+from info.workinfo import ArrayWorkInfo
+
 
 class jar_thread(QThread):
     def run(self):
@@ -31,6 +34,7 @@ class ExecuteMenu(MenuUi):
         MenuUi.__init__(self)
 
         self.userInfo = UserInfo.instance()
+        self.arrayWorkInfo = ArrayWorkInfo.instance()
 
         self.user_id = id
         self.processBtn.clicked.connect(self.callExe)
@@ -79,7 +83,24 @@ class ExecuteMenu(MenuUi):
 
     def closeEvent(self, a0: QtGui.QCloseEvent) -> None:
         print("closed")
+        self.sendWorkingInfo()
         self.logout()
+
+    def sendWorkingInfo(self):
+        url = "http://localhost:8090/awsDBproject/working/info"
+        info = {
+            "working_info": self.arrayWorkInfo.work_info_array,
+            "id": "yhj"
+        }
+        print(info)
+        try:
+            response = requests.post(url, json=info, verify=False)
+        except:
+            print("Connection Error")
+
+        print(response.status_code)
+
+        # if response.status_code == 200:
 
 
 if __name__ == "__main__":

@@ -11,7 +11,7 @@
 # face_recog.py
 # 얼굴인식 기능에 초점을 맞춘 wrapper 패키지
 import io
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 from PIL import Image
 import face_recognition
@@ -21,7 +21,8 @@ import numpy as np
 # 파이썬은 B,G,R형태(numpy객체)로 이미지를 표현
 # OpenCV: [B, G, R]
 import logging
-from login.userinfo import UserInfo
+from info.userinfo import UserInfo
+from info.workinfo import ArrayWorkInfo
 
 
 class FaceRecog:
@@ -93,6 +94,11 @@ class FaceRecog:
         self.known_face_encodings = []
         self.known_face_names = []
         self.set_image_to_known()
+
+        self.work_info = {}
+        self.work_info['date_time'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        self.work_info['work_type'] = "video"
+        self.work_info_array = ArrayWorkInfo.instance().work_info_array
 
     def get_logger(self):
         # logger instance 생성
@@ -368,6 +374,11 @@ class FaceRecog:
             notRecogTime = 0
 
         strNotRecogTime = str(timedelta(seconds=notRecogTime))
+
+        self.work_info['total_time'] = totalTime
+        self.work_info['work_time'] = recogTime
+        self.work_info['not_work_time'] = notRecogTime
+        self.work_info_array.append(self.work_info)
 
         str_noti_end = "프로그램 종료"
         self.logger.info(str_noti_end)
