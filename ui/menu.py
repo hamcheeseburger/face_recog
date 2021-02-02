@@ -90,7 +90,7 @@ class ExecuteMenu(MenuUi):
         url = "http://localhost:8090/awsDBproject/working/info"
         info = {
             "working_info": self.arrayWorkInfo.work_info_array,
-            "id": "yhj"
+            "id": self.user_id
         }
         print(info)
         try:
