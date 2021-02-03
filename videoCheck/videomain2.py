@@ -21,6 +21,8 @@ import numpy as np
 # 파이썬은 B,G,R형태(numpy객체)로 이미지를 표현
 # OpenCV: [B, G, R]
 import logging
+
+from info.loginfo import LogInfo
 from info.userinfo import UserInfo
 from info.workinfo import ArrayWorkInfo
 
@@ -43,16 +45,16 @@ class FaceRecog:
 
     def __init__(self):
         print("[video.py] __init__ call")
-        self.RECOG_LV = 1
-        self.NOD_SEC = 10
+        self.RECOG_LV = 0
+        self.NOD_SEC = 0
+
+        self.logInfo = LogInfo.instance()
+
         self.route = None
 
         self.userInfo = UserInfo.instance()
         self.known_face_encodings = []
         self.known_face_names = []
-
-        # logger instance 생성
-        self.logger = self.get_logger()
 
     # def __del__(self):
     #     del self.video
@@ -100,6 +102,8 @@ class FaceRecog:
         self.work_info['work_type'] = "video"
         self.work_info_array = ArrayWorkInfo.instance().work_info_array
 
+        self.logger = self.get_logger()
+
     def get_logger(self):
         # logger instance 생성
         logger = logging.getLogger(__name__)
@@ -115,7 +119,7 @@ class FaceRecog:
         streamHandler = logging.StreamHandler()
         streamHandler.setFormatter(formatter)
 
-        fileHandler = logging.FileHandler('./server.log')
+        fileHandler = logging.FileHandler(self.logInfo.file_path)
         fileHandler.setFormatter(formatter)
         # logger instance에 handler 설정
         logger.addHandler(streamHandler)

@@ -8,16 +8,19 @@
 버전:
     0.0.1
 """
+import datetime
+
 import requests
 from PyQt5.QtCore import QThread
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5 import QtWidgets, QtCore
-# import login.logincheck
+
+from info.loginfo import LogInfo
 from login import logincheck
-from ui.logingui import UiDialog
-from ui.menu import ExecuteMenu
 from realTimeCheck import realtimemain
 from videoCheck import videomain2
+from ui.logingui import UiDialog
+from ui.menu import ExecuteMenu
 from info.userinfo import UserInfo
 
 
@@ -28,12 +31,11 @@ class ExecuteLogin(UiDialog):
         self.setupUi(self.loginDialog)
 
         self.check_user = logincheck.CheckUser()
-        self.real_face_recog = realtimemain.FaceRecog.instance()
-        self.video_face_recog = videomain2.FaceRecog.instance()
         self.btn_login.clicked.connect(self.checkPassword)
         self.network_thread = NetworkThread()
         self.network_thread.threadEvent.connect(self.threadHandler)
-
+        self.realFaceRecog = realtimemain.FaceRecog.instance()
+        self.videoFaceRecog = videomain2.FaceRecog.instance()
         self.userInfo = UserInfo.instance()
 
     def checkPassword(self):
@@ -44,14 +46,11 @@ class ExecuteLogin(UiDialog):
         # 서버 로그인
         result, name, image = self.check_user.user_check_web_server(id, password)
         if result == 1:
-            # self.real_face_recog.name = name
-            # self.real_face_recog.image = image
-            # self.video_face_recog.name = name
-            # self.video_face_recog.image = image
             self.userInfo.setInfo(id, password, name, image)
+            self.makeLogFile()
+            self.getSetting()
             self.menuWindow()
             self.loginDialog.close()
-            self.getSetting()
         elif result == 0:
             msg.setText('Incorrect Password')
             msg.exec_()
@@ -69,6 +68,16 @@ class ExecuteLogin(UiDialog):
 
         self.menu = ExecuteMenu(self.lineEdit_username.text())
 
+    def makeLogFile(self):
+        time_format = datetime.datetime.now().strftime("%Y%m%d_%H-%M-%S")
+        file_name = self.userInfo.id + "_" + time_format + ".txt"
+        with open("./worklog/" + file_name, 'wt') as file:
+            file.write("login 시각 : " + time_format + "\n")
+        file.close()
+        self.logInfo = LogInfo.instance()
+        self.logInfo.setFileName(file_name)
+        print(self.logInfo.file_path)
+
     def getSetting(self):
         # print("Getting setting information from server!")
         self.network_thread.start()
@@ -81,11 +90,11 @@ class ExecuteLogin(UiDialog):
                 print("NOD_SEC : " + str(result_dict['NOD_SEC']))
                 print("RECOV_LV : " + str(result_dict['RECOG_LV']) + "\n")
 
-                self.real_face_recog.NOD_SEC = result_dict['NOD_SEC']
-                self.real_face_recog.DETEC_SEC = result_dict['DETEC_SEC']
-                self.real_face_recog.RECOG_LV = result_dict['RECOG_LV']
-                self.video_face_recog.NOD_SEC = result_dict['NOD_SEC']
-                self.video_face_recog.RECOG_LV = result_dict['RECOG_LV']
+                self.realFaceRecog.NOD_SEC = result_dict['NOD_SEC']
+                self.realFaceRecog.DETEC_SEC = result_dict['DETEC_SEC']
+                self.realFaceRecog.RECOG_LV = result_dict['RECOG_LV']
+                self.videoFaceRecog.NOD_SEC = result_dict['NOD_SEC']
+                self.videoFaceRecog.RECOG_LV = result_dict['RECOG_LV']
             else:
                 print("result_dict has error")
         else:

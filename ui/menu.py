@@ -8,6 +8,7 @@
 버전:
     0.0.2
 """
+import datetime
 import os
 
 import requests
@@ -15,12 +16,15 @@ from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtCore import QThread
 # from ui.video import ExecuteVideo
 from info.userinfo import UserInfo
+from realTimeCheck import realtimemain
 from ui.video2 import ExecuteVideo
 import subprocess
 from ui.menuui import MenuUi
 from ui.realtime import ExecuteRealTime
 from ui.log import Log
 from info.workinfo import ArrayWorkInfo
+from info.loginfo import LogInfo
+from videoCheck import videomain2
 
 
 class jar_thread(QThread):
@@ -33,21 +37,25 @@ class ExecuteMenu(MenuUi):
     def __init__(self, id):
         MenuUi.__init__(self)
 
+        # 사용자정보객체 생성
         self.userInfo = UserInfo.instance()
+        # 근무정보를 담을 array 클래스 생성
         self.arrayWorkInfo = ArrayWorkInfo.instance()
+        self.logInfo = LogInfo.instance()
 
-        self.user_id = id
+        self.user_id = id # 없어져도 되는 변수..
+        # 버튼 클릭리스너 설정
         self.processBtn.clicked.connect(self.callExe)
         self.jarBtn.clicked.connect(self.callJar)
         self.videoBtn.clicked.connect(self.call_video_recog)
         self.realTimeBtn.clicked.connect(self.call_realTime_recog)
         self.logBtn.clicked.connect(self.call_log_file)
         self.copyCheckBtn.clicked.connect(self.call_copy_check)
-
-        self.th1 = jar_thread()
-        self.userIdLabel.setText(self.userInfo.name + "님 환영합니다.")
         self.logoutBtn.clicked.connect(self.logout)
 
+        self.th1 = jar_thread()
+        # 사용자이름으로 환영문구 설정
+        self.userIdLabel.setText(self.userInfo.name + "님 환영합니다.")
         self.show()
 
     def callExe(self):
@@ -87,18 +95,26 @@ class ExecuteMenu(MenuUi):
         self.logout()
 
     def sendWorkingInfo(self):
-        url = "http://localhost:8090/awsDBproject/working/info"
-        info = {
-            "working_info": self.arrayWorkInfo.work_info_array,
-            "id": "yhj"
-        }
-        print(info)
-        try:
-            response = requests.post(url, json=info, verify=False)
-        except:
-            print("Connection Error")
+        if len(self.arrayWorkInfo.work_info_array) == 0:
+            os.remove(self.logInfo.file_path)
+        else:
+            with open(self.logInfo.file_path, 'r') as file:
+                log_data = file.read()
+            file.close()
 
-        print(response.status_code)
+            url = "http://localhost:8090/awsDBproject/working/info"
+            info = {
+                "working_info": self.arrayWorkInfo.work_info_array,
+                "id": "yhj",
+                "log_data": log_data
+            }
+            print(info)
+            try:
+                response = requests.post(url, json=info, verify=False)
+            except:
+                print("Connection Error")
+
+            print(response.status_code)
 
         # if response.status_code == 200:
 

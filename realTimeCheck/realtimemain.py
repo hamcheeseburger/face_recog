@@ -26,7 +26,7 @@ import timeit
 from realTimeCheck import camera
 from info.workinfo import WorkInfo
 from info.workinfo import ArrayWorkInfo
-
+from info.loginfo import LogInfo
 
 class FaceRecog(object):
     _instance = None
@@ -46,9 +46,9 @@ class FaceRecog(object):
 
     def __init__(self):
         print("__init__ is called\n")
-        self.RECOG_LV = 1
-        self.NOD_SEC = 10
-        self.DETEC_SEC = 60
+        self.RECOG_LV = 0
+        self.NOD_SEC = 0
+        self.DETEC_SEC = 0
 
         self.userInfo = UserInfo.instance()
         self.known_face_encodings = []
@@ -56,8 +56,8 @@ class FaceRecog(object):
         self.video = None
         # 로그 파일 생성 준비
 
-        # self.formatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(name)s - %(message)s')
-        self.logger = self.get_logger()
+        # self.formatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(name)s - %(message)s'
+        # self.reset()
 
     def set_image_to_known(self):
         self.known_face_names.append(self.name)
@@ -123,6 +123,8 @@ class FaceRecog(object):
         self.work_info['work_type'] = "real"
         self.work_info_array = ArrayWorkInfo.instance().work_info_array
 
+        self.logger = self.get_logger()
+
     def get_logger(self):
         # logger instance 생성
         logger = logging.getLogger(__name__)
@@ -135,7 +137,9 @@ class FaceRecog(object):
         self.formatter = logging.Formatter(format, TIME_FORMAT)
 
         streamHandler = logging.StreamHandler()
-        fileHandler = logging.FileHandler('./server.log')
+
+        logInfo = LogInfo.instance()
+        fileHandler = logging.FileHandler(logInfo.file_path)
         # logger instance에 handler 설정
         logger.addHandler(streamHandler)
         logger.addHandler(fileHandler)
