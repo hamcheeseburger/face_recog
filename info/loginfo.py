@@ -15,6 +15,7 @@ class LogInfo:
         self.file_name = ""
         self.context_path = "./worklog/"
         self.file_path = ""
+        self.created_date = ""
 
     def setFileName(self, f_n):
         self.file_name = f_n

@@ -69,13 +69,18 @@ class ExecuteLogin(UiDialog):
         self.menu = ExecuteMenu(self.lineEdit_username.text())
 
     def makeLogFile(self):
-        time_format = datetime.datetime.now().strftime("%Y%m%d_%H-%M-%S")
+        now = datetime.datetime.now()
+        time_format = now.strftime("%Y%m%d_%H-%M-%S")
+        created_format = now.strftime("%Y-%m-%d %H:%M:%S")
+
         file_name = self.userInfo.id + "_" + time_format + ".txt"
         with open("./worklog/" + file_name, 'wt') as file:
-            file.write("login 시각 : " + time_format + "\n")
+            file.write("login 시각 : " + created_format + "\n")
         file.close()
         self.logInfo = LogInfo.instance()
         self.logInfo.setFileName(file_name)
+        self.logInfo.created_date = created_format
+
         print(self.logInfo.file_path)
 
     def getSetting(self):

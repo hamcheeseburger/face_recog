@@ -106,7 +106,8 @@ class ExecuteMenu(MenuUi):
             info = {
                 "working_info": self.arrayWorkInfo.work_info_array,
                 "id": self.userInfo.id,
-                "log_data": log_data
+                "log_data": log_data,
+                "log_created": self.logInfo.created_date
             }
             print(info)
             try:
