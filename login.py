@@ -70,7 +70,7 @@ class ExecuteLogin(UiDialog):
 
     def makeLogFile(self):
         now = datetime.datetime.now()
-        time_format = now.strftime("%Y-%m-%d_%H-%M-%S")
+        time_format = now.strftime("%Y%m%d_%H-%M-%S")
         created_format = now.strftime("%Y-%m-%d %H:%M:%S")
 
         file_name = self.userInfo.id + "_" + time_format + ".txt"
@@ -93,11 +93,14 @@ class ExecuteLogin(UiDialog):
                 print("\nGet SETTING from SERVER")
                 print("DETEC_SEC : " + str(result_dict['DETEC_SEC']))
                 print("NOD_SEC : " + str(result_dict['NOD_SEC']))
+                print("VID_INTVL : " + str(result_dict['VID_INTVL']))
                 print("RECOV_LV : " + str(result_dict['RECOG_LV']) + "\n")
 
                 self.realFaceRecog.NOD_SEC = result_dict['NOD_SEC']
                 self.realFaceRecog.DETEC_SEC = result_dict['DETEC_SEC']
                 self.realFaceRecog.RECOG_LV = result_dict['RECOG_LV']
+
+                self.videoFaceRecog.VID_INTVL = result_dict['VID_INTVL']
                 self.videoFaceRecog.NOD_SEC = result_dict['NOD_SEC']
                 self.videoFaceRecog.RECOG_LV = result_dict['RECOG_LV']
             else:

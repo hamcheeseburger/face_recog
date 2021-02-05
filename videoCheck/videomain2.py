@@ -47,6 +47,7 @@ class FaceRecog:
         print("[video.py] __init__ call")
         self.RECOG_LV = 0
         self.NOD_SEC = 0
+        self.VID_INTVL = 0
 
         self.logInfo = LogInfo.instance()
 
@@ -64,6 +65,7 @@ class FaceRecog:
 
         print("Setting is applied to VIDEO object!")
         print("NOD_SEC : " + str(self.NOD_SEC))
+        print("VID_INTVL : " + str(self.VID_INTVL))
         print("RECOV_LV : " + str(self.RECOG_LV))
 
         self.name = self.userInfo.name
@@ -142,7 +144,7 @@ class FaceRecog:
             self.FPS = 30
         self.time_length = round(self.video.get(cv2.CAP_PROP_FRAME_COUNT) / self.FPS)
         print("비디오 총길이 : " + str(self.time_length) + "초")
-        self.interval = round(self.FPS)
+        self.interval = round(self.FPS) * self.VID_INTVL
         self.totalFrame = -self.interval
         self.frame_sequence = -self.interval
         self.specific_frame = []
