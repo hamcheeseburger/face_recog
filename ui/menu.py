@@ -98,20 +98,24 @@ class ExecuteMenu(MenuUi):
         if len(self.arrayWorkInfo.work_info_array) == 0:
             os.remove(self.logInfo.file_path)
         else:
-            with open(self.logInfo.file_path, 'r') as file:
-                log_data = file.read()
-            file.close()
+            # with open(self.logInfo.file_path, 'r') as file:
+            #     log_data = file.read()
+            # file.close()
 
             url = "http://localhost:8090/awsDBproject/working/info"
+            log_file = open(self.logInfo.file_path, 'rb')
+            upload = {
+                "log_file": log_file
+            }
             info = {
                 "working_info": self.arrayWorkInfo.work_info_array,
-                "id": self.userInfo.id,
-                "log_data": log_data,
                 "log_created": self.logInfo.created_date
             }
+            print(upload)
             print(info)
             try:
-                response = requests.post(url, json=info, verify=False)
+                response = requests.post(url, files=upload, data=info, verify=False)
+                # response = requests.post(url, files=upload)
             except:
                 print("Connection Error")
 

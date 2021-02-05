@@ -70,7 +70,7 @@ class ExecuteLogin(UiDialog):
 
     def makeLogFile(self):
         now = datetime.datetime.now()
-        time_format = now.strftime("%Y%m%d_%H-%M-%S")
+        time_format = now.strftime("%Y-%m-%d_%H-%M-%S")
         created_format = now.strftime("%Y-%m-%d %H:%M:%S")
 
         file_name = self.userInfo.id + "_" + time_format + ".txt"
