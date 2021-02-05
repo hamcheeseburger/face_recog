@@ -113,6 +113,7 @@ class ExecuteRealTime(RealTimeUi):
 
             # 근무 신호등 교체
             self.isWorking = self.face_recog.working
+            self.isRealSlackOff = self.face_recog.isRealSlackOff
             if self.isWorking is True:
                 self.change_traffic_light("../templates/Traffic_Lights_green.png")
                 if self.workingAlarmFlag is False and self.alarmMute is False:
@@ -121,7 +122,7 @@ class ExecuteRealTime(RealTimeUi):
                     # play_obj.wait_done()
                     self.workingAlarmFlag = True
                     self.slackOffAlarmFlag = False
-            else:
+            elif self.isRealSlackOff is True:
                 self.change_traffic_light("../templates/Traffic_Lights_red.png")
                 if self.slackOffAlarmFlag is False and self.alarmMute is False:
                     # print('slackOff alarm!!')

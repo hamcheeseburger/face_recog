@@ -151,6 +151,15 @@ class FaceRecog(object):
         return logger
 
     @property
+    def isRealSlackOff(self):
+        return self._isRealSlackOff
+
+    @isRealSlackOff.setter
+    def isRealSlackOff(self, value):
+        self._isRealSlackOff = value
+
+
+    @property
     def working(self):
         return self._working
 
