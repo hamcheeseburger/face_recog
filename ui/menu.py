@@ -102,8 +102,9 @@ class ExecuteMenu(MenuUi):
             #     log_data = file.read()
             # file.close()
 
-            url = "http://localhost:8090/awsDBproject/working/info"
-            log_file = open(self.logInfo.file_path, 'rb')
+            # url = "http://localhost:8090/awsDBproject/working/info"
+            url = "http://3.35.38.165:8080/awsDBproject/working/info"
+            log_file = open(self.logInfo.file_path, 'r', encoding="utf-8")
             upload = {
                 "log_file": log_file
             }
@@ -116,6 +117,7 @@ class ExecuteMenu(MenuUi):
             try:
                 response = requests.post(url, files=upload, data=info, verify=False)
                 # response = requests.post(url, files=upload)
+                log_file.close()
             except:
                 print("Connection Error")
 

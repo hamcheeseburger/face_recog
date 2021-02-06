@@ -139,7 +139,7 @@ class FaceRecog(object):
         streamHandler = logging.StreamHandler()
 
         logInfo = LogInfo.instance()
-        fileHandler = logging.FileHandler(logInfo.file_path)
+        fileHandler = logging.FileHandler(logInfo.file_path, encoding="utf-8")
         # logger instance에 handler 설정
         logger.addHandler(streamHandler)
         logger.addHandler(fileHandler)

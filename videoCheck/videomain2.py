@@ -121,7 +121,7 @@ class FaceRecog:
         streamHandler = logging.StreamHandler()
         streamHandler.setFormatter(formatter)
 
-        fileHandler = logging.FileHandler(self.logInfo.file_path)
+        fileHandler = logging.FileHandler(self.logInfo.file_path, encoding="utf-8")
         fileHandler.setFormatter(formatter)
         # logger instance에 handler 설정
         logger.addHandler(streamHandler)
@@ -235,7 +235,7 @@ class FaceRecog:
 
                     # 거리가 0.6 이하이고, 최소값을 가진 사람의 이름을 찾습니다.
                     name = "Unknown"
-                    if min_value < 0.5:
+                    if min_value < 0.6:
                         # 최소 값을 반환한 행렬을 찾는다.
                         index = np.argmin(distances)
                         name = self.known_face_names[index]
