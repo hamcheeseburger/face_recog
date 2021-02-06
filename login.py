@@ -76,7 +76,6 @@ class ExecuteLogin(UiDialog):
         file_name = self.userInfo.id + "_" + time_format + ".txt"
         with open("./worklog/" + file_name, 'wt', encoding='utf-8') as file:
             file.write("login 시각 : " + created_format + "\n")
-        file.close()
         self.logInfo = LogInfo.instance()
         self.logInfo.setFileName(file_name)
         self.logInfo.created_date = created_format

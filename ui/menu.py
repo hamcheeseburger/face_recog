@@ -116,8 +116,6 @@ class ExecuteMenu(MenuUi):
             print(info)
             try:
                 response = requests.post(url, files=upload, data=info, verify=False)
-                # response = requests.post(url, files=upload)
-                log_file.close()
             except:
                 print("Connection Error")
 
