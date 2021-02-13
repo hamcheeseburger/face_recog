@@ -134,8 +134,8 @@ class ExecuteMenu(MenuUi):
 
             print(response)
 
-        for image_name in image_list:
-            os.remove(path_dir + image_name)
+        # for image_name in image_list:
+        #     os.remove(path_dir + image_name)
 
 
 if __name__ == "__main__":
