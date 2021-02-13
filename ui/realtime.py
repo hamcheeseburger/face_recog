@@ -22,16 +22,15 @@ import simpleaudio as sa
 from realTimeCheck.realtimemain import FaceRecog
 
 import threading
-from negligencedetection.negligence_detection import detection
+from negligencedetection.negligence_detection_2021_0209 import Detection
 
 
 class ExecuteRealTime(RealTimeUi):
     def __init__(self, id):
         RealTimeUi.__init__(self)
-
         self.userInfo = UserInfo.instance()
         self.user_name.setText("사용자 : " + self.userInfo.name)
-
+        self.detection_thread = None
         self.user_id = id
         self.face_recog = None
         self.init_variable()
@@ -51,7 +50,7 @@ class ExecuteRealTime(RealTimeUi):
         # self.btn_select_route.clicked.connect(self.select_route)
 
         # 화면 탐지 버튼 핸들러
-        self.btn_detection.clicked.connect(self.negligence_handler)
+        # self.btn_detection.clicked.connect(self.negligence_handler)
 
         # 시작 버튼 미클릭시 버튼 클릭 못하게
         self.btn_cam_start.setDisabled(True)
@@ -201,17 +200,21 @@ class ExecuteRealTime(RealTimeUi):
             self.btn_sound_start.setText('Sound Off')
             self.alarmMute = False
 
-    def negligence_detection(self):
-        # 화면 탐지 동작
-        # 쓰레드->서브프로세스 호출로 동작하게 하였다.
-        # path = './negligencedetection/negligence_detection.py'
-        # call(["python", path])
-        detection()
-
-    def negligence_handler(self):
-        processThread = threading.Thread(target=self.negligence_detection)
-        processThread.start()
-        # self.btn_detection.setDisabled(True)
+    # def negligence_detection(self):
+    #     threading.Thread(target=self.detection.detect).start()
+    #     self.detection_thread = threading.Timer(60, self.negligence_detection)
+    #     self.detection_thread.start()
+    #     # 화면 탐지 동작
+    #     # 쓰레드->서브프로세스 호출로 동작하게 하였다.
+    #     # path = './negligencedetection/negligence_detection.py'
+    #     # call(["python", path])
+    #
+    # def negligence_handler(self):
+    #     # self.negligence_detection()
+    #     # processThread = threading.Thread(target=self.negligence_detection)
+    #     # processThread.start()
+    #
+    #     self.btn_detection.setDisabled(True)
 
     def closeEvent(self, a0: QtGui.QCloseEvent) -> None:
         self.end_recog()

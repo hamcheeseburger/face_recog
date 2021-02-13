@@ -98,30 +98,47 @@ class ExecuteMenu(MenuUi):
         if len(self.arrayWorkInfo.work_info_array) == 0:
             os.remove(self.logInfo.file_path)
         else:
-            # with open(self.logInfo.file_path, 'r') as file:
-            #     log_data = file.read()
-            # file.close()
+            now = datetime.datetime.now()
+            created_format = now.strftime("%Y-%m-%d %H:%M:%S")
+            with open(self.logInfo.file_path, 'wt', encoding="utf-8") as file:
+                file.write("logout 시각 : " + created_format)
 
-            # url = "http://localhost:8090/awsDBproject/working/info"
-            url = "http://3.35.38.165:8080/awsDBproject/working/info"
-            log_file = open(self.logInfo.file_path, 'r', encoding="utf-8")
-            upload = {
-                "log_file": log_file
-            }
+            url = "http://localhost:8090/awsDBproject/sending/info"
+            # url = "http://3.35.38.165:8080/awsDBproject/working/info"
+
+            # 배포되면 아래걸로 해야함
+            # url = "http://3.35.38.165:8080/awsDBproject/sending/info"
+            log_file = open(self.logInfo.file_path, 'rt', encoding="utf-8")
+
+            files = [
+                ("file", log_file)
+            ]
+
+            path_dir = './CaptureImage/'
+            image_list = os.listdir(path_dir)
+            for image_name in image_list:
+                path = path_dir + image_name
+                print(path)
+                image_file = open(path, 'rb')
+                obj = ("image", image_file)
+                files.append(obj)
+
             info = {
                 "working_info": self.arrayWorkInfo.work_info_array,
                 "log_created": self.logInfo.created_date
             }
-            print(upload)
+            print(files)
             print(info)
             try:
-                response = requests.post(url, files=upload, data=info, verify=False)
-            except:
-                print("Connection Error")
+                response = requests.post(url, files=files, data=info, verify=False)
+                print(response)
+            except Exception as e:
+                print(e)
 
-            print(response.status_code)
+            # print(response.status_code)
 
         # if response.status_code == 200:
+
 
 
 if __name__ == "__main__":
