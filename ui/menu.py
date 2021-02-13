@@ -102,26 +102,39 @@ class ExecuteMenu(MenuUi):
             #     log_data = file.read()
             # file.close()
 
-            # url = "http://localhost:8090/awsDBproject/working/info"
-            url = "http://3.35.38.165:8080/awsDBproject/working/info"
+            url = "http://localhost:8090/awsDBproject/sending/info"
+            # url = "http://3.35.38.165:8080/awsDBproject/working/info"
+            # url = "http://3.35.38.165:8080/awsDBproject/sending/info"
             log_file = open(self.logInfo.file_path, 'r', encoding="utf-8")
-            upload = {
-                "log_file": log_file
-            }
+            # upload = {
+            #     "log_file": log_file
+            # }
+
+            files = [
+                ("file", log_file)
+            ]
+
+            path_dir = './CaptureImage/'
+            image_list = os.listdir(path_dir)
+
+            for image_name in image_list:
+                image_file = open(path_dir + image_name, "rb")
+                obj = ("image", image_file)
+                files.append(obj)
+
             info = {
                 "working_info": self.arrayWorkInfo.work_info_array,
                 "log_created": self.logInfo.created_date
             }
-            print(upload)
+            print(files)
             print(info)
             try:
-                response = requests.post(url, files=upload, data=info, verify=False)
-            except:
-                print("Connection Error")
+                response = requests.post(url, files=files, data=info, verify=False)
+            except Exception as e:
+                print(e)
 
-            print(response.status_code)
+            print(response)
 
-        # if response.status_code == 200:
 
 
 if __name__ == "__main__":

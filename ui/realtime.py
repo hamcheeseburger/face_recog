@@ -22,13 +22,12 @@ import simpleaudio as sa
 from realTimeCheck.realtimemain import FaceRecog
 
 import threading
-from negligencedetection.negligence_detection import detection
-
+# from negligencedetection.negligence_detection import detection
+from negligencedetection.negligence_detection_2021_0209 import Detection
 
 class ExecuteRealTime(RealTimeUi):
     def __init__(self, id):
         RealTimeUi.__init__(self)
-
         self.userInfo = UserInfo.instance()
         self.user_name.setText("사용자 : " + self.userInfo.name)
 
@@ -140,6 +139,7 @@ class ExecuteRealTime(RealTimeUi):
 
         self.print_total_working.setText(self.face_recog.calculate_total())
         print("finish")
+        self.end_recog()
         # 종료버튼을 누르고 나서 신호등과 카메라 화면을 초기화
         self.isCameraDisplayed = False
         self.videoLabel.setText("근무종료")
@@ -171,6 +171,7 @@ class ExecuteRealTime(RealTimeUi):
 
     # 종료버튼 눌렸을 때 실행되는 함수
     def end_recog(self):
+        print("종료버튼 클릭!!!!!")
         self.stopFlag = True
         if self.face_recog is not None:
             self.face_recog.close()
@@ -202,15 +203,13 @@ class ExecuteRealTime(RealTimeUi):
             self.alarmMute = False
 
     def negligence_detection(self):
-        # 화면 탐지 동작
-        # 쓰레드->서브프로세스 호출로 동작하게 하였다.
-        # path = './negligencedetection/negligence_detection.py'
-        # call(["python", path])
-        detection()
+        print("")
+        # Detection().detect(1)
 
     def negligence_handler(self):
-        processThread = threading.Thread(target=self.negligence_detection)
-        processThread.start()
+        print("")
+        # processThread = threading.Thread(target=self.negligence_detection)
+        # processThread.start()
         # self.btn_detection.setDisabled(True)
 
     def closeEvent(self, a0: QtGui.QCloseEvent) -> None:

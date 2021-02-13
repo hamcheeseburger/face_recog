@@ -9,6 +9,7 @@
     0.0.4
 """
 import io
+import threading
 
 import face_recognition
 import cv2
@@ -23,10 +24,13 @@ from PIL import Image
 from info.userinfo import UserInfo
 import logging
 import timeit
+
+from negligencedetection.negligence_detection_2021_0209 import Detection
 from realTimeCheck import camera
 from info.workinfo import WorkInfo
 from info.workinfo import ArrayWorkInfo
 from info.loginfo import LogInfo
+
 
 class FaceRecog(object):
     _instance = None
@@ -46,10 +50,12 @@ class FaceRecog(object):
 
     def __init__(self):
         print("__init__ is called\n")
+        self.detection = Detection()
         self.RECOG_LV = 0
         self.NOD_SEC = 0
         self.DETEC_SEC = 0
 
+        self.work_id = 0
         self.userInfo = UserInfo.instance()
         self.known_face_encodings = []
         self.known_face_names = []
@@ -119,11 +125,21 @@ class FaceRecog(object):
         self.set_image_to_known()
 
         self.work_info = {}
+        self.work_id = self.work_id + 1
+        self.work_info['id'] = self.work_id
         self.work_info['date_time'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         self.work_info['work_type'] = "real"
         self.work_info_array = ArrayWorkInfo.instance().work_info_array
 
+        # 화면탐지코드 실행
+        self.negligence_detection()
+
         self.logger = self.get_logger()
+
+    def negligence_detection(self):
+        threading.Thread(target=self.detection.detect, args=(self.work_id,)).start()
+        self.detection_thread = threading.Timer(60, self.negligence_detection)
+        self.detection_thread.start()
 
     def get_logger(self):
         # logger instance 생성
@@ -168,8 +184,8 @@ class FaceRecog(object):
         self._working = value
 
     def __del__(self):
-        if self.video is not None:
-            del self.video
+        # if self.video is not None:
+        #     del self.video
         print("face_recog 객체 소멸")
 
     def get_name(self, name):
@@ -181,6 +197,8 @@ class FaceRecog(object):
 
     def close(self):
         self.video.end_camera()
+        if self.detection_thread is not None:
+            self.detection_thread.cancel()
 
     def get_frame(self):
         # 카메라 버전으로 테스트

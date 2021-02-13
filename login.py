@@ -115,7 +115,8 @@ class NetworkThread(QThread):
         super().__init__()
 
     def run(self):
-        # 동영상에서 프레임을 추출하는 과정
+        # 프로그램 기본 세팅 정보를 가져옴
+        # req_url = "http://3.35.38.165:8080/awsDBproject/setting/client"
         req_url = "http://localhost:8090/awsDBproject/setting/client"
         try:
             response = requests.post(req_url, data=None, verify=False)
