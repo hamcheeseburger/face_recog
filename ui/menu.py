@@ -124,6 +124,7 @@ class ExecuteMenu(MenuUi):
                 "working_info": self.arrayWorkInfo.work_info_array,
                 "log_created": self.logInfo.created_date
             }
+
             print(files)
             print(info)
             try:
