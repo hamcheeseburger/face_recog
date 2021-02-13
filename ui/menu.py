@@ -95,12 +95,11 @@ class ExecuteMenu(MenuUi):
         self.logout()
 
     def sendWorkingInfo(self):
+        path_dir = './CaptureImage/'
+        image_list = os.listdir(path_dir)
         if len(self.arrayWorkInfo.work_info_array) == 0:
             os.remove(self.logInfo.file_path)
         else:
-            # with open(self.logInfo.file_path, 'r') as file:
-            #     log_data = file.read()
-            # file.close()
 
             url = "http://localhost:8090/awsDBproject/sending/info"
             # url = "http://3.35.38.165:8080/awsDBproject/working/info"
@@ -114,13 +113,12 @@ class ExecuteMenu(MenuUi):
                 ("file", log_file)
             ]
 
-            path_dir = './CaptureImage/'
-            image_list = os.listdir(path_dir)
-
+            i = 1
             for image_name in image_list:
                 image_file = open(path_dir + image_name, "rb")
-                obj = ("image", image_file)
+                obj = ("image" + str(i), image_file)
                 files.append(obj)
+                i += 1
 
             info = {
                 "working_info": self.arrayWorkInfo.work_info_array,
@@ -135,6 +133,8 @@ class ExecuteMenu(MenuUi):
 
             print(response)
 
+        for image_name in image_list:
+            os.remove(path_dir + image_name)
 
 
 if __name__ == "__main__":
