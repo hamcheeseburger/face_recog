@@ -108,6 +108,7 @@ class ExecuteMenu(MenuUi):
             # upload = {
             #     "log_file": log_file
             # }
+            image_files = []
 
             files = [
                 ("file", log_file)
@@ -116,6 +117,7 @@ class ExecuteMenu(MenuUi):
             i = 1
             for image_name in image_list:
                 image_file = open(path_dir + image_name, "rb")
+                image_files.append(image_file)
                 obj = ("image" + str(i), image_file)
                 files.append(obj)
                 i += 1
@@ -134,8 +136,11 @@ class ExecuteMenu(MenuUi):
 
             print(response)
 
-        # for image_name in image_list:
-        #     os.remove(path_dir + image_name)
+            for image_f in image_files:
+                image_f.close()
+
+        for image_name in image_list:
+            os.remove(path_dir + image_name)
 
 
 if __name__ == "__main__":

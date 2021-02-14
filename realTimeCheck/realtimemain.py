@@ -138,7 +138,7 @@ class FaceRecog(object):
 
     def negligence_detection(self):
         threading.Thread(target=self.detection.detect, args=(self.work_id,)).start()
-        self.detection_thread = threading.Timer(60, self.negligence_detection)
+        self.detection_thread = threading.Timer(self.DETEC_SEC, self.negligence_detection)
         self.detection_thread.start()
 
     def get_logger(self):
