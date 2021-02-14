@@ -25,6 +25,7 @@ import threading
 # from negligencedetection.negligence_detection import detection
 from negligencedetection.negligence_detection_2021_0209 import Detection
 
+
 class ExecuteRealTime(RealTimeUi):
     def __init__(self, id):
         RealTimeUi.__init__(self)
