@@ -15,9 +15,8 @@ from PyQt5.QtWidgets import QWidget, QMainWindow
 class Ui_MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
-        self.setupUi()
+        # self.setupUi()
 
-    def setupUi(self):
         # window창
         self.setObjectName("MainWindow")
         self.resize(1190, 647)
@@ -34,6 +33,7 @@ class Ui_MainWindow(QMainWindow):
         self.topLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.topLayout.setContentsMargins(0, 0, 0, 0)
         self.topLayout.setObjectName("topLayout")
+        # 로그아웃 버튼
         self.logoutBtn = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -43,6 +43,7 @@ class Ui_MainWindow(QMainWindow):
         self.logoutBtn.setMinimumSize(QtCore.QSize(90, 30))
         self.logoutBtn.setObjectName("logoutBtn")
         self.topLayout.addWidget(self.logoutBtn)
+        # 근무기록 버튼
         self.workListBtn = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -54,7 +55,6 @@ class Ui_MainWindow(QMainWindow):
         self.topLayout.addWidget(self.workListBtn)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.topLayout.addItem(spacerItem)
-
 
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.verticalLayoutWidget.setGeometry(QtCore.QRect(20, 50, 372, 531))
@@ -184,12 +184,12 @@ class Ui_MainWindow(QMainWindow):
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem1)
+        # 실시간인식 시작 버튼
         self.realRecogStartBtn = QtWidgets.QPushButton(self.verticalLayoutWidget_4)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.realRecogStartBtn.sizePolicy().hasHeightForWidth())
-        # 실시간인식 시작 버튼
         self.realRecogStartBtn.setSizePolicy(sizePolicy)
         self.realRecogStartBtn.setMinimumSize(QtCore.QSize(90, 30))
         self.realRecogStartBtn.setObjectName("realRecogStartBtn")
@@ -218,27 +218,27 @@ class Ui_MainWindow(QMainWindow):
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         # 실시간인식 음성안내 버튼
-        self.faceRecogSoundBtn = QtWidgets.QPushButton(self.verticalLayoutWidget_4)
+        self.realRecogSoundBtn = QtWidgets.QPushButton(self.verticalLayoutWidget_4)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.faceRecogSoundBtn.sizePolicy().hasHeightForWidth())
-        self.faceRecogSoundBtn.setSizePolicy(sizePolicy)
-        self.faceRecogSoundBtn.setMinimumSize(QtCore.QSize(90, 30))
-        self.faceRecogSoundBtn.setObjectName("pushButton_4")
-        self.horizontalLayout_6.addWidget(self.faceRecogSoundBtn)
+        sizePolicy.setHeightForWidth(self.realRecogSoundBtn.sizePolicy().hasHeightForWidth())
+        self.realRecogSoundBtn.setSizePolicy(sizePolicy)
+        self.realRecogSoundBtn.setMinimumSize(QtCore.QSize(90, 30))
+        self.realRecogSoundBtn.setObjectName("realRecogSoundBtn")
+        self.horizontalLayout_6.addWidget(self.realRecogSoundBtn)
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem2)
         # 실시간인식 신호등 라벨
-        self.faceRecogSignalLabel = QtWidgets.QLabel(self.verticalLayoutWidget_4)
+        self.realRecogSignalLabel = QtWidgets.QLabel(self.verticalLayoutWidget_4)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.faceRecogSignalLabel.sizePolicy().hasHeightForWidth())
-        self.faceRecogSignalLabel.setSizePolicy(sizePolicy)
-        self.faceRecogSignalLabel.setMinimumSize(QtCore.QSize(140, 40))
-        self.faceRecogSignalLabel.setObjectName("signalLampLabel")
-        self.horizontalLayout_6.addWidget(self.faceRecogSignalLabel)
+        sizePolicy.setHeightForWidth(self.realRecogSignalLabel.sizePolicy().hasHeightForWidth())
+        self.realRecogSignalLabel.setSizePolicy(sizePolicy)
+        self.realRecogSignalLabel.setMinimumSize(QtCore.QSize(140, 40))
+        self.realRecogSignalLabel.setObjectName("realRecogSignalLabel")
+        self.horizontalLayout_6.addWidget(self.realRecogSignalLabel)
         self.verticalLayout_3.addLayout(self.horizontalLayout_6)
         self.realRecogAnnounceBox = QtWidgets.QGroupBox(self.verticalLayoutWidget_4)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
@@ -409,6 +409,8 @@ class Ui_MainWindow(QMainWindow):
         self.retranslateUi()
         QtCore.QMetaObject.connectSlotsByName(self)
 
+    # def setupUi(self):
+
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
         self.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -430,8 +432,8 @@ class Ui_MainWindow(QMainWindow):
         self.realRecogStartBtn.setText(_translate("MainWindow", "시작"))
         self.realRecogEndBtn.setText(_translate("MainWindow", "종료"))
         self.realRecogCamLabel.setText(_translate("MainWindow", "카메라 화면"))
-        self.faceRecogSoundBtn.setText(_translate("MainWindow", "음성안내"))
-        self.faceRecogSignalLabel.setText(_translate("MainWindow", "신호등"))
+        self.realRecogSoundBtn.setText(_translate("MainWindow", "음성안내"))
+        self.realRecogSignalLabel.setText(_translate("MainWindow", "신호등"))
         self.realRecogWorkLabel.setText(_translate("MainWindow", "순수근무시간 : 00:50:09"))
         self.realRecogTotalLabel.setText(_translate("MainWindow", "총근무시간 : 1:00:09"))
         self.realRecogNotWorkLabel.setText(_translate("MainWindow", "태만시간 : 00:10:00"))
@@ -449,9 +451,6 @@ class Ui_MainWindow(QMainWindow):
         self.videoRecogWorkLabel.setText(_translate("MainWindow", "순수근무시간 : 00:50:09"))
         self.videoRecogTotalLabel.setText(_translate("MainWindow", "총근무시간 : 1:00:09"))
         self.videoRecogNotWorkLabel.setText(_translate("MainWindow", "태만시간 : 00:10:00"))
-
-    def closeEvent(self, event):
-        print("closed")
 
 
 if __name__ == "__main__":
