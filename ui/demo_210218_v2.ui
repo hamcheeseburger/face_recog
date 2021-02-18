@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1190</width>
+    <width>939</width>
     <height>647</height>
    </rect>
   </property>
@@ -398,7 +398,7 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_6">
            <item>
-            <widget class="QPushButton" name="pushButton_4">
+            <widget class="QPushButton" name="faceRecogSoundBtn">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -539,7 +539,7 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_7">
            <item>
-            <widget class="QPushButton" name="video">
+            <widget class="QPushButton" name="videoCheckOpenBtn">
              <property name="minimumSize">
               <size>
                <width>90</width>
@@ -777,7 +777,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1190</width>
+     <width>939</width>
      <height>26</height>
     </rect>
    </property>
