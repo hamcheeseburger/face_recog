@@ -133,7 +133,7 @@ class FaceRecog:
 
     def get_video_info(self):
         self.video = cv2.VideoCapture(self.route)
-        container = (av.open(self.route)).streams.video[0]
+        container = (av.open(self.route)).streams.videoCheckOpenBtn[0]
         self.FPS = round(self.video.get(cv2.CAP_PROP_FPS), 2)
         self.time_length = round(container.frames / self.FPS)
         print("비디오 총길이 : " + str(self.time_length) + "초")
