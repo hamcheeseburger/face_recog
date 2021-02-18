@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QWidget, QMainWindow
 
 
@@ -230,6 +231,14 @@ class Ui_MainWindow(QMainWindow):
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem2)
         # 실시간인식 신호등 라벨
+        self.traffic_width = 120
+        self.traffic_height = 33
+
+        self.pixmap = QPixmap(
+            # self.scriptDir + os.path.sep + "./templates/Traffic_Lights_init.png"
+            "./templates/Traffic_Lights_init.png"
+        )
+        self.pixmap = self.pixmap.scaled(self.traffic_width, self.traffic_height)
         self.realRecogSignalLabel = QtWidgets.QLabel(self.verticalLayoutWidget_4)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -238,6 +247,9 @@ class Ui_MainWindow(QMainWindow):
         self.realRecogSignalLabel.setSizePolicy(sizePolicy)
         self.realRecogSignalLabel.setMinimumSize(QtCore.QSize(140, 40))
         self.realRecogSignalLabel.setObjectName("realRecogSignalLabel")
+        self.realRecogSignalLabel.resize(self.traffic_width, self.traffic_height)
+        self.realRecogSignalLabel.setPixmap(self.pixmap)
+
         self.horizontalLayout_6.addWidget(self.realRecogSignalLabel)
         self.verticalLayout_3.addLayout(self.horizontalLayout_6)
         self.realRecogAnnounceBox = QtWidgets.QGroupBox(self.verticalLayoutWidget_4)
@@ -419,7 +431,7 @@ class Ui_MainWindow(QMainWindow):
         self.workListBox.setTitle(_translate("MainWindow", "근무 기록"))
         self.userInfoBox.setTitle(_translate("MainWindow", "근무자 정보"))
         self.userNameLabel.setText(_translate("MainWindow", "근무자 이름"))
-        self.userIdLabel.setText(_translate("MainWindow", "아이디 : sji"))
+        self.userIdLabel.setText(_translate("MainWindow", "아이디"))
         self.userIPLabel.setText(_translate("MainWindow", "IP주소"))
         self.stgLvlLabel.setText(_translate("MainWindow", "사용자 인식 단계"))
         self.stgNodLabel.setText(_translate("MainWindow", "태만 기준 시간"))
@@ -432,11 +444,11 @@ class Ui_MainWindow(QMainWindow):
         self.realRecogStartBtn.setText(_translate("MainWindow", "시작"))
         self.realRecogEndBtn.setText(_translate("MainWindow", "종료"))
         self.realRecogCamLabel.setText(_translate("MainWindow", "카메라 화면"))
-        self.realRecogSoundBtn.setText(_translate("MainWindow", "음성안내"))
-        self.realRecogSignalLabel.setText(_translate("MainWindow", "신호등"))
-        self.realRecogWorkLabel.setText(_translate("MainWindow", "순수근무시간 : 00:50:09"))
-        self.realRecogTotalLabel.setText(_translate("MainWindow", "총근무시간 : 1:00:09"))
-        self.realRecogNotWorkLabel.setText(_translate("MainWindow", "태만시간 : 00:10:00"))
+        self.realRecogSoundBtn.setText(_translate("MainWindow", "음성안내 끄기"))
+        # self.realRecogSignalLabel.setText(_translate("MainWindow", "신호등"))
+        self.realRecogWorkLabel.setText(_translate("MainWindow", ""))
+        self.realRecogTotalLabel.setText(_translate("MainWindow", ""))
+        self.realRecogNotWorkLabel.setText(_translate("MainWindow", ""))
         self.videoCheckBox.setTitle(_translate("MainWindow", "동영상 검증"))
         self.videoCheckOpenBtn.setText(_translate("MainWindow", "동영상 열기"))
         self.videoCheckBtn.setText(_translate("MainWindow", "동영상 검증"))
