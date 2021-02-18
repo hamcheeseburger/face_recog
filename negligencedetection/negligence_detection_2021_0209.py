@@ -11,6 +11,7 @@ from keras.applications.vgg16 import VGG16
 SAVE_PATH = "./negligencedetection/"
 SEND_PATH = "./CaptureImage/"
 
+
 class ScrShot:
     def __init__(self):
         self.basename = "screenshot"
@@ -54,15 +55,17 @@ class Detection:
         image = cv2.imread(SAVE_PATH + "diff.jpg")
         single_input = resize(image, preserve_range=True, output_shape=(224, 224, 3)).astype('float64')
         single_input = single_input / 255
-        diff_set.append( single_input )
-        diff_set = np.array( diff_set )
+        diff_set.append(single_input)
+        diff_set = np.array(diff_set)
 
         vgg_input = self.vgg16_model.predict( diff_set )
         vgg_input = vgg_input.reshape( vgg_input.shape[0], 7*7*512 )
 
-        output = self.model.predict( vgg_input )
+        # output값이 1과 가까울 수록 GamePlaying
+        # 현재는 around()로 하고 있기 때문에 0.5이상이면 gameplaying, 0.5이하이면 working으로 판별함
+        output = self.model.predict(vgg_input)
         print(output)
-        prediction = np.around( output )
+        prediction = np.around(output)
         print(prediction)
         if prediction == 0:
             print("Detection Result: Working ")

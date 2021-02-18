@@ -131,7 +131,7 @@ class FaceRecog(object):
         self.work_info['work_type'] = "real"
         self.work_info_array = ArrayWorkInfo.instance().work_info_array
 
-        # 화면탐지코드 실행
+        # 화면탐지코드 실행 -> 인식단계 3단계 일 때 실행되도록 변경할 것
         self.negligence_detection()
 
         self.logger = self.get_logger()
@@ -462,7 +462,7 @@ if __name__ == '__main__':
     print(face_recog.known_face_names)
     while True:
         if face_recog.video_end:
-            break;
+            break
         frame = face_recog.get_frame()
 
         # show the frame

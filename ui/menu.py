@@ -15,6 +15,7 @@ import requests
 from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtCore import QThread
 # from ui.video import ExecuteVideo
+from info.settingInfo import SettingInfo
 from info.userinfo import UserInfo
 from realTimeCheck import realtimemain
 from ui.video2 import ExecuteVideo
@@ -25,6 +26,7 @@ from ui.log import Log
 from info.workinfo import ArrayWorkInfo
 from info.loginfo import LogInfo
 from videoCheck import videomain2
+from PyQt5.QtGui import QPixmap
 
 
 class jar_thread(QThread):
@@ -42,6 +44,18 @@ class ExecuteMenu(MenuUi):
         # 근무정보를 담을 array 클래스 생성
         self.arrayWorkInfo = ArrayWorkInfo.instance()
         self.logInfo = LogInfo.instance()
+
+        self.imagePixmap = QPixmap()
+        self.imagePixmap.loadFromData(self.userInfo.image)
+        self.imagePixmap = self.imagePixmap.scaledToWidth(400)
+        self.userImage.setPixmap(self.imagePixmap)
+
+        self.info = SettingInfo.instance()
+        string = "단계별 인식 : " + str(self.info.RECOV_LV) + "단계\n" \
+                 + "태만기준시간 : " + str(self.info.NOD_SEC) + "초\n" \
+                 + "화면탐지간격 : " + str(self.info.DETEC_SEC) + "초\n" \
+                 + "영상처리간격 : " + str(self.info.VID_INTVL) + "초"
+        self.settingInfo.setText(string)
 
         self.user_id = id # 없어져도 되는 변수..
         # 버튼 클릭리스너 설정
@@ -100,10 +114,14 @@ class ExecuteMenu(MenuUi):
         if len(self.arrayWorkInfo.work_info_array) == 0:
             os.remove(self.logInfo.file_path)
         else:
+            now = datetime.datetime.now()
+            created_format = now.strftime("%Y-%m-%d %H:%M:%S")
 
-            url = "http://localhost:8090/awsDBproject/sending/info"
-            # url = "http://3.35.38.165:8080/awsDBproject/working/info"
-            # url = "http://3.35.38.165:8080/awsDBproject/sending/info"
+            with open(self.logInfo.file_path, 'a', encoding='utf-8') as file:
+                file.write("logout 시각 : " + created_format + "\n")
+
+            # url = "http://localhost:8090/awsDBproject/sending/info"
+            url = "http://3.35.38.165:8080/awsDBproject/sending/info"
             log_file = open(self.logInfo.file_path, 'r', encoding="utf-8")
             # upload = {
             #     "log_file": log_file

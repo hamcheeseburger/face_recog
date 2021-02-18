@@ -15,39 +15,48 @@ from PyQt5.QtWidgets import QHBoxLayout, QWidget, QLabel, QLineEdit, QPushButton
 class MenuUi(QWidget):
     def __init__(self):
         QWidget.__init__(self)
-        self.resize(378, 350)
+        self.resize(1000, 1000)
 
         self.gridLayoutWidget = QtWidgets.QWidget(self)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(80, 60, 221, 221))
+        self.gridLayoutWidget.resize(1000, 1000)
+        # self.gridLayoutWidget.setGeometry(QtCore.QRect(80, 60, 221, 221))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
 
         self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
 
-        self.logBtn = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.logBtn = QtWidgets.QPushButton()
         self.logBtn.setObjectName("logBtn")
-        self.gridLayout.addWidget(self.logBtn, 7, 0, 1, 1)
+        self.gridLayout.addWidget(self.logBtn, 8, 0, 1, 1)
 
-        self.copyCheckBtn = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.copyCheckBtn = QtWidgets.QPushButton()
         self.copyCheckBtn.setObjectName("copyCheckBtn")
-        self.gridLayout.addWidget(self.copyCheckBtn, 6, 0, 1, 1)
+        self.gridLayout.addWidget(self.copyCheckBtn, 7, 0, 1, 1)
 
-        self.processBtn = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.processBtn = QtWidgets.QPushButton()
         self.processBtn.setObjectName("processBtn")
-        self.gridLayout.addWidget(self.processBtn, 5, 0, 1, 1)
+        self.gridLayout.addWidget(self.processBtn, 6, 0, 1, 1)
 
-        self.jarBtn = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.jarBtn = QtWidgets.QPushButton()
         self.jarBtn.setObjectName("jarBtn")
-        self.gridLayout.addWidget(self.jarBtn, 4, 0, 1, 1)
+        self.gridLayout.addWidget(self.jarBtn, 5, 0, 1, 1)
 
-        self.videoBtn = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.videoBtn = QtWidgets.QPushButton()
         self.videoBtn.setObjectName("videoBtn")
-        self.gridLayout.addWidget(self.videoBtn, 3, 0, 1, 1)
+        self.gridLayout.addWidget(self.videoBtn, 4, 0, 1, 1)
 
-        self.realTimeBtn = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.realTimeBtn = QtWidgets.QPushButton()
         self.realTimeBtn.setObjectName("realTimeBtn")
-        self.gridLayout.addWidget(self.realTimeBtn, 2, 0, 1, 1)
+        self.gridLayout.addWidget(self.realTimeBtn, 3, 0, 1, 1)
+
+        self.settingInfo = QLabel()
+        self.userImage = QLabel()
+        # self.userImage.resize(400, 400)
+        hbox1 = QHBoxLayout(self.gridLayoutWidget)
+        hbox1.addWidget(self.userImage)
+        hbox1.addWidget(self.settingInfo)
+        self.gridLayout.addLayout(hbox1, 2, 0, 1, 1)
 
         self.userIdLabel = QtWidgets.QLabel()
         self.logoutBtn = QtWidgets.QPushButton("로그아웃")

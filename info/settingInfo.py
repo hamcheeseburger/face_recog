@@ -1,27 +1,30 @@
 from realTimeCheck import realtimemain
 from videoCheck import videomain2
 
+
 class SettingInfo:
     _instance = None
 
     @classmethod
     def _getInstance(cls):
-        print("UserInfo getInstance()")
+        print("SettingInfo getInstance()")
         return cls._instance
 
     @classmethod
     def instance(cls, *args, **kargs):
-        print("UserInfo instance()")
+        print("SettingInfo instance()")
         cls._instance = cls(*args, **kargs)
         cls.instance = cls._getInstance
         return cls._instance
 
     def __init__(self):
-        self.DETEC_SEC = None
-        self.NOD_SEC = None
-        self.RECOV_LV = None
+        self.DETEC_SEC = 0
+        self.NOD_SEC = 0
+        self.RECOV_LV = 0
+        self.VID_INTVL = 0
 
-    def setInfo(self, detec_sec, nod_sec, recov_lv):
+    def reset(self, detec_sec, nod_sec, recog_lv, vid_intvl):
         self.DETEC_SEC = detec_sec
         self.NOD_SEC = nod_sec
-        self.RECOV_LV = recov_lv
+        self.RECOV_LV = recog_lv
+        self.VID_INTVL = vid_intvl

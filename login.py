@@ -22,6 +22,7 @@ from videoCheck import videomain2
 from ui.logingui import UiDialog
 from ui.menu import ExecuteMenu
 from info.userinfo import UserInfo
+from info.settingInfo import SettingInfo
 
 
 class ExecuteLogin(UiDialog):
@@ -29,7 +30,6 @@ class ExecuteLogin(UiDialog):
         self.loginDialog = loginDialog
         UiDialog.__init__(self)
         self.setupUi(self.loginDialog)
-
         self.check_user = logincheck.CheckUser()
         self.btn_login.clicked.connect(self.checkPassword)
         self.network_thread = NetworkThread()
@@ -49,8 +49,7 @@ class ExecuteLogin(UiDialog):
             self.userInfo.setInfo(id, password, name, image)
             self.makeLogFile()
             self.getSetting()
-            self.menuWindow()
-            self.loginDialog.close()
+
         elif result == 0:
             msg.setText('Incorrect Password')
             msg.exec_()
@@ -89,11 +88,16 @@ class ExecuteLogin(UiDialog):
     def threadHandler(self, result_dict):
         if result_dict is not None:
             if not result_dict.get("error"):
-                print("\nGet SETTING from SERVER")
-                print("DETEC_SEC : " + str(result_dict['DETEC_SEC']))
-                print("NOD_SEC : " + str(result_dict['NOD_SEC']))
-                print("VID_INTVL : " + str(result_dict['VID_INTVL']))
-                print("RECOV_LV : " + str(result_dict['RECOG_LV']) + "\n")
+                settingInfo = SettingInfo.instance()
+                settingInfo.RECOV_LV = result_dict['RECOG_LV']
+                settingInfo.NOD_SEC = result_dict['NOD_SEC']
+                settingInfo.DETEC_SEC = result_dict['DETEC_SEC']
+                settingInfo.VID_INTVL = result_dict['VID_INTVL']
+                # print("\nGet SETTING from SERVER")
+                # print("DETEC_SEC : " + str(result_dict['DETEC_SEC']))
+                # print("NOD_SEC : " + str(result_dict['NOD_SEC']))
+                # print("VID_INTVL : " + str(result_dict['VID_INTVL']))
+                # print("RECOV_LV : " + str(result_dict['RECOG_LV']) + "\n")
 
                 self.realFaceRecog.NOD_SEC = result_dict['NOD_SEC']
                 self.realFaceRecog.DETEC_SEC = result_dict['DETEC_SEC']
@@ -107,6 +111,9 @@ class ExecuteLogin(UiDialog):
         else:
             print("result_dict is None")
 
+        self.menuWindow()
+        self.loginDialog.close()
+
 
 class NetworkThread(QThread):
     threadEvent = QtCore.pyqtSignal(dict)
@@ -116,8 +123,8 @@ class NetworkThread(QThread):
 
     def run(self):
         # 프로그램 기본 세팅 정보를 가져옴
-        # req_url = "http://3.35.38.165:8080/awsDBproject/setting/client"
-        req_url = "http://localhost:8090/awsDBproject/setting/client"
+        req_url = "http://3.35.38.165:8080/awsDBproject/setting/client"
+        # req_url = "http://localhost:8090/awsDBproject/setting/client"
 
         try:
             response = requests.post(req_url, data=None, verify=False)
