@@ -122,6 +122,7 @@ class ExecuteMenu(MenuUi):
 
             # url = "http://localhost:8090/awsDBproject/sending/info"
             url = "http://3.35.38.165:8080/awsDBproject/sending/info"
+
             log_file = open(self.logInfo.file_path, 'r', encoding="utf-8")
             # upload = {
             #     "log_file": log_file
