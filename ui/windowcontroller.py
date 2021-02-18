@@ -9,12 +9,14 @@ from simpleaudio.shiny import *
 from PyQt5.QtCore import QByteArray
 from PyQt5.QtGui import QPixmap
 
+from info.settingInfo import SettingInfo
 from info.userinfo import UserInfo
 
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
 import simpleaudio as sa
-from ui.pygui_v2 import Ui_MainWindow
+# from ui.pygui_v2 import Ui_MainWindow
+from ui.pygui_v3 import Ui_MainWindow
 from realTimeCheck.realtimemain import FaceRecog
 
 
@@ -27,21 +29,36 @@ class WindowController(Ui_MainWindow):
         self.realRecogStartBtn.clicked.connect(self.realRecogStart)
         self.realRecogEndBtn.clicked.connect(self.realRecogEnd)
         self.realRecogSoundBtn.clicked.connect(self.realRecogSound)
-        self.videoCheckOpenBtn.clicked.connect(self.videoCheckOpen)
         self.videoCheckBtn.clicked.connect(self.videoCheck)
         self.videoRecogOpenBtn.clicked.connect(self.videoRecogOpen)
         self.videoRecogEndBtn.clicked.connect(self.videoRecogEnd)
+        self.realRecogDisplayBtn.clicked.connect(self.realRecogDisplay)
 
         # Define Variables
         self.userInfo = UserInfo.instance()
+        self.settingInfo = SettingInfo.instance()
+        # self.cameraOffPixmap = QPixmap("./templates/CAM_OFF.png")
+        # self.cameraOffPixmap = self.cameraOffPixmap.scaledToWidth(330)
+
         # 심플오디오
         self.scriptDir = os.path.dirname(os.path.abspath(__file__))
         self.workingWav = sa.WaveObject.from_wave_file(self.scriptDir + os.path.sep + './sound/voice_working.wav')
         self.notWorkingWav = sa.WaveObject.from_wave_file(self.scriptDir + os.path.sep + './sound/voice_notWorking.wav')
 
+        # 사용자 정보 적용
         self.userNameLabel.setText(self.userNameLabel.text() + "\t" + self.userInfo.name)
         self.userIdLabel.setText(self.userIdLabel.text() + "\t" + self.userInfo.id)
-        self.workListView.append("날짜시각\t근무타입\t근무시간")
+        self.imagePixmap = QPixmap()
+        self.imagePixmap.loadFromData(self.userInfo.image)
+        self.imagePixmap = self.imagePixmap.scaledToWidth(120)
+        self.userImgLabel.setPixmap(self.imagePixmap)
+
+        # 세팅 정보 적용
+        self.stgDecLabel.setText(self.stgDecLabel.text() + "\t" + str(self.settingInfo.DETEC_SEC) + "초")
+        self.stgLvlLabel.setText(self.stgLvlLabel.text() + "\t" + str(self.settingInfo.RECOV_LV) + "단계")
+        self.stgNodLabel.setText(self.stgNodLabel.text() + "\t" + str(self.settingInfo.NOD_SEC) + "초")
+
+        self.workListView.append("날짜시각\t\t근무타입\t\t근무시간")
 
         # 비활성화 버튼 초기화
         self.btn_init()
@@ -50,6 +67,7 @@ class WindowController(Ui_MainWindow):
     def btn_init(self):
         self.realRecogEndBtn.setDisabled(True)
         self.realRecogSoundBtn.setDisabled(True)
+        self.realRecogDisplayBtn.setDisabled(True)
         self.videoRecogEndBtn.setDisabled(True)
 
     def realRecog_init_variable(self):
@@ -68,13 +86,15 @@ class WindowController(Ui_MainWindow):
         self.realRecog_init_variable()
         self.face_recog = FaceRecog.instance()
         # 얼굴 인식 시작할 때 마다 변수 초기화 필요...
-        self.realRecogWorkLabel.setText("..근무시간 측정중..")
+        self.realRecogAnnounceLabel.setText("..근무시간 측정중..")
         self.realRecogStartBtn.setDisabled(True)
         self.change_traffic_light("../templates/Traffic_Lights_red.png")
 
-        # 소리onoff, 종료 버튼 활성화
+        # 카메라onoff, 소리onoff, 종료 버튼 활성화
         self.realRecogEndBtn.setDisabled(False)
         self.realRecogSoundBtn.setDisabled(False)
+        self.realRecogDisplayBtn.setDisabled(False)
+
         while True:
             frame = self.face_recog.get_frame()
             #     # frame이 아니라 jpg byte를 받아와서 이미지 출력
@@ -117,13 +137,16 @@ class WindowController(Ui_MainWindow):
             cv2.waitKey(5) & 0xFF
             self.face_recog.notifyIsPaused(self.pauseFlag)
 
-        self.realRecogWorkLabel.setText(self.face_recog.calculate_total())
+        self.realRecogAnnounceLabel.setText(self.face_recog.calculate_total())
         # 종료버튼을 누르고 나서 신호등과 카메라 화면을 초기화
         self.isCameraDisplayed = False
         self.change_traffic_light("../templates/Traffic_Lights_init.png")
 
+        self.realRecogCamLabel.setPixmap(self.camPixmap)
+        # 버튼 초기화
         self.realRecogSoundBtn.setDisabled(True)
         self.realRecogEndBtn.setDisabled(True)
+        self.realRecogDisplayBtn.setDisabled(True)
         self.realRecogStartBtn.setDisabled(False)
 
     def change_traffic_light(self, file_path):
@@ -146,8 +169,16 @@ class WindowController(Ui_MainWindow):
             self.alarmMute = False
             self.realRecogSoundBtn.setText("음성안내 끄기")
 
-    def videoCheckOpen(self):
-        print("videoCheckOpenBtn clicked")
+    def realRecogDisplay(self):
+        if self.isCameraDisplayed is True:
+            print('cam_off')
+            self.realRecogDisplayBtn.setText('카메라켜기')
+            self.isCameraDisplayed = False
+            self.realRecogCamLabel.setPixmap(self.camPixmap)
+        else:
+            print('cam_start')
+            self.realRecogDisplayBtn.setText('카메라끄기')
+            self.isCameraDisplayed = True
 
     def videoCheck(self):
         print("videoCheckBtn clicked")
