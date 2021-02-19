@@ -30,6 +30,7 @@ class UserInfo:
         self.password = ""
         self.name = ""
         self.image = None
+        self.ip = ""
 
     def setInfo(self, id, password, name, image):
         self.id = id

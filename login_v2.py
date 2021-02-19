@@ -9,6 +9,7 @@
     0.0.1
 """
 import datetime
+import socket
 
 import requests
 from PyQt5.QtCore import QThread
@@ -48,6 +49,11 @@ class ExecuteLogin(UiDialog):
         result, name, image = self.check_user.user_check_web_server(id, password)
         if result == 1:
             self.userInfo.setInfo(id, password, name, image)
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            s.connect(("8.8.8.8", 80))
+            print(s.getsockname()[0])
+            self.userInfo.ip = s.getsockname()[0]
+            # self.userInfo.ip = socket.gethostbyname(socket.getfqdn())
             self.makeLogFile()
             self.getSetting()
 

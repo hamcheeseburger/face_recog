@@ -393,8 +393,8 @@ class FaceRecog:
                                + "\n" + "인식된 프레임 : " + str(self.recogFrameAgg) + "\n" \
                                + "인식되지 않은 프레임 : " + str(self.notRecogAgg) + "\n")
 
-        str_total_working_time = "총근무시간 : " + strTotalTime + " / " \
-            + "순수근무시간 : " + strRecogTime + " / " \
+        str_total_working_time = "총근무시간 : " + strTotalTime + "\n" \
+            + "순수근무시간 : " + strRecogTime + "\n" \
             + "총태만시간 : " + strNotRecogTime + "\n"
         self.logger.info(str_total_working_time)
         return str_total_working_time
