@@ -72,7 +72,7 @@ class Detection:
         else:
             print("Detection Result: Game Playing")
             now = datetime.datetime.now()
-            time_format = now.strftime("%Y%m%d_%H-%M-%S")
+            time_format = now.strftime("%Y-%m-%d_%H-%M-%S")
 
             save_image.save(SEND_PATH + str(work_id) + "_" + time_format + ".jpg")
         print("End of Distraction Detection..")
