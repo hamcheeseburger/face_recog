@@ -60,6 +60,7 @@ class FaceRecog(object):
         self.known_face_encodings = []
         self.known_face_names = []
         self.video = None
+        self.detection_thread = None
         # 로그 파일 생성 준비
 
         # self.formatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(name)s - %(message)s'
@@ -132,7 +133,8 @@ class FaceRecog(object):
         self.work_info_array = ArrayWorkInfo.instance().work_info_array
 
         # 화면탐지코드 실행 -> 인식단계 3단계 일 때 실행되도록 변경할 것
-        self.negligence_detection()
+        if self.RECOG_LV == 3:
+            self.negligence_detection()
 
         self.logger = self.get_logger()
 
@@ -233,7 +235,7 @@ class FaceRecog(object):
                 # 거리 척도로 환산합니다. 거리(distance)가 가깝다는 (작다는) 것은 서로 비슷한 얼굴이라는 의미입니다.
                 if self.RECOG_LV == 1:
                     name = self.name
-                elif self.RECOG_LV == 2:
+                elif self.RECOG_LV >= 2:
                     distances = face_recognition.face_distance(self.known_face_encodings, face_encoding)
                     min_value = min(distances)
 

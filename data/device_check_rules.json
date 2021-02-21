@@ -1,12 +1,21 @@
 [
 
     {
-	"list_type":"DashCam",
+	"list_type":"BLACKBOX",
 	"item_list":
 	[
 		{
-		"item_type": "DashCam",
-		"item_name" : "Inavi FXD700",
+		"item_type": "BLACKBOX",
+		"item_name" : "정보 없음",
+		"file_type" : "정보 없음",
+		"id_seq" : [ [] ],
+		"check_value" : [ [] ]
+		},
+
+
+		{
+		"item_type": "BLACKBOX",
+		"item_name" : "아이나비 FXD700",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -47,8 +56,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Inavi FXD900",
+		"item_type": "BLACKBOX",
+		"item_name" : "아이나비 FXD900",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[  	
@@ -89,8 +98,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Inavi CLAIR",
+		"item_type": "BLACKBOX",
+		"item_name" : "아이나비 CLAIR",
 		"file_type" : "AVI",
 		"id_seq" : 	
 			[	
@@ -131,8 +140,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Inavi G100",
+		"item_type": "BLACKBOX",
+		"item_name" : "아이나비 G100",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -173,8 +182,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Inavi E100",
+		"item_type": "BLACKBOX",
+		"item_name" : "아이나비 E100",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -216,8 +225,8 @@
 
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Pineview CR-200HD",
+		"item_type": "BLACKBOX",
+		"item_name" : "파인뷰 CR-200HD",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -240,8 +249,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Pineview CR-500HD",
+		"item_type": "BLACKBOX",
+		"item_name" : "파인뷰 CR-500HD",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -264,8 +273,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Pineview Pro",
+		"item_type": "BLACKBOX",
+		"item_name" : "파인뷰 Pro",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -288,8 +297,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Softman R700",
+		"item_type": "BLACKBOX",
+		"item_name" : "소프트맨 R700",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -330,8 +339,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Softman R300DL",
+		"item_type": "BLACKBOX",
+		"item_name" : "소프트맨 R300DL",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -372,8 +381,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Softman R320DL",
+		"item_type": "BLACKBOX",
+		"item_name" : "소프트맨 R320DL",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -414,8 +423,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Lucas LK-5900",
+		"item_type": "BLACKBOX",
+		"item_name" : "루카스 LK-5900",
 		"file_type" : "AVI",
 		"id_seq" : 	
 			[	 
@@ -456,8 +465,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Lucas LK-7500",
+		"item_type": "BLACKBOX",
+		"item_name" : "루카스 LK-7500",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -480,8 +489,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Mando BN500D",
+		"item_type": "BLACKBOX",
+		"item_name" : "만도 BN500D",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -522,8 +531,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "DIONJames BlackAngel HD",
+		"item_type": "BLACKBOX",
+		"item_name" : "디오엔제임스 블랙엔젤 HD",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -566,8 +575,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Urive BlackAngel 2CH HD",
+		"item_type": "BLACKBOX",
+		"item_name" : "미동전자통신 블랙엔젤 2CH HD",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -590,8 +599,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "I-mercury Sapphire2",
+		"item_type": "BLACKBOX",
+		"item_name" : "아이머큐리 Sapphire2",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -632,8 +641,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Livue LB200",
+		"item_type": "BLACKBOX",
+		"item_name" : "라이뷰 LB200",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -674,8 +683,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Lexview LX200F",
+		"item_type": "BLACKBOX",
+		"item_name" : "렉스뷰 LX200F",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -716,8 +725,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Bullsi Unicorn ETK-B2400",
+		"item_type": "BLACKBOX",
+		"item_name" : "불스아이 유니콘 ETK-B2400",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -740,8 +749,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "JMC BlackCop 200",
+		"item_type": "BLACKBOX",
+		"item_name" : "중앙엠엔씨 블랙캅 200",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	 
@@ -782,8 +791,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Iriver X300",
+		"item_type": "BLACKBOX",
+		"item_name" : "아이리버 X300",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -824,8 +833,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "CleanView CM100",
+		"item_type": "BLACKBOX",
+		"item_name" : "크린뷰 CM100",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -866,7 +875,7 @@
 		},
 
 		{
-		"item_type": "DashCam",
+		"item_type": "BLACKBOX",
 		"item_name" : "Smart-i 3500",
 		"file_type" : "AVI",
 		"id_seq" : 
@@ -890,8 +899,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Perfect 300",
+		"item_type": "BLACKBOX",
+		"item_name" : "퍼팩트 300",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -918,8 +927,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Urive Shotgun",
+		"item_type": "BLACKBOX",
+		"item_name" : "유라이브 샷건",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -952,8 +961,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Dabonda Heart HDA900L",
+		"item_type": "BLACKBOX",
+		"item_name" : "하트 HDA900L",
 		"file_type" : "AVI",
 		"id_seq" : 
 			[	
@@ -986,7 +995,7 @@
 		},
 
 		{
-		"item_type": "DashCam",
+		"item_type": "BLACKBOX",
 		"item_name" : "Garmin dash cam 20",
 		"file_type" : "AVI",
 		"id_seq" : 
@@ -1005,30 +1014,11 @@
 			]
 		},
 
-		{
-		"item_type": "DashCam",
-		"item_name" : "Toguard Dash Cam",
-		"file_type" : "AVI",
-		"id_seq" : 
-			[	
-				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", 	 "strl", "strh", "strf", 
-				  "JUNK", "movi", "idx1"    
-				]
-			],
-		"check_value" :
-			[
-				[
-				   {"seq":0, "id":"JUNK", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-					"value":"v1020013", "value_type": "STR"}
-				]
-			]
-		},
-
 		
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Dabonda Gallery DBR-200H",
+		"item_type": "BLACKBOX",
+		"item_name" : "다본다 갤러리 DBR-200H",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
@@ -1068,8 +1058,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Dabonda Gallery DBR-2000H+",
+		"item_type": "BLACKBOX",
+		"item_name" : "다본다 갤러리 DBR-2000H+",
 		"file_type" : "MP4",
 		"id_seq" : 	
 			[
@@ -1109,8 +1099,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Dabonda Gallery DBR-2000HN",
+		"item_type": "BLACKBOX",
+		"item_name" : "다본다 갤러리 DBR-2000HN",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
@@ -1150,8 +1140,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Dabonda New Gallery DBR-2000HN",
+		"item_type": "BLACKBOX",
+		"item_name" : "다본다 뉴갤러리 DBR-2000HN",
 		"file_type" : "MP4",
 		"id_seq" : 	
 			[
@@ -1191,8 +1181,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Dabonda Brother 300",
+		"item_type": "BLACKBOX",
+		"item_name" : "다본다 브라더 300",
 		"file_type" : "MP4",
 		"id_seq" : 	
 			[
@@ -1232,7 +1222,7 @@
 		},
 
 		{
-		"item_type": "DashCam",
+		"item_type": "BLACKBOX",
 		"item_name" : "Real View HD",
 		"file_type" : "MP4",
 		"id_seq" : 	
@@ -1273,8 +1263,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Dabonda HDA-100V",
+		"item_type": "BLACKBOX",
+		"item_name" : "다본다 HDA-100V",
 		"file_type" : "MP4",
 		"id_seq" :
 			[
@@ -1311,8 +1301,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "PittaSoft Blackvue DR400",
+		"item_type": "BLACKBOX",
+		"item_name" : "피타소프트 블랙뷰 DR400",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
@@ -1345,8 +1335,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "PittaSoft Blackvue DR350",
+		"item_type": "BLACKBOX",
+		"item_name" : "피타소프트 블랙뷰 DR350",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
@@ -1373,8 +1363,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "PittaSoft Blackvue DR400G-HD",
+		"item_type": "BLACKBOX",
+		"item_name" : "피타소프트 블랙뷰 DR400G-HD",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
@@ -1401,11 +1391,15 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "PittaSoft Blackvue WIFI DR500GW-HD",
+		"item_type": "BLACKBOX",
+		"item_name" : "피타소프트 블랙뷰 WIFI DR500GW-HD",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
+				[ "ftyp", "free", "mdat", "moov", "mvhd",     "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stco", "stsc", "stss",    "trak", "tkhd", "mdia", "mdhd", 
+				  "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stco", "stsc"
+				],
 				[ "ftyp", "free", "mdat", "moov", "mvhd",     "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd",
 				  "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stco", "stsc", "stss"
 				]
@@ -1423,13 +1417,25 @@
 				    "value":"mp42", "value_type":"STR" },
 				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
 				    "value":"mp42", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Pittasoft Co., Ltd.", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" }
 				]
 			]
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Urive HD",
+		"item_type": "BLACKBOX",
+		"item_name" : "유라이브 HD",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
@@ -1468,8 +1474,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Urive Single",
+		"item_type": "BLACKBOX",
+		"item_name" : "유라이브 싱글",
 		"file_type" : "MP4",
 		"id_seq" :
 			[
@@ -1500,8 +1506,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Urive Albatross md-7000p",
+		"item_type": "BLACKBOX",
+		"item_name" : "유라이브 알바트로스 md-7000p",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
@@ -1540,8 +1546,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Urive Albatross A2",
+		"item_type": "BLACKBOX",
+		"item_name" : "유라이브 알바트로스 A2",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
@@ -1569,8 +1575,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Urive Eagle",
+		"item_type": "BLACKBOX",
+		"item_name" : "유라이브 이글",
 		"file_type" : "MP4",
 		"id_seq" :
 			[
@@ -1602,8 +1608,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Atom AL-350",
+		"item_type": "BLACKBOX",
+		"item_name" : "아톰 AL-350",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
@@ -1643,8 +1649,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Atom Gold AL-390",
+		"item_type": "BLACKBOX",
+		"item_name" : "아톰 골드 AL-390",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
@@ -1685,8 +1691,8 @@
 
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Hyundai Mobicom IT-8000",
+		"item_type": "BLACKBOX",
+		"item_name" : "현대 모비콤 IT-8000",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
@@ -1726,8 +1732,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Atom K3000",
+		"item_type": "BLACKBOX",
+		"item_name" : "아톰 K3000",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
@@ -1760,8 +1766,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Itronics ITB-50",
+		"item_type": "BLACKBOX",
+		"item_name" : "아이트로닉스 ITB-50",
 		"file_type" : "MP4",
 		"id_seq" :
 			[
@@ -1790,8 +1796,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Itronics ITB-70G",
+		"item_type": "BLACKBOX",
+		"item_name" : "아이트로닉스 ITB-70G",
 		"file_type" : "MP4",
 		"id_seq" :
 			[
@@ -1822,8 +1828,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Iroad 3300CH",
+		"item_type": "BLACKBOX",
+		"item_name" : "아이로드 3300CH",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
@@ -1863,8 +1869,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "Iroad IONE 250V",
+		"item_type": "BLACKBOX",
+		"item_name" : "아이로드 IONE 250V",
 		"file_type" : "MP4",
 		"id_seq" :
 			[
@@ -1901,8 +1907,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "YooilStar RealView HD",
+		"item_type": "BLACKBOX",
+		"item_name" : "유일스타 리얼뷰 HD",
 		"file_type" : "MP4",
 		"id_seq" : 
 			[
@@ -1942,8 +1948,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "HoneyWell 100WN",
+		"item_type": "BLACKBOX",
+		"item_name" : "허니웰 100WN",
 		"file_type" : "MP4",
 		"id_seq" :
 			[
@@ -1974,8 +1980,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "I-mercury MD-100",
+		"item_type": "BLACKBOX",
+		"item_name" : "아이머큐리 MD-100",
 		"file_type" : "MP4",
 		"id_seq" :
 			[
@@ -2006,8 +2012,8 @@
 		},
 
 		{
-		"item_type": "DashCam",
-		"item_name" : "HMS RoadMemory",
+		"item_type": "BLACKBOX",
+		"item_name" : "HMS 로드메모리",
 		"file_type" : "3gp",
 		"id_seq" :
 			[
@@ -2038,24 +2044,6 @@
 				    "value":"3gp5", "value_type":"STR" }
 				]
 			]
-		},
-
-		{
-		"item_type": "DashCam",
-		"item_name" : "Oasser Amazing U2",
-		"file_type" : "3gp",
-		"id_seq" :
-			[
-			 	[ "ftyp", "frea", "mdat", "moov", "mvhd", 
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "udta", "ⓒfmt" "ⓒinf", "gps"
-				]
-			],
-		"check_value": 
-			[
-				[  ]
-			]
 		}
 
 	]
@@ -2066,6 +2054,14 @@
 	"list_type":"CCTV",
 	"item_list":
 	[
+		{
+		"item_type" : "CCTV",
+		"item_name" : "정보 없음",
+		"file_type" : "정보 없음",
+		"id_seq" : [ [] ],
+		"check_value" : [ [] ]
+		},
+
 		{
 		"item_type": "CCTV",
 		"item_name" : "EGPIS (NVR Series)",
@@ -2101,36 +2097,20 @@
 
 
    {
-	"list_type":"SmartPhone",
+	"list_type":"SMARTPHONE",
 	"item_list":
 	[
 		{
-		"item_type": "SmartPhone",
-		"item_name" : "Galaxy Note 3",
-		"file_type" : "MP4",
-		"id_seq" : 	
-			[	
-				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "smta",  
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco", 
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"SDLN", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "SEQ_PLAY", "value_type":"STR" },
-				  { "seq":0, "id":"smrd", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "TRUEBLUE", "value_type":"STR" },
-				  { "seq":0, "id":"smta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "saut", "value_type":"STR" }
-				]
-			]
+		"item_type" : "SMARTPHONE",
+		"item_name" : "정보 없음",
+		"file_type" : "정보 없음",
+		"id_seq" : [ [] ],
+		"check_value" : [ [] ]
 		},
 
 		{
-		"item_type": "SmartPhone",
-		"item_name" : "Galaxy Note 4",
+		"item_type": "SMARTPHONE",
+		"item_name" : "갤럭시 노트 4",
 		"file_type" : "MP4",
 		"id_seq" : 	
 			[	
@@ -2155,58 +2135,8 @@
 		},
 
 		{
-		"item_type": "SmartPhone",
-		"item_name" : "Galaxy Note 5",
-		"file_type" : "MP4",
-		"id_seq" : 	
-			[	
-				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "smta",  
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco", 
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco", "sefd"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"SDLN", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "SEQ_PLAY", "value_type":"STR" },
-				  { "seq":0, "id":"smrd", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "TRUEBLUE", "value_type":"STR" },
-				  { "seq":0, "id":"smta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "saut", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "Galaxy Note 8",
-		"file_type" : "MP4",
-		"id_seq" : 	
-			[	  
-				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "smta", "meta", 
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco", 
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco", "sefd"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"SDLN", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "SEQ_PLAY", "value_type":"STR" },
-				  { "seq":0, "id":"smrd", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "TRUEBLUE", "value_type":"STR" },
-				  { "seq":0, "id":"smta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "saut", "value_type":"STR" },
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "mdtacom.android.version", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "Galaxy S4",
+		"item_type": "SMARTPHONE",
+		"item_name" : "갤럭시 노트 3",
 		"file_type" : "MP4",
 		"id_seq" : 	
 			[	
@@ -2229,12 +2159,12 @@
 		},
 
 		{
-		"item_type": "SmartPhone",
-		"item_name" : "Galaxy S8+",
+		"item_type": "SMARTPHONE",
+		"item_name" : "갤럭시 S4",
 		"file_type" : "MP4",
 		"id_seq" : 	
 			[	
-				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "smta", "meta", 
+				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "smta",  
 				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco", 
 				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco"
 				]
@@ -2247,315 +2177,13 @@
 				  { "seq":0, "id":"smrd", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
 				    "value": "TRUEBLUE", "value_type":"STR" },
 				  { "seq":0, "id":"smta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "saut", "value_type":"STR" },
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "mdtacom.android.version", "value_type":"STR" }
+				    "value": "saut", "value_type":"STR" }
 				]
 			]
 		},
 
 		{
-		"item_type": "SmartPhone",
-		"item_name" : "Galaxy S9",
-		"file_type" : "MP4",
-		"id_seq" : 	
-			[	
-				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "ⓒxyz", "smta", "meta",  
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco",   
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"SDLN", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "SEQ_PLAY", "value_type":"STR" },
-				  { "seq":0, "id":"smrd", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "TRUEBLUE", "value_type":"STR" },
-				  { "seq":0, "id":"smta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "saut", "value_type":"STR" },
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "mdtacom.android.version", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "Galaxy S9+",
-		"file_type" : "MP4",
-		"id_seq" : 	
-			[	
-				[ "ftyp", "mdat", "moov", "mvhd", "udta", "SDLN", "smrd", "ⓒxyz", "smta", "meta",  
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco",   
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"SDLN", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "SEQ_PLAY", "value_type":"STR" },
-				  { "seq":0, "id":"smrd", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "TRUEBLUE", "value_type":"STR" },
-				  { "seq":0, "id":"smta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "saut", "value_type":"STR" },
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "mdtacom.android.version", "value_type":"STR" }
-				]
-			]
-		},
-
-
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "iPhone Series",
-		"file_type" : "MOV",
-		"id_seq" : 	
-			[	 
-				[ "SKIP" ]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "iPhone", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "iPad Series",
-		"file_type" : "MOV",
-		"id_seq" : 	
-			[	 
-				[ "SKIP" ]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "iPad", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "iPhone 6S",
-		"file_type" : "MOV",
-		"id_seq" : 	
-			[	
-				[ "ftyp", "wide", "mdat", "moov", "mvhd", 
-				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stss", "sdtp", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "udta", "free", "meta", "free"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "iPhone 6s", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "iPhone 6S+",
-		"file_type" : "MOV",
-		"id_seq" : 	
-			[	
-				[ "ftyp", "wide", "mdat", "moov", "mvhd", 
-				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts",  
-				  "ctts", "cslg", "stss", "sdtp", "stsc", "stsz", "stco", "meta"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "iPhone 6s Plus", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "iPhone 7",
-		"file_type" : "MOV",
-		"id_seq" : 	
-			[	
-				[ "ftyp", "moov", "mvhd", 
-				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "cslg", "stss", "sdtp", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "meta", "wide", "mdat"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "iPhone 7", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "iPhone 7+",
-		"file_type" : "MOV",
-		"id_seq" : 	
-			[	
-				[ "ftyp", "wide", "mdat", "moov", "mvhd", 
-				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stss", "sdtp", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "meta"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "iPhone 7 Plus", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "iPhone 8",
-		"file_type" : "MOV",
-		"id_seq" : 	
-			[	
-				[ "ftyp", "wide", "mdat", "moov", "mvhd",
-				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "cslg", "stss", "sdtp", "stsc", "stsz", "stco",  
-				  "meta"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "iPhone 8", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "iPhone SE",
-		"file_type" : "MOV",
-		"id_seq" : 	
-			[	
-				[ "ftyp", "wide", "mdat", "moov", "mvhd", 
-				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stss", "sdtp", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "meta" 
-				],
-				[ "ftyp", "wide", "mdat", "moov", "mvhd", 
-				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stss", "sdtp", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "udta", "free", "meta", "free" 
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "iPhone SE", "value_type":"STR" }
-				],
-				[  
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "iPhone SE", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "iPhone X",
-		"file_type" : "MOV",
-		"id_seq" : 	
-			[	 
-				[ "ftyp", "wide", "mdat", "moov", "mvhd", 
-				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
-				  "sgpd", "sgpd", "sbgp", "stts", "ctts", "cslg", "stss", "sdtp", "stsc", "stsz", "stco",   	
-				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",
-				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "udta", "free", "meta", "free" 
-				],
-				[ "ftyp", "wide", "mdat", "moov", "mvhd", 
-				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "cslg", "stss", "sdtp", "stsc", "stsz", "stco",   	
-				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",
-				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "meta", "free" 
-				],
-				[ "ftyp", "moov", "mvhd", 
-				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "cslg", "stss", "sdtp", "stsc", "stsz", "stco",   		  
-				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "trak", "tkhd", "edts", "elst", "tref", "mdia", "mdhd", "hdlr", "minf", "gmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "meta", "wide", "mdat" 
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "iPhone X", "value_type":"STR" }
-				],
-				[  
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "iPhone X", "value_type":"STR" }
-				],
-				[  
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "iPhone X", "value_type":"STR" }
-				]
-			]
-		},
-
-		
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "iPad 2",
-		"file_type" : "MOV",
-		"id_seq" : 	
-			[	 
-				[ "ftyp", "wide", "mdat", "moov", "mvhd",
-				  "trak", "tkhd", "tapt", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stss", "sdtp", "stsc", "stsz", "stco",   	
-				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
-				  "meta", "udta", "ⓒmak", "ⓒswr", "ⓒday", "ⓒmod"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "iPad 2", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
+		"item_type": "SMARTPHONE",
 		"item_name" : "LG G4",
 		"file_type" : "MP4",
 		"id_seq" : 	
@@ -2580,69 +2208,7 @@
 		},
 
 		{
-		"item_type": "SmartPhone",
-		"item_name" : "LG Q6",
-		"file_type" : "MP4",
-		"id_seq" : 	
-			[	
-				[ "ftyp", "moov", "mvhd", "udta", "auth", "stvd", "meta",   
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco",   
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco",   
-				  "free", "mdat"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"auth", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "LGM-X600S", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "LG V30",
-		"file_type" : "MP4",
-		"id_seq" : 	
-			[	
-				[ "ftyp", "moov", "mvhd", "udta", "auth", "stvd", "vhdr", "meta",  
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco",   
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco",   
-				  "free", "mdat"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"auth", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "LGM-V300K", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
-		"item_name" : "LG X5",
-		"file_type" : "MP4",
-		"id_seq" : 	
-			[	
-				[ "ftyp", "moov", "mvhd", "udta", "auth", "stvd", "vhdr", "meta",  
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco",   
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco",   
-				  "free", "mdat"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"auth", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "LM-X510L", "value_type":"STR" }
-				]
-			]
-		},
-		{
-		"item_type": "SmartPhone",
+		"item_type": "SMARTPHONE",
 		"item_name" : "Nexus 5X",
 		"file_type" : "MP4",
 		"id_seq" : 	
@@ -2663,28 +2229,7 @@
 		},
 
 		{
-		"item_type": "SmartPhone",
-		"item_name" : "Redmi Note5",
-		"file_type" : "MP4",
-		"id_seq" : 	
-			[	 
-				[ "ftyp", "moov", "mvhd", "meta",   
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsz", "stsc", "stco",   
-				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "stco",   
-				  "free", "mdat"
-				]
-			],
-		"check_value" : 
-			[	
-				[  
-				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
-				    "value": "mdtacom.android.version", "value_type":"STR" }
-				]
-			]
-		},
-
-		{
-		"item_type": "SmartPhone",
+		"item_type": "SMARTPHONE",
 		"item_name" : "HTC Wildfire A3333",
 		"file_type" : "3gp",
 		"id_seq" : 	
@@ -2712,8 +2257,8 @@
 		},
 
 		{
-		"item_type": "SmartPhone",
-		"item_name" : "LG Optimus G",
+		"item_type": "SMARTPHONE",
+		"item_name" : "LG 옵티머스G",
 		"file_type" : "k3g",
 		"id_seq" : 	
 			[	
@@ -2738,9 +2283,11 @@
 				]
 			]
 		}
+		
+
 
 	]
-
    }
+
 
 ]

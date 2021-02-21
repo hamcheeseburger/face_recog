@@ -225,7 +225,7 @@ class FaceRecog:
             for face_encoding in self.face_encodings:
                 if self.RECOG_LV == 1:
                     name = self.name
-                elif self.RECOG_LV == 2:
+                elif self.RECOG_LV >= 2:
                     distances = face_recognition.face_distance(self.known_face_encodings, face_encoding)
                     min_value = min(distances)
 

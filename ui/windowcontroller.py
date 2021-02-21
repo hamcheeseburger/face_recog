@@ -1,4 +1,5 @@
 import datetime
+import subprocess
 from datetime import time
 from time import time
 from threading import Timer
@@ -207,6 +208,8 @@ class WindowController(Ui_MainWindow):
 
     def videoCheck(self):
         print("videoCheckBtn clicked")
+        fileName = './Duplicate/VideoCombineAnalysis.jar'
+        subprocess.run(["start", fileName], shell=True)
 
     def videoRecogOpen(self):
         print("videoRecogOpenBtn clicked")
