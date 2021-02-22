@@ -325,10 +325,10 @@ class WindowController(Ui_MainWindow):
             os.remove(self.logInfo.file_path)
         else:
             now = datetime.datetime.now()
-            created_format = now.strftime("%Y-%m-%d %H:%M:%S")
+            logout_date_format = now.strftime("%Y-%m-%d %H:%M:%S")
 
             with open(self.logInfo.file_path, 'a', encoding='utf-8') as file:
-                file.write("logout 시각 : " + created_format + "\n")
+                file.write("logout 시각 : " + logout_date_format + "\n")
 
             url = "http://localhost:8090/awsDBproject/sending/info"
             # url = "http://3.35.38.165:8080/awsDBproject/sending/info"
@@ -354,7 +354,8 @@ class WindowController(Ui_MainWindow):
             info = {
                 "working_info": self.arrayWorkInfo.work_info_array,
                 "log_created": self.logInfo.created_date,
-                "ip": self.userInfo.ip
+                "ip": self.userInfo.ip,
+                "logout_date": logout_date_format
             }
 
             print(files)
