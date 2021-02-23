@@ -8,20 +8,20 @@ from threading import Timer
 import threading
 import cv2
 import requests
-from PyQt5 import QtWidgets, QtCore
+from PyQt5 import QtWidgets, QtCore, QtGui
 import os
 import sys
 
 from PyQt5.QtCore import QByteArray, QThread
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QFileDialog
+from PyQt5 import QtCore, QtWidgets
 
 from info.loginfo import LogInfo
 from info.settingInfo import SettingInfo
 from info.userinfo import UserInfo
 from info.workinfo import ArrayWorkInfo
 from server import receive_data
-
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
 import simpleaudio as sa
@@ -37,6 +37,7 @@ import server
 class WindowController(Ui_MainWindow):
     def __init__(self):
         Ui_MainWindow.__init__(self)
+        self.workStart = False
 
         # Setting button click listener
         self.logoutBtn.clicked.connect(self.logout)
@@ -101,6 +102,7 @@ class WindowController(Ui_MainWindow):
         self.videoCheckBtn.setDisabled(True)
 
     def init_variable(self):
+        self.workStart = True
         self.stopFlag = False
         self.pauseFlag = False
         self.isCameraDisplayed = True
@@ -176,8 +178,10 @@ class WindowController(Ui_MainWindow):
         # 종료버튼을 누르고 나서 신호등과 카메라 화면을 초기화
         self.isCameraDisplayed = False
         self.change_traffic_light("../templates/Traffic_Lights_init.png")
-
         self.realRecogCamLabel.setPixmap(self.camPixmap)
+
+        # 작업 종료
+        self.workStart = False
         # 버튼 초기화
         self.realRecogSoundBtn.setDisabled(True)
         self.realRecogEndBtn.setDisabled(True)
@@ -228,7 +232,7 @@ class WindowController(Ui_MainWindow):
             recevie_th.threadEvent.connect(self.receiveThreadHandler)
             recevie_th.start()
 
-            fileName = './vca/vca.jar'
+            fileName = './vca/vca1.jar'
             # start ./Duplicate/VideoCombineAnalysis.jar [videoPath] 의 명령어가 실행 되는 것
             subprocess.run(["start", fileName, self.videoRecogFileRoute], shell=True)
 
@@ -323,6 +327,8 @@ class WindowController(Ui_MainWindow):
         self.videoRecogRunLabel.setText("근무시간 측정완료")
         self.videoRecogAnnounceLabel.setText(self.video_face_recog.calculate_total())
         print("finish")
+        # 작업 종료
+        self.workStart = False
 
         self.videoRecogStartBtn.setText("시작")
         self.videoRecogStartBtn.setDisabled(True)
@@ -351,7 +357,7 @@ class WindowController(Ui_MainWindow):
             self.workListView.append(workString)
             # 근무한시간 재설정
             self.userInfo.work_time += workInfo['work_time']
-            self.workTimeLabel.setText(worktime)
+            self.workTimeLabel.setText(str(datetime.timedelta(seconds=self.userInfo.work_time)).split(".")[0])
 
         # 로그파일 화면
         with open(self.logInfo.file_path, 'rt', encoding='utf-8') as file:
@@ -360,12 +366,16 @@ class WindowController(Ui_MainWindow):
         self.logView.setText(log)
 
     def closeEvent(self, event):
-        print("closed")
-        # 자바 프로그램에서 응답이 안왔을 경우를 대비
-        if self.isVideoCheckCilcked:
-            subprocess.run(["python", "client.py", "not_passed"], shell=True)
-        self.sendWorkingInfo()
-        self.date_timer.cancel()
+        print(self.workStart)
+        if self.workStart is False:
+            # 자바 프로그램에서 응답이 안왔을 경우를 대비
+            if self.isVideoCheckCilcked:
+                subprocess.run(["python", "client.py", "not_passed"], shell=True)
+            self.sendWorkingInfo()
+            self.date_timer.cancel()
+        else:
+            QtWidgets.QMessageBox.information(self, "QMessageBox", "작업이 실행중이므로 종료할 수 없습니다.")
+            event.ignore()
 
     def sendWorkingInfo(self):
         path_dir = './CaptureImage/'
