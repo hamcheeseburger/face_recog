@@ -127,8 +127,8 @@ class NetworkThread(QThread):
 
     def run(self):
         # 프로그램 기본 세팅 정보를 가져옴
-        # req_url = "http://3.35.38.165:8080/awsDBproject/setting/client"
-        req_url = "http://localhost:8090/awsDBproject/setting/client"
+        req_url = "http://3.35.38.165:8080/awsDBproject/setting/client"
+        # req_url = "http://localhost:8090/awsDBproject/setting/client"
 
         try:
             response = requests.post(req_url, data=None, verify=False)

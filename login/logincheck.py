@@ -20,8 +20,8 @@ from info.userinfo import UserInfo
 
 
 class CheckUser:
-    URL = "http://localhost:8090/awsDBproject/user/login"
-    # URL = "http://3.35.38.165:8080/awsDBproject/user/login"
+    # URL = "http://localhost:8090/awsDBproject/user/login"
+    URL = "http://3.35.38.165:8080/awsDBproject/user/login"
 
     def __init__(self):
         self.known_face_names = []

@@ -372,8 +372,8 @@ class WindowController(Ui_MainWindow):
             with open(self.logInfo.file_path, 'a', encoding='utf-8') as file:
                 file.write("logout 시각 : " + logout_date_format + "\n")
 
-            url = "http://localhost:8090/awsDBproject/sending/info"
-            # url = "http://3.35.38.165:8080/awsDBproject/sending/info"
+            # url = "http://localhost:8090/awsDBproject/sending/info"
+            url = "http://3.35.38.165:8080/awsDBproject/sending/info"
 
             log_file = open(self.logInfo.file_path, 'r', encoding="utf-8")
             # upload = {
