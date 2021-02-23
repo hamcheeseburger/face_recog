@@ -334,6 +334,13 @@ class WindowController(Ui_MainWindow):
 
         # out.release()
 
+    def refreshLogFileView(self):
+        # 로그파일 화면
+        with open(self.logInfo.file_path, 'rt', encoding='utf-8') as file:
+            log = file.read()
+
+        self.logView.setText(log)
+
     def refreshView(self):
         size = len(self.arrayWorkInfo.work_info_array)
         if size != 0:
