@@ -49,6 +49,7 @@ class ExecuteLogin(UiDialog):
         result, name, image = self.check_user.user_check_web_server(id, password)
         if result == 1:
             self.userInfo.setInfo(id, password, name, image)
+            # 사용자 IP 주소 얻기
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             s.connect(("8.8.8.8", 80))
             print(s.getsockname()[0])

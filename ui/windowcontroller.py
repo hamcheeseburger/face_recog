@@ -214,7 +214,7 @@ class WindowController(Ui_MainWindow):
 
     def videoCheck(self):
         print("videoCheckBtn clicked")
-        fileName = './Duplicate/VideoCombineAnalysis.jar'
+        fileName = './vca/vca.jar'
         # start ./Duplicate/VideoCombineAnalysis.jar [videoPath] 의 명령어가 실행 되는 것
         subprocess.run(["start", fileName, self.videoRecogFileRoute], shell=True)
 
