@@ -1,7 +1,9 @@
 import datetime
 import subprocess
 from datetime import time
+from multiprocessing.connection import Listener
 from time import time
+import time
 from threading import Timer
 import threading
 import cv2
@@ -18,6 +20,7 @@ from info.loginfo import LogInfo
 from info.settingInfo import SettingInfo
 from info.userinfo import UserInfo
 from info.workinfo import ArrayWorkInfo
+from server import receive_data
 
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
@@ -26,6 +29,7 @@ import simpleaudio as sa
 from ui.pygui_v3 import Ui_MainWindow
 from realTimeCheck import realtimemain
 from videoCheck import videomain2
+import server
 
 
 class WindowController(Ui_MainWindow):
@@ -47,6 +51,7 @@ class WindowController(Ui_MainWindow):
         self.settingInfo = SettingInfo.instance()
         self.arrayWorkInfo = ArrayWorkInfo.instance()
         self.logInfo = LogInfo.instance()
+        self.isVideoCheckCilcked = False
 
         # 심플오디오
         self.scriptDir = os.path.dirname(os.path.abspath(__file__))
@@ -90,6 +95,7 @@ class WindowController(Ui_MainWindow):
         self.realRecogSoundBtn.setDisabled(True)
         self.realRecogDisplayBtn.setDisabled(True)
         self.videoRecogStartBtn.setDisabled(True)
+        self.videoCheckBtn.setDisabled(True)
 
     def init_variable(self):
         self.stopFlag = False
@@ -209,7 +215,24 @@ class WindowController(Ui_MainWindow):
     def videoCheck(self):
         print("videoCheckBtn clicked")
         fileName = './Duplicate/VideoCombineAnalysis.jar'
-        subprocess.run(["start", fileName], shell=True)
+        # start ./Duplicate/VideoCombineAnalysis.jar [videoPath] 의 명령어가 실행 되는 것
+        subprocess.run(["start", fileName, self.videoRecogFileRoute], shell=True)
+
+        # 중복 클릭 방지
+        if self.isVideoCheckCilcked is False:
+            self.isVideoCheckCilcked = True
+            recevie_th = ReceiveThread(self)
+            recevie_th.threadEvent.connect(self.receiveThreadHandler)
+            recevie_th.start()
+
+    def receiveThreadHandler(self, result):
+        if result:
+            print("result is True!")
+            # 시작버튼 활성화
+            self.videoRecogStartBtn.setDisabled(False)
+        else:
+            print("result is False,,")
+        self.isVideoCheckCilcked = False
 
     def videoRecogOpen(self):
         print("videoRecogOpenBtn clicked")
@@ -223,8 +246,8 @@ class WindowController(Ui_MainWindow):
             self.videoRecogFileRoute = filesRoute[0]
             if self.videoRecogFileRoute != '':
                 print(self.videoRecogFileRoute)
-                # 시작버튼 활성화
-                self.videoRecogStartBtn.setDisabled(False)
+                # 무결성 검사 버튼 활성화
+                self.videoCheckBtn.setDisabled(False)
 
     def videoRecogStart(self):
         print("videoRecogStartBtn clicked")
@@ -315,6 +338,9 @@ class WindowController(Ui_MainWindow):
 
     def closeEvent(self, event):
         print("closed")
+        # 자바 프로그램에서 응답이 안왔을 경우를 대비
+        if self.isVideoCheckCilcked:
+            subprocess.run(["python", "client.py", "not_passed"], shell=True)
         self.sendWorkingInfo()
         self.date_timer.cancel()
 
@@ -401,6 +427,14 @@ class VideoThread(QThread):
             self.threadEvent.emit(200)
         else:
             self.threadEvent.emit(None)
+
+
+class ReceiveThread(QThread):
+    threadEvent = QtCore.pyqtSignal(bool)
+
+    def run(self):
+        result = server.result_receiver(('', 5000))
+        self.threadEvent.emit(result)
 
 
 if __name__ == "__main__":

@@ -90,6 +90,12 @@ class Ui_MainWindow(QMainWindow):
         self.videoCheckTextlabel.setMinimumSize(QtCore.QSize(80, 30))
         self.videoCheckTextlabel.setObjectName("videoCheckTextlabel")
         self.horizontalLayout_7.addWidget(self.videoCheckTextlabel)
+        # 비디오 열기 버튼
+        self.videoRecogOpenBtn = QtWidgets.QPushButton(self.widget)
+        self.videoRecogOpenBtn.setMinimumSize(QtCore.QSize(90, 30))
+        self.videoRecogOpenBtn.setObjectName("videoRecogOpenBtn")
+        self.horizontalLayout_7.addWidget(self.videoRecogOpenBtn)
+        # 동영상 검사 버튼
         self.videoCheckBtn = QtWidgets.QPushButton(self.widget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -122,11 +128,7 @@ class Ui_MainWindow(QMainWindow):
         self.horizontalLayout_8.addWidget(self.label)
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_8.addItem(spacerItem2)
-        # 비디오 열기 버튼
-        self.videoRecogOpenBtn = QtWidgets.QPushButton(self.widget1)
-        self.videoRecogOpenBtn.setMinimumSize(QtCore.QSize(90, 30))
-        self.videoRecogOpenBtn.setObjectName("videoRecogOpenBtn")
-        self.horizontalLayout_8.addWidget(self.videoRecogOpenBtn)
+
         # 비디오 실행 버튼
         self.videoRecogStartBtn = QtWidgets.QPushButton(self.widget1)
         self.videoRecogStartBtn.setMinimumSize(QtCore.QSize(90, 30))
