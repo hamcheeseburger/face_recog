@@ -44,9 +44,9 @@ class ExecuteLogin(UiDialog):
         password = self.lineEdit_password.text()
 
         # 서버 로그인
-        result, name, image = self.check_user.user_check_web_server(id, password)
+        result = self.check_user.user_check_web_server(id, password)
         if result == 1:
-            self.userInfo.setInfo(id, password, name, image)
+            # self.userInfo.setInfo(id, password, name, image)
             self.makeLogFile()
             self.getSetting()
 

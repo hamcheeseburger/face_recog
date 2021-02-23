@@ -16,6 +16,8 @@ import pickle
 import pymysql
 import requests
 
+from info.userinfo import UserInfo
+
 
 class CheckUser:
     URL = "http://localhost:8090/awsDBproject/user/login"
@@ -27,6 +29,7 @@ class CheckUser:
         self.known_face_paths = []
         self.image = []
         self.user_info_array = []
+        self.userInfo = UserInfo.instance()
 
     def user_check_web_server(self, id, password):
         info = {
@@ -41,7 +44,7 @@ class CheckUser:
             response = requests.post(self.URL, data=info, verify=False)
         except:
             print("Connection Error")
-            return -2, None, None
+            return -2
 
         print(response.status_code)
         # 추후 fail.jsp에서는 응답 코드를 200이 아닌 것으로 바꾸는 것으로?
@@ -50,18 +53,21 @@ class CheckUser:
             json_data = response.json()
             if json_data.get("error"):
                 print(json_data['error'])
-                return 0, None, None
+                return 0
 
             if json_data.get('image') and json_data.get('name'):
                 # Encoding 후 member_image 타입은 bytes
                 member_image = base64.b64decode(json_data['image'])
                 member_name = json_data['name']
-                # print("Welcome " + member_name + "!!")
+                work_time = json_data['work_time']
+                print("work_time : " + str(work_time) + "초")
 
-                return 1, member_name, member_image
+                self.userInfo.setInfo(id, password, member_name, member_image, work_time)
+
+                return 1
         else:
             print("response error")
-            return -1, None, None
+            return -1
 
 
 if __name__ == "__main__":

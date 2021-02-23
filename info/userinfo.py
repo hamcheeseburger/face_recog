@@ -31,10 +31,12 @@ class UserInfo:
         self.name = ""
         self.image = None
         self.ip = ""
+        self.work_time = 0
 
-    def setInfo(self, id, password, name, image):
+    def setInfo(self, id, password, name, image, work_time):
         self.id = id
         self.password = password
         self.name = name
         self.image = image
+        self.work_time = work_time
 

@@ -26,7 +26,9 @@ sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
 import simpleaudio as sa
 # from ui.pygui_v2 import Ui_MainWindow
-from ui.pygui_v3 import Ui_MainWindow
+# from ui.pygui_v3 import Ui_MainWindow
+# from ui.pygui_v4 import Ui_MainWindow
+from ui.pygui_v5 import Ui_MainWindow
 from realTimeCheck import realtimemain
 from videoCheck import videomain2
 import server
@@ -66,6 +68,7 @@ class WindowController(Ui_MainWindow):
         self.imagePixmap.loadFromData(self.userInfo.image)
         self.imagePixmap = self.imagePixmap.scaledToWidth(120)
         self.userImgLabel.setPixmap(self.imagePixmap)
+        self.workTimeLabel.setText(str(datetime.timedelta(seconds=self.userInfo.work_time)).split(".")[0])
 
         # 세팅 정보 적용
         self.stgDecLabel.setText(self.stgDecLabel.text() + "\t" + str(self.settingInfo.DETEC_SEC) + "초")
@@ -112,6 +115,10 @@ class WindowController(Ui_MainWindow):
     def realRecogStart(self):
         print("realRecogStartBtn clicked")
         self.init_variable()
+
+        # 동영상 인식 불가능 하게 버튼 변경
+        self.videoRecogOpenBtn.setDisabled(True)
+
         self.face_recog = realtimemain.FaceRecog.instance()
         # 얼굴 인식 시작할 때 마다 변수 초기화 필요...
         self.realRecogAnnounceLabel.setText("..근무시간 측정중..")
@@ -176,10 +183,10 @@ class WindowController(Ui_MainWindow):
         self.realRecogEndBtn.setDisabled(True)
         self.realRecogDisplayBtn.setDisabled(True)
         self.realRecogStartBtn.setDisabled(False)
-    #     로그파일 초기화
-        self.refreshLogFileView()
-        # 근무기록 추가
-        self.refreshWorkListView()
+        self.videoRecogOpenBtn.setDisabled(False)
+
+        # 화면 refresh
+        self.refreshView()
 
     def change_traffic_light(self, file_path):
         self.pixmap = QPixmap(self.scriptDir + os.path.sep + file_path)
@@ -214,16 +221,16 @@ class WindowController(Ui_MainWindow):
 
     def videoCheck(self):
         print("videoCheckBtn clicked")
-        fileName = './vca/vca.jar'
-        # start ./Duplicate/VideoCombineAnalysis.jar [videoPath] 의 명령어가 실행 되는 것
-        subprocess.run(["start", fileName, self.videoRecogFileRoute], shell=True)
-
         # 중복 클릭 방지
         if self.isVideoCheckCilcked is False:
             self.isVideoCheckCilcked = True
             recevie_th = ReceiveThread(self)
             recevie_th.threadEvent.connect(self.receiveThreadHandler)
             recevie_th.start()
+
+            fileName = './vca/vca.jar'
+            # start ./Duplicate/VideoCombineAnalysis.jar [videoPath] 의 명령어가 실행 되는 것
+            subprocess.run(["start", fileName, self.videoRecogFileRoute], shell=True)
 
     def receiveThreadHandler(self, result):
         if result:
@@ -252,8 +259,11 @@ class WindowController(Ui_MainWindow):
     def videoRecogStart(self):
         print("videoRecogStartBtn clicked")
         if self.videoRecogStartBtn.text() == "시작":
+            # 실시간 인식 비활성화
+            self.realRecogStartBtn.setDisabled(True)
             self.init_variable()
             # self.videoRecogRunLabel.setText("프레임추출중..")
+            self.videoRecogAnnounceLabel.setText("")
             self.videoRecogStartBtn.setDisabled(True)
 
             self.video_face_recog = videomain2.FaceRecog.instance()
@@ -285,11 +295,11 @@ class WindowController(Ui_MainWindow):
         # out = cv2.VideoWriter(
         #     "outVideo/" + self.user_id + "_" + nowDate + ".mp4", fcc, 3.0, (int(video.get(3)), int(video.get(4)))
         # )
-
         self.videoRecogRunLabel.setText("근무시간 측정중...")
         # 종료 버튼 활성화
         self.videoRecogStartBtn.setDisabled(False)
         self.videoRecogStartBtn.setText("종료")
+
         while True:
             frame = self.video_face_recog.do_recognition()
             # frame이 아니라 jpg byte를 받아와서 이미지 출력
@@ -316,21 +326,27 @@ class WindowController(Ui_MainWindow):
 
         self.videoRecogStartBtn.setText("시작")
         self.videoRecogStartBtn.setDisabled(True)
-        # out.release()
-        #     로그파일 초기화
-        self.refreshLogFileView()
-        # 근무기록 추가
-        self.refreshWorkListView()
+        self.videoCheckBtn.setDisabled(True)
+        self.realRecogStartBtn.setDisabled(False)
 
-    def refreshWorkListView(self):
+        # 화면 refresh
+        self.refreshView()
+
+        # out.release()
+
+    def refreshView(self):
         size = len(self.arrayWorkInfo.work_info_array)
         if size != 0:
+            # 근무기록 화면
             workInfo = self.arrayWorkInfo.work_info_array[size-1]
             worktime = str(datetime.timedelta(seconds=workInfo['work_time'])).split(".")[0]
             workString = str(workInfo['date_time']) + "\t" + str(workInfo['work_type']) + "\t\t" + worktime
             self.workListView.append(workString)
+            # 근무한시간 재설정
+            self.userInfo.work_time += workInfo['work_time']
+            self.workTimeLabel.setText(worktime)
 
-    def refreshLogFileView(self):
+        # 로그파일 화면
         with open(self.logInfo.file_path, 'rt', encoding='utf-8') as file:
             log = file.read()
 
@@ -442,5 +458,5 @@ if __name__ == "__main__":
 
     app = QtWidgets.QApplication(sys.argv)
     pygui = WindowController()
-    pygui.refreshWorkListView("추가한 글")
+    pygui.refreshView("추가한 글")
     sys.exit(app.exec_())
