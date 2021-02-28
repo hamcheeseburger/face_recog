@@ -16,13 +16,11 @@ import pickle
 import pymysql
 import requests
 
+from info.urlInfo import UrlInfo
 from info.userinfo import UserInfo
 
 
 class CheckUser:
-    URL = "http://localhost:8090/awsDBproject/user/login"
-    # URL = "http://3.35.38.165:8080/awsDBproject/user/login"
-
     def __init__(self):
         self.known_face_names = []
         self.known_face_images = []
@@ -38,10 +36,11 @@ class CheckUser:
         }
 
         # putty 접속하여 tomcat 서버 구동한 후 테스트 할 것
-        # url = "http://3.35.38.165:8080/awsDBproject/user/login"
-        print(self.URL)
+        url = UrlInfo.instance().url + "/awsDBproject/user/login"
+
+        print(url)
         try:
-            response = requests.post(self.URL, data=info, verify=False)
+            response = requests.post(url, data=info, verify=False)
         except:
             print("Connection Error")
             return -2

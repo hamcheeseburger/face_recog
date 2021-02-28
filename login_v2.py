@@ -17,10 +17,14 @@ from PyQt5.QtWidgets import QMessageBox
 from PyQt5 import QtWidgets, QtCore
 
 from info.loginfo import LogInfo
+from info.urlInfo import UrlInfo
 from login import logincheck
 from realTimeCheck import realtimemain
 from videoCheck import videomain2
-from ui.logingui import UiDialog
+# from ui.logingui import UiDialog
+# from ui.logingui_v2 import UiDialog
+from ui.logingui_v3 import UiDialog
+
 # from ui.menu import ExecuteMenu
 from ui.windowcontroller import WindowController
 from info.userinfo import UserInfo
@@ -33,15 +37,42 @@ class ExecuteLogin(UiDialog):
         UiDialog.__init__(self)
         self.setupUi(self.loginDialog)
         self.check_user = logincheck.CheckUser()
-        self.btn_login.clicked.connect(self.checkPassword)
+        self.btn_login.clicked.connect(self.LoginBtnClicked)
         self.network_thread = NetworkThread()
         self.network_thread.threadEvent.connect(self.threadHandler)
         self.userInfo = UserInfo.instance()
 
-    def checkPassword(self):
+        self.combo_url.currentIndexChanged.connect(self.comboxHandler)
+
+        self.urlInfo = UrlInfo.instance()
+
+    def comboxHandler(self):
+        if self.combo_url.currentIndex() == 2:
+            self.label_url.setVisible(True)
+            return
+
+        self.label_url.setVisible(False)
+
+    def LoginBtnClicked(self):
+        # 접속 주소 설정
+        comboIndex = self.combo_url.currentIndex()
+        if comboIndex == 0:
+            self.urlInfo.url = "http://localhost:8090"
+        elif comboIndex == 1:
+            self.urlInfo.url = "http://3.35.38.165:8080"
+        else:
+            self.urlInfo.url = self.label_url.text()
+
+        print(self.urlInfo.url)
+
         msg = QMessageBox()
         id = self.lineEdit_username.text()
         password = self.lineEdit_password.text()
+
+        if id == "" or password == "":
+            msg.setText('아이디와 비밀번호를 입력하세요.')
+            msg.exec_()
+            return
 
         # 서버 로그인
         result = self.check_user.user_check_web_server(id, password)
@@ -57,13 +88,13 @@ class ExecuteLogin(UiDialog):
             self.getSetting()
 
         elif result == 0:
-            msg.setText('Incorrect Password')
+            msg.setText('일치하는 사용자가 없습니다.')
             msg.exec_()
         elif result == -1:
-            msg.setText('Response Error')
+            msg.setText('서버 응답 오류')
             msg.exec_()
         elif result == -2:
-            msg.setText('Network Error')
+            msg.setText('서버와의 접속에 실패하였습니다.')
             msg.exec_()
 
     def menuWindow(self):
@@ -96,17 +127,6 @@ class ExecuteLogin(UiDialog):
                 settingInfo.NOD_SEC = result_dict['NOD_SEC']
                 settingInfo.DETEC_SEC = result_dict['DETEC_SEC']
                 settingInfo.VID_INTVL = result_dict['VID_INTVL']
-
-                # self.realFaceRecog = realtimemain.FaceRecog.instance()
-                # self.videoFaceRecog = videomain2.FaceRecog.instance()
-                #
-                # self.realFaceRecog.NOD_SEC = result_dict['NOD_SEC']
-                # self.realFaceRecog.DETEC_SEC = result_dict['DETEC_SEC']
-                # self.realFaceRecog.RECOG_LV = result_dict['RECOG_LV']
-                #
-                # self.videoFaceRecog.VID_INTVL = result_dict['VID_INTVL']
-                # self.videoFaceRecog.NOD_SEC = result_dict['NOD_SEC']
-                # self.videoFaceRecog.RECOG_LV = result_dict['RECOG_LV']
             else:
                 print("result_dict has error")
         else:
@@ -123,8 +143,7 @@ class NetworkThread(QThread):
 
     def run(self):
         # 프로그램 기본 세팅 정보를 가져옴
-        # req_url = "http://3.35.38.165:8080/awsDBproject/setting/client"
-        req_url = "http://localhost:8090/awsDBproject/setting/client"
+        req_url = UrlInfo.instance().url + "/awsDBproject/setting/client"
 
         try:
             response = requests.post(req_url, data=None, verify=False)

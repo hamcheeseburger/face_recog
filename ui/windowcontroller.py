@@ -14,6 +14,7 @@ from PyQt5 import QtCore, QtWidgets
 
 from info.loginfo import LogInfo
 from info.settingInfo import SettingInfo
+from info.urlInfo import UrlInfo
 from info.userinfo import UserInfo
 from info.workinfo import ArrayWorkInfo
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
@@ -390,8 +391,9 @@ class WindowController(Ui_MainWindow):
             with open(self.logInfo.file_path, 'a', encoding='utf-8') as file:
                 file.write("logout 시각 : " + logout_date_format + "\n")
 
-            url = "http://localhost:8090/awsDBproject/sending/info"
+            # url = "http://localhost:8090/awsDBproject/sending/info"
             # url = "http://3.35.38.165:8080/awsDBproject/sending/info"
+            url = UrlInfo.instance().url + "/awsDBproject/sending/info"
 
             # 로그파일 files 배열에 추가
             log_file = open(self.logInfo.file_path, 'r', encoding="utf-8")
