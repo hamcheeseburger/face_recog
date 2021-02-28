@@ -8,8 +8,6 @@
 버전:
     0.0.3
 """
-# face_recog.py
-# 얼굴인식 기능에 초점을 맞춘 wrapper 패키지
 import io
 from datetime import datetime, timedelta
 
@@ -17,12 +15,10 @@ from PIL import Image
 import face_recognition
 import cv2
 import numpy as np
-
-# 파이썬은 B,G,R형태(numpy객체)로 이미지를 표현
-# OpenCV: [B, G, R]
 import logging
 
 from info.loginfo import LogInfo
+from info.settingInfo import SettingInfo
 from info.userinfo import UserInfo
 from info.workinfo import ArrayWorkInfo
 
@@ -45,20 +41,24 @@ class FaceRecog:
 
     def __init__(self):
         print("[video.py] __init__ call")
-        self.RECOG_LV = 0
-        self.NOD_SEC = 0
-        self.VID_INTVL = 0
+        settingInfo = SettingInfo.instance()
+        self.RECOG_LV = settingInfo.RECOV_LV
+        self.NOD_SEC = settingInfo.NOD_SEC
+        self.VID_INTVL = settingInfo.VID_INTVL
 
         self.logInfo = LogInfo.instance()
 
         self.route = None
 
         self.userInfo = UserInfo.instance()
+        self.name = self.userInfo.name
+        self.image = self.userInfo.image
+
+        self.logger = None
+
         self.known_face_encodings = []
         self.known_face_names = []
-
-    # def __del__(self):
-    #     del self.video
+        self.set_image_to_known()
 
     def reset(self):
         print("reset 호출")
@@ -67,9 +67,6 @@ class FaceRecog:
         print("NOD_SEC : " + str(self.NOD_SEC))
         print("VID_INTVL : " + str(self.VID_INTVL))
         print("RECOV_LV : " + str(self.RECOG_LV))
-
-        self.name = self.userInfo.name
-        self.image = self.userInfo.image
 
         self.working = False
         # 화면에 잡힌 얼굴중 근무자가 존재하는지를 알아내는 boolean 변수
@@ -94,17 +91,13 @@ class FaceRecog:
         self.notRecogEndPoint = 0
 
         self.alertSlackOff = False
-
-        self.known_face_encodings = []
-        self.known_face_names = []
-        self.set_image_to_known()
-
         self.work_info = {}
         self.work_info['date_time'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         self.work_info['work_type'] = "video"
         self.work_info_array = ArrayWorkInfo.instance().work_info_array
 
         self.logger = self.get_logger()
+        self.logger.info("동영상 근무측정 시작")
 
     def get_logger(self):
         # logger instance 생성
@@ -114,7 +107,8 @@ class FaceRecog:
         if len(logger.handlers) > 0:
             return logger
 
-        FORMAT = '[%(asctime)s] %(levelname)s - %(name)s - %(message)s'
+        # FORMAT = '[%(asctime)s] %(levelname)s - %(name)s - %(message)s'
+        FORMAT = '[%(asctime)s]- %(message)s'
         TIME_FORMAT = "%Y-%m-%d %H:%M:%S"
         formatter = logging.Formatter(FORMAT, TIME_FORMAT)
 
@@ -131,24 +125,31 @@ class FaceRecog:
 
         return logger
 
+    # 비디오 경로 설정
     def set_file_route(self, route):
         self.route = route
         self.logger.info(self.route)
         self.get_video_info()
 
+    # 비디오 정보 가져오기
     def get_video_info(self):
         self.video = cv2.VideoCapture(self.route)
         self.FPS = round(self.video.get(cv2.CAP_PROP_FPS), 2)
-        print("fps : " + str(self.FPS))
+
+        # fps 값이 없다면 기본값인 30으로 설정
         if self.FPS == 0:
             self.FPS = 30
+
         self.time_length = round(self.video.get(cv2.CAP_PROP_FRAME_COUNT) / self.FPS)
         print("비디오 총길이 : " + str(self.time_length) + "초")
+
+        # 몇 frame 간격으로 넘어갈 것인지 설정
         self.interval = round(self.FPS) * self.VID_INTVL
         self.totalFrame = -self.interval
         self.frame_sequence = -self.interval
         self.specific_frame = []
 
+    # 사용자 이미지 설정
     def set_image_to_known(self):
         self.known_face_names.append(self.name)
         mode = 'RGB'
@@ -178,9 +179,6 @@ class FaceRecog:
 
     def set_frame_list(self, frame_list):
         self.specific_frame = frame_list
-
-    def notifyIsPaused(self, paused):
-        self.paused = paused
 
     def get_specific_frame(self):
         percent = 0
@@ -295,11 +293,7 @@ class FaceRecog:
 
         #프레임에 얼굴이 없거나, 근무자가 없는 경우
         if self.first is False and (len(self.face_locations) == 0 or not self.workerExist):
-            # if len(self.face_locations) == 0:
-            #     print("아무도 없음")
-            # if not self.workerExist:
-            #     print("근무자 없음")
-            # 근무태만이 시작된 시간 저장..
+
             if self.working:  # 얼굴인식이 되다가 안되기 시작한 첫 번째 순간
                 self.notRecogFrame = self.interval
                 self.notRecogStartPoint = self.totalFrame / self.FPS
@@ -307,35 +301,23 @@ class FaceRecog:
                 self.notRecogFrame += self.interval
             self.working = False
 
-        for (top, right, bottom, left), name in zip(self.face_locations, self.face_names):
-            # Scale back up face locations since the frame we detected in was scaled to 1/4 size
-            top *= 4
-            right *= 4
-            bottom *= 4
-            left *= 4
-
-            # Draw a box around the face
-            cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
-
-            # Draw a label with a name below the face
-            if self.RECOG_LV >= 2:
-                cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
-                font = cv2.FONT_HERSHEY_DUPLEX
-                cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
+        # for (top, right, bottom, left), name in zip(self.face_locations, self.face_names):
+        #     # Scale back up face locations since the frame we detected in was scaled to 1/4 size
+        #     top *= 4
+        #     right *= 4
+        #     bottom *= 4
+        #     left *= 4
+        #
+        #     # Draw a box around the face
+        #     cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
+        #
+        #     # Draw a label with a name below the face
+        #     if self.RECOG_LV >= 2:
+        #         cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
+        #         font = cv2.FONT_HERSHEY_DUPLEX
+        #         cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
 
         return frame
-
-    def get_jpg_bytes(self):
-        frame = self.do_recognition()
-        # We are using Motion JPEG, but OpenCV defaults to capture raw images,
-        # so we must encode it into JPEG in order to correctly display the
-        # video stream.
-        if frame is not None:
-            ret, jpg = cv2.imencode('.jpg', frame)
-            return jpg.tobytes()
-        else:
-            print("FRAME IS NONE")
-            return None
 
     def calculate_total(self):
         # 영상 마지막에 근무자가 인식이 되지 않는다면 태만시간에 대한 계산이 끝나지 않으므로
@@ -356,8 +338,6 @@ class FaceRecog:
                 self.notRecogEndPoint = total_sec
                 self.logger.info('태만유지시간 : ' + format(not_recog_sec, ".1f") + '초(' + strNotRecogStart + "~" + strNotRecogEnd + ")")
 
-        # self.logger.info('근무누적시간 : ' + format(recog_sec, ".1f") + '초/' + format(total_sec, ".1f") + '초')
-
         # 근무시간 계산
         if self.time_length != 0 and self.totalFrame / self.FPS + 1 > self.time_length:
             totalTime = self.time_length
@@ -365,9 +345,6 @@ class FaceRecog:
             totalTime = int(self.totalFrame / self.FPS)
 
         strTotalTime = str(timedelta(seconds=totalTime))
-
-        # notRecogTime = int((self.notRecogAgg / self.totalFrame) * totalTime)
-        # recogTime = totalTime - notRecogTime
 
         recogTime = int((self.recogFrameAgg / self.totalFrame) * totalTime)
         strRecogTime = str(timedelta(seconds=recogTime))
@@ -396,16 +373,6 @@ class FaceRecog:
         str_total_working_time = "총근무시간 : " + strTotalTime + "\n" \
             + "순수근무시간 : " + strRecogTime + "\n" \
             + "총태만시간 : " + strNotRecogTime + "\n"
-        self.logger.info(str_total_working_time)
+        self.logger.info(str_total_working_time + "\n")
         return str_total_working_time
-
-
-if __name__ == '__main__':
-    face_recog = FaceRecog()
-    frames = face_recog.get_specific_frame()
-    print(str(len(frames)))
-
-    for i in range(len(frames)):
-        cv2.imshow("frame", frames[i])
-        cv2.waitKey(5) & 0xFF
 

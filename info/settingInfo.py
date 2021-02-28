@@ -1,6 +1,3 @@
-from realTimeCheck import realtimemain
-from videoCheck import videomain2
-
 
 class SettingInfo:
     _instance = None

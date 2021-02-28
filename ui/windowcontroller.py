@@ -1,14 +1,9 @@
 import datetime
 import subprocess
-from datetime import time
-from multiprocessing.connection import Listener
-from time import time
-import time
-from threading import Timer
 import threading
+from threading import Timer
 import cv2
 import requests
-from PyQt5 import QtWidgets, QtCore, QtGui
 import os
 import sys
 
@@ -21,22 +16,23 @@ from info.loginfo import LogInfo
 from info.settingInfo import SettingInfo
 from info.userinfo import UserInfo
 from info.workinfo import ArrayWorkInfo
-from server import receive_data
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
 import simpleaudio as sa
-# from ui.pygui_v2 import Ui_MainWindow
-# from ui.pygui_v3 import Ui_MainWindow
-# from ui.pygui_v4 import Ui_MainWindow
 from ui.pygui_v5 import Ui_MainWindow
 from realTimeCheck import realtimemain
 from videoCheck import videomain2
-import server
+from python import server
 
 
 class WindowController(Ui_MainWindow):
     def __init__(self):
         Ui_MainWindow.__init__(self)
+        self.face_recog = None
+        self.video_face_recog = None
+
+        threading.Thread(target=self.setValiable).start()
+
         self.workStart = False
 
         # Setting button click listener
@@ -79,15 +75,19 @@ class WindowController(Ui_MainWindow):
         self.workListView.append("날짜시각\t\t근무타입\t\t근무시간")
 
         # 화면 초기화 작업
-        self.refreshLogFileView() # 로그파일 출력
+        self.refreshView()
         self.showDateTime() # 현재시간 출력
         self.btn_init() # 버튼 비활성화
 
         self.show()
 
+    def setValiable(self):
+        self.face_recog = realtimemain.FaceRecog.instance()
+        self.video_face_recog = videomain2.FaceRecog.instance()
+
     def showDateTime(self):
         now = datetime.datetime.now()
-        time_format = now.strftime("%Y년%m월%d일 %H시%M분".encode('unicode-escape').decode())
+        time_format = now.strftime("%Y년 %m월 %d일 %H시 %M분".encode('unicode-escape').decode())
         time_format = time_format.encode().decode('unicode-escape')
         self.dateLabel.setText(time_format)
 
@@ -104,7 +104,6 @@ class WindowController(Ui_MainWindow):
     def init_variable(self):
         self.workStart = True
         self.stopFlag = False
-        self.pauseFlag = False
         self.isCameraDisplayed = True
         self.workingAlarmFlag = False
         self.slackOffAlarmFlag = False
@@ -116,13 +115,18 @@ class WindowController(Ui_MainWindow):
 
     def realRecogStart(self):
         print("realRecogStartBtn clicked")
+        if self.face_recog is None:
+            print("face_recog is None")
+            return
+
         self.init_variable()
 
         # 동영상 인식 불가능 하게 버튼 변경
         self.videoRecogOpenBtn.setDisabled(True)
 
-        self.face_recog = realtimemain.FaceRecog.instance()
         # 얼굴 인식 시작할 때 마다 변수 초기화 필요...
+        self.face_recog.reset()
+
         self.realRecogAnnounceLabel.setText("..근무시간 측정중..")
         self.realRecogStartBtn.setDisabled(True)
         self.change_traffic_light("../templates/Traffic_Lights_red.png")
@@ -134,14 +138,11 @@ class WindowController(Ui_MainWindow):
 
         while True:
             frame = self.face_recog.get_frame()
-            #     # frame이 아니라 jpg byte를 받아와서 이미지 출력
-            #     # bytes -> QPixmap으로 변환하는 것이 핵심
-            #     # frame이 null이 아닐 경우에만 윈도우 상 출력
+
             if frame is None:
                 print("frame is None")
                 break
-            if frame is not None and self.isCameraDisplayed is True:
-                # print('frame is not None')
+            elif self.isCameraDisplayed:
                 byte = self.face_recog.get_jpg_bytes()
                 if byte is not None:
                     my_bytes = QByteArray(byte)
@@ -150,29 +151,25 @@ class WindowController(Ui_MainWindow):
                     assert ok
                     bytes_pixmap = bytes_pixmap.scaledToWidth(330)
                     self.realRecogCamLabel.setPixmap(bytes_pixmap)
-            # 근무 신호등 교체
-            self.isWorking = self.face_recog.working
-            self.isRealSlackOff = self.face_recog.isRealSlackOff
-            if self.isWorking is True:
+
+            if self.face_recog.working:
                 self.change_traffic_light("../templates/Traffic_Lights_green.png")
                 if self.workingAlarmFlag is False and self.alarmMute is False:
-                    # print('working alarm!!')
-                    play_obj = self.workingWav.play()
-                    #             # play_obj.wait_done()
+                    self.workingWav.play()
                     self.workingAlarmFlag = True
                     self.slackOffAlarmFlag = False
-            elif self.isRealSlackOff is True:
+
+            elif self.face_recog.isRealSlackOff is True:
                 self.change_traffic_light("../templates/Traffic_Lights_red.png")
                 if self.slackOffAlarmFlag is False and self.alarmMute is False:
-                    # print('slackOff alarm!!')
-                    play_obj = self.notWorkingWav.play()
+                    self.notWorkingWav.play()
                     self.slackOffAlarmFlag = True
                     self.workingAlarmFlag = False
-            #
+
             if self.stopFlag or self.face_recog.video_end:
                 break
+            #     아래 코드는 지우면 안됨
             cv2.waitKey(5) & 0xFF
-            self.face_recog.notifyIsPaused(self.pauseFlag)
 
         self.realRecogAnnounceLabel.setText(self.face_recog.calculate_total())
         # 종료버튼을 누르고 나서 신호등과 카메라 화면을 초기화
@@ -213,7 +210,7 @@ class WindowController(Ui_MainWindow):
             self.realRecogSoundBtn.setText("음성안내 끄기")
 
     def realRecogDisplay(self):
-        if self.isCameraDisplayed is True:
+        if self.isCameraDisplayed:
             print('cam_off')
             self.realRecogDisplayBtn.setText('카메라켜기')
             self.isCameraDisplayed = False
@@ -225,6 +222,9 @@ class WindowController(Ui_MainWindow):
 
     def videoCheck(self):
         print("videoCheckBtn clicked")
+        fileName = './vca/vca4.jar'
+        # start ./Duplicate/VideoCombineAnalysis.jar [videoPath] 의 명령어가 실행 되는 것
+        subprocess.run(["start", fileName, self.videoRecogFileRoute], shell=True)
         # 중복 클릭 방지
         if self.isVideoCheckCilcked is False:
             self.isVideoCheckCilcked = True
@@ -232,17 +232,21 @@ class WindowController(Ui_MainWindow):
             recevie_th.threadEvent.connect(self.receiveThreadHandler)
             recevie_th.start()
 
-            fileName = './vca/vca1.jar'
-            # start ./Duplicate/VideoCombineAnalysis.jar [videoPath] 의 명령어가 실행 되는 것
-            subprocess.run(["start", fileName, self.videoRecogFileRoute], shell=True)
-
     def receiveThreadHandler(self, result):
-        if result:
+        print(result)
+        self.videoRecogStartBtn.setDisabled(True)
+        if result == 1:
             print("result is True!")
             # 시작버튼 활성화
             self.videoRecogStartBtn.setDisabled(False)
-        else:
+            self.videoRecogRunLabel.setText("모든 검사를 통과하였습니다.")
+            self.videoRecogRunLabel.setStyleSheet("color: rgb(51, 0, 255);")
+        elif result == 0:
             print("result is False,,")
+            self.videoRecogRunLabel.setText("검사를 통과하지 못했습니다.")
+            self.videoRecogRunLabel.setStyleSheet("color: rgb(255, 0, 0);")
+        else:
+            self.videoRecogRunLabel.setText("")
         self.isVideoCheckCilcked = False
 
     def videoRecogOpen(self):
@@ -261,8 +265,13 @@ class WindowController(Ui_MainWindow):
                 self.videoCheckBtn.setDisabled(False)
 
     def videoRecogStart(self):
+        if self.video_face_recog is None:
+            print("video_face_recog is None")
+            return
+
         print("videoRecogStartBtn clicked")
         if self.videoRecogStartBtn.text() == "시작":
+            self.videoRecogRunLabel.setStyleSheet("color: rgb(0, 0, 0);")
             # 실시간 인식 비활성화
             self.realRecogStartBtn.setDisabled(True)
             self.init_variable()
@@ -270,7 +279,7 @@ class WindowController(Ui_MainWindow):
             self.videoRecogAnnounceLabel.setText("")
             self.videoRecogStartBtn.setDisabled(True)
 
-            self.video_face_recog = videomain2.FaceRecog.instance()
+            self.video_face_recog.reset()
             self.video_face_recog.set_file_route(self.videoRecogFileRoute)
 
             self.th = VideoThread(self, self.video_face_recog)
@@ -291,14 +300,6 @@ class WindowController(Ui_MainWindow):
             return
 
     def videoRecogStartWork(self):
-        # video = self.face_recog.get_video()
-        # fcc = cv2.VideoWriter_fourcc("m", "p", "4", "v")
-        # now = datetime.datetime.now()
-        # nowDate = str(now.strftime('%Y%m%d_%H-%M-%S'))
-        # print(nowDate)
-        # out = cv2.VideoWriter(
-        #     "outVideo/" + self.user_id + "_" + nowDate + ".mp4", fcc, 3.0, (int(video.get(3)), int(video.get(4)))
-        # )
         self.videoRecogRunLabel.setText("근무시간 측정중...")
         # 종료 버튼 활성화
         self.videoRecogStartBtn.setDisabled(False)
@@ -306,23 +307,16 @@ class WindowController(Ui_MainWindow):
 
         while True:
             frame = self.video_face_recog.do_recognition()
-            # frame이 아니라 jpg byte를 받아와서 이미지 출력
-            # bytes -> QPixmap으로 변환하는 것이 핵심
-            # frame이 null이 아닐 경우에만 윈도우 상 출력
+
             if frame is None:
                 print("<<<<동영상이 종료됨>>>>")
                 break
-
-            # 비디오쓰기
-            # out.write(frame)
 
             # 근무 신호등 교체
             self.isWorking = self.video_face_recog.working
             if self.stopFlag or self.video_face_recog.video_end:
                 print("video stopFlag is True")
                 break
-            cv2.waitKey(5) & 0xFF
-            self.video_face_recog.notifyIsPaused(self.pauseFlag)
 
         self.videoRecogRunLabel.setText("근무시간 측정완료")
         self.videoRecogAnnounceLabel.setText(self.video_face_recog.calculate_total())
@@ -337,15 +331,6 @@ class WindowController(Ui_MainWindow):
 
         # 화면 refresh
         self.refreshView()
-
-        # out.release()
-
-    def refreshLogFileView(self):
-        # 로그파일 화면
-        with open(self.logInfo.file_path, 'rt', encoding='utf-8') as file:
-            log = file.read()
-
-        self.logView.setText(log)
 
     def refreshView(self):
         size = len(self.arrayWorkInfo.work_info_array)
@@ -367,10 +352,25 @@ class WindowController(Ui_MainWindow):
 
     def closeEvent(self, event):
         print(self.workStart)
+
+        # 실시간 인식 logger close
+        if self.face_recog.logger is not None:
+            handlers = self.face_recog.logger.handlers[:]
+            for handler in handlers:
+                handler.close()
+                self.face_recog.logger.removeHandler(handler)
+
+        # 동영상 인식 logger close
+        if self.video_face_recog.logger is not None:
+            handlers = self.video_face_recog.logger.handlers[:]
+            for handler in handlers:
+                handler.close()
+                self.video_face_recog.logger.removeHandler(handler)
+
         if self.workStart is False:
             # 자바 프로그램에서 응답이 안왔을 경우를 대비
             if self.isVideoCheckCilcked:
-                subprocess.run(["python", "client.py", "not_passed"], shell=True)
+                subprocess.run(["python", "./python/client.py", "not_passed"], shell=True)
             self.sendWorkingInfo()
             self.date_timer.cancel()
         else:
@@ -378,30 +378,29 @@ class WindowController(Ui_MainWindow):
             event.ignore()
 
     def sendWorkingInfo(self):
+        # 캡쳐 이미지 list 가져오기
         path_dir = './CaptureImage/'
         image_list = os.listdir(path_dir)
-        if len(self.arrayWorkInfo.work_info_array) == 0:
-            os.remove(self.logInfo.file_path)
-        else:
+
+        # 근무를 했을 경우
+        if len(self.arrayWorkInfo.work_info_array) != 0:
+            # 로그 파일에 로그아웃시간 추가
             now = datetime.datetime.now()
             logout_date_format = now.strftime("%Y-%m-%d %H:%M:%S")
-
             with open(self.logInfo.file_path, 'a', encoding='utf-8') as file:
                 file.write("logout 시각 : " + logout_date_format + "\n")
 
-            # url = "http://localhost:8090/awsDBproject/sending/info"
-            url = "http://3.35.38.165:8080/awsDBproject/sending/info"
+            url = "http://localhost:8090/awsDBproject/sending/info"
+            # url = "http://3.35.38.165:8080/awsDBproject/sending/info"
 
+            # 로그파일 files 배열에 추가
             log_file = open(self.logInfo.file_path, 'r', encoding="utf-8")
-            # upload = {
-            #     "log_file": log_file
-            # }
-            image_files = []
-
             files = [
                 ("file", log_file)
             ]
 
+            # 캡쳐 이미지 파일 files 배열에 추가
+            image_files = []
             i = 1
             for image_name in image_list:
                 image_file = open(path_dir + image_name, "rb")
@@ -410,6 +409,7 @@ class WindowController(Ui_MainWindow):
                 files.append(obj)
                 i += 1
 
+            # 근무정보 dictionary 타입으로 정의
             info = {
                 "working_info": self.arrayWorkInfo.work_info_array,
                 "log_created": self.logInfo.created_date,
@@ -429,8 +429,17 @@ class WindowController(Ui_MainWindow):
             for image_f in image_files:
                 image_f.close()
 
+            log_file.close()
+            if log_file.closed:
+                print("log file closed")
+            else:
+                print("log file not closed")
+
+        # 캡쳐 이미지 삭제
         for image_name in image_list:
             os.remove(path_dir + image_name)
+        # 로그 파일 삭제
+        os.remove(self.logInfo.file_path)
 
 
 class VideoThread(QThread):
@@ -463,7 +472,7 @@ class VideoThread(QThread):
 
 
 class ReceiveThread(QThread):
-    threadEvent = QtCore.pyqtSignal(bool)
+    threadEvent = QtCore.pyqtSignal(int)
 
     def run(self):
         result = server.result_receiver(('', 5000))

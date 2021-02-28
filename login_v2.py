@@ -36,8 +36,6 @@ class ExecuteLogin(UiDialog):
         self.btn_login.clicked.connect(self.checkPassword)
         self.network_thread = NetworkThread()
         self.network_thread.threadEvent.connect(self.threadHandler)
-        self.realFaceRecog = realtimemain.FaceRecog.instance()
-        self.videoFaceRecog = videomain2.FaceRecog.instance()
         self.userInfo = UserInfo.instance()
 
     def checkPassword(self):
@@ -98,19 +96,17 @@ class ExecuteLogin(UiDialog):
                 settingInfo.NOD_SEC = result_dict['NOD_SEC']
                 settingInfo.DETEC_SEC = result_dict['DETEC_SEC']
                 settingInfo.VID_INTVL = result_dict['VID_INTVL']
-                # print("\nGet SETTING from SERVER")
-                # print("DETEC_SEC : " + str(result_dict['DETEC_SEC']))
-                # print("NOD_SEC : " + str(result_dict['NOD_SEC']))
-                # print("VID_INTVL : " + str(result_dict['VID_INTVL']))
-                # print("RECOV_LV : " + str(result_dict['RECOG_LV']) + "\n")
 
-                self.realFaceRecog.NOD_SEC = result_dict['NOD_SEC']
-                self.realFaceRecog.DETEC_SEC = result_dict['DETEC_SEC']
-                self.realFaceRecog.RECOG_LV = result_dict['RECOG_LV']
-
-                self.videoFaceRecog.VID_INTVL = result_dict['VID_INTVL']
-                self.videoFaceRecog.NOD_SEC = result_dict['NOD_SEC']
-                self.videoFaceRecog.RECOG_LV = result_dict['RECOG_LV']
+                # self.realFaceRecog = realtimemain.FaceRecog.instance()
+                # self.videoFaceRecog = videomain2.FaceRecog.instance()
+                #
+                # self.realFaceRecog.NOD_SEC = result_dict['NOD_SEC']
+                # self.realFaceRecog.DETEC_SEC = result_dict['DETEC_SEC']
+                # self.realFaceRecog.RECOG_LV = result_dict['RECOG_LV']
+                #
+                # self.videoFaceRecog.VID_INTVL = result_dict['VID_INTVL']
+                # self.videoFaceRecog.NOD_SEC = result_dict['NOD_SEC']
+                # self.videoFaceRecog.RECOG_LV = result_dict['RECOG_LV']
             else:
                 print("result_dict has error")
         else:
@@ -127,8 +123,8 @@ class NetworkThread(QThread):
 
     def run(self):
         # 프로그램 기본 세팅 정보를 가져옴
-        req_url = "http://3.35.38.165:8080/awsDBproject/setting/client"
-        # req_url = "http://localhost:8090/awsDBproject/setting/client"
+        # req_url = "http://3.35.38.165:8080/awsDBproject/setting/client"
+        req_url = "http://localhost:8090/awsDBproject/setting/client"
 
         try:
             response = requests.post(req_url, data=None, verify=False)

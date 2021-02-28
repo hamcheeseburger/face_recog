@@ -6,7 +6,7 @@
 개발일시:
     2021.01.12.02.07.00
 버전:
-    0.0.4
+    0.0.5
 """
 import io
 import threading
@@ -14,20 +14,18 @@ import threading
 import face_recognition
 import cv2
 import numpy as np
-# 파이썬은 B,G,R형태(numpy객체)로 이미지를 표현
-# OpenCV: [B, G, R]
 
 from datetime import datetime, timedelta
 
 from PIL import Image
 
+from info.settingInfo import SettingInfo
 from info.userinfo import UserInfo
 import logging
 import timeit
 
 from negligencedetection.negligence_detection_2021_0209 import Detection
 from realTimeCheck import camera
-from info.workinfo import WorkInfo
 from info.workinfo import ArrayWorkInfo
 from info.loginfo import LogInfo
 
@@ -51,9 +49,10 @@ class FaceRecog(object):
     def __init__(self):
         print("__init__ is called\n")
         self.detection = Detection()
-        self.RECOG_LV = 0
-        self.NOD_SEC = 0
-        self.DETEC_SEC = 0
+        settingInfo = SettingInfo.instance()
+        self.RECOG_LV = settingInfo.RECOV_LV
+        self.NOD_SEC = settingInfo.NOD_SEC
+        self.DETEC_SEC = settingInfo.DETEC_SEC
 
         self.work_id = 0
         self.userInfo = UserInfo.instance()
@@ -61,10 +60,11 @@ class FaceRecog(object):
         self.known_face_names = []
         self.video = None
         self.detection_thread = None
-        # 로그 파일 생성 준비
+        self.logger = None
 
-        # self.formatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(name)s - %(message)s'
-        # self.reset()
+        self.name = self.userInfo.name
+        self.image = self.userInfo.image
+        self.set_image_to_known()
 
     def set_image_to_known(self):
         self.known_face_names.append(self.name)
@@ -84,15 +84,13 @@ class FaceRecog(object):
         print("NOD_SEC : " + str(self.NOD_SEC))
         print("RECOV_LV : " + str(self.RECOG_LV) + "\n")
 
-        self.name = self.userInfo.name
-        self.image = self.userInfo.image
-
         self.working = False
         # 화면에 잡힌 얼굴중 근무자가 존재하는지를 알아내는 boolean 변수
         self.workerExist = False
         self.paused = False
         # log 출력 형식
 
+        print("카메라 가져오기 전")
         self.video = camera.VideoCamera()
         # 근무 최초 시작시간 초기화
         self.workStartTimeAtFirst = 0
@@ -121,10 +119,6 @@ class FaceRecog(object):
         self.process_this_frame = True
         self.video_end = False
 
-        self.known_face_names = []
-        self.known_face_encodings = []
-        self.set_image_to_known()
-
         self.work_info = {}
         self.work_id = self.work_id + 1
         self.work_info['id'] = self.work_id
@@ -132,11 +126,12 @@ class FaceRecog(object):
         self.work_info['work_type'] = "real"
         self.work_info_array = ArrayWorkInfo.instance().work_info_array
 
-        # 화면탐지코드 실행 -> 인식단계 3단계 일 때 실행되도록 변경할 것
+        # 인식 단계가 3단계라면 화면탐지코드 실행
         if self.RECOG_LV == 3:
             self.negligence_detection()
 
         self.logger = self.get_logger()
+        self.logger.info("실시간 근무측정 시작")
 
     def negligence_detection(self):
         threading.Thread(target=self.detection.detect, args=(self.work_id,)).start()
@@ -146,11 +141,13 @@ class FaceRecog(object):
     def get_logger(self):
         # logger instance 생성
         logger = logging.getLogger(__name__)
+
         # handler 생성 (stream, file)
         if len(logger.handlers) > 0:
             return logger
 
-        format = '[%(asctime)s] %(levelname)s - %(name)s - %(message)s'
+        # format = '[%(asctime)s] %(levelname)s - %(name)s - %(message)s'
+        format = '[%(asctime)s]- %(message)s'
         TIME_FORMAT = "%Y-%m-%d %H:%M:%S"
         self.formatter = logging.Formatter(format, TIME_FORMAT)
 
@@ -186,8 +183,6 @@ class FaceRecog(object):
         self._working = value
 
     def __del__(self):
-        # if self.video is not None:
-        #     del self.video
         print("face_recog 객체 소멸")
 
     def get_name(self, name):
@@ -203,36 +198,21 @@ class FaceRecog(object):
             self.detection_thread.cancel()
 
     def get_frame(self):
-        # 카메라 버전으로 테스트
         frame = self.video.get_frame()
-        # ret, frame = self.video.read()
 
         if frame is None:
             self.video_end = True
             return None
-        # 카메라로부터 frame을 읽어서 1/4 크기로 줄입니다. 이것은 계산양을 줄이기 위해서 입니다.
-        # Grab a single frame of video
-        # Resize frame of video to 1/4 size for faster face recognition processing
-        small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
 
-        # Convert the image from BGR color (which OpenCV uses) to RGB color (which face_recognition uses)
+        small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
         rgb_small_frame = small_frame[:, :, ::-1]
 
-        # 계산 양을 더 줄이기 위해서 두 frame당 1번씩만 계산합니다.
-        # Only process every other frame of video to save time
-
         if self.process_this_frame:
-            # Find all the faces and face encodings in the current frame of video
-            # 프레임 안에 존재하는 모든 얼굴의 위치를 가져오고, 해당 얼굴들의 특징을 추출한다.
-
             self.face_locations = face_recognition.face_locations(rgb_small_frame)
             self.face_encodings = face_recognition.face_encodings(rgb_small_frame, self.face_locations)
 
             self.face_names = []
             for face_encoding in self.face_encodings:
-                # See if the face s a match for the known face(s)
-                # Frame에서 추출한 얼굴 특징과 knowns에 있던 사진 얼굴의 특징을 비교하여, (얼마나 비슷한지)
-                # 거리 척도로 환산합니다. 거리(distance)가 가깝다는 (작다는) 것은 서로 비슷한 얼굴이라는 의미입니다.
                 if self.RECOG_LV == 1:
                     name = self.name
                 elif self.RECOG_LV >= 2:
@@ -254,7 +234,6 @@ class FaceRecog(object):
 
         self.process_this_frame = not self.process_this_frame
 
-###
         # self.slackOffCount != 0 없으면 맨처음 코드를 실행했을때
         # slackOffCount = 0 이니까 무조건 10 이상임
         if self.slackOffCount != 0 and (
@@ -351,7 +330,7 @@ class FaceRecog(object):
                 self.working = False
                 # start_time = datetime.now().replace(microsecond=0)
                 # self.logger.info("근무 태만 : {0}".format(start_time) )
-###
+
         for (top, right, bottom, left), name in zip(self.face_locations, self.face_names):
             # Scale back up face locations since the frame we detected in was scaled to 1/4 size
             top *= 4
@@ -362,15 +341,12 @@ class FaceRecog(object):
             # Draw a box around the face
             cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
 
-            # Draw a label with a name below the face
+            # 얼굴인식 단계가 2단계 이상이라면 사용자의 이름을 표시한다
             if self.RECOG_LV >= 2:
                 cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
                 font = cv2.FONT_HERSHEY_DUPLEX
                 cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
 
-        # frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
-        # frame = cv2.transpose(frame)
-        # frame = cv2.flip(frame, 1)
         return frame
 
     def get_jpg_bytes(self):
@@ -413,17 +389,9 @@ class FaceRecog(object):
         final_working_count = final_total_working_count - self.totalSlackOffCount
         final_slackoff_count = self.totalSlackOffCount
 
-        # print(final_total_working_count)
-        # print(final_working_count)
-        # print(final_slackoff_count)
-
         total_cnt = str(timedelta(seconds=final_total_working_count)).split(".")[0]
         working_cnt = str(timedelta(seconds=final_working_count)).split(".")[0]
         slack_cnt = str(timedelta(seconds=final_slackoff_count)).split(".")[0]
-
-        # print(str(timedelta(seconds=final_total_working_count)).split(".")[0])
-        # print(str(timedelta(seconds=final_working_count)).split(".")[0])
-        # print(str(timedelta(seconds=final_slackoff_count)).split(".")[0])
 
         final_working_count_int = int(final_working_count)
         final_slackoff_count_int = int(final_slackoff_count)
@@ -432,9 +400,6 @@ class FaceRecog(object):
         self.work_info['total_time'] = final_total_working_count_int
         self.work_info['work_time'] = final_working_count_int
         self.work_info['not_work_time'] = final_slackoff_count_int
-        # self.work_info.total_time = final_total_working_count_int
-        # self.work_info.work_time = final_working_count_int
-        # self.work_info.not_work_time = final_slackoff_count_int
 
         self.logger.info(f'프로그램 종료')
         s = "총근무시간 : "
@@ -452,33 +417,7 @@ class FaceRecog(object):
             s += str(int(final_slackoff_count_int / 60)) + "분 "
         s += str(final_slackoff_count_int % 60) + "초"
 
-        self.logger.info(f'' + '총근무시간 : ' + total_cnt + ' 순수근무시간 : ' + working_cnt + ' 근무태만시간 : ' + slack_cnt)
+        self.logger.info(f'' + '총근무시간 : ' + total_cnt + ' 순수근무시간 : ' + working_cnt + ' 근무태만시간 : ' + slack_cnt + "\n")
         self.work_info_array.append(self.work_info)
-        # self.reset()
 
         return s
-
-
-if __name__ == '__main__':
-    face_recog = FaceRecog()
-    print(face_recog.known_face_names)
-    while True:
-        if face_recog.video_end:
-            break
-        frame = face_recog.get_frame()
-
-        # show the frame
-        # cv2.imshow(title(윈도우창 제목), image(출력할 이미지 객체))//특정한 이미지를 화면에 출력
-        cv2.imshow("Frame", frame)
-        # key = cv2.waitKey(1) & 0xFF
-
-        # if the `q` key was pressed, break from the loop
-        # if key == ord('q'):
-        #     break
-
-    # do a bit of cleanup
-
-
-    cv2.destroyAllWindows()
-    face_recog.calculate_total()
-    print('finish')
