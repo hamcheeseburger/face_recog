@@ -19,8 +19,6 @@ from PyQt5 import QtWidgets, QtCore
 from info.loginfo import LogInfo
 from info.urlInfo import UrlInfo
 from login import logincheck
-from realTimeCheck import realtimemain
-from videoCheck import videomain2
 # from ui.logingui import UiDialog
 # from ui.logingui_v2 import UiDialog
 from ui.logingui_v3 import UiDialog
