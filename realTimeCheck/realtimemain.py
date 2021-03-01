@@ -17,7 +17,7 @@ import numpy as np
 
 from datetime import datetime, timedelta
 
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 from info.settingInfo import SettingInfo
 from info.userinfo import UserInfo
@@ -343,10 +343,14 @@ class FaceRecog(object):
 
             # 얼굴인식 단계가 2단계 이상이라면 사용자의 이름을 표시한다
             if self.RECOG_LV >= 2:
-                cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
-                font = cv2.FONT_HERSHEY_DUPLEX
-                cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
-
+                # cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
+                pill_image = Image.fromarray(frame)
+                draw = ImageDraw.Draw(pill_image)
+                draw.rectangle(((left, bottom - 35), (right, bottom)), fill=(0, 0, 225))
+                draw.text((left + 30, bottom - 38), name, font=ImageFont.truetype('malgun.ttf', 30), fill=(255, 255, 255))
+                frame = np.array(pill_image)
+                # font = cv2.FONT_HERSHEY_DUPLEX
+                # cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
         return frame
 
     def get_jpg_bytes(self):

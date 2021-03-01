@@ -6,6 +6,8 @@ import cv2
 import requests
 import os
 import sys
+import face_recognition_models
+from face_recognition_models import models
 
 from PyQt5.QtCore import QByteArray, QThread
 from PyQt5.QtGui import QPixmap
@@ -31,7 +33,7 @@ class WindowController(Ui_MainWindow):
         Ui_MainWindow.__init__(self)
         self.face_recog = None
         self.video_face_recog = None
-
+        print(face_recognition_models.__email__)
         threading.Thread(target=self.setValiable).start()
 
         self.workStart = False
@@ -355,14 +357,14 @@ class WindowController(Ui_MainWindow):
         print(self.workStart)
 
         # 실시간 인식 logger close
-        if self.face_recog.logger is not None:
+        if self.face_recog is not None and self.face_recog.logger is not None:
             handlers = self.face_recog.logger.handlers[:]
             for handler in handlers:
                 handler.close()
                 self.face_recog.logger.removeHandler(handler)
 
         # 동영상 인식 logger close
-        if self.video_face_recog.logger is not None:
+        if self.video_face_recog is not None and self.video_face_recog.logger is not None:
             handlers = self.video_face_recog.logger.handlers[:]
             for handler in handlers:
                 handler.close()

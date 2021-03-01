@@ -22,8 +22,10 @@ from login import logincheck
 # from ui.logingui import UiDialog
 # from ui.logingui_v2 import UiDialog
 from ui.logingui_v3 import UiDialog
-
+import face_recognition_models
+from face_recognition_models import models
 # from ui.menu import ExecuteMenu
+
 from ui.windowcontroller import WindowController
 from info.userinfo import UserInfo
 from info.settingInfo import SettingInfo
@@ -31,6 +33,8 @@ from info.settingInfo import SettingInfo
 
 class ExecuteLogin(UiDialog):
     def __init__(self, loginDialog):
+        print(face_recognition_models.__email__)
+        models
         self.loginDialog = loginDialog
         UiDialog.__init__(self)
         self.setupUi(self.loginDialog)
