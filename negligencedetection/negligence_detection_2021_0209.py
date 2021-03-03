@@ -1,4 +1,5 @@
 import datetime
+import os
 
 import cv2
 import numpy as np
@@ -10,6 +11,8 @@ from keras.applications.vgg16 import VGG16
 
 SAVE_PATH = "./negligencedetection/"
 SEND_PATH = "./CaptureImage/"
+scriptDir = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = scriptDir + os.path.sep + "../model/TF_best.hdf5"
 
 
 class ScrShot:
@@ -42,7 +45,8 @@ class ScrShot:
 class Detection:
     def __init__(self):
         self.vgg16_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
-        self.model = load_model('.\\model\\TF_best.hdf5')
+        self.model = load_model(MODEL_PATH)
+        print(MODEL_PATH)
 
     def detect(self, work_id):
         print("detect")

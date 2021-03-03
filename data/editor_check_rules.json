@@ -1,0 +1,2303 @@
+[
+    {
+	"list_type":"AVI_EDITOR",
+	"item_list":
+	[
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name" : "GomMix",
+		"file_type" : "AVI",
+		"id_seq" : 	
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",       "strl", "strh", "strf", 
+				  "INFO", "ISFT", "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",      "strl", "strh", "strf", "indx",
+				  "odml", "dmlh", "INFO", "ISFT", "JUNK", "movi", "idx1",     "AVIX"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",      "strl", "strh", "strf", 
+				  "odml", "dmlh", "INFO", "ISFT", "JUNK", "movi", "idx1",     "AVIX", "movi"
+				]
+			],
+		"check_value" : 
+			[	
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"GOM ENCODER", "value_type": "STR" }			
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"GOM ENCODER", "value_type": "STR" }			
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"GOM ENCODER", "value_type": "STR" }			
+				]
+			]
+		},
+
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name" : "Bandicut",
+		"file_type" : "AVI",
+		"id_seq" : 		
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK", "vprp",    "strl", "strh", "strf", "JUNK", "vprp",   
+				  "strl", "strh", "strf", "JUNK",      "JUNK", "INFO", "ISFT", "JUNK", "movi", "idx1" 
+			   	],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",      "strl", "strh", "strf", "JUNK",   
+				  "strl", "strh", "strf", "JUNK",      "JUNK", "INFO", "ISFT", "JUNK", "movi", "idx1" 
+			   	],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK", "vprp",      
+				  "strl", "strh", "strf", "JUNK",      "JUNK", "INFO", "ISFT", "JUNK", "movi", "idx1" 
+			   	],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",      
+				  "strl", "strh", "strf", "JUNK",      "JUNK", "INFO", "ISFT", "JUNK", "movi", "idx1" 
+			   	],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx", "vprp",     
+				  "strl", "strh", "strf", "indx",      "odml", "dmlh", "INFO", "ISFT", "JUNK", "movi", "idx1",   
+				  "AVIX"
+			   	],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",      
+				  "strl", "strh", "strf", "indx",      "odml", "dmlh", "INFO", "ISFT", "JUNK", "movi", "idx1",   
+				  "AVIX"
+			   	],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "indx",      
+				  "strl", "strh", "strf", "indx",      "odml", "dmlh", "INFO", "ISFT", "JUNK", "movi", "idx1",   
+				  "AVIX"
+			   	]
+			],
+		"check_value" : 
+			[	
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Bandicut", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Bandicut", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Bandicut", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Bandicut", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Bandicut", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Bandicut", "value_type": "STR" }
+				], 
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Bandicut", "value_type": "STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name" : "Gilisoft Video Editor",
+		"file_type" : "AVI",
+		"id_seq" : 	
+			[	
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "JUNK",         
+				  "strl", "strh", "strf", "JUNK", "vprp",      "JUNK", "JUNK", "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "JUNK", "vprp",            
+				  "strl", "strh", "strf", "JUNK",      "JUNK", "JUNK", "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "JUNK", "vprp",            
+				  "JUNK", "JUNK", "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "JUNK",         
+				  "strl", "strh", "strf", "JUNK",      "JUNK", "JUNK", "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK", "vprp",     
+				  "strl", "strh", "strf", "JUNK",      "JUNK", "INFO", "ISFT", "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",      
+				  "strl", "strh", "strf", "JUNK",      "JUNK", "INFO", "ISFT", "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",     
+				  "strl", "strh", "strf", "indx", "vprp",    "odml", "dmlh", "JUNK", "JUNK", "movi", "idx1",   "AVIX"    
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx", "vprp",    
+				  "strl", "strh", "strf", "indx",      "odml", "dmlh", "JUNK", "JUNK", "movi", "idx1",   "AVIX"     
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx", "vprp",    
+				  "strl", "strh", "strf", "indx",      "odml", "dmlh", "INFO", "ISFT", "JUNK", "movi", "idx1",   "AVIX"     
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx", 
+				  "strl", "strh", "strf", "indx", "vprp",     "odml", "dmlh", "INFO", "ISFT", "JUNK", "movi", "idx1",   "AVIX"     
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx", 
+				  "strl", "strh", "strf", "indx",      "odml", "dmlh", "INFO", "ISFT", "JUNK", "movi", "idx1",   "AVIX"     
+				]
+			],
+		"check_value" : 
+			[	
+				[ { "seq":3, "id":"JUNK", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Lavf53.24.2", "value_type": "STR" } 
+				],  
+				[ { "seq":3, "id":"JUNK", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1,  
+					"value":"Lavf53.24.2", "value_type": "STR" } 
+				],
+				[ { "seq":2, "id":"JUNK", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1,  
+					"value":"Lavf53.24.2", "value_type": "STR" } 
+				],
+				[ { "seq":3, "id":"JUNK", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1,  
+					"value":"Lavf53.24.2", "value_type": "STR" } 
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1,  
+					"value":"Lavf53.24.2", "value_type": "STR" } 
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1,  
+					"value":"Lavf53.24.2", "value_type": "STR" } 
+				],
+				[ { "seq":0, "id":"JUNK", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Lavf53.24.2", "value_type": "STR" } 
+				],
+				[ { "seq":0, "id":"JUNK", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Lavf53.24.2", "value_type": "STR" }			
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1,  
+					"value":"Lavf53.24.2", "value_type": "STR" } 
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1,  
+					"value":"Lavf53.24.2", "value_type": "STR" } 
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1,  
+					"value":"Lavf53.24.2", "value_type": "STR" } 
+				]
+			]
+		},
+		
+
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name" : "Sony Vegas",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "JUNK", "indx",
+				  "odml", "dmlh", "JUNK", "VDEX", "LACE", "PAR", "INFO", "TCOD",  "TCDO", 	"JUNK", "movi", "idx1", "JUNK"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "JUNK", "indx", 
+				  "odml", "dmlh", "JUNK", "VDEX", "LACE", "PAR", "INFO", "IENG", "INAM", "IART", "ICOP", "ICMT", "TCOD",  "TCDO", 
+				  "JUNK", "movi", "idx1", "JUNK"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "JUNK", "indx", 
+				  "odml", "dmlh", "SFNX", "VDEX", "LACE", "PAR", "INFO", "TCOD", "TCDO", "JUNK", "movi", "idx1", "JUNK", "AVIX"
+				]
+			],
+		"check_value" : 
+			[ 	[ ],
+				[ ],
+				[ ]
+			]
+		},
+	 
+			
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name" : "Edius",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[       
+				[ "AVI", "hdrl", "avih",	  "strl", "strh", "strf", "JUNK", 	"strl", "strh", "strf", "JUNK", 
+				  "JUNK", "JUNK", "movi", "idx1", "PrmA", "Tdat", "tc_O", "tc_A", "rn_O", "rn_A", "CtEx", "ReeL", "Cdat", "cmnt", "CtsI"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",    "strl", "strh", "strf", "indx", 
+				  "odml", "dmlh", "JUNK", "movi", "idx1",     "AVIX", "JUNK", "movi", 
+				  "PrmA", "Tdat", "tc_O", "tc_A", "rn_O", "rn_A", "CtEx", "ReeL", "Cdat", "cmnt", "CtsI"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",    "strl", "strh", "strf", "indx", 
+				  "odml", "dmlh", "JUNK", "movi", "idx1",     "AVIX", "JUNK", "movi",   "AVIX", "JUNK", 
+				  "movi", "PrmA", "Tdat", "tc_O", "tc_A", "rn_O", "rn_A", "CtEx", "ReeL", "Cdat", "cmnt", "CtsI"
+				]
+			],
+		"check_value" : 
+			[	[ ],
+				[ ], 
+				[ ] 	
+			]
+		},
+
+
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name" : "PowerDirector",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "JUNK", "indx",
+				  "odml", "dmlh", "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     
+				  "odml", "dmlh", "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "indx",
+				  "odml", "dmlh", "movi"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "JUNK", "indx",
+				  "odml", "dmlh", "movi"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     
+				  "odml", "dmlh", "movi", "idx1", "AVIX"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "JUNK", "indx",
+				  "odml", "dmlh", "movi", "idx1", "AVIX"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "indx",
+				  "odml", "dmlh", "movi", "AVIX"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "JUNK", "indx",
+				  "odml", "dmlh", "movi", "AVIX"
+				]
+			],
+		"check_value" : 
+			[ 	
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"dvsd", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"dvsd", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"YUY2", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"YUY2", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"iavs", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"dvsd", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"dvsd", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"YUY2", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"YUY2", "value_type": "STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name" : "Pinnacle Studio",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "JUNK", "indx",
+				  "odml", "dmlh", "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "JUNK", "indx",
+				  "odml", "dmlh", "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "JUNK", "indx",
+				  "odml", "dmlh", "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "JUNK", "indx",
+				  "odml", "dmlh", "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "indx",
+				  "odml", "dmlh", "JUNK", "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "JUNK", "indx",
+				  "odml", "dmlh", "JUNK", "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "strn",     "strl", "strh", "strf", "strn",
+				  "odml", "dmlh", "JUNK", "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "indx",
+				  "odml", "dmlh", "JUNK", "movi", "idx1",  "AVIX"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "JUNK", "indx",
+				  "odml", "dmlh", "JUNK", "movi", "idx1",  "AVIX"
+				]
+			],
+		"check_value" : 
+			[ 	
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"dvsd", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"MJPG", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"DIB ", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"cvid", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"divx", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"divx", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"divx", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"divx", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"strh", "rule_type" : "equal_value", "field_name":"fccHandler", "field_offset":4, "field_size":4, 
+					"value":"divx", "value_type": "STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name" : "Adobe Premiere",
+		"file_type" : "AVI",
+		"id_seq" : 	
+			[
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "Cr8r", "INFO", "ICRD", "ISFT",    "Tdat", "tc_O", "tc_A", "JUNK", "movi", "idx1",  "_PMX" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "indx", "strl", "strh", "strf", 
+				  "indx", "odml", "dmlh",     "Cr8r", "INFO", "ICRD", "ISFT",     "Tdat", "tc_O", "tc_A", "_PMX", "JUNK", "movi", "idx1", "JUNK"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",      "strl", "strh", "strf", "indx",   "odml", "dmlh", "JUNK", 
+				  "Cr8r", "INFO", "ICRD", "ISFT",    "Tdat", "tc_O", "tc_A", "JUNK", "movi", "idx1",  "JUNK",  "_PMX" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "indx", "strl", "strh", "strf",     
+				  "indx", "odml", "dmlh",     "INFO", "ICRD", "ISFT",     "Tdat", "tc_O", "tc_A", "JUNK", "movi", "idx1", "AVIX", "movi", "Cr8r", "_PMX"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "JUNQ", "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "JUNQ", "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",      "strl", "strh", "strf", "indx",   
+				  "odml", "dmlh", "JUNQ", "movi", "idx1",  "AVIX"
+				]
+			],
+		"check_value" : 
+			[	
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+						"value":"Adobe Premiere", "value_type": "STR" }
+				], 
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+						"value":"Adobe Premiere", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+						"value":"Adobe Premiere", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+						"value":"Adobe Premiere", "value_type": "STR" }
+				], 
+				[ ],
+				[ ],
+				[ ]
+			]
+		},
+
+
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name" : "YAMB",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf",
+				  "INFO", "ISFT", "JUNK", "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf",     "indx", "odml", "dmlh",
+				  "INFO", "ISFT", "JUNK", "movi", "idx1",     "AVIX"
+				]
+			],
+		"check_value" : 
+			[ 	
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+						"value":"GPAC", "value_type": "STR" }
+				], 	
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+						"value":"GPAC", "value_type": "STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name" : "Avidemux",
+		"file_type" : "AVI",
+		"id_seq" : 	
+			[
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",    "strl", "strh", "strf", "JUNK", 
+				  "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",    "strl", "strh", "strf", "indx", 
+				  "odml", "dmlh", "JUNK", "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK", 
+				  "JUNK", "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",    "strl", "strh", "strf", "indx", 
+				  "odml", "dmlh", "JUNK", "movi", "idx1", "AVIX"
+				]
+
+			],
+		"check_value" : 
+			[	
+				[ 
+				],
+				[ 
+				],
+				[ 
+				],
+				[ 
+				]
+		 	]
+		},
+
+
+		{
+		"item_type" : "AVI_EDITOR",
+		"item_name" : "FFmpeg",
+		"file_type" : "AVI",
+		"id_seq" :
+			[ 
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK", "vprp",    "strl", "strh", "strf", "JUNK",
+				  "JUNK", "INFO", "ISFT", "JUNK",  "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",    "strl", "strh", "strf", "JUNK",
+				  "JUNK", "INFO", "ISFT", "JUNK",  "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",    "strl", "strh", "strf", "JUNK",
+				  "JUNK", "INFO", "ICRD", "ISFT", "JUNK",  "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK", "vprp",    
+				  "JUNK", "INFO", "ISFT", "JUNK",  "movi", "idx1"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", 
+				  "indx", "vprp", "odml", "dmlh", "INFO", "ISFT", "JUNK", "movi", "idx1",   "AVIX"
+				],	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx", "vprp",   "strl", "strh", "strf", "indx",
+				   "odml", "dmlh", "INFO", "ISFT", "JUNK", "movi", "idx1",   "AVIX"
+				]
+			],
+		"check_value" : 
+			[
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+				    "value":"Lavf55.33.100", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+				    "value":"Lavf55.33.100", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+				    "value":"Lavf55.33.100", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+				    "value":"Lavf55.33.100", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+				    "value":"Lavf55.33.100", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+				    "value":"Lavf55.33.100", "value_type": "STR" }
+				]
+			]
+		},
+
+
+
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name" : "Lightworks",
+		"file_type" : "AVI",
+		"id_seq" : 
+			[	
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",      "strl", "strh", "strf", "indx",
+				  "odml", "dmlh", "INFO", "ISFT", "ISMP", "JUNK", "movi", "idx1", "JUNK"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx", 
+				  "odml", "dmlh", "INFO", "ISFT", "ISMP", "JUNK", "movi", "idx1", "JUNK"
+				],
+				[ "AVI", "hdrl", "avih",      "strl", "strh", "strf", "indx",      "strl", "strh", "strf", "indx",
+				  "odml", "dmlh", "INFO", "ISFT", "ISMP", "JUNK", "movi", "idx1", "JUNK",     "AVIX"
+				]
+			],
+		"check_value" : 
+			[ 	
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+						"value":"EditShare AVI v3.0.0.0", "value_type": "STR" }
+				], 	
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+						"value":"EditShare AVI v3.0.0.0", "value_type": "STR" }
+				], 	
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+						"value":"EditShare AVI v3.0.0.0", "value_type": "STR" }
+				]
+			]
+		}, 
+
+
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name" : "VirtualDub",
+		"file_type" : "AVI",
+		"id_seq" : 	
+			[
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",    "strl", "strh", "strf", "JUNK", 
+				  "odml", "dmlh", "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK", 
+				  "odml", "dmlh", "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",     "strl", "strh", "strf", "indx", 
+				  "odml", "dmlh", "JUNK", "movi", "idx1", "AVIX"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf", 
+				  "JUNK", "movi"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf", 
+				  "JUNK", "movi", "idx1"
+				]
+			],
+		"check_value" : 
+			[	
+				[ { "seq":2, "id":"JUNK", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+						"value":"VirtualDub", "value_type": "STR" }
+				],
+				[ { "seq":1, "id":"JUNK", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+						"value":"VirtualDub", "value_type": "STR" }
+				],
+				[ { "seq":2, "id":"JUNK", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+						"value":"VirtualDub", "value_type": "STR" }
+				],
+				[ { "seq":2, "id":"JUNK", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+						"value":"VirtualDub", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"JUNK", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+						"value":"VirtualDub", "value_type": "STR" }
+				]
+		 	]
+		},
+
+
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name" : "Free Video Editor",
+		"file_type" : "AVI",
+		"id_seq" : 		
+			[	
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",    "strl", "strh", "strf", "JUNK", "vprp",   
+				  "JUNK", "INFO", "ISFT", "JUNK", "movi", "idx1" 
+			   	],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",    "vprp",   
+				  "JUNK", "INFO", "ISFT", "JUNK", "movi", "idx1" 
+			   	], 
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx",    "strl", "strh", "strf", "indx", "vprp",   
+				  "odml", "dmlh", "INFO", "ISFT", "JUNK", "movi", "idx1",   "AVIX"
+			   	],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",      
+				  "strl", "strh", "strf", "JUNK",      "JUNK", "INFO", "ISFT", "JUNK", "movi", "idx1" 
+			   	],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK", "vprp",     
+				  "strl", "strh", "strf", "JUNK", "vprp",     "strl", "strh", "strf", "JUNK",      "JUNK", "INFO", "ISFT", "JUNK", "movi", "idx1" 
+			   	],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "JUNK",      
+				  "strl", "strh", "strf", "JUNK",     "JUNK", "INFO", "ICRD ", "ISFT", "JUNK", "movi", "idx1"   
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf", "indx","vprp",    "strl", "strh", "strf", "indx",    
+				  "odml", "dmlh", "INFO", "ISFT", "JUNK", "movi", "idx1",   "AVIX"
+			   	]
+			],
+		"check_value" : 
+			[	
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Lavf57.26.100", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Lavf57.26.100", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Lavf57.26.100", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Lavf57.26.100", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Lavf54.59.107", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Lavf57.26.100", "value_type": "STR" }
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Lavf54.59.107", "value_type": "STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name" : "AfterEffect",
+		"file_type" : "AVI",
+		"id_seq" : 	
+			[
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",    "strl", "strh", "strf", "FIEL", "ALFA", 
+				  "Cr8r", "INFO", "ICRD", "ISFT", "Tdat", "tc_O", "tc_A","_PMX", "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",    "strl", "strh", "strf", "FIEL",  
+				  "Cr8r", "INFO", "ICRD", "ISFT", "Tdat", "tc_O", "tc_A","_PMX", "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",    "FIEL", "ALFA", 
+				  "Cr8r", "INFO", "ICRD", "ISFT", "Tdat", "tc_O", "tc_A","_PMX", "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf","indx",    "strl", "strh", "strf","indx","odml","dmlh", "FIEL", "ALFA", 
+				  "INFO", "ICRD", "ISFT", "Tdat", "tc_O", "tc_A", "JUNK", "movi", "idx1", "AVIX"
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",    "strl", "strh", "strf", 
+				  "Cr8r", "INFO", "ICRD", "ISFT", "Tdat", "tc_O", "tc_A","_PMX", "JUNK", "movi", "idx1" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf","indx",    "strl", "strh", "strf","indx","odml","dmlh",
+				  "Cr8r", "INFO", "ICRD", "ISFT", "Tdat", "tc_O", "tc_A","_PMX", "JUNK", "movi", "idx1", "JUNK" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf","Cr8r", 
+				   "INFO", "ICRD", "ISFT", "Tdat", "tc_O", "tc_A", "JUNK", "movi", "idx1","_PMX" 
+				],
+				[ "AVI", "hdrl", "avih",     "strl", "strh", "strf",     "strl", "strh", "strf",  
+				  "Cr8r", "INFO", "ICRD", "ISFT",    "Tdat", "tc_O", "tc_A", "JUNK", "movi", "idx1",  "_PMX" 
+				]
+			],
+		"check_value" : 
+			[	
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Adobe After Effects", "value_type": "STR" }			
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Adobe After Effects", "value_type": "STR" }			
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Adobe After Effects", "value_type": "STR" }			
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Adobe After Effects", "value_type": "STR" }			
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Adobe After Effects", "value_type": "STR" }			
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Adobe After Effects", "value_type": "STR" }			
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Adobe After Effects", "value_type": "STR" }			
+				],
+				[ { "seq":0, "id":"ISFT", "rule_type" : "contain_value", "field_name":"NONE", "field_offset": -1, "field_size": -1, 
+					"value":"Adobe After Effects", "value_type": "STR" }			
+				]
+		 	]
+		},
+
+
+		{
+		"item_type": "AVI_EDITOR",
+		"item_name": "Avid Media Composer",
+		"file_type": "AVI",
+		"id_seq": [
+				[ "AVI", "hdrl", "avih",    "strl", "strh", "strf", "strn",    "strl", "strh", "strf", "strn",
+				  "JUNK", "movi", "idx1",  "ERRO" 
+				],
+				[ "AVI", "hdrl", "avih",    "strl", "strh", "strf", "strn",
+				  "JUNK", "movi", "idx1",  "ERRO"
+				]
+			],
+		"check_value": 
+			[
+				[ ],
+				[ ] 
+			]
+		}
+
+	]
+    },
+
+
+    {
+	"list_type":"MP4_EDITOR",
+	"item_list":
+	[
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name": "Avidemux",
+		"file_type": "MP4",
+		"id_seq": 
+			[
+				[ "ftyp", "free", "mdat", "moov",
+				  "mvhd", "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref",
+				  "stbl", "stsd", "stts", "stsc", "stsz", "stco", "udta", "meta"
+				],
+				[ "ftyp", "free", "mdat", "moov",
+				  "mvhd", "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stss", "ctts", "stsc", "stsz", "stco",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref",
+				  "stbl", "stsd", "stts", "stsc", "stsz", "stco", "udta", "meta"
+				],
+				[ "ftyp", "free", "mdat", "moov",
+				  "mvhd", "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco", "udta", "meta"
+				],
+				[ "ftyp", "free", "mdat", "moov",
+				  "mvhd", "iods", "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stsz",
+				  "stsc", "co64", "ctts", "stss",
+			  	  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "co64", "udta", "name", "free"
+				],
+				[ "ftyp", "free", "mdat", "moov",
+				  "mvhd", "iods", "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stsz",
+				  "stsc", "co64", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd",
+				  "dinf", "dref", "stbl", "stsd", "stts", "stsz", "stsc", "co64", "udta", "name", "free"
+				]
+			],
+		"check_value": 
+			[
+				[ { "seq": 0, "id": "meta", "rule_type": "contain_value", "field_name": "NONE", "field_offset": -1, "field_size": -1,
+				    "value": "Lavf56.36.100", "value_type": "STR"}
+				],
+				[ { "seq": 0, "id": "meta", "rule_type": "contain_value", "field_name": "NONE", "field_offset": -1, "field_size": -1,
+				    "value": "Lavf56.36.100", "value_type": "STR"}
+				],
+				[ { "seq": 0, "id": "meta", "rule_type": "contain_value", "field_name": "NONE", "field_offset": -1, "field_size": -1,
+				    "value": "Lavf56.36.100", "value_type": "STR"}
+				],
+				[ { "seq": 0, "id": "name", "rule_type": "contain_value", "field_name": "NONE", "field_offset": -1, "field_size": -1,
+				    "value": "Stereo","value_type": "STR"},
+				  { "seq":0, "id":"mdat", "rule_type" : "size_value", "field_name":"NONE", "field_offset":0, "field_size":4, 
+				    "value":"1", "value_type": "LONG" }		
+				],
+				[ { "seq": 0, "id": "name", "rule_type": "contain_value", "field_name": "NONE", "field_offset": -1, "field_size": -1,
+				    "value": "Stereo","value_type": "STR"},
+				  { "seq":0, "id":"mdat", "rule_type" : "size_value", "field_name":"NONE", "field_offset":0, "field_size":4, 
+				    "value":"1", "value_type": "LONG" }		
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "Movie Maker",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "mdat", "moov", "mvhd",    
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", "stss",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", "stss",
+				  "udta", "meta", "Xtra"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "equal_value", "field_name":"NONE", "field_offset":0, "field_size":44, 
+				   "value":"000000000000002068646C7200000000000000006D64697200000000000000000000000000000008696C7374", 
+				   "value_type":"BYTE" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "GomMix",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[
+				[ "ftyp", "free", "mdat", "moov", "mvhd",    
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco", "uuid",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "uuid", "udta", "ⓒreq", "ⓒenc" 
+				],
+				[ "ftyp", "mdat", "moov", "mvhd",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "co64", "uuid",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "co64",
+				  "uuid", "udta", "ⓒreq", "ⓒenc"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"ⓒreq", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "QuickTime 6.0 or greater", "value_type":"STR" },
+				  { "seq":0, "id":"ⓒenc", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "GOM ENCODER (GMp4Writer 1.0)", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"ⓒreq", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "QuickTime 6.0 or greater", "value_type":"STR" },
+				  { "seq":0, "id":"ⓒenc", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "GOM ENCODER (GMp4Writer 1.0)", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "VapMix",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[
+				[ "ftyp", "free", "mdat", "moov", "mvhd",    
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "ctts", "stsc", "stsz", "stco",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",
+				  "udta", "meta"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Lavf56.40.101", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"avc1", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands3", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "Bandicut",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[ 	
+				["SKIP"],
+				["SKIP"]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Bandicut", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"avc1", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands3", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				],
+				[ { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Bandicut", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "Gilisoft Video Editor",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "free", "mdat", "mdat", "moov", "mvhd",      
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco", 
+				  "udta", "meta"
+				],
+				[ "ftyp", "free", "mdat", "mdat", "moov", "mvhd",     
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco", 
+				  "udta", "meta"
+				],
+				[ "ftyp", "free", "mdat", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco",      
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "udta", "meta"
+				],
+				[ "ftyp", "free", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco",      
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "udta", "meta"
+				],
+				[ "ftyp", "free", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "ctts", "stsc", "stsz", "stco",      
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "udta", "meta"
+				]
+			],
+		"check_value": 	
+			[	
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Lavf53.24.2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Lavf53.24.2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Lavf53.24.2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Lavf53.24.2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Lavf53.24.2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" }
+				]
+			]
+		},
+		
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "Sony Vegas",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "free",  "moov", "mvhd",    
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "stsc", "stsz", "stco", "stss",
+				  "mdat"
+				],
+				[ "ftyp", "free",  "mdat", "moov", "mvhd",    
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "stsc", "stsz", "stco", "stss"
+				],
+				[ "ftyp", "free",  "moov", "mvhd",    
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "stsc", "stsz", "stco", "stss",
+				  "mdat"
+				],
+				[ "ftyp", "uuid", "free", "mdat", "moov", "mvhd",    
+				 "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",     "uuid",
+				 "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "stsc", "stsz", "stco", "stss", 
+				  "uuid"
+				],
+				[ "ftyp", "uuid", "free", "mdat", "moov", "mvhd",    
+				 "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 	"uuid",
+				 "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", "stss", 
+				  "uuid"
+				],
+				[ "ftyp", "uuid", "free", "mdat", "moov", "mvhd",     
+				 "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 	"uuid", 
+				 "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "stsc", "stsz", "stco", "stss", 
+				  "uuid", "meta"
+				],
+				[ "ftyp", "free", "mdat", "moov", "mvhd",    
+				 "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "stss", "sdtp", "stsc", "stsz", "stco",
+				 "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",  "meta"
+				]
+			],
+		"check_value": 	
+			[	
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":19529854, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":19529854, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":19529854, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"MSNV", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":19529854, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"MSNV", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"MSNV", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":19529854, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"MSNV", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Non-Real Time Metadata", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"XAVC", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":19529854, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"XAVC", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "NRT Metadata Handler", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "Edius",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[
+				[ "ftyp", "moov", "mvhd",     
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "stsc", "stsz", "stco", "stss", "sdtp",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",
+				  "free", "free", "mdat"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"sdtp", "rule_type" : "equal_value", "field_name":"NONE", "field_offset":0, "field_size":14, 
+				    "value": "0000000000000000080808080000", "value_type":"BYTE" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"avc1", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"avc1", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "PowerDirector",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[
+				[ "ftyp", "free", "mdat", "moov", "mvhd",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "stsc", "stsz", "stco", "stss", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "stsc", "stsz", "stco"
+				],
+				[ "ftyp", "uuid", "free", "mdat", "moov", "mvhd",     
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "stsc", "stsz", 				
+
+  "stco", "stss", "uuid", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",
+				  "uuid", "uuid"
+				],
+				[ "ftyp", "free", "mdat", "moov", "mvhd",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", "stss", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "stsc", "stsz", "stco"
+				],
+				[ "ftyp", "uuid", "free", "mdat", "moov", "mvhd",     
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "stsc", "stsz", 				
+
+"stco", "stss", "uuid", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "ctts", "stsc", "stsz", 				
+
+"stco",
+				  "uuid", "uuid"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"MSNV", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":16786688, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"MSNV", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" }
+				],
+				[ 
+				  { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "PROF", "value_type":"STR" },
+				  { "seq":1, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "USMT", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"MSNV", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":16786688, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"MSNV", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" }
+				],
+				[ 
+				  { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "PROF", "value_type":"STR" },
+				  { "seq":1, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "USMT", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "Pinnacle Studio",
+		"file_type" : "MP4",
+		"id_seq" : 	
+			[	
+				[ "ftyp", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "ctts", "stss", "stco", "udta", "tsel", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "stco", "udta", "tsel", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "stco", "tref",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "stco",	    "mdat"
+				],
+				[ "ftyp", "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "stss", "stco", "udta", "tsel", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "stco", "udta", "tsel", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "stco", "tref",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "nmhd", "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "stco",	    "mdat"
+				],
+				[ "ftyp", "moov", "mvhd",    
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "ctts", "stss", "stco", "udta", "tsel", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "stco", "udta", "tsel",     "mdat"
+				],
+				[ "ftyp", "moov", "mvhd",    
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "stss", "stco", "udta", "tsel", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "stco", "udta", "tsel",     "mdat"
+				], 
+				[ "ftyp", "uuid",  "moov", "mvhd",   
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", 
+				  "stsd", "stts", "stsc", "stsz", "stco", "stss",  "uuid", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", 
+				  "stsd", "stts", "stsc", "stsz", "stco",     "uuid", "uuid", "mdat"
+				],
+				[ "ftyp", "uuid",  "moov", "mvhd",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stts", "stsz", "stsc",
+				  "stsd", "stss", "stco",     "udta", "tsel", "uuid", "edts", "elst",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stts", "stsz", "stsc",
+				  "stsd", "stco",     "udta", "tsel", "uuid", "edts", "elst",
+				  "uuid", "mdat"
+				],
+				[ "ftyp", "uuid", "mdat", "moov", "mvhd",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf",  "dinf", "dref", "stbl", "stts", "stsz", "stsc",
+				  "stsd", "stss", "stco",    "vmhd", "udta", "tsel", "uuid", "edts", "elst",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "dinf", "dref", "stbl", "stts", "stsz", "stsc",
+				  "stsd", "stco",     "smhd", "udta", "tsel", "uuid", "edts", "elst",
+				  "udta", "titl", "uuid"
+				],
+				[ "ftyp", "mdat", "moov", "mvhd",   
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf",  "dinf", "dref", "stbl", "stts", "stsz", "stsc",
+				  "stsd", "stss", "stco",    "vmhd", "udta", "tsel", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "dinf", "dref", "stbl", "stts", "stsz", "stsc",
+				  "stsd", "stco",     "smhd", "udta", "tsel"
+				],
+				[ "ftyp",  "mdat",  "moov", "mvhd", "iods",     
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "stss", "stco",    "vmhd", "udta", "tsel", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf",  "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "stco",    "smhd", "udta", "tsel", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf",  "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "stco",	   "nmhd", "tref", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf",  "dinf", "dref", "stbl", "stts", "stsz", "stsc", 
+				  "stsd", "stco",	   "nmhd"
+				]
+			],
+		"check_value": 	
+			[
+				[ { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "AVID", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				],
+				[ { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "AVID", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				],
+				[ { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "AVID", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				],
+				[ { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "AVID", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				],
+				[ { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "PROF", "value_type":"STR" }
+				],
+				[ { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "AVID", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"MSNV", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":16777249, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"MSNV", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" }
+				],
+				[ { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "dicas", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"MSNV", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":16777249, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"MSNV", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" }
+				],
+				[ { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "dicas", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				],
+				[ { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "dicas", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "Adobe Premiere",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[ 	
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "sdtp", "stsc", "stsz", "stco", "ctts",  
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", 
+				  "udta", "ⓒTIM", "ⓒTSC", "ⓒTSZ", "uuid", "free", "mdat"
+				],
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "sdtp", "stsc", "stsz", "stco", "ctts", "uuid", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", 
+				  "udta", "ⓒTIM", "ⓒTSC", "ⓒTSZ", "uuid",  "mdat"
+				],
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "sdtp", "stsc", "stsz", "stco", "ctts",  
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", 
+				  "udta", "ⓒTIM", "ⓒTSC", "ⓒTSZ", "uuid",  "mdat"
+				],
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", "stss",
+				  "edts", "elst", "iods", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "edts", "elst",    "udta", "ⓒTIM", "ⓒTSC", "ⓒTSZ", "uuid", "mdat"
+				],
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", "stss", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", 
+				  "udta", "ⓒTIM", "ⓒTSC", "ⓒTSZ", "uuid", "free", "mdat"
+				],
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", "stss", "ctts", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", 
+				  "udta", "ⓒTIM", "ⓒTSC", "ⓒTSZ", "uuid", "free", "mdat"
+				],
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "sdtp", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", 
+				  "udta", "ⓒTIM", "ⓒTSC", "ⓒTSZ", "uuid", "mdat"
+				],
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "sdtp", "stsc", "stsz", "stco", "ctts", 
+				  "udta", "ⓒTIM", "ⓒTSC", "ⓒTSZ", "uuid", "mdat"
+				],
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "sdtp", "stsc", "stsz", "stco", "ctts",  
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", 
+				  "skip", "mdat"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Mainconcept", "value_type":"STR" },
+				  { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Adobe Premiere", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Mainconcept", "value_type":"STR" },
+				  { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Adobe Premiere", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Mainconcept", "value_type":"STR" },
+				  { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Adobe Premiere", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Mainconcept", "value_type":"STR" },
+				  { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Adobe Premiere", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"M4V", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"M4V", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Mainconcept", "value_type":"STR" },
+				  { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Adobe Premiere", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"M4V", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"M4V", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Mainconcept", "value_type":"STR" },
+				  { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Adobe Premiere", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"M4V", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"M4V", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Mainconcept", "value_type":"STR" },
+				  { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Adobe Premiere", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Mainconcept", "value_type":"STR" },
+				  { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Adobe Premiere", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Mainconcept", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "Final Cut Pro X",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "sdtp", "stsc", "stsz", "stco", 
+				  "udta", "dscp", "thmb", "titl", "titl", "auth", "wide", "mdat"
+				],
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "co64", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "sdtp", "stsc", "stsz", "co64", 
+				  "udta", "dscp", "thmb", "titl", "titl", "auth", "mdat"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"dscp", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value":"This video", "value_type":"STR" },
+				  { "seq":0, "id":"thmb", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value":"Photoshop", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"dscp", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value":"This video", "value_type":"STR" },
+				  { "seq":0, "id":"thmb", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value":"Photoshop", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "iMovie",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "sdtp", "stsc", "stsz", "stco", 
+				  "udta", "dscp", "titl", "titl", "wide", "mdat"
+				],
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "co64", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "sdtp", "stsc", "stsz", "co64", 
+				  "udta", "dscp", "titl", "titl", "mdat"
+				]
+			],
+		"check_value": 
+			[
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value":"Core Media", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value":"Core Media", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "YAMB",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[ 	
+				[ "ftyp", "moov", "mvhd", "iods",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco",  
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "stsc", "stsz", "stco", 
+				  "mdat", "free"
+				],
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "stsc", "stsz", "stco",  
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", 
+				  "mdat", "free"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "IsoMedia File Produced with GPAC", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"free", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "IsoMedia File Produced with GPAC", "value_type":"STR" }
+				]
+			]
+		},
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "Lightworks",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[ 	
+				[ "ftyp", "moov", "mvhd", "iods",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", "edts", "elst", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", "stss", "ctts", "edts", "elst", 
+				  "mdat"
+				],
+				[ "ftyp", "mdat" "moov", "mvhd", "iods",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", "edts", "elst", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", "stss", "ctts", "edts", "elst"
+				],
+				[ "ftyp", "mdat" "moov", "mvhd",
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", "stss", "ctts", "edts", "elst",    "iods"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Mainconcept", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"mdat", "rule_type" : "size_value", "field_name":"NONE", "field_offset":0, "field_size":4, 
+				    "value":"1", "value_type":"LONG" }
+				],
+				[  
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Mainconcept", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"mdat", "rule_type" : "size_value", "field_name":"NONE", "field_offset":0, "field_size":4, 
+				    "value":"1", "value_type":"LONG" }
+				],
+				[  
+				  { "seq":0, "id":"hdlr", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Mainconcept", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"mdat", "rule_type" : "size_value", "field_name":"NONE", "field_offset":0, "field_size":4, 
+				    "value":"1", "value_type":"LONG" }
+				]
+			]
+		},
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "Adobe Photoshop CC",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[ 	
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "sdtp", "stsc", "stsz", "stco", "ctts", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "hdlr", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", 
+				  "udta", "ⓒTIM", "ⓒTSC", "ⓒTSZ", "uuid", "free", "mdat"
+				],
+				[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", "stss", "edts", "elst", "iods", 
+				  "trak", "tkhd", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", "edts", "elst", 
+				  "udta", "ⓒTIM", "ⓒTSC", "ⓒTSZ", "uuid", "free", "mdat"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Adobe amecommand CC", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" },
+				  { "seq":0, "id":"mdat", "rule_type" : "size_value", "field_name":"NONE", "field_offset":0, "field_size":4, 
+				    "value":"1", "value_type":"LONG" }
+				],
+				[  
+				  { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Adobe amecommand CC", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"M4V", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"M4V", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"mdat", "rule_type" : "size_value", "field_name":"NONE", "field_offset":0, "field_size":4, 
+				    "value":"1", "value_type":"LONG" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "Free Video Editor",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[ 	
+				[ "ftyp", "free", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco",
+				  "udta", "meta"
+				],
+				[ "ftyp", "free", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "ctts", "stsc", "stsz", "stco", 
+				  "udta", "meta"
+				],
+				[ "ftyp", "free", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco",
+				  "udta", "meta"
+				],
+				[ "ftyp", "free", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco",
+				  "udta", "meta"
+				],
+				[ "ftyp", "free", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "udta", "meta"
+				],
+				[ "ftyp", "free", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "ctts", "stsc", "stsz", "stco",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "udta", "meta"
+				],
+				[ "ftyp", "free", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "ctts", "stsc", "stsz", "stco",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco", 
+				  "udta", "meta"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Lavf57.26.100", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Lavf57.26.100", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Lavf57.26.100", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Lavf54.59.107", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				], 
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Lavf57.26.100", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"avc1", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands3", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Lavf54.59.107", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"avc1", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands3", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Lavf57.26.100", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"avc1", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands3", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+			"item_type": "MP4_EDITOR",
+			"item_name": "FFmpeg",
+			"file_type": "MP4",
+			"id_seq": 
+				[
+					[ "ftyp", "free", "mdat", "moov",
+					  "mvhd", "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+					  "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco",
+					  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref",
+					  "stbl", "stsd", "stts", "stsc", "stsz", "stco", "udta", "meta"
+					],
+					[ "ftyp", "free", "mdat", "moov",
+					  "mvhd", "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+					  "dinf", "dref", "stbl", "stsd", "stts", "stss", "ctts", "stsc", "stsz", "stco",
+					  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref",
+					  "stbl", "stsd", "stts", "stsc", "stsz", "stco", "udta", "meta"
+					],
+					[ "ftyp", "free", "mdat", "moov",
+					  "mvhd", "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+					  "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco", "udta", "meta"
+					],
+					[ "ftyp", "free", "mdat", "moov",
+					  "mvhd", "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd",
+					  "dinf", "dref", "stbl", "stsd", "stts", "stss", "ctts", "stsc", "stsz", "stco", "udta", "meta"
+					]
+				],
+			"check_value": 
+				[
+					[ { "seq": 0, "id": "meta", "rule_type": "contain_value", "field_name": "NONE", "field_offset": -1, "field_size": -1, 
+					    "value": "ⓒtoo", "value_type": "STR"},
+					  { "seq": 0, "id": "meta", "rule_type": "contain_value", "field_name": "NONE", "field_offset": -1, "field_size": -1,
+					    "value": "Lavf55.33.100", "value_type": "STR" }
+					],
+					[ { "seq": 0, "id": "meta", "rule_type": "contain_value", "field_name": "NONE", "field_offset": -1, "field_size": -1, 
+					    "value": "ⓒtoo", "value_type": "STR"},
+					  { "seq": 0, "id": "meta", "rule_type": "contain_value", "field_name": "NONE", "field_offset": -1, "field_size": -1,
+					    "value": "Lavf55.33.100", "value_type": "STR"}
+					],
+					[ { "seq": 0, "id": "meta", "rule_type": "contain_value", "field_name": "NONE", "field_offset": -1, "field_size": -1, 
+					    "value": "ⓒtoo", "value_type": "STR"},
+					  { "seq": 0, "id": "meta", "rule_type": "contain_value", "field_name": "NONE", "field_offset": -1, "field_size": -1,
+					    "value": "Lavf55.33.100", "value_type": "STR"}
+					],
+					[ { "seq": 0, "id": "meta", "rule_type": "contain_value", "field_name": "NONE", "field_offset": -1, "field_size": -1, 
+					    "value": "ⓒtoo", "value_type": "STR"},
+					  { "seq": 0, "id": "meta", "rule_type": "contain_value", "field_name": "NONE", "field_offset": -1, "field_size": -1,
+					    "value": "Lavf55.33.100", "value_type": "STR"}
+					]
+				]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "After Effect",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[ 	
+				["SKIP"],
+				["SKIP"]
+			],
+		"check_value": 	
+			[
+				[  
+ 
+   				  { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Adobe After Effects", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":0, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+    				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				],
+				[  
+				  { "seq":0, "id":"uuid", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "Adobe After Effects", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"M4V", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":1, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"M4V", "value_type":"STR" },
+    				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"mp42", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "Movavi Video Editor",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[ 	
+				[ "ftyp", "free", "mdat", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", "stts", "stss", "stsc", "stsz", "stco",
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", "stts", "stsc", "stsz", "stco",
+				  "sgpd", "sbgp", "udta", "meta"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "mdtaencoder", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"avc1", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands3", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "Kakao Talk",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[ 	[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "stsc", "stsz", "stco",  
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", 
+				  "udta", "meta", "free", "mdat"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"avc1", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands3", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "VivaVideo App",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[ 	[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "stsc", "stsz", "stco",  
+				  "udta", "meta", "free", "free", "mdat"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"avc1", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands3", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				]
+			]
+		},
+
+
+		{
+		"item_type": "MP4_EDITOR",
+		"item_name" : "Quik App",
+		"file_type" : "MP4",
+		"id_seq" : 
+			[ 	[ "ftyp", "moov", "mvhd", 
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "vmhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stss", "ctts", "stsc", "stsz", "stco",  
+				  "trak", "tkhd", "edts", "elst", "mdia", "mdhd", "hdlr", "minf", "smhd", "dinf", "dref", "stbl", "stsd", 
+				  "stts", "stsc", "stsz", "stco", 
+				  "udta", "meta", "free", "mdat"
+				]
+			],
+		"check_value": 	
+			[
+				[  
+				  { "seq":0, "id":"meta", "rule_type" : "contain_value", "field_name":"NONE", "field_offset":-1, "field_size":-1, 
+				    "value": "ⓒtoo", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Major Brands", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "equal_value", "field_name":"Minor Version", "field_offset":4, "field_size":4, 
+				    "value":512, "value_type":"INT" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands0", "field_offset":-1, "field_size":-1, 
+				    "value":"isom", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands1", "field_offset":-1, "field_size":-1, 
+				    "value":"iso2", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands2", "field_offset":-1, "field_size":-1, 
+				    "value":"avc1", "value_type":"STR" },
+				  { "seq":0, "id":"ftyp", "rule_type" : "contain_value", "field_name":"Compatible Brands3", "field_offset":-1, "field_size":-1, 
+				    "value":"mp41", "value_type":"STR" }
+				]
+			]
+		}
+			
+	]
+    }
+]

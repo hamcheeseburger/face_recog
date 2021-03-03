@@ -225,7 +225,10 @@ class WindowController(Ui_MainWindow):
 
     def videoCheck(self):
         print("videoCheckBtn clicked")
-        fileName = './vca/vca4.jar'
+        print("scriptDir : " + self.scriptDir)
+        print("os.path.sep : " + os.path.sep)
+        fileName = self.scriptDir + os.path.sep + '../vca/vca4.jar'
+        print(fileName)
         # start ./Duplicate/VideoCombineAnalysis.jar [videoPath] 의 명령어가 실행 되는 것
         subprocess.run(["start", fileName, self.videoRecogFileRoute], shell=True)
         # 중복 클릭 방지
@@ -396,7 +399,7 @@ class WindowController(Ui_MainWindow):
             # url = "http://localhost:8090/awsDBproject/sending/info"
             # url = "http://3.35.38.165:8080/awsDBproject/sending/info"
             url = UrlInfo.instance().url + "/awsDBproject/sending/info"
-
+            print(url)
             # 로그파일 files 배열에 추가
             log_file = open(self.logInfo.file_path, 'r', encoding="utf-8")
             files = [
