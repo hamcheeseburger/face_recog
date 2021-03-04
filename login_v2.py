@@ -9,7 +9,9 @@
     0.0.1
 """
 import datetime
+import os
 import socket
+from contextlib import closing
 
 import requests
 from PyQt5.QtCore import QThread
@@ -22,19 +24,16 @@ from login import logincheck
 # from ui.logingui import UiDialog
 # from ui.logingui_v2 import UiDialog
 from ui.logingui_v3 import UiDialog
-import face_recognition_models
-from face_recognition_models import models
 # from ui.menu import ExecuteMenu
 
 from ui.windowcontroller import WindowController
 from info.userinfo import UserInfo
 from info.settingInfo import SettingInfo
+import sqlite3
 
 
 class ExecuteLogin(UiDialog):
     def __init__(self, loginDialog):
-        print(face_recognition_models.__email__)
-        models
         self.loginDialog = loginDialog
         UiDialog.__init__(self)
         self.setupUi(self.loginDialog)
@@ -47,23 +46,39 @@ class ExecuteLogin(UiDialog):
         self.combo_url.currentIndexChanged.connect(self.comboxHandler)
 
         self.urlInfo = UrlInfo.instance()
+    #   접속 url db 가져오기
+        scriptDir = os.path.dirname(os.path.abspath(__file__))
+        db_path = scriptDir + os.path.sep + "data/url_db.db"
+        try:
+            self.con = sqlite3.connect(db_path)
+
+            with closing(self.con.cursor()) as cur:
+                cur.execute("CREATE TABLE IF NOT EXISTS URL_TB (id integer primary key, url text unique);")
+                cur.execute("SELECT * FROM URL_TB")
+                rows = cur.fetchall()
+                for row in rows:
+                    self.combo_url.insertItem(self.combo_url.count() - 1, row[1])
+        except sqlite3.Error as e:
+            print(e)
 
     def comboxHandler(self):
-        if self.combo_url.currentIndex() == 2:
+        if self.combo_url.currentIndex() == self.combo_url.count() - 1:
             self.label_url.setVisible(True)
             return
 
         self.label_url.setVisible(False)
 
     def LoginBtnClicked(self):
-        # 접속 주소 설정
+        # 접속 주소 정보 가져오기
         comboIndex = self.combo_url.currentIndex()
         if comboIndex == 0:
             self.urlInfo.url = "http://localhost:8090"
         elif comboIndex == 1:
             self.urlInfo.url = "http://3.35.38.165:8080"
-        else:
+        elif comboIndex == self.combo_url.count() - 1:
             self.urlInfo.url = self.label_url.text()
+        else:
+            self.urlInfo.url = self.combo_url.itemText(comboIndex)
 
         print(self.urlInfo.url)
 
@@ -78,26 +93,37 @@ class ExecuteLogin(UiDialog):
 
         # 서버 로그인
         result = self.check_user.user_check_web_server(id, password)
-        if result == 1:
-            # self.userInfo.setInfo(id, password, name, image)
-            # 사용자 IP 주소 얻기
-            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-            s.connect(("8.8.8.8", 80))
-            print(s.getsockname()[0])
-            self.userInfo.ip = s.getsockname()[0]
-            # self.userInfo.ip = socket.gethostbyname(socket.getfqdn())
-            self.makeLogFile()
-            self.getSetting()
-
-        elif result == 0:
+        if result == 0:
             msg.setText('일치하는 사용자가 없습니다.')
             msg.exec_()
+            return
         elif result == -1:
             msg.setText('서버 응답 오류')
             msg.exec_()
+            return
         elif result == -2:
             msg.setText('서버와의 접속에 실패하였습니다.')
             msg.exec_()
+            return
+
+        # 접속 성공
+        # 사용자 IP 주소 얻기
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        print(s.getsockname()[0])
+        self.userInfo.ip = s.getsockname()[0]
+        # self.userInfo.ip = socket.gethostbyname(socket.getfqdn())
+        self.makeLogFile()
+        self.getSetting()
+
+        if comboIndex == self.combo_url.count() - 1:
+            print("insert into db")
+            with closing(self.con.cursor()) as cur:
+                try:
+                    cur.execute("INSERT INTO URL_TB(url) VALUES(?);", (self.urlInfo.url,))
+                    self.con.commit()
+                except sqlite3.Error as e:
+                    print(e)
 
     def menuWindow(self):
         self.loginDialog.close()

@@ -58,8 +58,8 @@ class UiDialog(object):
         self.combo_url = QtWidgets.QComboBox(dialog)
         self.combo_url.setGeometry(QtCore.QRect(170, 116, 141, 21))
         self.combo_url.setObjectName("combo_url")
-        self.combo_url.addItem("로컬서버")
-        self.combo_url.addItem("aws서버")
+        self.combo_url.addItem("Local Server")
+        self.combo_url.addItem("AWS Server")
         self.combo_url.addItem("직접입력")
 
         self.label_url = QtWidgets.QLineEdit(dialog)

@@ -224,10 +224,7 @@ class WindowController(Ui_MainWindow):
             self.isCameraDisplayed = True
 
     def videoCheck(self):
-        print("videoCheckBtn clicked")
-        print("scriptDir : " + self.scriptDir)
-        print("os.path.sep : " + os.path.sep)
-        fileName = self.scriptDir + os.path.sep + '../vca/vca4.jar'
+        fileName = self.scriptDir + os.path.sep + '../vca/vca5.jar'
         print(fileName)
         # start ./Duplicate/VideoCombineAnalysis.jar [videoPath] 의 명령어가 실행 되는 것
         subprocess.run(["start", fileName, self.videoRecogFileRoute], shell=True)
