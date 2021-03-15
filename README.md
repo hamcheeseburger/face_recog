@@ -1,3 +1,36 @@
+
+# 근태관리 프로그램 개요
+
+![2021-03-15 14;21;29](https://user-images.githubusercontent.com/68433884/111107228-d41b9500-8599-11eb-91a4-97907b503b74.PNG)
+
+-----
+
+## 1. 문제의식 & 솔루션 & 기대효과
+
+
+![2021-03-15 13;53;13](https://user-images.githubusercontent.com/68433884/111106855-2dcf8f80-8599-11eb-9e05-b4a51f47b35e.PNG)
+
+
+## 2. 근무측정 프로그램 - 핵심기능
+
+
+![2021-03-15 13;55;51](https://user-images.githubusercontent.com/68433884/111106863-30ca8000-8599-11eb-913f-2dfd1fe389d8.PNG)
+
+
+## 3. 근무측정 프로그램 - 세부기능
+
+
+![2021-03-15 13;56;05](https://user-images.githubusercontent.com/68433884/111106895-3cb64200-8599-11eb-823f-1f78a550ce42.PNG)
+![2021-03-15 13;56;22](https://user-images.githubusercontent.com/68433884/111106900-3de76f00-8599-11eb-8d75-802648813399.PNG)
+![2021-03-15 13;56;28](https://user-images.githubusercontent.com/68433884/111106902-40e25f80-8599-11eb-91e4-617b4dc64f83.PNG)
+![2021-03-15 13;56;33](https://user-images.githubusercontent.com/68433884/111106906-4344b980-8599-11eb-8da3-9849c267fd24.PNG)
+![2021-03-15 13;56;40](https://user-images.githubusercontent.com/68433884/111106915-48096d80-8599-11eb-8345-b4efb5343902.PNG)
+![2021-03-15 13;56;45](https://user-images.githubusercontent.com/68433884/111106919-493a9a80-8599-11eb-8b48-574517931721.PNG)
+![2021-03-15 13;56;51](https://user-images.githubusercontent.com/68433884/111106927-4a6bc780-8599-11eb-99b9-29b22efec3a8.PNG)
+
+
+- 관리자 사이트 항목에서 계속... &#128073; <https://github.com/jaeim/face-recog-aws-web.git>
+
 # face_recog pyinstaller 설명서
 
 1. ####spec file 활용하기
@@ -67,13 +100,3 @@
 
      약간의 시간이 흐른 뒤, **dist 폴더** 내에 exe 파일이 생성됩니다.  
      필요한 파일들을 exe 파일과 한 폴더 내에 존재하게 한 후 실행하시면 됩니다.
-
-# 근태관리 프로그램 개요
-
------
-
-## 1. 문제의식 & 솔루션 & 기대효과
-
-
-![image-center]({{ site.url }}{{ site.baseurl }}/README_IMG/2021-03-15 13;53;13.PNG){: .align-center}
-
