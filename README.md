@@ -33,7 +33,7 @@
 
 # face_recog pyinstaller 설명서
 
-1. ####spec file 활용하기
+1. #### spec file 활용하기
     - #####현재 프로젝트에 있는 login_v2.spec에 대한 설명  
     
       pyinstaller는 기본적으로 파이썬 스크립트에서 import한 모듈들을 자동적으로 참조하도록 되어있으나,
