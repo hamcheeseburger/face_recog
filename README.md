@@ -69,7 +69,7 @@
      "spec file 활용법" https://pyinstaller.readthedocs.io/en/stable/spec-files.html   
      "spec file에 face_recognition 관련정보 추가하기" https://github.com/ageitgey/face_recognition/issues/357
     
-2. ####spec file로 실행파일 만들기  
+2. #### spec file로 실행파일 만들기  
     - #####*datas* 옵션에 적용할 파일의 경로 설정  
     
         프로그램이 실행되는 위치에 따라 경로가 달라지게끔 지정을 해주어야 합니다.  
@@ -85,7 +85,7 @@
         MODEL_PATH = "../model/TF_best.hdf5"
         </code></pre>
         
-   - #####실행파일 만들기  
+   - ##### 실행파일 만들기  
      
      현재 **login_v2.spec** 파일은 onefile 옵션과 windowed 옵션이 적용되어 있습니다.
      onefile 옵션은 프로그램을 하나의 실행파일로 만들어 줍니다.  
