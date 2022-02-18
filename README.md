@@ -34,7 +34,7 @@
 # face_recog pyinstaller 설명서
 
 1. #### spec file 활용하기
-    - #####현재 프로젝트에 있는 login_v2.spec에 대한 설명  
+    - ##### 현재 프로젝트에 있는 login_v2.spec에 대한 설명  
     
       pyinstaller는 기본적으로 파이썬 스크립트에서 import한 모듈들을 자동적으로 참조하도록 되어있으나,
       특정 모듈 내에서 import하는 다른 모듈의 경우는 pyinstaller가 찾아내지 못할 때가 있습니다.
@@ -70,7 +70,7 @@
      "spec file에 face_recognition 관련정보 추가하기" https://github.com/ageitgey/face_recognition/issues/357
     
 2. #### spec file로 실행파일 만들기  
-    - #####*datas* 옵션에 적용할 파일의 경로 설정  
+    - ##### *datas* 옵션에 적용할 파일의 경로 설정  
     
         프로그램이 실행되는 위치에 따라 경로가 달라지게끔 지정을 해주어야 합니다.  
            
